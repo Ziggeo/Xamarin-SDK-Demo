@@ -30,11 +30,14 @@ packages/
 *.dll
 *.exe
 *.pdb
-Ziggeo.Android/bin/
-Ziggeo.Android/obj/
-Ziggeo.iOS/bin/
-Ziggeo.iOS/obj/
-Ziggeo.NuGet/obj/
+iOS/bin/
+iOS/obj/
+crossplatform/FormsTestApp/Android/bin/
+crossplatform/FormsTestApp/Android/obj/
+crossplatform/FormsTestApp/iOS/bin/
+crossplatform/FormsTestApp/iOS/obj/
+crossplatform/FormsTestApp/packages/
+Android/obj
       
 
 # Android/IntelliJ
