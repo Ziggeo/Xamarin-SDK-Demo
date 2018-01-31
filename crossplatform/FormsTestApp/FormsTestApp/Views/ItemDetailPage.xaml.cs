@@ -43,5 +43,12 @@ namespace FormsTestApp
             await Navigation.PopAsync();
             await App.ZiggeoApplication.Videos.Delete(viewModel.Item.token);
         }
+
+        async void Play_Clicked(object sender, System.EventArgs e)
+        {
+            Ziggeo.Player player = new Ziggeo.Player(App.ZiggeoApplication);
+            await player.Play(viewModel.Item.token);
+        }
+
     }
 }
