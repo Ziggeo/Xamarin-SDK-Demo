@@ -31,7 +31,7 @@ namespace FormsTestApp
 
         async void AddItem_Clicked(object sender, EventArgs e)
         {
-            Ziggeo.Recorder recorder = new Ziggeo.Recorder(App.ZiggeoApplication);
+            Ziggeo.IZiggeoRecorder recorder = App.ZiggeoApplication.Recorder;
             try
             {
                 string token = await recorder.Record();

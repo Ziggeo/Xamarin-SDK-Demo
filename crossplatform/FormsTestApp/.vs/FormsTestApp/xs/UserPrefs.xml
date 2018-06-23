@@ -1,0 +1,34 @@
+﻿<Properties StartupConfiguration="{E50EA1BF-6C00-411D-AFFD-AB46F3EC881B}|Default" NuGet.AddPackagesDialog.IncludePrerelease="True">
+  <MonoDevelop.Ide.ItemProperties.FormsTestApp.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneDeviceTarget.49b59ae6d23c0cfc6f811a7a715441b39c98cbb9" automaticSigning="False">
+    <MonoDevelop.MacDev.AppleDevelopmentTeam />
+  </MonoDevelop.Ide.ItemProperties.FormsTestApp.iOS>
+  <MonoDevelop.Ide.Workbench ActiveDocument="FormsTestApp/Views/ItemDetailPage.xaml.cs">
+    <Files>
+      <File FileName="FormsTestApp/Views/ItemsPage.xaml.cs" Line="38" Column="65" />
+      <File FileName="FormsTestApp/App.xaml" Line="19" Column="1" />
+      <File FileName="FormsTestApp/App.xaml.cs" Line="11" Column="9" />
+      <File FileName="FormsTestApp/ViewModels/BaseViewModel.cs" Line="29" Column="25" />
+      <File FileName="FormsTestApp/Services/CloudDataStore.cs" Line="24" Column="1" />
+      <File FileName="FormsTestApp/Services/MockDataStore.cs" Line="10" Column="19" />
+      <File FileName="FormsTestApp/Models/Item.cs" Line="5" Column="18" />
+      <File FileName="FormsTestApp/Services/IDataStore.cs" Line="8" Column="14" />
+      <File FileName="FormsTestApp/ViewModels/ItemDetailViewModel.cs" Line="15" Column="9" />
+      <File FileName="FormsTestApp/ViewModels/ItemsViewModel.cs" Line="22" Column="14" />
+      <File FileName="FormsTestApp/Views/ItemDetailPage.xaml.cs" Line="33" Column="58" />
+      <File FileName="FormsTestApp/Views/ItemsPage.xaml" Line="23" Column="1" />
+      <File FileName="FormsTestApp/Views/ItemDetailPage.xaml" Line="9" Column="1" />
+      <File FileName="FormsTestApp/Views/AboutPage.xaml.cs" Line="1" Column="1" />
+      <File FileName="FormsTestApp/Views/AboutPage.xaml" Line="61" Column="1" />
+      <File FileName="FormsTestApp/ViewModels/AboutViewModel.cs" Line="5" Column="1" />
+      <File FileName="FormsTestApp/Views/MainPage.cs" Line="1" Column="1" />
+      <File FileName="iOS/Main.cs" Line="17" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhone" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.FormsTestApp.Droid AndroidDesignerPreferredTheme="Theme.DeviceDefault.NoActionBar.Fullscreen" />
+  <MultiItemStartupConfigurations />
+</Properties>

@@ -30,10 +30,10 @@ namespace FormsTestApp
             BindingContext = this.viewModel = viewModel;
             Task.Run(async () =>
             {
-                byte[] data = await App.ZiggeoApplication.Videos.GetCover(viewModel.Item.token);
+                var stream = await App.ZiggeoApplication.Videos.DownloadImage(viewModel.Item.token);
                 this.img.Source = ImageSource.FromStream(() =>
                 {
-                    return new System.IO.MemoryStream(data);
+                    return stream;
                 });
             }).Wait();
         }
@@ -41,12 +41,12 @@ namespace FormsTestApp
         async void Delete_Clicked(object sender, System.EventArgs e)
         {
             await Navigation.PopAsync();
-            await App.ZiggeoApplication.Videos.Delete(viewModel.Item.token);
+            await App.ZiggeoApplication.Videos.Destroy(viewModel.Item.token);
         }
 
         async void Play_Clicked(object sender, System.EventArgs e)
         {
-            Ziggeo.Player player = new Ziggeo.Player(App.ZiggeoApplication);
+            Ziggeo.IZiggeoPlayer player = App.ZiggeoApplication.Player;
             await player.Play(viewModel.Item.token);
         }
 

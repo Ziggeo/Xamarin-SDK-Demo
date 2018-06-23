@@ -35,7 +35,7 @@ namespace FormsTestApp
         {
             try
             {
-                await App.ZiggeoApplication.Videos.Delete(token);
+                await App.ZiggeoApplication.Videos.Destroy(token);
                 return true;
             }
             catch(Exception ex)
