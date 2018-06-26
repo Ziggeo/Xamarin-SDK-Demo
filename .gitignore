@@ -30,15 +30,10 @@ packages/
 *.dll
 *.exe
 *.pdb
-iOS/bin/
-iOS/obj/
-crossplatform/FormsTestApp/Android/bin/
-crossplatform/FormsTestApp/Android/obj/
-crossplatform/FormsTestApp/iOS/bin/
-crossplatform/FormsTestApp/iOS/obj/
+**bin/
+**obj/
 crossplatform/FormsTestApp/packages/
-Android/obj
-      
+.vs/      
 
 # Android/IntelliJ
 #
