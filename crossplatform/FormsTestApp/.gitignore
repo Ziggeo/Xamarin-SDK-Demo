@@ -48,4 +48,7 @@ local.properties
 buck-out/
 \.buckd/
 *.keystore
+
+#Resharper
+*.user
       
