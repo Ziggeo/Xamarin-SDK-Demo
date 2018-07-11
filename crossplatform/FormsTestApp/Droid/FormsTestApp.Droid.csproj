@@ -41,9 +41,6 @@
     <AndroidUseSharedRuntime>false</AndroidUseSharedRuntime>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Acr.UserDialogs, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Acr.UserDialogs.7.0.1\lib\monoandroid80\Acr.UserDialogs.dll</HintPath>
-    </Reference>
     <Reference Include="FormsViewGroup, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Xamarin.Forms.3.1.0.583944\lib\MonoAndroid10\FormsViewGroup.dll</HintPath>
     </Reference>
@@ -158,7 +155,7 @@
       <HintPath>..\packages\Xamarin.Forms.3.1.0.583944\lib\MonoAndroid10\Xamarin.Forms.Xaml.dll</HintPath>
     </Reference>
     <Reference Include="Ziggeo, Version=1.0.0.0, Culture=neutral, processorArchitecture=AMD64">
-      <HintPath>..\packages\Ziggeo.1.0.1\lib\monoandroid81\Ziggeo.dll</HintPath>
+      <HintPath>..\packages\Ziggeo.1.0.0\lib\monoandroid81\Ziggeo.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
