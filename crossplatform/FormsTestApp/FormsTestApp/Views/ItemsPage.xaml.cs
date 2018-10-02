@@ -32,6 +32,8 @@ namespace FormsTestApp
         async void AddItem_Clicked(object sender, EventArgs e)
         {
             Ziggeo.IZiggeoRecorder recorder = App.ZiggeoApplication.Recorder;
+            recorder.VideoDevice = Ziggeo.ZiggeoVideoDevice.Front;
+            recorder.CameraFlipButtonVisible = true;
             try
             {
                 string token = await recorder.Record();
