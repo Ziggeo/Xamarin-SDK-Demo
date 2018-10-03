@@ -3,6 +3,8 @@
 Ziggeo API (https://ziggeo.com) allows you to integrate video recording and playback with only
 several lines of code in your app.
 
+## Upgrading from v.1.0.0 to v.1.1.0
+The update bring crossplatform avaiable client/server auth tokens. Use ZiggeoApplication.ClientAuthToken and ZiggeoApplication.ServerAuthToken properties to set the auth tokens on iOS and Android platforms
 
 ## Integration
 
