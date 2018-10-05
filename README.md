@@ -1,4 +1,4 @@
-# Ziggeo Xamarin SDK 1.1.0
+# Ziggeo Xamarin SDK 1.2.0
 
 Ziggeo API (https://ziggeo.com) allows you to integrate video recording and playback with only
 several lines of code in your app.
@@ -45,6 +45,62 @@ To enable client/server auth tokens use:
 ```csharp
 ZiggeoApplication.ServerAuthToken = "SERVER_AUTH_TOKEN"
 ZiggeoApplication.ClientAuthToken = "CLIENT_AUTH_TOKEN"
+```
+
+## Events
+### Video service events
+
+```csharp
+ZiggeoApplication.Videos.UploadStarted += (string filePath) =>
+{
+//upload started
+Console.WriteLine("upload started from {0}", filePath);
+};
+
+ZiggeoApplication.Videos.UploadProgressChanged += (string token, string filename, long bytesSent, long totalBytes) => 
+{
+//update progress    
+Console.WriteLine("upload progress changed for {2}: {0}/{1}", bytesSent, totalBytes, token);
+};
+
+ZiggeoApplication.Videos.UploadComplete += (string token, string filename) =>
+{
+//done
+Console.WriteLine("{0} upload done with token {1}", filename, token);
+};
+
+ZiggeoApplication.Videos.UploadFailed += (string filename, Exception error) =>
+{
+//handle error
+Console.WriteLine("{0} upload failed with error {1}", filename, error.ToString());
+};
+```
+
+### Recorder events
+```csharp
+ZiggeoApplication.Recorder.RecordingStarted += () =>
+{
+//recorder started
+Console.WriteLine("recorder interface was shown");
+};
+
+ZiggeoApplication.Recorder.RecordingCanceled += () =>
+{
+//recorder was closed by the user
+Console.WriteLine("recorded was closed manually, recording was canceled");
+};
+
+ZiggeoApplication.Recorder.RecordingFinishedUploadDone += (string token) =>
+{
+//done
+Console.WriteLine("recording and file upload were finished with token {0}", token);
+};
+
+ZiggeoApplication.Recorder.RecordingError += (Exception ex) =>
+{
+//handle error
+Console.WriteLine("recorder error: {0}", ex.ToString());
+};
 ```
 
 ## API Methods

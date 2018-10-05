@@ -114,7 +114,7 @@
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.IO.Compression" />
     <Reference Include="Ziggeo">
-      <HintPath>..\packages\ZiggeoXamarinSDK.1.1.0\lib\xamarinios10\Ziggeo.dll</HintPath>
+      <HintPath>..\packages\ZiggeoXamarinSDK.1.2.0\lib\xamarinios10\Ziggeo.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
