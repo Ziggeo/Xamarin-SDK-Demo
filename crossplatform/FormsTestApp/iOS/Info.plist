@@ -40,8 +40,6 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
-	<key>XSAppIconAssets</key>
-	<string>Assets.xcassets/AppIcon.appiconset</string>
 	<key>UIStatusBarStyle</key>
 	<string>UIStatusBarStyleLightContent</string>
 	<key>UIViewControllerBasedStatusBarAppearance</key>
@@ -50,5 +48,7 @@
 	<string>The application will have access to video</string>
 	<key>NSMicrophoneUsageDescription</key>
 	<string>The application will have access to audio</string>
+	<key>XSAppIconAssets</key>
+	<string>Images.xcassets/AppIcon.appiconset</string>
 </dict>
 </plist>
