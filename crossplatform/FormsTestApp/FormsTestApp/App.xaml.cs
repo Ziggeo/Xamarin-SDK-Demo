@@ -7,7 +7,7 @@ namespace FormsTestApp
     public partial class App : Application
     {
         public static bool UseMockDataStore = false;
-        public static Ziggeo.ZiggeoApplication ZiggeoApplication = new Ziggeo.ZiggeoApplication("4f0190ef04f6c877daae7e8aa20d54c6");
+        public static Ziggeo.ZiggeoApplication ZiggeoApplication = new Ziggeo.ZiggeoApplication("ZIGGEO_APP_TOKEN");
 
         public App()
         {
