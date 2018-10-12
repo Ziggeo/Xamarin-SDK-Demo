@@ -42,7 +42,7 @@ namespace FormsTestApp
             ZiggeoApplication.Recorder.RecordingStarted += () =>
             {
                 //recorder started
-                Console.WriteLine("recorder interface was shown");
+                Console.WriteLine("recording started");
             };
 
             ZiggeoApplication.Recorder.RecordingCanceled += () =>
