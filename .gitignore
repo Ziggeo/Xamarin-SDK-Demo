@@ -26,6 +26,7 @@ project.xcworkspace
 
 # Visual Studio
 *.userprefs
+*.user
 packages/
 *.dll
 *.exe
@@ -47,5 +48,3 @@ local.properties
 buck-out/
 \.buckd/
 *.keystore
-      
-**.user
