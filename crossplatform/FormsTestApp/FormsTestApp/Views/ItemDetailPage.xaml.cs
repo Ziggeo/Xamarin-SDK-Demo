@@ -1,6 +1,4 @@
-﻿using System;
-using Xamarin.Forms;
-using System.Threading.Tasks;
+﻿using Xamarin.Forms;
 using Acr.UserDialogs;
 
 namespace FormsTestApp
@@ -28,18 +26,22 @@ namespace FormsTestApp
             InitializeComponent();
 
             BindingContext = this.viewModel = viewModel;
-            Task.Run(async () =>
-            {
-                var stream = await App.ZiggeoApplication.Videos.DownloadImage(viewModel.Item.token);
-                this.img.Source = ImageSource.FromStream(() => { return stream; });
-            }).Wait();
+            LoadImage();
+        }
+
+        async void LoadImage()
+        {
+            ShowLoading();
+            var stream = await App.ZiggeoApplication.Videos.DownloadImage(viewModel.Item.token);
+            this.img.Source = ImageSource.FromStream(() => { return stream; });
+            HideLoading();
         }
 
         async void Delete_Clicked(object sender, System.EventArgs e)
         {
-            UserDialogs.Instance.Loading().Show();
+            ShowLoading();
             await App.ZiggeoApplication.Videos.Destroy(viewModel.Item.token);
-            UserDialogs.Instance.Loading().Hide();
+            HideLoading();
             await Navigation.PopAsync();
         }
 
@@ -47,6 +49,16 @@ namespace FormsTestApp
         {
             Ziggeo.IZiggeoPlayer player = App.ZiggeoApplication.Player;
             await player.Play(viewModel.Item.token);
+        }
+
+        private void ShowLoading()
+        {
+            UserDialogs.Instance.Loading().Show();
+        }
+
+        private void HideLoading()
+        {
+            UserDialogs.Instance.Loading().Hide();
         }
     }
 }
