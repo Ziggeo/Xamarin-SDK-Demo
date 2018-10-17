@@ -41,6 +41,14 @@
     <AndroidUseSharedRuntime>false</AndroidUseSharedRuntime>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Acr.UserDialogs, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>..\packages\Acr.UserDialogs.7.0.1\lib\monoandroid80\Acr.UserDialogs.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="AndHUD, Version=1.2.0.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>..\packages\AndHUD.1.2.0\lib\MonoAndroid\AndHUD.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Binding_Videocache, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
       <HintPath>..\packages\ZiggeoXamarinSDK.1.2.2\lib\monoandroid81\Binding_Videocache.dll</HintPath>
       <Private>True</Private>
@@ -78,11 +86,17 @@
       <HintPath>..\packages\Square.OkIO.1.13.0\lib\MonoAndroid\Square.OkIO.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Collections" />
+    <Reference Include="System.IdentityModel" />
     <Reference Include="System.IO.Compression" />
+    <Reference Include="System.Runtime" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Threading.Tasks" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
     <Reference Include="Mono.Android" />
     <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml.Linq" />
     <Reference Include="Xamarin-ZiggeoAndroidSDK-Binding, Version=0.76.0.0, Culture=neutral, PublicKeyToken=null">
       <HintPath>..\packages\ZiggeoXamarinSDK.1.2.2\lib\monoandroid81\Xamarin-ZiggeoAndroidSDK-Binding.dll</HintPath>
       <Private>True</Private>
