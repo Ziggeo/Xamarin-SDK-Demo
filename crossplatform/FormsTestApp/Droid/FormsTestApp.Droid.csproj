@@ -42,7 +42,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Binding_Videocache, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
-      <HintPath>..\packages\ZiggeoXamarinSDK.1.2.2\lib\monoandroid81\Binding_Videocache.dll</HintPath>
+      <HintPath>..\packages\ZiggeoXamarinSDK.1.2.3\lib\monoandroid81\Binding_Videocache.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="FormsViewGroup, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
@@ -84,7 +84,7 @@
     <Reference Include="Mono.Android" />
     <Reference Include="System.Net.Http" />
     <Reference Include="Xamarin-ZiggeoAndroidSDK-Binding, Version=0.76.0.0, Culture=neutral, PublicKeyToken=null">
-      <HintPath>..\packages\ZiggeoXamarinSDK.1.2.2\lib\monoandroid81\Xamarin-ZiggeoAndroidSDK-Binding.dll</HintPath>
+      <HintPath>..\packages\ZiggeoXamarinSDK.1.2.3\lib\monoandroid81\Xamarin-ZiggeoAndroidSDK-Binding.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Xamarin.Android.Arch.Core.Common, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
@@ -163,7 +163,7 @@
       <HintPath>..\packages\Xamarin.Forms.3.1.0.583944\lib\MonoAndroid10\Xamarin.Forms.Xaml.dll</HintPath>
     </Reference>
     <Reference Include="Ziggeo, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
-      <HintPath>..\packages\ZiggeoXamarinSDK.1.2.2\lib\monoandroid81\Ziggeo.dll</HintPath>
+      <HintPath>..\packages\ZiggeoXamarinSDK.1.2.3\lib\monoandroid81\Ziggeo.dll</HintPath>
       <Private>True</Private>
     </Reference>
   </ItemGroup>
