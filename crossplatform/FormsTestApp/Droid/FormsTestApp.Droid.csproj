@@ -154,8 +154,14 @@
     <Reference Include="Xamarin.Forms.Xaml, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Xamarin.Forms.3.1.0.583944\lib\MonoAndroid10\Xamarin.Forms.Xaml.dll</HintPath>
     </Reference>
+    <Reference Include="Binding_Videocache">
+      <HintPath>..\packages\ZiggeoXamarinSDK.1.2.3\lib\monoandroid81\Binding_Videocache.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin-ZiggeoAndroidSDK-Binding">
+      <HintPath>..\packages\ZiggeoXamarinSDK.1.2.3\lib\monoandroid81\Xamarin-ZiggeoAndroidSDK-Binding.dll</HintPath>
+    </Reference>
     <Reference Include="Ziggeo">
-      <HintPath>..\packages\ZiggeoXamarinSDK.1.2.2\lib\monoandroid81\Ziggeo.dll</HintPath>
+      <HintPath>..\packages\ZiggeoXamarinSDK.1.2.3\lib\monoandroid81\Ziggeo.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>

@@ -45,6 +45,12 @@ namespace FormsTestApp
                 Console.WriteLine("recording started");
             };
 
+            ZiggeoApplication.Recorder.RecordingStopped += () =>
+            {
+                //recording was stopped
+                Console.WriteLine("recording stopped");
+            };
+
             ZiggeoApplication.Recorder.RecordingCanceled += () =>
             {
                 //recorder was closed by the user
