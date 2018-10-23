@@ -1,7 +1,6 @@
 ﻿using System;
-
 using Xamarin.Forms;
-using System.Threading.Tasks;
+using Acr.UserDialogs;
 
 namespace FormsTestApp
 {
@@ -28,20 +27,43 @@ namespace FormsTestApp
             InitializeComponent();
 
             BindingContext = this.viewModel = viewModel;
-            Task.Run(async () =>
+            LoadImage();
+        }
+
+        async void LoadImage()
+        {
+            ShowLoading();
+            try
             {
                 var stream = await App.ZiggeoApplication.Videos.DownloadImage(viewModel.Item.token);
-                this.img.Source = ImageSource.FromStream(() =>
-                {
-                    return stream;
-                });
-            }).Wait();
+                this.img.Source = ImageSource.FromStream(() => { return stream; });
+            }
+            catch (Exception ex)
+            {
+                await DisplayAlert("Error", ex.Message, "Okay");
+            }
+            finally
+            {
+                HideLoading();
+            }
         }
 
         async void Delete_Clicked(object sender, System.EventArgs e)
         {
-            await Navigation.PopAsync();
-            await App.ZiggeoApplication.Videos.Destroy(viewModel.Item.token);
+            ShowLoading();
+            try
+            {
+                await App.ZiggeoApplication.Videos.Destroy(viewModel.Item.token);
+                await Navigation.PopAsync();
+            }
+            catch (Exception exception)
+            {
+                await DisplayAlert("Error", exception.Message, "Okay");
+            }
+            finally
+            {
+                HideLoading();
+            }
         }
 
         async void Play_Clicked(object sender, System.EventArgs e)
@@ -50,5 +72,14 @@ namespace FormsTestApp
             await player.Play(viewModel.Item.token);
         }
 
+        private void ShowLoading()
+        {
+            UserDialogs.Instance.Loading().Show();
+        }
+
+        private void HideLoading()
+        {
+            UserDialogs.Instance.Loading().Hide();
+        }
     }
 }

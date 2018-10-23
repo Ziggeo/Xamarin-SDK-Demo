@@ -1,5 +1,5 @@
 ﻿using System;
-
+using Acr.UserDialogs;
 using Android.App;
 using Android.Content;
 using Android.Content.PM;
@@ -10,7 +10,8 @@ using Android.OS;
 
 namespace FormsTestApp.Droid
 {
-    [Activity(Label = "FormsTestApp.Droid", Icon = "@drawable/icon", Theme = "@style/MyTheme", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
+    [Activity(Label = "FormsTestApp.Droid", Icon = "@drawable/icon", Theme = "@style/MyTheme", MainLauncher = true,
+        ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
     public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsAppCompatActivity
     {
         protected override void OnCreate(Bundle bundle)
@@ -23,6 +24,7 @@ namespace FormsTestApp.Droid
             global::Xamarin.Forms.Forms.Init(this, bundle);
 
             LoadApplication(new App());
+            UserDialogs.Init(this);
         }
 
         protected override void OnActivityResult(int requestCode, Result resultCode, Intent data)
