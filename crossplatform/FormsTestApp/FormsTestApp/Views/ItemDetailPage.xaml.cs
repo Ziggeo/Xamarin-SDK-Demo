@@ -1,4 +1,5 @@
-﻿using Xamarin.Forms;
+﻿using System;
+using Xamarin.Forms;
 using Acr.UserDialogs;
 
 namespace FormsTestApp
@@ -32,17 +33,37 @@ namespace FormsTestApp
         async void LoadImage()
         {
             ShowLoading();
-            var stream = await App.ZiggeoApplication.Videos.DownloadImage(viewModel.Item.token);
-            this.img.Source = ImageSource.FromStream(() => { return stream; });
-            HideLoading();
+            try
+            {
+                var stream = await App.ZiggeoApplication.Videos.DownloadImage(viewModel.Item.token);
+                this.img.Source = ImageSource.FromStream(() => { return stream; });
+            }
+            catch (Exception ex)
+            {
+                await DisplayAlert("Error", ex.Message, "Okay");
+            }
+            finally
+            {
+                HideLoading();
+            }
         }
 
         async void Delete_Clicked(object sender, System.EventArgs e)
         {
             ShowLoading();
-            await App.ZiggeoApplication.Videos.Destroy(viewModel.Item.token);
-            HideLoading();
-            await Navigation.PopAsync();
+            try
+            {
+                await App.ZiggeoApplication.Videos.Destroy(viewModel.Item.token);
+                await Navigation.PopAsync();
+            }
+            catch (Exception exception)
+            {
+                await DisplayAlert("Error", exception.Message, "Okay");
+            }
+            finally
+            {
+                HideLoading();
+            }
         }
 
         async void Play_Clicked(object sender, System.EventArgs e)
