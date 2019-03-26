@@ -10,7 +10,7 @@ namespace Ziggeo.Xamarin.NetStandard.Demo
     {
         public static bool UseMockDataStore = false;
         public static IZiggeoApplication ZiggeoApplication;
-        public const string ZiggeoApplicationToken = "ZIGGEO_APP_TOKEN";
+        public const string ZiggeoApplicationToken = "ZIGGEO_APP_ID";
 
         public App()
         {

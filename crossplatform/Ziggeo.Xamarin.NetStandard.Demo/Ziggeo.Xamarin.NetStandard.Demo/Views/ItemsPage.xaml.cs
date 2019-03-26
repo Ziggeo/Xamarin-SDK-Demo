@@ -34,6 +34,20 @@ namespace Ziggeo.Xamarin.NetStandard.Demo
             Ziggeo.IZiggeoRecorder recorder = App.ZiggeoApplication.Recorder;
             recorder.VideoDevice = Ziggeo.ZiggeoVideoDevice.Front;
             recorder.CameraFlipButtonVisible = true;
+            recorder.MaxRecordingDurationSeconds = 5;
+            recorder.ShowAudioIndicator = true;
+            recorder.ShowLightIndicator = true;
+            recorder.ShowFaceOutline = true;
+            recorder.LuminosityUpdated += (double luminosity) => {
+                //Console.WriteLine("new luminosity value received: {0}", luminosity);
+            };
+            recorder.AudioLevelUpdated += (double level) =>
+            {
+                //Console.WriteLine("new audio level received: {0}", level);
+            };
+            recorder.FaceDetected += (int faceID, double x, double y, double width, double height) => {
+                Console.WriteLine("face {0} detected at: {1}x{2}, size: {3}:{4}", faceID, x, y, width, height); 
+            };
             try
             {
                 string token = await recorder.Record();
