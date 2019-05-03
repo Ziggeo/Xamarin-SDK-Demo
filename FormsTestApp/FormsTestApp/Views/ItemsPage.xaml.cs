@@ -34,6 +34,8 @@ namespace FormsTestApp
             Ziggeo.IZiggeoRecorder recorder = App.ZiggeoApplication.Recorder;
             recorder.VideoDevice = Ziggeo.ZiggeoVideoDevice.Front;
             recorder.CameraFlipButtonVisible = true;
+            recorder.VideoQuality = Ziggeo.VideoQuality.High;
+            recorder.AdditionalParameters = new Dictionary<string, string> { { "video_profile", "VIDEO_PROFILE_ID"} };
             try
             {
                 string token = await recorder.Record();

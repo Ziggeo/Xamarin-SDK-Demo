@@ -1,7 +1,10 @@
-# Ziggeo Xamarin SDK 1.2.3
+# Ziggeo Xamarin SDK 1.2.5
 
 Ziggeo API (https://ziggeo.com) allows you to integrate video recording and playback with only
 several lines of code in your app.
+
+## Upgrading from v.1.2.3 to v.1.2.5
+The update improves video quality and adds an opportunity to select the recorded video quality
 
 ## Upgrading from v.1.2.2 to v.1.2.3
 The update bring  `RecordingStopped` event. It will be invoked at the moment of the recording was stopped
@@ -30,11 +33,11 @@ To fire up a recorder, add:
 Ziggeo.IZiggeoRecorder recorder = App.ZiggeoApplication.Recorder;
 try
 {
-	string token = await recorder.Record();
+string token = await recorder.Record();
 }
 catch(Exception ex)
 {
-	await DisplayAlert("Error", ex.Message, "Okay");
+await DisplayAlert("Error", ex.Message, "Okay");
 }
 ``` 
 
@@ -117,6 +120,7 @@ ZiggeoApplication.Recorder.RecordingError += (Exception ex) =>
 Console.WriteLine("recorder error: {0}", ex.ToString());
 };
 ```
+
 
 ## API Methods
 To access API methods, use:
@@ -277,7 +281,6 @@ Closes and submits the stream
 ```csharp 
 App.ZiggeoApplication.Streams.Bind(string video_token_or_key, string token_or_key, Dictionary<string, string> arguments) 
 ``` 
- 
 
 ## License
 
