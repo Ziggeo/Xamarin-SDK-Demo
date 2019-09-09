@@ -6,6 +6,7 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using Android.OS;
+using Acr.UserDialogs;
 
 using Ziggeo;
 
@@ -18,8 +19,9 @@ namespace Ziggeo.Xamarin.NetStandard.Demo.Droid
         {
             TabLayoutResource = Resource.Layout.Tabbar;
             ToolbarResource = Resource.Layout.Toolbar;
-
+               
             base.OnCreate(savedInstanceState);
+            UserDialogs.Init(this);
             global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
             LoadApplication(new App(new ZiggeoApplication(App.ZiggeoApplicationToken)));
         }
