@@ -2,8 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Ziggeo.Xamarin.NetStandard.Demo.Models;
 
-namespace Ziggeo.Xamarin.NetStandard.Demo
+namespace Ziggeo.Xamarin.NetStandard.Demo.Services
 {
     public class MockDataStore : IDataStore<VideoItem>
     {

@@ -1,10 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Threading.Tasks;
-
 using Xamarin.Forms;
+using Ziggeo.Xamarin.NetStandard.Demo.Models;
+using Ziggeo.Xamarin.NetStandard.Demo.ViewModels;
 
-namespace Ziggeo.Xamarin.NetStandard.Demo
+namespace Ziggeo.Xamarin.NetStandard.Demo.Views
 {
     public partial class ItemsPage : ContentPage
     {

@@ -1,8 +1,10 @@
 ﻿using System;
-using Xamarin.Forms;
 using Acr.UserDialogs;
+using Xamarin.Forms;
+using Ziggeo.Xamarin.NetStandard.Demo.Models;
+using Ziggeo.Xamarin.NetStandard.Demo.ViewModels;
 
-namespace Ziggeo.Xamarin.NetStandard.Demo
+namespace Ziggeo.Xamarin.NetStandard.Demo.Views
 {
     public partial class ItemDetailPage : ContentPage
     {

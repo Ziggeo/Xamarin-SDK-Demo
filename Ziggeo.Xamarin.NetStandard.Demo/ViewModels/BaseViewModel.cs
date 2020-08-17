@@ -2,16 +2,18 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
-
 using Xamarin.Forms;
+using Ziggeo.Xamarin.NetStandard.Demo.Models;
+using Ziggeo.Xamarin.NetStandard.Demo.Services;
 
-namespace Ziggeo.Xamarin.NetStandard.Demo
+namespace Ziggeo.Xamarin.NetStandard.Demo.ViewModels
 {
     public class BaseViewModel : INotifyPropertyChanged
     {
         public IDataStore<VideoItem> DataStore => DependencyService.Get<IDataStore<VideoItem>>() ?? new MockDataStore();
 
         bool isBusy = false;
+
         public bool IsBusy
         {
             get { return isBusy; }
@@ -19,6 +21,7 @@ namespace Ziggeo.Xamarin.NetStandard.Demo
         }
 
         string title = string.Empty;
+
         public string Title
         {
             get { return title; }
@@ -26,7 +29,7 @@ namespace Ziggeo.Xamarin.NetStandard.Demo
         }
 
         protected bool SetProperty<T>(ref T backingStore, T value,
-            [CallerMemberName]string propertyName = "",
+            [CallerMemberName] string propertyName = "",
             Action onChanged = null)
         {
             if (EqualityComparer<T>.Default.Equals(backingStore, value))
@@ -39,7 +42,9 @@ namespace Ziggeo.Xamarin.NetStandard.Demo
         }
 
         #region INotifyPropertyChanged
+
         public event PropertyChangedEventHandler PropertyChanged;
+
         protected void OnPropertyChanged([CallerMemberName] string propertyName = "")
         {
             var changed = PropertyChanged;
@@ -48,6 +53,7 @@ namespace Ziggeo.Xamarin.NetStandard.Demo
 
             changed.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
+
         #endregion
     }
 }

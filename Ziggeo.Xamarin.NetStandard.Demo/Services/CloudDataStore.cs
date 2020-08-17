@@ -1,13 +1,10 @@
 ﻿using System;
-using System.Linq;
 using System.Collections.Generic;
-using System.Net.Http;
-using System.Text;
+using System.Linq;
 using System.Threading.Tasks;
+using Ziggeo.Xamarin.NetStandard.Demo.Models;
 
-using Newtonsoft.Json;
-
-namespace Ziggeo.Xamarin.NetStandard.Demo
+namespace Ziggeo.Xamarin.NetStandard.Demo.Services
 {
     public class CloudDataStore : IDataStore<VideoItem>
     {

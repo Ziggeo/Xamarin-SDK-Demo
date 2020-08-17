@@ -1,8 +1,6 @@
-﻿using System;
-using System.Windows.Input;
-using Xamarin.Forms;
+﻿using Ziggeo.Xamarin.NetStandard.Demo.Models;
 
-namespace Ziggeo.Xamarin.NetStandard.Demo
+namespace Ziggeo.Xamarin.NetStandard.Demo.ViewModels
 {
     public class ItemDetailViewModel : BaseViewModel
     {

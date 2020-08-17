@@ -2,8 +2,11 @@
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using Ziggeo;
+using Ziggeo.Xamarin.NetStandard.Demo.Services;
+using Ziggeo.Xamarin.NetStandard.Demo.Views;
 
 [assembly: XamlCompilation(XamlCompilationOptions.Compile)]
+
 namespace Ziggeo.Xamarin.NetStandard.Demo
 {
     public partial class App : Application
@@ -31,11 +34,12 @@ namespace Ziggeo.Xamarin.NetStandard.Demo
                 Console.WriteLine("upload started from {0}", filePath);
             };
 
-            ZiggeoApplication.Videos.UploadProgressChanged += (string token, string filename, long bytesSent, long totalBytes) =>
-            {
-                //update progress    
-                Console.WriteLine("upload progress changed for {2}: {0}/{1}", bytesSent, totalBytes, token);
-            };
+            ZiggeoApplication.Videos.UploadProgressChanged +=
+                (string token, string filename, long bytesSent, long totalBytes) =>
+                {
+                    //update progress    
+                    Console.WriteLine("upload progress changed for {2}: {0}/{1}", bytesSent, totalBytes, token);
+                };
 
             ZiggeoApplication.Videos.UploadComplete += (string token, string filename) =>
             {

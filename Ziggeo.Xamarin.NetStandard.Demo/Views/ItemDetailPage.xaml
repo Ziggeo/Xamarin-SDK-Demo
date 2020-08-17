@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Ziggeo.Xamarin.NetStandard.Demo.ItemDetailPage" Title="{Binding Title}">
-	<StackLayout Spacing="20" Padding="5">
+
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Ziggeo.Xamarin.NetStandard.Demo.Views.ItemDetailPage" Title="{Binding Title}">
+    <StackLayout Spacing="20" Padding="5">
         <Image x:Name="img" />
         <Button Margin="0,10,0,0" Text="Play" Clicked="Play_Clicked" BackgroundColor="Blue" TextColor="White" />
-        <Button Margin="0,10,0,0" Text="Delete" Command="{Binding DeleteItem}" Clicked="Delete_Clicked" BackgroundColor="Red" TextColor="White" />
-	</StackLayout>
+        <Button Margin="0,10,0,0" Text="Delete" Command="{Binding DeleteItem}" Clicked="Delete_Clicked"
+                BackgroundColor="Red" TextColor="White" />
+    </StackLayout>
 </ContentPage>

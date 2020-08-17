@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace Ziggeo.Xamarin.NetStandard.Demo
+﻿namespace Ziggeo.Xamarin.NetStandard.Demo.Models
 {
     public class VideoItem
     {
