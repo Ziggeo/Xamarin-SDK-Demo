@@ -1,8 +1,11 @@
 ﻿using System;
+using Xamarin.Essentials;
 using Xamarin.Forms;
+using Xamarin.Forms.Internals;
 using Xamarin.Forms.Xaml;
 using Ziggeo;
 using Ziggeo.Xamarin.NetStandard.Demo.Services;
+using Ziggeo.Xamarin.NetStandard.Demo.Utils;
 using Ziggeo.Xamarin.NetStandard.Demo.Views;
 
 [assembly: XamlCompilation(XamlCompilationOptions.Compile)]
@@ -88,12 +91,19 @@ namespace Ziggeo.Xamarin.NetStandard.Demo
             else
                 DependencyService.Register<CloudDataStore>();
 
+
+            Page page = IsLoggedIn() ? (Page) new LoginPage() : new MainPage();
+
             if (Device.RuntimePlatform == Device.iOS)
-                MainPage = new MainPage();
+                MainPage = page;
             else
-                MainPage = new NavigationPage(new MainPage());
+                MainPage = new NavigationPage(page);
         }
 
+        public bool IsLoggedIn()
+        {
+            return String.IsNullOrEmpty(Preferences.Get(Constants.KeyAppToken, null));
+        }
 
         protected override void OnStart()
         {

@@ -4,9 +4,9 @@
              x:Class="Ziggeo.Xamarin.NetStandard.Demo.App">
     <Application.Resources>
         <ResourceDictionary>
-            <Color x:Key="Primary">#2196F3</Color>
-            <Color x:Key="PrimaryDark">#1976D2</Color>
-            <Color x:Key="Accent">#96d1ff</Color>
+            <Color x:Key="Primary">#DC5163</Color>
+            <Color x:Key="PrimaryDark">#AA3E4B</Color>
+            <Color x:Key="Accent">#607D8B</Color>
             <Color x:Key="LightBackgroundColor">#FAFAFA</Color>
             <Color x:Key="DarkBackgroundColor">#C0C0C0</Color>
             <Color x:Key="MediumGrayTextColor">#4d4d4d</Color>
@@ -15,6 +15,14 @@
                 <Setter Property="BarBackgroundColor" Value="{StaticResource Primary}" />
                 <Setter Property="BarTextColor" Value="White" />
             </Style>
+            
+            <!--  SIZES  -->
+            <OnPlatform
+                x:Key="MessageTextSize"
+                x:TypeArguments="x:Double"
+                Android="18"
+                iOS="20" />
+
         </ResourceDictionary>
     </Application.Resources>
 </Application>

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- xmlns:controls="clr-namespace:SafeAuthenticatorApp.Controls" -->
+<ContentPage
+    x:Class="Ziggeo.Xamarin.NetStandard.Demo.Views.LoginPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:viewModels="clr-namespace:Ziggeo.Xamarin.NetStandard.Demo.ViewModels;assembly=Ziggeo.Xamarin.NetStandard.Demo"
+    xmlns:resources="clr-namespace:Ziggeo.Xamarin.NetStandard.Demo;assembly=Ziggeo.Xamarin.NetStandard.Demo"
+    NavigationPage.BackButtonTitle="Login"
+    NavigationPage.HasNavigationBar="False"
+    Visual="Material">
+
+    <ContentPage.BindingContext>
+        <viewModels:AuthViewModel />
+    </ContentPage.BindingContext>
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style x:Key="MessageStyle" TargetType="Label">
+                <Setter Property="FontSize" Value="{StaticResource MessageTextSize}" />
+                <Setter Property="FontAttributes" Value="Bold" />
+            </Style>
+            <Style x:Key="ImageStyle" TargetType="Image">
+                <Setter Property="Aspect" Value="AspectFit" />
+                <Setter Property="HeightRequest" Value="95" />
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout Padding="25">
+                <Image
+                    x:Name="ConnectionSettingsMenuIcon"
+                    Margin="10,30"
+                    HeightRequest="25"
+                    HorizontalOptions="EndAndExpand"
+                    Source="gearIcon"
+                    VerticalOptions="Start"
+                    WidthRequest="25" />
+
+                <StackLayout VerticalOptions="CenterAndExpand">
+
+                    <Image
+                        HorizontalOptions="Center"
+                        Source="logo.png"
+                        Style="{StaticResource ImageStyle}" />
+
+                    <Label
+                        HorizontalOptions="Center"
+                        Style="{StaticResource MessageStyle}"
+                        Text="{x:Static resources:AppResources.auth_message}" />
+
+                    <Entry
+                        IsVisible="{Binding IsManualQrMode}"
+                        x:Name="TokenEntry"
+                        Placeholder="{x:Static resources:AppResources.enter_manually_hint}"
+                        ReturnType="Done"
+                        Text="{Binding AppToken}" />
+
+                    <Button
+                        Command="{Binding AuthCommand}"
+                        Text="{x:Static resources:AppResources.btn_scan_qr_text}" />
+
+                    <Button
+                        Command="{Binding SwitchQrMode}"
+                        Text="{Binding SwitchModeBtnText}" />
+
+                    <!-- <Label -->
+                    <!--     Margin="0,10,0,0" -->
+                    <!--     HorizontalOptions="Center" -->
+                    <!--     Text="CREATE ACCOUNT" -->
+                    <!--     TextColor="{StaticResource PrimaryColor}"> -->
+                    <!--     <Label.GestureRecognizers> -->
+                    <!--         <TapGestureRecognizer Command="{Binding CreateAccountCommand}" /> -->
+                    <!--     </Label.GestureRecognizers> -->
+                    <!-- </Label> -->
+                </StackLayout>
+
+                <!-- <Label -->
+                <!--     HorizontalOptions="Center" -->
+                <!--     Style="{StaticResource NeedHelpStyle}" -->
+                <!--     Text="Need any help?" -->
+                <!--     VerticalOptions="End"> -->
+                <!--     <Label.GestureRecognizers> -->
+                <!--         <TapGestureRecognizer Command="{Binding NeedHelpCommand}" NumberOfTapsRequired="1" /> -->
+                <!--     </Label.GestureRecognizers> -->
+                <!-- </Label> -->
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
