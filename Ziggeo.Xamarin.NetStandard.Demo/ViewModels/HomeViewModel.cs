@@ -11,11 +11,10 @@ using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using System.Windows.Input;
 using Xamarin.Forms;
-using Ziggeo.Xamarin.NetStandard.Demo.Views;
 
 namespace Ziggeo.Xamarin.NetStandard.Demo.ViewModels
 {
-    public class AuthViewModel : INotifyPropertyChanged
+    public class HomeViewModel : INotifyPropertyChanged
     {
         private string _appToken;
         private bool _isManualQrMode;
@@ -23,25 +22,14 @@ namespace Ziggeo.Xamarin.NetStandard.Demo.ViewModels
         private string _authActionBtnText;
         public event PropertyChangedEventHandler PropertyChanged;
 
-        public AuthViewModel()
+        public HomeViewModel()
         {
-            AuthCommand = new Command(SaveTokenAndNavigateToMain, CanExecute);
+            AuthCommand = new Command(() => { }, CanExecute);
             SwitchQrMode = new Command(() => { IsManualQrMode = !IsManualQrMode; });
             _switchModeBtnText = AppResources.enter_qr_manually_text;
             _authActionBtnText = AppResources.btn_scan_qr_text;
         }
 
-        private void SaveTokenAndNavigateToMain()
-        {
-            if (IsManualQrMode)
-            {
-                Preferences.Set(Constants.KeyAppToken, AppToken);
-                MessagingCenter.Send(this, Constants.NavHome);
-            }
-            else
-            {
-            }
-        }
 
         public string AppToken
         {
@@ -69,7 +57,6 @@ namespace Ziggeo.Xamarin.NetStandard.Demo.ViewModels
             {
                 _switchModeBtnText = value;
                 OnPropertyChanged(nameof(SwitchModeBtnText));
-                ((Command) AuthCommand).ChangeCanExecute();
             }
         }
 

@@ -4,5 +4,8 @@ namespace Ziggeo.Xamarin.NetStandard.Demo.Utils
     {
         // Preferences
         internal const string KeyAppToken = "KeyAppToken";
+        
+        // Messenger
+        internal const string NavHome = "KeyAppToken";
     }
 }

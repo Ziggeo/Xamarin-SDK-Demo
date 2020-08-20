@@ -91,7 +91,7 @@ namespace Ziggeo.Xamarin.NetStandard.Demo
                 DependencyService.Register<CloudDataStore>();
 
 
-            Page page = IsLoggedIn() ? (Page) new LoginPage() : new MainPage();
+            Page page = IsLoggedIn() ? (Page) new LoginPage() : new HomePage();
 
             if (Device.RuntimePlatform == Device.iOS)
                 MainPage = page;
