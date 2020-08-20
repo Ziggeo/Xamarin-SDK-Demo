@@ -26,7 +26,6 @@ namespace Ziggeo.Xamarin.NetStandard.Demo
         public App(IZiggeoApplication instance)
         {
             InitializeComponent();
-
             ZiggeoApplication = instance;
 
             //ZiggeoApplication.ServerAuthToken = "SERVER_AUTH_TOKEN";

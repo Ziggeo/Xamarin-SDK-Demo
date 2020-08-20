@@ -7,7 +7,6 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:viewModels="clr-namespace:Ziggeo.Xamarin.NetStandard.Demo.ViewModels;assembly=Ziggeo.Xamarin.NetStandard.Demo"
     xmlns:resources="clr-namespace:Ziggeo.Xamarin.NetStandard.Demo;assembly=Ziggeo.Xamarin.NetStandard.Demo"
-    NavigationPage.BackButtonTitle="Login"
     NavigationPage.HasNavigationBar="False"
     Visual="Material">
 
@@ -29,65 +28,49 @@
     </ContentPage.Resources>
 
     <ContentPage.Content>
-        <ScrollView>
-            <StackLayout Padding="25">
+        <StackLayout
+            Padding="16">
+            <StackLayout
+                VerticalOptions="Start">
                 <Image
-                    x:Name="ConnectionSettingsMenuIcon"
-                    Margin="10,30"
-                    HeightRequest="25"
-                    HorizontalOptions="EndAndExpand"
-                    Source="gearIcon"
-                    VerticalOptions="Start"
-                    WidthRequest="25" />
+                    Margin="0,80,0,0"
+                    WidthRequest="250"
+                    Source="logo" />
+                <Label
+                    Margin="0,32"
+                    FontSize="Small"
+                    HorizontalTextAlignment="Center"
+                    Style="{StaticResource MessageStyle}"
+                    Text="{x:Static resources:AppResources.auth_message}" />
+            </StackLayout>
 
-                <StackLayout VerticalOptions="CenterAndExpand">
+            <AbsoluteLayout
+                VerticalOptions="End"
+                HeightRequest="200">
 
-                    <Image
-                        HorizontalOptions="Center"
-                        Source="logo.png"
-                        Style="{StaticResource ImageStyle}" />
+                <Entry
+                    Margin="0,16"
+                    AbsoluteLayout.LayoutFlags="All"
+                    AbsoluteLayout.LayoutBounds="0,0,1,1"
+                    IsVisible="{Binding IsManualQrMode}"
+                    x:Name="TokenEntry"
+                    Placeholder="{x:Static resources:AppResources.enter_manually_hint}"
+                    ReturnType="Done"
+                    Text="{Binding AppToken}" />
 
-                    <Label
-                        HorizontalOptions="Center"
-                        Style="{StaticResource MessageStyle}"
-                        Text="{x:Static resources:AppResources.auth_message}" />
-
-                    <Entry
-                        IsVisible="{Binding IsManualQrMode}"
-                        x:Name="TokenEntry"
-                        Placeholder="{x:Static resources:AppResources.enter_manually_hint}"
-                        ReturnType="Done"
-                        Text="{Binding AppToken}" />
-
+                <StackLayout
+                    AbsoluteLayout.LayoutBounds="0.5,1,180,100"
+                    AbsoluteLayout.LayoutFlags="PositionProportional">
                     <Button
                         Command="{Binding AuthCommand}"
-                        Text="{x:Static resources:AppResources.btn_scan_qr_text}" />
+                        Text="{Binding AuthActionBtnText}" />
 
                     <Button
+                        FontSize="12"
                         Command="{Binding SwitchQrMode}"
                         Text="{Binding SwitchModeBtnText}" />
-
-                    <!-- <Label -->
-                    <!--     Margin="0,10,0,0" -->
-                    <!--     HorizontalOptions="Center" -->
-                    <!--     Text="CREATE ACCOUNT" -->
-                    <!--     TextColor="{StaticResource PrimaryColor}"> -->
-                    <!--     <Label.GestureRecognizers> -->
-                    <!--         <TapGestureRecognizer Command="{Binding CreateAccountCommand}" /> -->
-                    <!--     </Label.GestureRecognizers> -->
-                    <!-- </Label> -->
                 </StackLayout>
-
-                <!-- <Label -->
-                <!--     HorizontalOptions="Center" -->
-                <!--     Style="{StaticResource NeedHelpStyle}" -->
-                <!--     Text="Need any help?" -->
-                <!--     VerticalOptions="End"> -->
-                <!--     <Label.GestureRecognizers> -->
-                <!--         <TapGestureRecognizer Command="{Binding NeedHelpCommand}" NumberOfTapsRequired="1" /> -->
-                <!--     </Label.GestureRecognizers> -->
-                <!-- </Label> -->
-            </StackLayout>
-        </ScrollView>
+            </AbsoluteLayout>
+        </StackLayout>
     </ContentPage.Content>
 </ContentPage>

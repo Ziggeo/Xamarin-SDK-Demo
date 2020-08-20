@@ -19,13 +19,15 @@ namespace Ziggeo.Xamarin.NetStandard.Demo.ViewModels
         private string _appToken;
         private bool _isManualQrMode;
         private string _switchModeBtnText;
+        private string _authActionBtnText;
         public event PropertyChangedEventHandler PropertyChanged;
 
         public AuthViewModel()
         {
             AuthCommand = new Command(() => { }, CanExecute);
             SwitchQrMode = new Command(() => { IsManualQrMode = !IsManualQrMode; });
-            _switchModeBtnText = AppResources.use_scanner_text;
+            _switchModeBtnText = AppResources.enter_qr_manually_text;
+            _authActionBtnText = AppResources.btn_scan_qr_text;
         }
 
 
@@ -45,7 +47,7 @@ namespace Ziggeo.Xamarin.NetStandard.Demo.ViewModels
 
         private bool CanExecute()
         {
-            return !string.IsNullOrWhiteSpace(AppToken);
+            return !IsManualQrMode || !string.IsNullOrWhiteSpace(AppToken);
         }
 
         public string SwitchModeBtnText
@@ -58,6 +60,17 @@ namespace Ziggeo.Xamarin.NetStandard.Demo.ViewModels
             }
         }
 
+        public string AuthActionBtnText
+        {
+            get => _authActionBtnText;
+            set
+            {
+                _authActionBtnText = value;
+                OnPropertyChanged(nameof(AuthActionBtnText));
+            }
+        }
+
+
         public bool IsManualQrMode
         {
             get => _isManualQrMode;
@@ -67,11 +80,13 @@ namespace Ziggeo.Xamarin.NetStandard.Demo.ViewModels
                 OnPropertyChanged(nameof(IsManualQrMode));
                 if (_isManualQrMode)
                 {
-                    SwitchModeBtnText = AppResources.enter_qr_manually_text;
+                    AuthActionBtnText = AppResources.btn_use_entered_text;
+                    SwitchModeBtnText = AppResources.use_scanner_text;
                 }
                 else
                 {
-                    SwitchModeBtnText = AppResources.use_scanner_text;
+                    AuthActionBtnText = AppResources.btn_scan_qr_text;
+                    SwitchModeBtnText = AppResources.enter_qr_manually_text;
                 }
             }
         }
