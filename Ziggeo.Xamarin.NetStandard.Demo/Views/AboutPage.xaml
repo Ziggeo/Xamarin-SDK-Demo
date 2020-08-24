@@ -3,7 +3,7 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Ziggeo.Xamarin.NetStandard.Demo.Views.AboutPage"
              xmlns:vm="clr-namespace:Ziggeo.Xamarin.NetStandard.Demo;"
-             xmlns:viewModels="clr-namespace:Ziggeo.Xamarin.NetStandard.Demo.ViewModels;assembly=Ziggeo.Xamarin.NetStandard.Demo"
+             xmlns:viewModels="clr-namespace:Ziggeo.Xamarin.NetStandard.Demo.ViewModels;assembly=Ziggeo demo. Xamarin"
              Title="{Binding Title}">
     <ContentPage.BindingContext>
         <viewModels:AboutViewModel />

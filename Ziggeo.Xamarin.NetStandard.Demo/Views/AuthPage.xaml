@@ -5,8 +5,8 @@
     x:Class="Ziggeo.Xamarin.NetStandard.Demo.Views.LoginPage"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:viewModels="clr-namespace:Ziggeo.Xamarin.NetStandard.Demo.ViewModels;assembly=Ziggeo.Xamarin.NetStandard.Demo"
-    xmlns:resources="clr-namespace:Ziggeo.Xamarin.NetStandard.Demo;assembly=Ziggeo.Xamarin.NetStandard.Demo"
+    xmlns:viewModels="clr-namespace:Ziggeo.Xamarin.NetStandard.Demo.ViewModels;assembly=Ziggeo demo. Xamarin"
+    xmlns:resources="clr-namespace:Ziggeo.Xamarin.NetStandard.Demo;assembly=Ziggeo demo. Xamarin"
     NavigationPage.HasNavigationBar="False"
     Visual="Material">
 
