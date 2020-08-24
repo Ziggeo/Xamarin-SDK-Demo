@@ -25,22 +25,30 @@ namespace Ziggeo.Xamarin.NetStandard.Demo.ViewModels
 
         public AuthViewModel()
         {
-            AuthCommand = new Command(SaveTokenAndNavigateToMain, CanExecute);
+            AuthCommand = new Command(OnAuthPressed, CanExecute);
             SwitchQrMode = new Command(() => { IsManualQrMode = !IsManualQrMode; });
             _switchModeBtnText = AppResources.enter_qr_manually_text;
             _authActionBtnText = AppResources.btn_scan_qr_text;
         }
 
-        private void SaveTokenAndNavigateToMain()
+        private void OnAuthPressed()
         {
             if (IsManualQrMode)
             {
-                Preferences.Set(Constants.KeyAppToken, AppToken);
-                MessagingCenter.Send(this, Constants.NavHome);
+                SaveAndNavigate(AppToken);
             }
             else
             {
+                IZiggeoQrScanner scanner = App.ZiggeoApplication.QrScanner;
+                scanner.Decoded += SaveAndNavigate;
+                scanner.StartQrScanner();
             }
+        }
+
+        private void SaveAndNavigate(string token)
+        {
+            Preferences.Set(Constants.KeyAppToken, token);
+            MessagingCenter.Send(this, Constants.NavHome);
         }
 
         public string AppToken
