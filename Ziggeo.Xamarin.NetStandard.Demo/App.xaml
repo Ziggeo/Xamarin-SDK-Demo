@@ -15,7 +15,7 @@
                 <Setter Property="BarBackgroundColor" Value="{StaticResource Primary}" />
                 <Setter Property="BarTextColor" Value="White" />
             </Style>
-            
+
             <!--  SIZES  -->
             <OnPlatform
                 x:Key="MessageTextSize"
@@ -23,6 +23,17 @@
                 Android="18"
                 iOS="20" />
 
+            <Style TargetType="Label">
+                <Setter Property="FontFamily" Value="quicksand" />
+            </Style>
+            
+            <Style TargetType="Button">
+                <Setter Property="FontFamily" Value="quicksand" />
+            </Style>
+            
+            <Style TargetType="Entry">
+                <Setter Property="FontFamily" Value="quicksand" />
+            </Style>
         </ResourceDictionary>
     </Application.Resources>
 </Application>

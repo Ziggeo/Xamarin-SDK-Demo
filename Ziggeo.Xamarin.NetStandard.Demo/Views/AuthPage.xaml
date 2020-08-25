@@ -14,19 +14,6 @@
         <viewModels:AuthViewModel />
     </ContentPage.BindingContext>
 
-    <ContentPage.Resources>
-        <ResourceDictionary>
-            <Style x:Key="MessageStyle" TargetType="Label">
-                <Setter Property="FontSize" Value="{StaticResource MessageTextSize}" />
-                <Setter Property="FontAttributes" Value="Bold" />
-            </Style>
-            <Style x:Key="ImageStyle" TargetType="Image">
-                <Setter Property="Aspect" Value="AspectFit" />
-                <Setter Property="HeightRequest" Value="95" />
-            </Style>
-        </ResourceDictionary>
-    </ContentPage.Resources>
-
     <ContentPage.Content>
         <StackLayout
             Padding="16">
@@ -38,9 +25,7 @@
                     Source="logo" />
                 <Label
                     Margin="0,32"
-                    FontSize="Small"
                     HorizontalTextAlignment="Center"
-                    Style="{StaticResource MessageStyle}"
                     Text="{x:Static resources:AppResources.auth_message}" />
             </StackLayout>
 
