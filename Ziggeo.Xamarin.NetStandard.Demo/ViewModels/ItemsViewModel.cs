@@ -23,7 +23,7 @@ namespace Ziggeo.Xamarin.NetStandard.Demo.ViewModels
             {
                 var _item = item as VideoItem;
                 Items.Add(_item);
-                DataStore.AddCachedItem(_item);
+                VideosService.AddCachedItem(_item);
             });
         }
 
@@ -37,7 +37,7 @@ namespace Ziggeo.Xamarin.NetStandard.Demo.ViewModels
             try
             {
                 Items.Clear();
-                var items = await DataStore.Index();
+                var items = await VideosService.Index();
                 foreach (var item in items)
                 {
                     Items.Add(item);

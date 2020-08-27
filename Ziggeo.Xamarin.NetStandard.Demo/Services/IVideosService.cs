@@ -1,12 +1,13 @@
 ﻿using System.Collections.Generic;
 using System.Threading.Tasks;
+using Ziggeo.Xamarin.NetStandard.Demo.Models;
 
 namespace Ziggeo.Xamarin.NetStandard.Demo.Services
 {
-    public interface IDataStore<T>
+    public interface IVideosService
     {
-        void AddCachedItem(T item);
+        void AddCachedItem(VideoItem item);
         Task<bool> Delete(string id);
-        Task<IEnumerable<T>> Index();
+        Task<IEnumerable<VideoItem>> Index();
     }
 }

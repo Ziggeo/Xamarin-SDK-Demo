@@ -86,9 +86,9 @@ namespace Ziggeo.Xamarin.NetStandard.Demo
             };
 
             if (UseMockDataStore)
-                DependencyService.Register<MockDataStore>();
+                DependencyService.Register<MockVideosService>();
             else
-                DependencyService.Register<CloudDataStore>();
+                DependencyService.Register<CloudVideosService>();
 
 
             Page page = IsLoggedIn() ? (Page) new LoginPage() : new HomePage();

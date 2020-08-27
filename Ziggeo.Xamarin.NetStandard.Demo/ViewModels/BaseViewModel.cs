@@ -10,7 +10,7 @@ namespace Ziggeo.Xamarin.NetStandard.Demo.ViewModels
 {
     public class BaseViewModel : INotifyPropertyChanged
     {
-        public IDataStore<VideoItem> DataStore => DependencyService.Get<IDataStore<VideoItem>>() ?? new MockDataStore();
+        public IVideosService VideosService => DependencyService.Get<IVideosService>() ?? new MockVideosService();
 
         bool isBusy = false;
 

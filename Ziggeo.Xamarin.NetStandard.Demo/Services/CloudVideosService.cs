@@ -6,11 +6,11 @@ using Ziggeo.Xamarin.NetStandard.Demo.Models;
 
 namespace Ziggeo.Xamarin.NetStandard.Demo.Services
 {
-    public class CloudDataStore : IDataStore<VideoItem>
+    public class CloudVideosService : IVideosService
     {
         List<VideoItem> items;
 
-        public CloudDataStore()
+        public CloudVideosService()
         {
             items = new List<VideoItem>();
         }

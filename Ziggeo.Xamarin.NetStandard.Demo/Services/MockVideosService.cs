@@ -6,11 +6,11 @@ using Ziggeo.Xamarin.NetStandard.Demo.Models;
 
 namespace Ziggeo.Xamarin.NetStandard.Demo.Services
 {
-    public class MockDataStore : IDataStore<VideoItem>
+    public class MockVideosService : IVideosService
     {
         List<VideoItem> items;
 
-        public MockDataStore()
+        public MockVideosService()
         {
             items = new List<VideoItem>();
             var mockItems = new List<VideoItem>
