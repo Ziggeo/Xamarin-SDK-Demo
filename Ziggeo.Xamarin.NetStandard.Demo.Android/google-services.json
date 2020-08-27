@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "762880395808",
+    "firebase_url": "https://ziggeo-xamarin-demo.firebaseio.com",
+    "project_id": "ziggeo-xamarin-demo",
+    "storage_bucket": "ziggeo-xamarin-demo.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:762880395808:android:4471d433b465d8cf8c4a45",
+        "android_client_info": {
+          "package_name": "com.ziggeo.xamarin.demo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "762880395808-8875t2l7fekmlc1mk6aflun1d45a2a0d.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC9HGlIA-aTGQOvdaAouLXNkd7tq4XVbPU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "762880395808-8875t2l7fekmlc1mk6aflun1d45a2a0d.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

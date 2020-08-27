@@ -22,6 +22,7 @@ namespace Ziggeo.Xamarin.NetStandard.Demo.Droid
             ToolbarResource = Resource.Layout.Toolbar;
                
             base.OnCreate(savedInstanceState);
+            Fabric.Fabric.With(this, new Crashlytics.Crashlytics());
             Platform.Init(this, savedInstanceState); 
             UserDialogs.Init(this);
             global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
