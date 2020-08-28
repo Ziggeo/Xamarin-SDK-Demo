@@ -12,9 +12,9 @@ using Ziggeo.Xamarin.NetStandard.Demo.Utils;
 namespace Ziggeo.Xamarin.NetStandard.Demo.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class LoginPage : ContentPage
+    public partial class AuthPage : ContentPage
     {
-        public LoginPage()
+        public AuthPage()
         {
             InitializeComponent();
             MessagingCenter.Subscribe<AuthViewModel>(
