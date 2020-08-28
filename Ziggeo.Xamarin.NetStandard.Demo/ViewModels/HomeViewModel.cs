@@ -14,7 +14,7 @@ using Xamarin.Forms;
 
 namespace Ziggeo.Xamarin.NetStandard.Demo.ViewModels
 {
-    public class HomeViewModel : INotifyPropertyChanged
+    public class HomeViewModel : BaseViewModel
     {
         private string _appToken;
         private bool _isManualQrMode;
@@ -29,7 +29,6 @@ namespace Ziggeo.Xamarin.NetStandard.Demo.ViewModels
             _switchModeBtnText = AppResources.enter_qr_manually_text;
             _authActionBtnText = AppResources.btn_scan_qr_text;
         }
-
 
         public string AppToken
         {
@@ -70,7 +69,6 @@ namespace Ziggeo.Xamarin.NetStandard.Demo.ViewModels
             }
         }
 
-
         public bool IsManualQrMode
         {
             get => _isManualQrMode;
@@ -89,21 +87,6 @@ namespace Ziggeo.Xamarin.NetStandard.Demo.ViewModels
                     SwitchModeBtnText = AppResources.enter_qr_manually_text;
                 }
             }
-        }
-
-        bool SetProperty<T>(ref T storage, T value, [CallerMemberName] string propertyName = null)
-        {
-            if (Object.Equals(storage, value))
-                return false;
-
-            storage = value;
-            OnPropertyChanged(propertyName);
-            return true;
-        }
-
-        protected void OnPropertyChanged([CallerMemberName] string propertyName = null)
-        {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
     }
 }

@@ -7,7 +7,6 @@ namespace Ziggeo.Xamarin.NetStandard.Demo.ViewModels
         public VideoItem Item { get; set; }
         public ItemDetailViewModel(VideoItem item = null)
         {
-            Title = item?.token;
             Item = item;
         }
 

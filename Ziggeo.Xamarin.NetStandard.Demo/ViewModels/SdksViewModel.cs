@@ -9,23 +9,17 @@ using Ziggeo.Xamarin.NetStandard.Demo.Views;
 
 namespace Ziggeo.Xamarin.NetStandard.Demo.ViewModels
 {
-    public class ItemsViewModel : BaseViewModel
+    public class SdksViewModel : BaseViewModel
     {
-        public ObservableCollection<VideoItem> Items { get; set; }
+        public ObservableCollection<SdkItem> Items { get; set; }
         public Command LoadItemsCommand { get; set; }
-        public IVideosService VideosService => DependencyService.Get<IVideosService>() ?? new MockVideosService();
 
-        public ItemsViewModel()
+        public IInfoService InfoService => DependencyService.Get<IInfoService>();
+
+        public SdksViewModel()
         {
-            Items = new ObservableCollection<VideoItem>();
+            Items = new ObservableCollection<SdkItem>();
             LoadItemsCommand = new Command(async () => await ExecuteLoadItemsCommand());
-
-            MessagingCenter.Subscribe<ItemsPage, VideoItem>(this, "AddItem", (obj, item) =>
-            {
-                var _item = item as VideoItem;
-                Items.Add(_item);
-                VideosService.AddCachedItem(_item);
-            });
         }
 
         async Task ExecuteLoadItemsCommand()
@@ -38,11 +32,10 @@ namespace Ziggeo.Xamarin.NetStandard.Demo.ViewModels
             try
             {
                 Items.Clear();
-                var items = await VideosService.Index();
+                var items = InfoService.GetSdks();
                 foreach (var item in items)
                 {
                     Items.Add(item);
-
                 }
             }
             catch (Exception ex)

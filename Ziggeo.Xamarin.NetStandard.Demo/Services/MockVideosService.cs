@@ -15,10 +15,10 @@ namespace Ziggeo.Xamarin.NetStandard.Demo.Services
             items = new List<VideoItem>();
             var mockItems = new List<VideoItem>
             {
-                new VideoItem { token = Guid.NewGuid().ToString()},
-                new VideoItem { token = Guid.NewGuid().ToString()},
-                new VideoItem { token = Guid.NewGuid().ToString()},
-                new VideoItem { token = Guid.NewGuid().ToString()},
+                new VideoItem { Token = Guid.NewGuid().ToString()},
+                new VideoItem { Token = Guid.NewGuid().ToString()},
+                new VideoItem { Token = Guid.NewGuid().ToString()},
+                new VideoItem { Token = Guid.NewGuid().ToString()},
             };
 
             foreach (var item in mockItems)
@@ -34,7 +34,7 @@ namespace Ziggeo.Xamarin.NetStandard.Demo.Services
 
         public async Task<bool> Delete(string token)
         {
-            var _item = items.Where((VideoItem arg) => arg.token == token).FirstOrDefault();
+            var _item = items.Where((VideoItem arg) => arg.Token == token).FirstOrDefault();
             items.Remove(_item);
 
             return await Task.FromResult(true);

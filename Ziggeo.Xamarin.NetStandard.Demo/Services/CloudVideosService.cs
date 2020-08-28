@@ -18,7 +18,8 @@ namespace Ziggeo.Xamarin.NetStandard.Demo.Services
         public async Task<IEnumerable<VideoItem>> Index()
         {
             items.Clear();
-            items.AddRange((await App.ZiggeoApplication.Videos.Index(null)).Select(jsonObj => new VideoItem() { token = jsonObj["token"].ToString() }));
+            items.AddRange((await App.ZiggeoApplication.Videos.Index(null))
+                .Select(jsonObj => new VideoItem() {Token = jsonObj["token"].ToString()}));
             return items;
         }
 
@@ -34,7 +35,7 @@ namespace Ziggeo.Xamarin.NetStandard.Demo.Services
                 await App.ZiggeoApplication.Videos.Destroy(token);
                 return true;
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 Console.WriteLine(ex.ToString());
                 return false;

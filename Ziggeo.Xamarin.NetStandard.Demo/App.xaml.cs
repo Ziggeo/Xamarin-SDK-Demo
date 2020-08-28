@@ -85,13 +85,14 @@ namespace Ziggeo.Xamarin.NetStandard.Demo
                 Console.WriteLine("recorder error: {0}", ex.ToString());
             };
 
+            DependencyService.Register<InfoService>();
             if (UseMockDataStore)
                 DependencyService.Register<MockVideosService>();
             else
                 DependencyService.Register<CloudVideosService>();
 
 
-            Page page = IsLoggedIn() ? (Page) new LoginPage() : new HomePage();
+            Page page = IsLoggedIn() ? (Page) new LoginPage() : new ItemsPage();
 
             if (Device.RuntimePlatform == Device.iOS)
                 MainPage = page;

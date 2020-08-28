@@ -7,6 +7,7 @@ using Android.Views;
 using Android.Widget;
 using Android.OS;
 using Acr.UserDialogs;
+using FFImageLoading.Forms.Platform;
 using Xamarin.Essentials;
 
 using Ziggeo;
@@ -22,6 +23,8 @@ namespace Ziggeo.Xamarin.NetStandard.Demo.Droid
             ToolbarResource = Resource.Layout.Toolbar;
                
             base.OnCreate(savedInstanceState);
+            CachedImageRenderer.Init(true);
+            CachedImageRenderer.InitImageViewHandler();
             Platform.Init(this, savedInstanceState); 
             UserDialogs.Init(this);
             global::Xamarin.Forms.Forms.Init(this, savedInstanceState);

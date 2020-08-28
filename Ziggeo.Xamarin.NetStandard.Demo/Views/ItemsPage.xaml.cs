@@ -1,6 +1,7 @@
 ﻿using System;
 using Xamarin.Forms;
 using Ziggeo.Xamarin.NetStandard.Demo.Models;
+using Ziggeo.Xamarin.NetStandard.Demo.Services;
 using Ziggeo.Xamarin.NetStandard.Demo.ViewModels;
 
 namespace Ziggeo.Xamarin.NetStandard.Demo.Views
@@ -50,7 +51,7 @@ namespace Ziggeo.Xamarin.NetStandard.Demo.Views
             try
             {
                 string token = await recorder.Record();
-                MessagingCenter.Send<ItemsPage, VideoItem>(this, "AddItem", new VideoItem() { token = token });
+                MessagingCenter.Send<ItemsPage, VideoItem>(this, "AddItem", new VideoItem() { Token = token });
             }
             catch(Exception ex)
             {

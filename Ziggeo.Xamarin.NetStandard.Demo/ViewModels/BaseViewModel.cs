@@ -10,50 +10,27 @@ namespace Ziggeo.Xamarin.NetStandard.Demo.ViewModels
 {
     public class BaseViewModel : INotifyPropertyChanged
     {
-        public IVideosService VideosService => DependencyService.Get<IVideosService>() ?? new MockVideosService();
+        public event PropertyChangedEventHandler PropertyChanged;
 
-        bool isBusy = false;
+        private bool _isBusy = false;
 
         public bool IsBusy
         {
-            get { return isBusy; }
-            set { SetProperty(ref isBusy, value); }
+            get { return _isBusy; }
+            set { SetProperty(ref _isBusy, value); }
         }
 
-        string title = string.Empty;
-
-        public string Title
+        protected void SetProperty<T>(ref T storage, T value, [CallerMemberName] string propertyName = null)
         {
-            get { return title; }
-            set { SetProperty(ref title, value); }
-        }
+            if (Equals(storage, value)) return;
 
-        protected bool SetProperty<T>(ref T backingStore, T value,
-            [CallerMemberName] string propertyName = "",
-            Action onChanged = null)
-        {
-            if (EqualityComparer<T>.Default.Equals(backingStore, value))
-                return false;
-
-            backingStore = value;
-            onChanged?.Invoke();
+            storage = value;
             OnPropertyChanged(propertyName);
-            return true;
         }
 
-        #region INotifyPropertyChanged
-
-        public event PropertyChangedEventHandler PropertyChanged;
-
-        protected void OnPropertyChanged([CallerMemberName] string propertyName = "")
+        protected void OnPropertyChanged([CallerMemberName] string propertyName = null)
         {
-            var changed = PropertyChanged;
-            if (changed == null)
-                return;
-
-            changed.Invoke(this, new PropertyChangedEventArgs(propertyName));
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
-
-        #endregion
     }
 }

@@ -1,27 +1,16 @@
-﻿using System;
-using System.ComponentModel;
-using System.Windows.Input;
+﻿using System.Windows.Input;
 using Xamarin.Essentials;
 using Xamarin.Forms;
 using Ziggeo.Xamarin.NetStandard.Demo.Utils;
-using System;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.ComponentModel;
-using System.Runtime.CompilerServices;
-using System.Windows.Input;
-using Xamarin.Forms;
-using Ziggeo.Xamarin.NetStandard.Demo.Views;
 
 namespace Ziggeo.Xamarin.NetStandard.Demo.ViewModels
 {
-    public class AuthViewModel : INotifyPropertyChanged
+    public class AuthViewModel : BaseViewModel
     {
         private string _appToken;
         private bool _isManualQrMode;
         private string _switchModeBtnText;
         private string _authActionBtnText;
-        public event PropertyChangedEventHandler PropertyChanged;
 
         public AuthViewModel()
         {
@@ -110,21 +99,6 @@ namespace Ziggeo.Xamarin.NetStandard.Demo.ViewModels
                     SwitchModeBtnText = AppResources.enter_qr_manually_text;
                 }
             }
-        }
-
-        bool SetProperty<T>(ref T storage, T value, [CallerMemberName] string propertyName = null)
-        {
-            if (Object.Equals(storage, value))
-                return false;
-
-            storage = value;
-            OnPropertyChanged(propertyName);
-            return true;
-        }
-
-        protected void OnPropertyChanged([CallerMemberName] string propertyName = null)
-        {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
     }
 }

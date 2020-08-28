@@ -1,10 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-
+using FFImageLoading.Forms.Platform;
 using Foundation;
 using UIKit;
-
 using Ziggeo;
 
 namespace Ziggeo.Xamarin.NetStandard.Demo.iOS
@@ -26,6 +25,8 @@ namespace Ziggeo.Xamarin.NetStandard.Demo.iOS
         {
             global::Xamarin.Forms.Forms.Init();
             global::Xamarin.Forms.FormsMaterial.Init();
+            CachedImageRenderer.Init();
+            CachedImageRenderer.InitImageSourceHandler();
             LoadApplication(new App(new ZiggeoApplication(App.ZiggeoApplicationToken)));
 
             return base.FinishedLaunching(app, options);

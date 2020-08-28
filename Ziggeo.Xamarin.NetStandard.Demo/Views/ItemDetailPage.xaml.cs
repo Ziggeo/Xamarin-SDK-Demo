@@ -17,7 +17,7 @@ namespace Ziggeo.Xamarin.NetStandard.Demo.Views
 
             var item = new VideoItem
             {
-                token = "Item 1",
+                Token = "Item 1",
             };
 
             viewModel = new ItemDetailViewModel(item);
@@ -37,7 +37,7 @@ namespace Ziggeo.Xamarin.NetStandard.Demo.Views
             ShowLoading();
             try
             {
-                var stream = await App.ZiggeoApplication.Videos.DownloadImage(viewModel.Item.token);
+                var stream = await App.ZiggeoApplication.Videos.DownloadImage(viewModel.Item.Token);
                 this.img.Source = ImageSource.FromStream(() => { return stream; });
             }
             catch (Exception ex)
@@ -55,7 +55,7 @@ namespace Ziggeo.Xamarin.NetStandard.Demo.Views
             ShowLoading();
             try
             {
-                await App.ZiggeoApplication.Videos.Destroy(viewModel.Item.token);
+                await App.ZiggeoApplication.Videos.Destroy(viewModel.Item.Token);
                 await Navigation.PopAsync();
             }
             catch (Exception exception)
@@ -71,7 +71,7 @@ namespace Ziggeo.Xamarin.NetStandard.Demo.Views
         async void Play_Clicked(object sender, System.EventArgs e)
         {
             Ziggeo.IZiggeoPlayer player = App.ZiggeoApplication.Player;
-            await player.Play(viewModel.Item.token);
+            await player.Play(viewModel.Item.Token);
         }
 
         private void ShowLoading()
