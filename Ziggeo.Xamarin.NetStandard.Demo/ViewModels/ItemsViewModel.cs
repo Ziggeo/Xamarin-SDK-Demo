@@ -18,7 +18,7 @@ namespace Ziggeo.Xamarin.NetStandard.Demo.ViewModels
         public ItemsViewModel()
         {
             Items = new ObservableCollection<VideoItem>();
-            LoadItemsCommand = new Command(async () => await ExecuteLoadItemsCommand());
+            LoadItemsCommand = new Command(async () => await ExecuteLoadCommand());
 
             MessagingCenter.Subscribe<ItemsPage, VideoItem>(this, "AddItem", (obj, item) =>
             {
@@ -28,7 +28,7 @@ namespace Ziggeo.Xamarin.NetStandard.Demo.ViewModels
             });
         }
 
-        async Task ExecuteLoadItemsCommand()
+        public override async Task ExecuteLoadCommand()
         {
             if (IsBusy)
                 return;
@@ -42,7 +42,6 @@ namespace Ziggeo.Xamarin.NetStandard.Demo.ViewModels
                 foreach (var item in items)
                 {
                     Items.Add(item);
-
                 }
             }
             catch (Exception ex)

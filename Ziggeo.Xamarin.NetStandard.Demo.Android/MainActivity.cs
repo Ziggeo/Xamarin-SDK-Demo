@@ -23,12 +23,12 @@ namespace Ziggeo.Xamarin.NetStandard.Demo.Droid
             ToolbarResource = Resource.Layout.Toolbar;
                
             base.OnCreate(savedInstanceState);
-            CachedImageRenderer.Init(true);
-            CachedImageRenderer.InitImageViewHandler();
-            Platform.Init(this, savedInstanceState); 
-            UserDialogs.Init(this);
+            Platform.Init(this, savedInstanceState);
             global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
             global::Xamarin.Forms.FormsMaterial.Init(this, savedInstanceState);
+            CachedImageRenderer.Init(true);
+            CachedImageRenderer.InitImageViewHandler();
+            UserDialogs.Init(this);
             LoadApplication(new App(new ZiggeoApplication(App.ZiggeoApplicationToken)));
         }
 

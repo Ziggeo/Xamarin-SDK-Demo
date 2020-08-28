@@ -3,7 +3,7 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:forms="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
              xmlns:resources="clr-namespace:Ziggeo.Xamarin.NetStandard.Demo;assembly=Ziggeo.Xamarin.NetStandard.Demo"
-             x:Class="Ziggeo.Xamarin.NetStandard.Demo.Views.SdksPage"
+             x:Class="Ziggeo.Xamarin.NetStandard.Demo.Views.ListInfoPage"
              Title="{x:Static resources:AppResources.sdks_header}">
 
     <ContentPage.Content>
@@ -11,7 +11,6 @@
             <ListView x:Name="ItemsListView"
                       BackgroundColor="White"
                       ItemsSource="{Binding Items}"
-                      VerticalOptions="FillAndExpand"
                       HasUnevenRows="true"
                       CachingStrategy="RecycleElement"
                       ItemSelected="OnItemSelected">
@@ -19,9 +18,19 @@
                     <DataTemplate>
                         <ViewCell>
                             <StackLayout>
-                                <forms:CachedImage
-                                    HeightRequest="200"
-                                    Source="{Binding Logo}" />
+                                <Grid
+                                    HorizontalOptions="Fill"
+                                    VerticalOptions="Fill">
+                                    <Image
+                                        Margin="20"
+                                        HeightRequest="200"
+                                        Source="{Binding Logo}" />
+                                    <BoxView
+                                        HorizontalOptions="Fill"
+                                        VerticalOptions="Fill"
+                                        BackgroundColor="#000000"
+                                        Opacity="0.2" />
+                                </Grid>
                             </StackLayout>
                         </ViewCell>
                     </DataTemplate>

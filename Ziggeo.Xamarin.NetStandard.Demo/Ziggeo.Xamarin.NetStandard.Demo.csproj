@@ -49,12 +49,8 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>AppResources.resx</DependentUpon>
     </Compile>
-    <Compile Update="Views\SdksPage.xaml.cs">
+    <Compile Update="Views\ListInfoPage.xaml.cs">
       <DependentUpon>SdksPage.xaml</DependentUpon>
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Update="Views\TopClientsPage.xaml.cs">
-      <DependentUpon>TopClientsPage.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>

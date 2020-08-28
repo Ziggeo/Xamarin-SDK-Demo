@@ -9,30 +9,14 @@ using Ziggeo.Xamarin.NetStandard.Demo.Views;
 
 namespace Ziggeo.Xamarin.NetStandard.Demo.ViewModels
 {
-    public class TopClientsViewModel : BaseViewModel
+    public class TopClientsViewModel : ListInfoViewModel<ClientItem>
     {
-        public ObservableCollection<ClientItem> Items { get; set; }
-        public Command LoadItemsCommand { get; set; }
-
-        public IInfoService InfoService => DependencyService.Get<IInfoService>();
-
-        public TopClientsViewModel()
+        public override async Task ExecuteLoadCommand()
         {
-            Items = new ObservableCollection<ClientItem>();
-            LoadItemsCommand = new Command(async () => await ExecuteLoadItemsCommand());
-        }
-
-        async Task ExecuteLoadItemsCommand()
-        {
-            if (IsBusy)
-                return;
-
-            IsBusy = true;
-
             try
             {
                 Items.Clear();
-                var items = InfoService.GetTopClients();
+                var items = await InfoService.GetTopClients();
                 foreach (var item in items)
                 {
                     Items.Add(item);
@@ -41,10 +25,6 @@ namespace Ziggeo.Xamarin.NetStandard.Demo.ViewModels
             catch (Exception ex)
             {
                 Debug.WriteLine(ex);
-            }
-            finally
-            {
-                IsBusy = false;
             }
         }
     }

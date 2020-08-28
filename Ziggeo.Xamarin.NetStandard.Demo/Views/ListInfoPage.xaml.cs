@@ -6,15 +6,15 @@ using Ziggeo.Xamarin.NetStandard.Demo.ViewModels;
 
 namespace Ziggeo.Xamarin.NetStandard.Demo.Views
 {
-    public partial class TopClientsPage : ContentPage
+    public partial class ListInfoPage : ContentPage
     {
-        TopClientsViewModel _viewModel;
+        BaseViewModel _viewModel;
 
-        public TopClientsPage()
+        public ListInfoPage(BaseViewModel model)
         {
             InitializeComponent();
 
-            BindingContext = _viewModel = new TopClientsViewModel();
+            BindingContext = _viewModel = model;
         }
 
         async void OnItemSelected(object sender, SelectedItemChangedEventArgs args)
@@ -31,7 +31,7 @@ namespace Ziggeo.Xamarin.NetStandard.Demo.Views
         protected override void OnAppearing()
         {
             base.OnAppearing();
-            _viewModel.LoadItemsCommand.Execute(null);
+            _viewModel.LoadCommand.Execute(null);
         }
     }
 }

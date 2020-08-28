@@ -6,7 +6,7 @@ namespace Ziggeo.Xamarin.NetStandard.Demo.Services
 {
     public interface IInfoService
     {
-        IEnumerable<ClientItem> GetTopClients();
-        IEnumerable<SdkItem> GetSdks();
+        Task<IEnumerable<ClientItem>> GetTopClients();
+        Task<IEnumerable<SdkItem>> GetSdks();
     }
 }

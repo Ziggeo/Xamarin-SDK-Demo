@@ -76,19 +76,20 @@
     <None Include="Properties\AndroidManifest.xml" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\ic_android.jpg" />
-    <AndroidResource Include="Resources\drawable\ic_csharp.jpg" />
-    <AndroidResource Include="Resources\drawable\ic_flutter.jpg" />
-    <AndroidResource Include="Resources\drawable\ic_java.jpg" />
     <AndroidResource Include="Resources\drawable\ic_launcher_foreground.xml" />
-    <AndroidResource Include="Resources\drawable\ic_nodejs.jpg" />
-    <AndroidResource Include="Resources\drawable\ic_objc.jpg" />
-    <AndroidResource Include="Resources\drawable\ic_php.jpg" />
-    <AndroidResource Include="Resources\drawable\ic_python.jpg" />
-    <AndroidResource Include="Resources\drawable\ic_reactnative.jpg" />
-    <AndroidResource Include="Resources\drawable\ic_ruby.jpg" />
-    <AndroidResource Include="Resources\drawable\ic_swift.jpg" />
-    <AndroidResource Include="Resources\drawable\ic_xamarin.jpg" />
+    <AndroidResource Include="Resources\drawable\logo_android.png" />
+    <AndroidResource Include="Resources\drawable\logo_csharp.png" />
+    <AndroidResource Include="Resources\drawable\logo_flutter.png" />
+    <AndroidResource Include="Resources\drawable\logo_java.png" />
+    <AndroidResource Include="Resources\drawable\logo_nodejs.png" />
+    <AndroidResource Include="Resources\drawable\logo_objc.png" />
+    <AndroidResource Include="Resources\drawable\logo_php.png" />
+    <AndroidResource Include="Resources\drawable\logo_python.png" />
+    <AndroidResource Include="Resources\drawable\logo_react.png" />
+    <AndroidResource Include="Resources\drawable\logo_ruby.png" />
+    <AndroidResource Include="Resources\drawable\logo_swift.png" />
+    <AndroidResource Include="Resources\drawable\logo_xamarin.png" />
+    <AndroidResource Include="Resources\drawable\xamagon.png" />
     <AndroidResource Include="Resources\layout\Tabbar.axml" />
     <AndroidResource Include="Resources\layout\Toolbar.axml" />
     <AndroidResource Include="Resources\mipmap-anydpi-v26\ic_launcher.xml" />

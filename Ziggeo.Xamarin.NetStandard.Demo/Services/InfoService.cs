@@ -17,14 +17,14 @@ namespace Ziggeo.Xamarin.NetStandard.Demo.Services
             _initSdks();
         }
 
-        public IEnumerable<ClientItem> GetTopClients()
+        public async Task<IEnumerable<ClientItem>> GetTopClients()
         {
-            return _clientItems;
+            return await Task.Run(() => _clientItems);
         }
 
-        public IEnumerable<SdkItem> GetSdks()
+        public async Task<IEnumerable<SdkItem>> GetSdks()
         {
-            return _sdkItems;
+            return await Task.Run(() => _sdkItems);
         }
 
         private void _initClients()
@@ -119,51 +119,51 @@ namespace Ziggeo.Xamarin.NetStandard.Demo.Services
             _sdkItems = new List<SdkItem>
             {
                 new SdkItem(
-                    "ic_objc",
+                    "logo_objc",
                     "https://github.com/Ziggeo/iOS-Client-SDK"
                 ),
                 new SdkItem(
-                    "ic_swift",
+                    "logo_swift",
                     "https://github.com/Ziggeo/Swift-Client-SDK"
                 ),
                 new SdkItem(
-                    "ic_android",
+                    "logo_android",
                     "https://github.com/Ziggeo/Android-Client-SDK"
                 ),
                 new SdkItem(
-                    "ic_xamarin",
+                    "logo_xamarin",
                     "https://github.com/Ziggeo/Xamarin-SDK-Demo"
                 ),
                 new SdkItem(
-                    "ic_reactnative",
+                    "logo_react",
                     "https://github.com/Ziggeo/ReactNativeDemo"
                 ),
                 new SdkItem(
-                    "ic_flutter",
+                    "logo_flutter",
                     "https://github.com/Ziggeo/Flutter-SDK"
                 ),
                 new SdkItem(
-                    "ic_php",
+                    "logo_php",
                     "https://github.com/Ziggeo/ZiggeoPhpSdk"
                 ),
                 new SdkItem(
-                    "ic_python",
+                    "logo_python",
                     "https://github.com/Ziggeo/ZiggeoPythonSdk"
                 ),
                 new SdkItem(
-                    "ic_nodejs",
+                    "logo_nodejs",
                     "https://github.com/Ziggeo/ZiggeoNodeSdk"
                 ),
                 new SdkItem(
-                    "ic_ruby",
+                    "logo_ruby",
                     "https://github.com/Ziggeo/ZiggeoRubySdk"
                 ),
                 new SdkItem(
-                    "ic_java",
+                    "logo_java",
                     "https://github.com/Ziggeo/ZiggeoJavaSdk"
                 ),
                 new SdkItem(
-                    "ic_csharp",
+                    "logo_csharp",
                     "https://github.com/Ziggeo/ZiggeoCSharpSDK"
                 )
             };
