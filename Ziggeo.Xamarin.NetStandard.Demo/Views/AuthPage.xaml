@@ -21,7 +21,7 @@
                 VerticalOptions="Start">
                 <Image
                     Margin="0,80,0,0"
-                    WidthRequest="250"
+                    HeightRequest="70"
                     Source="logo" />
                 <Label
                     Margin="0,32"
