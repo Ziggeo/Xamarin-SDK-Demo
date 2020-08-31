@@ -33,6 +33,8 @@
       <LastGenOutput>AppResources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Fonts\quicksand_regular.ttf" />
+    <None Remove="Fonts\quicksand_bold.ttf" />
+    <EmbeddedResource Include="Fonts\quicksand_bold.ttf" />
   </ItemGroup>
 
   <ItemGroup>

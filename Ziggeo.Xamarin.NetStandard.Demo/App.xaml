@@ -17,23 +17,48 @@
                 <Setter Property="BarTextColor" Value="White" />
             </Style>
 
-            <!--  SIZES  -->
+            <!--  Sizes  -->
             <OnPlatform
                 x:Key="MessageTextSize"
                 x:TypeArguments="x:Double"
                 Android="18"
                 iOS="20" />
 
+            <!--  Fonts  -->
             <Style TargetType="Label">
-                <Setter Property="FontFamily" Value="quicksand" />
+                <Style.Triggers>
+                    <Trigger TargetType="Label" Property="FontAttributes" Value="Bold">
+                        <Setter Property="FontFamily"
+                                Value="quicksand_bold" />
+                    </Trigger>
+                </Style.Triggers>
+
+                <Setter Property="FontFamily"
+                        Value="quicksand_regular" />
             </Style>
 
             <Style TargetType="Button">
-                <Setter Property="FontFamily" Value="quicksand" />
+                <Style.Triggers>
+                    <Trigger TargetType="Button" Property="FontAttributes" Value="Bold">
+                        <Setter Property="FontFamily"
+                                Value="quicksand_bold" />
+                    </Trigger>
+                </Style.Triggers>
+            
+                <Setter Property="FontFamily"
+                        Value="quicksand_regular" />
             </Style>
 
             <Style TargetType="Entry">
-                <Setter Property="FontFamily" Value="quicksand" />
+                <Style.Triggers>
+                    <Trigger TargetType="Entry" Property="FontAttributes" Value="Bold">
+                        <Setter Property="FontFamily"
+                                Value="quicksand_bold" />
+                    </Trigger>
+                </Style.Triggers>
+            
+                <Setter Property="FontFamily"
+                        Value="quicksand_regular" />
             </Style>
         </ResourceDictionary>
     </Application.Resources>

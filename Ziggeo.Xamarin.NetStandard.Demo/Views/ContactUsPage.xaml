@@ -15,20 +15,19 @@
 
     <ContentPage.Content>
         <RelativeLayout
-            BackgroundColor="Aqua"
-            Padding="16">
+            Margin="16">
+            <StackLayout>
+                <Label
+                    FontSize="20"
+                    FontAttributes="Bold"
+                    HorizontalTextAlignment="Center"
+                    Text="{x:Static resources:AppResources.contact_title}" />
 
-            <Label
-                FontSize="20"
-                FontAttributes="Bold"
-                Margin="0,0,0,16"
-                HorizontalTextAlignment="Center"
-                Text="{x:Static resources:AppResources.contact_title}" />
-
-            <Label
-                FontSize="18"
-                Margin="0,0,0,16"
-                Text="{x:Static resources:AppResources.contact_message}" />
+                <Label
+                    FontSize="18"
+                    Margin="0,0,0,32"
+                    Text="{x:Static resources:AppResources.contact_message}" />
+            </StackLayout>
 
             <FlexLayout
                 RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.9}"
