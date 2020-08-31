@@ -19,7 +19,7 @@ namespace Ziggeo.Xamarin.NetStandard.Demo {
     // class via a tool like ResGen or Visual Studio.
     // To add or remove a member, edit your .ResX file then rerun ResGen
     // with the /str option, or rebuild your VS project.
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "16.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "4.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     internal class AppResources {
@@ -241,10 +241,10 @@ namespace Ziggeo.Xamarin.NetStandard.Demo {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Do you have a question about Ziggeo?\nWondering how you can start using Ziggeo?\nWish to get in touch
-        ///            with someone to see how you can start using Ziggeo tomorrow?\nIf you are ready to start a video revolution
-        ///            of your website / service / app or system, click on the Contact Us button to send us an email, or visit our
-        ///            support base to find answers or ask us there.
+        ///   Looks up a localized string similar to Do you have a question about Ziggeo?
+        ///Wondering how you can start using Ziggeo?
+        ///Wish to get in touch with someone to see how you can start using Ziggeo tomorrow?
+        ///If you are ready to start a video revolution of your website / service / app or system, click on the Contact Us button to send us an email, or visit our support base to find answers or ask us there.
         ///        .
         /// </summary>
         internal static string contact_message {
