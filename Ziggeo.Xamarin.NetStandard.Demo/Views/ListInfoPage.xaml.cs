@@ -8,7 +8,7 @@ namespace Ziggeo.Xamarin.NetStandard.Demo.Views
 {
     public partial class ListInfoPage : ContentPage
     {
-        BaseViewModel _viewModel;
+        private readonly BaseViewModel _viewModel;
 
         public ListInfoPage(BaseViewModel model)
         {
@@ -17,10 +17,9 @@ namespace Ziggeo.Xamarin.NetStandard.Demo.Views
             BindingContext = _viewModel = model;
         }
 
-        async void OnItemSelected(object sender, SelectedItemChangedEventArgs args)
+        private async void OnItemSelected(object sender, SelectedItemChangedEventArgs args)
         {
-            var item = args.SelectedItem as SdkItem;
-            if (item == null)
+            if (!(args.SelectedItem is BaseAboutItem item))
                 return;
             await Launcher.OpenAsync(item.Url);
 

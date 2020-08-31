@@ -2,11 +2,8 @@
 {
     public class ClientItem : BaseAboutItem
     {
-        public string Name { get; set; }
-
-        public ClientItem(string url, string name, string logo) : base(logo, url)
+        public ClientItem(string logo, string url) : base(logo, url)
         {
-            Name = name;
         }
     }
 }

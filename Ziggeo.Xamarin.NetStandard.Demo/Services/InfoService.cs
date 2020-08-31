@@ -33,82 +33,66 @@ namespace Ziggeo.Xamarin.NetStandard.Demo.Services
             {
                 new ClientItem(
                     "logo_sap",
-                    "SAP",
                     "https://sap.com"
                 ),
                 new ClientItem(
                     "logo_gofundme",
-                    "GoFundMe",
                     "https://www.gofundme.com"
                 ),
                 new ClientItem(
                     "logo_swisspost",
-                    "SwissPost",
                     "https://www.post.ch/en"
                 ),
                 new ClientItem(
                     "logo_virgin",
-                    "Virgin",
                     "https://www.virginatlantic.com"
                 ),
                 new ClientItem(
                     "logo_itslearning",
-                    "ItsLearning",
                     "https://itslearning.com"
                 ),
                 new ClientItem(
                     "logo_callidus",
-                    "Callidus Cloud",
                     "https://www.calliduscloud.com"
                 ),
                 new ClientItem(
                     "logo_hireiq",
-                    "Hire IQ",
                     "http://www.hireiqinc.com"
                 ),
                 new ClientItem(
                     "logo_fiverr",
-                    "Fiverr",
                     "https://www.fiverr.com"
                 ),
                 new ClientItem(
                     "logo_circleup",
-                    "CircleUp",
                     "https://circleup.com"
                 ),
                 new ClientItem(
                     "logo_youcruit",
-                    "Youcruit",
                     "https://us.youcruit.com"
                 ),
                 new ClientItem(
                     "logo_netflix",
-                    "Netflix",
                     "https://www.netflix.com"
                 ),
                 new ClientItem(
                     "logo_spotify",
-                    "Spotify",
                     "https://spotify.com"
                 ),
                 new ClientItem(
                     "logo_nyustern",
-                    "NYU Stern",
                     "http://www.stern.nyu.edu"
                 ),
                 new ClientItem(
                     "logo_dubizzle",
-                    "Dubizzle",
                     "https://dubizzle.com"
                 ),
                 new ClientItem(
                     "logo_usv",
-                    "Union Square Ventures",
                     "https://usv.com"
                 ),
                 new ClientItem(
                     "logo_mavenclinic",
-                    "Maven Clinic",
                     "https://www.mavenclinic.com"
                 )
             };
