@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Ziggeo.Xamarin.NetStandard.Demo.Views.VideoEditorPage"
+             xmlns:resources="clr-namespace:Ziggeo.Xamarin.NetStandard.Demo;"
+             xmlns:viewModels="clr-namespace:Ziggeo.Xamarin.NetStandard.Demo.ViewModels;assembly=Ziggeo.Xamarin.NetStandard.Demo"
+             Title="{x:Static resources:AppResources.video_editor_header}">
+
+    <ContentPage.BindingContext>
+        <viewModels:VideoEditorViewModel />
+    </ContentPage.BindingContext>
+
+    <StackLayout
+        HorizontalOptions="CenterAndExpand"
+        VerticalOptions="Center">
+        <Label
+            Text="{x:Static resources:AppResources.coming_soon}" />
+    </StackLayout>
+</ContentPage>
