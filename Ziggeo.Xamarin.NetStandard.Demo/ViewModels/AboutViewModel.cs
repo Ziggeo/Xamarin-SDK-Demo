@@ -8,7 +8,7 @@ namespace Ziggeo.Xamarin.NetStandard.Demo.ViewModels
     {
         public AboutViewModel()
         {
-            OpenWebCommand = new Command(() => Device.OpenUri(new Uri("https://xamarin.com/platform")));
+            OpenWebCommand = new Command(url => Device.OpenUri(new Uri(url.ToString())));
         }
 
         public ICommand OpenWebCommand { get; }

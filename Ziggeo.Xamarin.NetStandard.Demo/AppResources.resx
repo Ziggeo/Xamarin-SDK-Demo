@@ -268,32 +268,6 @@
     <data name="about_title" xml:space="preserve">
     <value>Thanks for trying our demo!</value>
   </data>
-    <data name="about_text" xml:space="preserve">
-    <value>
-            \nVisit &lt;a href=https://github.com/Ziggeo/Android-Client-SDK&gt;GitHub&lt;/a&gt; if you want to star us or just
-            to see the sources
-            \n\nYou might also want to take a look at other sections.
-            \n\nLearn:
-            \n- &lt;a href=https://ziggeo.com/quickstart&gt;Quick start&lt;/a&gt;
-            \n- &lt;a href=https://ziggeo.com/screencasts&gt;Screencasts&lt;/a&gt;
-            \n- &lt;a href=https://ziggeo.com/webinars&gt;Webinars&lt;/a&gt;
-            \n\nReference:
-            \n- &lt;a href=https://ziggeo.com/docs&gt;Documentation&lt;/a&gt;
-            \n- &lt;a href=https://support.ziggeo.com/&gt;FAQs&lt;/a&gt;
-            \n- &lt;a href=https://ziggeo.com/integrations&gt;Integrations&lt;/a&gt;
-            \n\nSandboxes
-            \n- &lt;a href=https://ziggeo.com/sandbox/configuration&gt;Configuration&lt;/a&gt;
-            \n- &lt;a href=https://ziggeo.com/sandbox/serverside&gt;Server-Side&lt;/a&gt;
-            \n- &lt;a href=https://ziggeo.com/sandbox/authorization-tokens&gt;Authorization Tokens&lt;/a&gt;
-            \n- &lt;a href=https://ziggeo.com/sandbox/webhooks&gt;Webhooks Builder&lt;/a&gt;
-            \n\nCommunity
-            \n- &lt;a href=https://support.ziggeo.com/hc/en-us/community/posts&gt;Forum&lt;/a&gt;
-            \n- &lt;a href=https://stackoverflow.com/search?q=ziggeo&gt;StackOverflow&lt;/a&gt;
-            \n\nSupport
-            \n- &lt;a href=mailto:support@ziggeo.com&gt;Support&lt;/a&gt;
-            \n- &lt;a href=https://ziggeo.com/dev-updates&gt;Dev Updates&lt;/a&gt;
-        </value>
-  </data>
     <data name="video_editor_header" xml:space="preserve">
     <value>Video editor</value>
   </data>

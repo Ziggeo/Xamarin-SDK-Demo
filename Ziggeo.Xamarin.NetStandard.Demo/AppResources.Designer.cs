@@ -70,24 +70,6 @@ namespace Ziggeo.Xamarin.NetStandard.Demo {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 
-        ///            \nVisit &lt;a href=https://github.com/Ziggeo/Android-Client-SDK&gt;GitHub&lt;/a&gt; if you want to star us or just
-        ///            to see the sources
-        ///            \n\nYou might also want to take a look at other sections.
-        ///            \n\nLearn:
-        ///            \n- &lt;a href=https://ziggeo.com/quickstart&gt;Quick start&lt;/a&gt;
-        ///            \n- &lt;a href=https://ziggeo.com/screencasts&gt;Screencasts&lt;/a&gt;
-        ///            \n- &lt;a href=https://ziggeo.com/webinars&gt;Webinars&lt;/a&gt;
-        ///            \n\nReference:
-        ///            \n- &lt;a href=https: [rest of string was truncated]&quot;;.
-        /// </summary>
-        internal static string about_text {
-            get {
-                return ResourceManager.GetString("about_text", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Thanks for trying our demo!.
         /// </summary>
         internal static string about_title {

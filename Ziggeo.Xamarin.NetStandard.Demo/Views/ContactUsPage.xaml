@@ -7,6 +7,7 @@
     xmlns:viewModels="clr-namespace:Ziggeo.Xamarin.NetStandard.Demo.ViewModels;assembly=Ziggeo.Xamarin.NetStandard.Demo"
     xmlns:resources="clr-namespace:Ziggeo.Xamarin.NetStandard.Demo;assembly=Ziggeo.Xamarin.NetStandard.Demo"
     NavigationPage.HasNavigationBar="False"
+    Title="{x:Static resources:AppResources.contact_header}"
     Visual="Material">
 
     <ContentPage.BindingContext>
