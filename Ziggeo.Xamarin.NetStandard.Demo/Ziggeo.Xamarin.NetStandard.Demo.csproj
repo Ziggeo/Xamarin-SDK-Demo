@@ -52,7 +52,6 @@
       <DependentUpon>AppResources.resx</DependentUpon>
     </Compile>
     <Compile Update="Views\ListInfoPage.xaml.cs">
-      <DependentUpon>SdksPage.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="Views\ContactUsPage.xaml.cs">
@@ -69,6 +68,14 @@
     </Compile>
     <Compile Update="Views\MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\LogPage.xaml.cs">
+      <DependentUpon>LogPage.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\RecordingsListPage.xaml.cs">
+      <DependentUpon>RecordingsListPage.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>

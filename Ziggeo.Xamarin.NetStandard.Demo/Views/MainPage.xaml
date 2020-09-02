@@ -1,19 +1,53 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Ziggeo.Xamarin.NetStandard.Demo.Views.MainPage"
-             xmlns:resources="clr-namespace:Ziggeo.Xamarin.NetStandard.Demo;"
-             xmlns:viewModels="clr-namespace:Ziggeo.Xamarin.NetStandard.Demo.ViewModels;assembly=Ziggeo.Xamarin.NetStandard.Demo"
-             Title="{x:Static resources:AppResources.settings_header}">
+<MasterDetailPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                  x:Class="Ziggeo.Xamarin.NetStandard.Demo.Views.MainPage"
+                  xmlns:resources="clr-namespace:Ziggeo.Xamarin.NetStandard.Demo;"
+                  NavigationPage.HasNavigationBar="False"
+                  xmlns:viewModels="clr-namespace:Ziggeo.Xamarin.NetStandard.Demo.ViewModels;assembly=Ziggeo.Xamarin.NetStandard.Demo">
 
-    <ContentPage.BindingContext>
+    <MasterDetailPage.BindingContext>
         <viewModels:MainViewModel />
-    </ContentPage.BindingContext>
+    </MasterDetailPage.BindingContext>
 
-    <StackLayout
-        HorizontalOptions="CenterAndExpand"
-        VerticalOptions="Center">
-        <Label
-            Text="{x:Static resources:AppResources.coming_soon}" />
-    </StackLayout>
-</ContentPage>
+    <MasterDetailPage.Master>
+        <ContentPage
+            Title="Menu">
+            <StackLayout
+                Orientation="Vertical">
+                <StackLayout
+                    Padding="16,0"
+                    Orientation="Horizontal"
+                    BackgroundColor="{StaticResource Primary}"
+                    HeightRequest="100">
+                    <StackLayout>
+                        <Label
+                            Text="{x:Static resources:AppResources.title_app_token}" />
+                        <Label
+                            Text="{Binding AppToken}" />
+                    </StackLayout>
+                    <Button
+                        Text="Logout" />
+                </StackLayout>
+                <ListView
+                    x:Name="NavigationList"
+                    ItemSelected="OnMenuItemSelected">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <Label
+                                    Margin="16,0"
+                                    VerticalTextAlignment="Center"
+                                    Text="{Binding Title}" />
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </StackLayout>
+        </ContentPage>
+    </MasterDetailPage.Master>
+
+    <MasterDetailPage.Detail>
+        <NavigationPage />
+    </MasterDetailPage.Detail>
+</MasterDetailPage>

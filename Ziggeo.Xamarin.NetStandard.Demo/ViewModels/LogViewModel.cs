@@ -4,11 +4,9 @@ using Xamarin.Forms;
 
 namespace Ziggeo.Xamarin.NetStandard.Demo.ViewModels
 {
-    public class MainViewModel : BaseViewModel
+    public class LogViewModel : BaseViewModel
     {
-        public string AppToken { get; set; }
-
-        public MainViewModel()
+        public LogViewModel()
         {
         }
     }
