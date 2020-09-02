@@ -2,9 +2,9 @@
 
 namespace Ziggeo.Xamarin.NetStandard.Demo.Views
 {
-    public class MainPage : TabbedPage
+    public class OldMainPage : TabbedPage
     {
-        public MainPage()
+        public OldMainPage()
         {
             Page itemsPage, aboutPage = null;
 

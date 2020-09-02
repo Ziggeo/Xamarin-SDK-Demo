@@ -92,7 +92,7 @@ namespace Ziggeo.Xamarin.NetStandard.Demo
                 DependencyService.Register<CloudVideosService>();
 
 
-            Page page = IsLoggedIn() ? (Page) new AuthPage() : new ItemsPage();
+            Page page = IsLoggedIn() ? (Page) new AuthPage() : new MainPage();
 
             if (Device.RuntimePlatform == Device.iOS)
                 MainPage = page;
