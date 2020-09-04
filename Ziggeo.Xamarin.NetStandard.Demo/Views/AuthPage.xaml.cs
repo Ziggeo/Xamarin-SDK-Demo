@@ -23,7 +23,7 @@ namespace Ziggeo.Xamarin.NetStandard.Demo.Views
                 async sender =>
                 {
                     MessageCenterUnsubscribe();
-                    Navigation.InsertPageBefore(new HomePage(), this);
+                    Navigation.InsertPageBefore(new MainPage(), this);
                     await Navigation.PopAsync();
                 });
         }
