@@ -24,6 +24,14 @@
                 Android="18"
                 iOS="20" />
 
+            <!-- Icons -->
+            <x:String x:Key="IconLogout">&#xf206;</x:String>
+            
+            <OnPlatform x:Key="MaterialFontFamily" x:TypeArguments="x:String">
+                <On Platform="iOS" Value="Material Design Icons" />
+                <On Platform="Android" Value="materialdesignicons-webfont.ttf#Material Design Icons" />
+            </OnPlatform>
+            
             <!--  Fonts  -->
             <Style TargetType="Label">
                 <Style.Triggers>

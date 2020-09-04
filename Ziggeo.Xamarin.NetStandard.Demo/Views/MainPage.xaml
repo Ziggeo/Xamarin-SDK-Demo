@@ -16,18 +16,37 @@
             <StackLayout
                 Orientation="Vertical">
                 <StackLayout
-                    Padding="16,0"
+                    Padding="16"
                     Orientation="Horizontal"
                     BackgroundColor="{StaticResource Primary}"
                     HeightRequest="100">
                     <StackLayout>
                         <Label
+                            TextColor="White"
                             Text="{x:Static resources:AppResources.title_app_token}" />
                         <Label
+                            TextColor="White"
                             Text="{Binding AppToken}" />
                     </StackLayout>
-                    <Button
-                        Text="Logout" />
+
+                    <StackLayout
+                        HorizontalOptions="EndAndExpand">
+                        <Image
+                            Margin="16,0,0,0"
+                            VerticalOptions="Start">
+                            <Image.Source>
+                                <FontImageSource
+                                    x:Key="IconTest"
+                                    FontFamily="{DynamicResource MaterialFontFamily}"
+                                    Glyph="{StaticResource IconLogout}"
+                                    Size="24" />
+                            </Image.Source>
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer x:Name="LogoutButton" NumberOfTapsRequired="1" />
+                            </Image.GestureRecognizers>
+                        </Image>
+                    </StackLayout>
+
                 </StackLayout>
                 <ListView
                     x:Name="NavigationList"
@@ -36,6 +55,7 @@
                         <DataTemplate>
                             <ViewCell>
                                 <Label
+                                    TextColor="Black"
                                     Margin="16,0"
                                     VerticalTextAlignment="Center"
                                     Text="{Binding Title}" />

@@ -40,5 +40,8 @@
 	<string>Application will have access to camera</string>
 	<key>NSMicrophoneUsageDescription</key>
 	<string>Application will have access to microphone</string>
+	<array>
+		<string>materialdesignicons-webfont.ttf</string>
+	</array>
 </dict>
 </plist>

@@ -36,8 +36,9 @@ namespace Ziggeo.Xamarin.NetStandard.Demo.Views
             MenuList.Add(logPage);
 
             NavigationList.ItemsSource = MenuList;
-            
+
             Detail = new NavigationPage((Page) Activator.CreateInstance(typeof(RecordingsListPage)));
+            this.LogoutButton.Tapped += async (object sender, EventArgs e) => { };
         }
 
         private void OnMenuItemSelected(object sender, SelectedItemChangedEventArgs e)
