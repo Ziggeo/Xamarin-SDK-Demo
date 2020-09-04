@@ -8,7 +8,7 @@ namespace Ziggeo.Xamarin.NetStandard.Demo.ViewModels
 {
     public class MainViewModel : BaseViewModel
     {
-        public string AppToken { get; set; }
+        public string AppToken => Preferences.Get(Constants.KeyAppToken, null);
 
         public MainViewModel()
         {

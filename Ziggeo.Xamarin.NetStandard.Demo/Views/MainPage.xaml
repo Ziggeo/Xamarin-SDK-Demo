@@ -19,7 +19,7 @@
                     Padding="16"
                     Orientation="Horizontal"
                     BackgroundColor="{StaticResource Primary}"
-                    HeightRequest="100">
+                    HeightRequest="50">
                     <StackLayout>
                         <Label
                             TextColor="White"
