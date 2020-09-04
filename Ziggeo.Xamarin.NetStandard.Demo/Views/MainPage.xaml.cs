@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using Xamarin.Forms;
 using Ziggeo.Xamarin.NetStandard.Demo.Models;
+using Ziggeo.Xamarin.NetStandard.Demo.Utils;
+using Ziggeo.Xamarin.NetStandard.Demo.ViewModels;
 
 namespace Ziggeo.Xamarin.NetStandard.Demo.Views
 {
@@ -38,7 +40,16 @@ namespace Ziggeo.Xamarin.NetStandard.Demo.Views
             NavigationList.ItemsSource = MenuList;
 
             Detail = new NavigationPage((Page) Activator.CreateInstance(typeof(RecordingsListPage)));
-            this.LogoutButton.Tapped += async (object sender, EventArgs e) => { };
+
+            MessagingCenter.Subscribe<MainViewModel>(
+                this,
+                Constants.NavAuth,
+                async sender =>
+                {
+                    MessageCenterUnsubscribe();
+                    Navigation.InsertPageBefore(new AuthPage(), this);
+                    await Navigation.PopAsync();
+                });
         }
 
         private void OnMenuItemSelected(object sender, SelectedItemChangedEventArgs e)
@@ -48,6 +59,11 @@ namespace Ziggeo.Xamarin.NetStandard.Demo.Views
 
             Detail = new NavigationPage((Page) Activator.CreateInstance(page));
             IsPresented = false;
+        }
+
+        public void MessageCenterUnsubscribe()
+        {
+            MessagingCenter.Unsubscribe<MainViewModel>(this, Constants.NavAuth);
         }
     }
 }

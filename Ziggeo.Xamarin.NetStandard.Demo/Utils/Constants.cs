@@ -6,6 +6,7 @@ namespace Ziggeo.Xamarin.NetStandard.Demo.Utils
         internal const string KeyAppToken = "KeyAppToken";
         
         // Messenger
-        internal const string NavHome = "KeyAppToken";
+        internal const string NavHome = "NavHome";
+        internal const string NavAuth = "NavAuth";
     }
 }

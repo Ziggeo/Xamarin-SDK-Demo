@@ -42,7 +42,9 @@
                                     Size="24" />
                             </Image.Source>
                             <Image.GestureRecognizers>
-                                <TapGestureRecognizer x:Name="LogoutButton" NumberOfTapsRequired="1" />
+                                <TapGestureRecognizer
+                                    Command="{Binding OnLogoutClicked }"
+                                    NumberOfTapsRequired="1" />
                             </Image.GestureRecognizers>
                         </Image>
                     </StackLayout>
