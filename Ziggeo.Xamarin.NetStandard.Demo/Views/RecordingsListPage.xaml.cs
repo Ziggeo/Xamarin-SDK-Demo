@@ -1,15 +1,37 @@
 ﻿using System;
 using Xamarin.Forms;
+using Ziggeo.Xamarin.NetStandard.Demo.Models;
+using Ziggeo.Xamarin.NetStandard.Demo.ViewModels;
 
 namespace Ziggeo.Xamarin.NetStandard.Demo.Views
 {
     public partial class RecordingsListPage : ContentPage
     {
         private bool _isOpened;
+        RecordingsListViewModel viewModel;
 
         public RecordingsListPage()
         {
             InitializeComponent();
+            BindingContext = viewModel = new RecordingsListViewModel();
+        }
+
+        async void OnItemSelected(object sender, SelectedItemChangedEventArgs args)
+        {
+            var item = args.SelectedItem as VideoItem;
+            if (item == null)
+                return;
+
+            await Navigation.PushAsync(new ItemDetailPage(new ItemDetailViewModel(item)));
+
+            // Manually deselect item
+            ItemsListView.SelectedItem = null;
+        }
+
+        protected override void OnAppearing()
+        {
+            base.OnAppearing();
+            viewModel.LoadItemsCommand.Execute(null);
         }
 
         private void BtnRoot_OnClicked(object sender, EventArgs e)
