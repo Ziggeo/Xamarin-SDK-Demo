@@ -26,6 +26,12 @@
 
             <!-- Icons -->
             <x:String x:Key="IconLogout">&#xf206;</x:String>
+            <x:String x:Key="IconPlus">&#xf415;</x:String>
+            <x:String x:Key="IconVideo">&#xf567;</x:String>
+            <x:String x:Key="IconScreen">&#xf379;</x:String>
+            <x:String x:Key="IconImage">&#xf2e9;</x:String>
+            <x:String x:Key="IconFolder">&#xf24b;</x:String>
+            <x:String x:Key="IconMic">&#xf36c;</x:String>
             
             <OnPlatform x:Key="MaterialFontFamily" x:TypeArguments="x:String">
                 <On Platform="iOS" Value="Material Design Icons" />

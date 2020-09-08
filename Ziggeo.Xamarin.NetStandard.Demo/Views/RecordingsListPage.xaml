@@ -9,11 +9,118 @@
     <ContentPage.BindingContext>
         <viewModels:RecordingsListViewModel />
     </ContentPage.BindingContext>
-
     <StackLayout
-        HorizontalOptions="CenterAndExpand"
-        VerticalOptions="Center">
-        <Label
-            Text="{x:Static resources:AppResources.coming_soon}" />
+        HorizontalOptions="End"
+        Padding="30"
+        Orientation="Horizontal">
+        <FlexLayout
+            WidthRequest="50"
+            HeightRequest="330"
+            Direction="Column"
+            JustifyContent="End"
+            AlignItems="Center">
+
+            <ImageButton
+                Clicked="BtnFolder_OnClicked"
+                IsVisible="False"
+                x:Name="BtnFolder"
+                Padding="8"
+                WidthRequest="40"
+                HeightRequest="40"
+                CornerRadius="20"
+                Margin="0,0,0,8"
+                BackgroundColor="{StaticResource Accent}">
+                <ImageButton.Source>
+                    <FontImageSource
+                        FontFamily="{DynamicResource MaterialFontFamily}"
+                        Glyph="{StaticResource IconFolder}" />
+                </ImageButton.Source>
+            </ImageButton>
+
+            <ImageButton
+                Clicked="BtnImage_OnClicked"
+                IsVisible="False"
+                x:Name="BtnImage"
+                Padding="8"
+                WidthRequest="40"
+                HeightRequest="40"
+                CornerRadius="20"
+                Margin="0,0,0,8"
+                BackgroundColor="{StaticResource Accent}">
+                <ImageButton.Source>
+                    <FontImageSource
+                        FontFamily="{DynamicResource MaterialFontFamily}"
+                        Glyph="{StaticResource IconImage}" />
+                </ImageButton.Source>
+            </ImageButton>
+
+            <ImageButton
+                Clicked="BtnMic_OnClicked"
+                IsVisible="False"
+                x:Name="BtnMic"
+                Padding="8"
+                WidthRequest="40"
+                HeightRequest="40"
+                CornerRadius="20"
+                Margin="0,0,0,8"
+                BackgroundColor="{StaticResource Accent}">
+                <ImageButton.Source>
+                    <FontImageSource
+                        FontFamily="{DynamicResource MaterialFontFamily}"
+                        Glyph="{StaticResource IconScreen}" />
+                </ImageButton.Source>
+            </ImageButton>
+
+            <ImageButton
+                Clicked="BtnScreen_OnClicked"
+                IsVisible="False"
+                x:Name="BtnScreen"
+                Padding="8"
+                WidthRequest="40"
+                HeightRequest="40"
+                CornerRadius="20"
+                Margin="0,0,0,8"
+                BackgroundColor="{StaticResource Accent}">
+                <ImageButton.Source>
+                    <FontImageSource
+                        FontFamily="{DynamicResource MaterialFontFamily}"
+                        Glyph="{StaticResource IconMic}" />
+                </ImageButton.Source>
+            </ImageButton>
+
+            <ImageButton
+                Clicked="BtnVideo_OnClicked"
+                IsVisible="False"
+                x:Name="BtnVideo"
+                Padding="8"
+                WidthRequest="40"
+                HeightRequest="40"
+                CornerRadius="20"
+                Margin="0,0,0,8"
+                BackgroundColor="{StaticResource Accent}">
+                <ImageButton.Source>
+                    <FontImageSource
+                        FontFamily="{DynamicResource MaterialFontFamily}"
+                        Glyph="{StaticResource IconVideo}" />
+                </ImageButton.Source>
+            </ImageButton>
+
+            <ImageButton
+                Clicked="BtnRoot_OnClicked"
+                x:Name="BtnRoot"
+                Padding="16"
+                WidthRequest="60"
+                HeightRequest="60"
+                CornerRadius="30"
+                BackgroundColor="{StaticResource Accent}">
+                <ImageButton.Source>
+                    <FontImageSource
+                        FontFamily="{DynamicResource MaterialFontFamily}"
+                        Glyph="{StaticResource IconPlus}"
+                        Size="16" />
+                </ImageButton.Source>
+            </ImageButton>
+
+        </FlexLayout>
     </StackLayout>
 </ContentPage>

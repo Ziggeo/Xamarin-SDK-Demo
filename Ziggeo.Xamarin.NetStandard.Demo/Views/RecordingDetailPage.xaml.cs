@@ -71,7 +71,7 @@ namespace Ziggeo.Xamarin.NetStandard.Demo.Views
         async void Play_Clicked(object sender, System.EventArgs e)
         {
             Ziggeo.IZiggeoPlayer player = App.ZiggeoApplication.Player;
-            await player.Play(viewModel.Item.Token);
+            await player.StartPlayer(viewModel.Item.Token);
         }
 
         private void ShowLoading()
