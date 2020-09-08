@@ -19,7 +19,24 @@ namespace Ziggeo.Xamarin.NetStandard.Demo.Services
         {
             items.Clear();
             items.AddRange((await App.ZiggeoApplication.Videos.Index(null))
-                .Select(jsonObj => new VideoItem() {Token = jsonObj["token"].ToString()}));
+                .Select(jsonObj =>
+                {
+                    var tags = jsonObj["tags"].ToString()
+                        .Replace("[", "")
+                        .Replace("]", "")
+                        .Replace("\"", "")
+                        .Replace("\n", "");
+
+                    return new VideoItem()
+                    {
+                        Token = jsonObj["token"].ToString(),
+                        Status = jsonObj["state_string"].ToString(),
+                        Tags = tags,
+                        Date = new DateTime(1970, 1, 1, 0, 0, 0, DateTimeKind.Utc)
+                            .AddSeconds((double) jsonObj["submission_date"])
+                            .ToLocalTime().ToString("g"),
+                    };
+                }));
             return items;
         }
 

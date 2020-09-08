@@ -9,27 +9,72 @@
     <ContentPage.BindingContext>
         <viewModels:RecordingsListViewModel />
     </ContentPage.BindingContext>
-    
-    <AbsoluteLayout >
+
+    <AbsoluteLayout>
         <ListView
             x:Name="ItemsListView"
-                  ItemsSource="{Binding Items}"
-                  VerticalOptions="FillAndExpand"
-                  HasUnevenRows="true"
-                  RefreshCommand="{Binding LoadItemsCommand}"
-                  IsPullToRefreshEnabled="true"
-                  IsRefreshing="{Binding IsBusy, Mode=OneWay}"
-                  CachingStrategy="RecycleElement"
-                  ItemSelected="OnItemSelected">
+            ItemsSource="{Binding Items}"
+            VerticalOptions="FillAndExpand"
+            HasUnevenRows="true"
+            RefreshCommand="{Binding LoadItemsCommand}"
+            IsPullToRefreshEnabled="true"
+            IsRefreshing="{Binding IsBusy, Mode=OneWay}"
+            CachingStrategy="RecycleElement"
+            ItemSelected="OnItemSelected">
 
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
-                        <StackLayout Padding="16">
-                            <Label Text="{Binding Token}"
-                                   LineBreakMode="NoWrap"
-                                   Style="{DynamicResource ListItemTextStyle}"
-                                   FontSize="16" />
+                        <StackLayout
+                            HorizontalOptions="Center"
+                            Orientation="Horizontal"
+                            Padding="16">
+                            <Image>
+                                <Image.Source>
+                                    <FontImageSource
+                                        Color="Black"
+                                        Size="60"
+                                        FontFamily="{DynamicResource MaterialFontFamily}"
+                                        Glyph="{StaticResource IconVideo}" />
+                                </Image.Source>
+                            </Image>
+                            <StackLayout
+                                VerticalOptions="Center"
+                                Margin="16,0,0,0">
+                                <Label Text="{Binding Token}"
+                                       Style="{StaticResource TokenAndTagsStyle}" />
+                                <Label
+                                    Text="{Binding Tags}"
+                                    Style="{StaticResource TokenAndTagsStyle}" />
+                            </StackLayout>
+                            <StackLayout
+                                Margin="16,0,0,0"
+                                HorizontalOptions="CenterAndExpand">
+                                <Label
+                                    HorizontalTextAlignment="Center"
+                                    Text="{Binding Status}">
+                                    <Label.Triggers>
+                                        <Trigger TargetType="Label"
+                                                 Property="Text"
+                                                 Value="READY">
+                                            <Setter Property="TextColor" Value="{StaticResource StateReady}" />
+                                        </Trigger>
+                                        <Trigger TargetType="Label"
+                                                 Property="Text"
+                                                 Value="FAILED">
+                                            <Setter Property="TextColor" Value="{StaticResource StateFailed}" />
+                                        </Trigger>
+                                        <Trigger TargetType="Label"
+                                                 Property="Text"
+                                                 Value="PROCESSING">
+                                            <Setter Property="TextColor" Value="{StaticResource StateProcessing}" />
+                                        </Trigger>
+                                    </Label.Triggers>
+                                </Label>
+                                <Label
+                                    HorizontalTextAlignment="Center"
+                                    Text="{Binding Date, StringFormat='{0:MMMM dd, yyyy}'}" />
+                            </StackLayout>
                         </StackLayout>
                     </ViewCell>
                 </DataTemplate>
@@ -38,120 +83,120 @@
 
         <StackLayout
             Margin="30"
-             AbsoluteLayout.LayoutFlags="All" 
+            AbsoluteLayout.LayoutFlags="All"
             AbsoluteLayout.LayoutBounds="0,0,1,1"
             HorizontalOptions="End"
-        Orientation="Horizontal">
-        
-        <FlexLayout
-            HorizontalOptions="EndAndExpand"
-            HeightRequest="330"
-            Direction="Column"
-            JustifyContent="End"
-            AlignItems="Center">
+            Orientation="Horizontal">
 
-            <ImageButton
-                Clicked="BtnFolder_OnClicked"
-                IsVisible="False"
-                x:Name="BtnFolder"
-                Padding="8"
-                WidthRequest="40"
-                HeightRequest="40"
-                CornerRadius="20"
-                Margin="0,0,0,8"
-                BackgroundColor="{StaticResource Accent}">
-                <ImageButton.Source>
-                    <FontImageSource
-                        FontFamily="{DynamicResource MaterialFontFamily}"
-                        Glyph="{StaticResource IconFolder}" />
-                </ImageButton.Source>
-            </ImageButton>
+            <FlexLayout
+                HorizontalOptions="EndAndExpand"
+                HeightRequest="330"
+                Direction="Column"
+                JustifyContent="End"
+                AlignItems="Center">
 
-            <ImageButton
-                Clicked="BtnImage_OnClicked"
-                IsVisible="False"
-                x:Name="BtnImage"
-                Padding="8"
-                WidthRequest="40"
-                HeightRequest="40"
-                CornerRadius="20"
-                Margin="0,0,0,8"
-                BackgroundColor="{StaticResource Accent}">
-                <ImageButton.Source>
-                    <FontImageSource
-                        FontFamily="{DynamicResource MaterialFontFamily}"
-                        Glyph="{StaticResource IconImage}" />
-                </ImageButton.Source>
-            </ImageButton>
+                <ImageButton
+                    Clicked="BtnFolder_OnClicked"
+                    IsVisible="False"
+                    x:Name="BtnFolder"
+                    Padding="8"
+                    WidthRequest="40"
+                    HeightRequest="40"
+                    CornerRadius="20"
+                    Margin="0,0,0,8"
+                    BackgroundColor="{StaticResource Accent}">
+                    <ImageButton.Source>
+                        <FontImageSource
+                            FontFamily="{DynamicResource MaterialFontFamily}"
+                            Glyph="{StaticResource IconFolder}" />
+                    </ImageButton.Source>
+                </ImageButton>
 
-            <ImageButton
-                Clicked="BtnMic_OnClicked"
-                IsVisible="False"
-                x:Name="BtnMic"
-                Padding="8"
-                WidthRequest="40"
-                HeightRequest="40"
-                CornerRadius="20"
-                Margin="0,0,0,8"
-                BackgroundColor="{StaticResource Accent}">
-                <ImageButton.Source>
-                    <FontImageSource
-                        FontFamily="{DynamicResource MaterialFontFamily}"
-                        Glyph="{StaticResource IconScreen}" />
-                </ImageButton.Source>
-            </ImageButton>
+                <ImageButton
+                    Clicked="BtnImage_OnClicked"
+                    IsVisible="False"
+                    x:Name="BtnImage"
+                    Padding="8"
+                    WidthRequest="40"
+                    HeightRequest="40"
+                    CornerRadius="20"
+                    Margin="0,0,0,8"
+                    BackgroundColor="{StaticResource Accent}">
+                    <ImageButton.Source>
+                        <FontImageSource
+                            FontFamily="{DynamicResource MaterialFontFamily}"
+                            Glyph="{StaticResource IconImage}" />
+                    </ImageButton.Source>
+                </ImageButton>
 
-            <ImageButton
-                Clicked="BtnScreen_OnClicked"
-                IsVisible="False"
-                x:Name="BtnScreen"
-                Padding="8"
-                WidthRequest="40"
-                HeightRequest="40"
-                CornerRadius="20"
-                Margin="0,0,0,8"
-                BackgroundColor="{StaticResource Accent}">
-                <ImageButton.Source>
-                    <FontImageSource
-                        FontFamily="{DynamicResource MaterialFontFamily}"
-                        Glyph="{StaticResource IconMic}" />
-                </ImageButton.Source>
-            </ImageButton>
+                <ImageButton
+                    Clicked="BtnMic_OnClicked"
+                    IsVisible="False"
+                    x:Name="BtnMic"
+                    Padding="8"
+                    WidthRequest="40"
+                    HeightRequest="40"
+                    CornerRadius="20"
+                    Margin="0,0,0,8"
+                    BackgroundColor="{StaticResource Accent}">
+                    <ImageButton.Source>
+                        <FontImageSource
+                            FontFamily="{DynamicResource MaterialFontFamily}"
+                            Glyph="{StaticResource IconScreen}" />
+                    </ImageButton.Source>
+                </ImageButton>
 
-            <ImageButton
-                Clicked="BtnVideo_OnClicked"
-                IsVisible="False"
-                x:Name="BtnVideo"
-                Padding="8"
-                WidthRequest="40"
-                HeightRequest="40"
-                CornerRadius="20"
-                Margin="0,0,0,8"
-                BackgroundColor="{StaticResource Accent}">
-                <ImageButton.Source>
-                    <FontImageSource
-                        FontFamily="{DynamicResource MaterialFontFamily}"
-                        Glyph="{StaticResource IconVideo}" />
-                </ImageButton.Source>
-            </ImageButton>
+                <ImageButton
+                    Clicked="BtnScreen_OnClicked"
+                    IsVisible="False"
+                    x:Name="BtnScreen"
+                    Padding="8"
+                    WidthRequest="40"
+                    HeightRequest="40"
+                    CornerRadius="20"
+                    Margin="0,0,0,8"
+                    BackgroundColor="{StaticResource Accent}">
+                    <ImageButton.Source>
+                        <FontImageSource
+                            FontFamily="{DynamicResource MaterialFontFamily}"
+                            Glyph="{StaticResource IconMic}" />
+                    </ImageButton.Source>
+                </ImageButton>
 
-            <ImageButton
-                Clicked="BtnRoot_OnClicked"
-                x:Name="BtnRoot"
-                Padding="16"
-                WidthRequest="60"
-                HeightRequest="60"
-                CornerRadius="30"
-                BackgroundColor="{StaticResource Accent}">
-                <ImageButton.Source>
-                    <FontImageSource
-                        FontFamily="{DynamicResource MaterialFontFamily}"
-                        Glyph="{StaticResource IconPlus}"
-                        Size="16" />
-                </ImageButton.Source>
-            </ImageButton>
+                <ImageButton
+                    Clicked="BtnVideo_OnClicked"
+                    IsVisible="False"
+                    x:Name="BtnVideo"
+                    Padding="8"
+                    WidthRequest="40"
+                    HeightRequest="40"
+                    CornerRadius="20"
+                    Margin="0,0,0,8"
+                    BackgroundColor="{StaticResource Accent}">
+                    <ImageButton.Source>
+                        <FontImageSource
+                            FontFamily="{DynamicResource MaterialFontFamily}"
+                            Glyph="{StaticResource IconVideo}" />
+                    </ImageButton.Source>
+                </ImageButton>
 
-        </FlexLayout>
-    </StackLayout>
+                <ImageButton
+                    Clicked="BtnRoot_OnClicked"
+                    x:Name="BtnRoot"
+                    Padding="16"
+                    WidthRequest="60"
+                    HeightRequest="60"
+                    CornerRadius="30"
+                    BackgroundColor="{StaticResource Accent}">
+                    <ImageButton.Source>
+                        <FontImageSource
+                            FontFamily="{DynamicResource MaterialFontFamily}"
+                            Glyph="{StaticResource IconPlus}"
+                            Size="16" />
+                    </ImageButton.Source>
+                </ImageButton>
+
+            </FlexLayout>
+        </StackLayout>
     </AbsoluteLayout>
 </ContentPage>

@@ -12,6 +12,9 @@
             <Color x:Key="MediumGrayTextColor">#4d4d4d</Color>
             <Color x:Key="LightTextColor">#999999</Color>
             <Color x:Key="Grayscale">#CC4B4B4B</Color>
+            <Color x:Key="StateFailed">#C20202</Color>
+            <Color x:Key="StateReady">#46AF0B</Color>
+            <Color x:Key="StateProcessing">#FCC02C</Color>
             <Style TargetType="NavigationPage">
                 <Setter Property="BarBackgroundColor" Value="{StaticResource Primary}" />
                 <Setter Property="BarTextColor" Value="White" />
@@ -32,12 +35,12 @@
             <x:String x:Key="IconImage">&#xf2e9;</x:String>
             <x:String x:Key="IconFolder">&#xf24b;</x:String>
             <x:String x:Key="IconMic">&#xf36c;</x:String>
-            
+
             <OnPlatform x:Key="MaterialFontFamily" x:TypeArguments="x:String">
                 <On Platform="iOS" Value="Material Design Icons" />
                 <On Platform="Android" Value="materialdesignicons-webfont.ttf#Material Design Icons" />
             </OnPlatform>
-            
+
             <!--  Fonts  -->
             <Style TargetType="Label">
                 <Style.Triggers>
@@ -58,7 +61,7 @@
                                 Value="quicksand_bold" />
                     </Trigger>
                 </Style.Triggers>
-            
+
                 <Setter Property="FontFamily"
                         Value="quicksand_regular" />
             </Style>
@@ -70,9 +73,19 @@
                                 Value="quicksand_bold" />
                     </Trigger>
                 </Style.Triggers>
-            
+
                 <Setter Property="FontFamily"
                         Value="quicksand_regular" />
+            </Style>
+
+            <Style x:Key="TokenAndTagsStyle" TargetType="Label">
+                <Setter Property="WidthRequest" Value="180" />
+                <Setter Property="LineBreakMode" Value="TailTruncation" />
+                <Style.Triggers>
+                    <Trigger TargetType="Label" Property="Text" Value="">
+                        <Setter Property="IsVisible" Value="False" />
+                    </Trigger>
+                </Style.Triggers>
             </Style>
         </ResourceDictionary>
     </Application.Resources>
