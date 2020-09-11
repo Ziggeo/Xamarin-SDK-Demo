@@ -28,9 +28,10 @@ namespace Ziggeo.Xamarin.NetStandard.Demo.ViewModels
             }
             else
             {
-                IZiggeoQrScanner scanner = App.ZiggeoApplication.QrScanner;
-                scanner.Decoded += SaveAndNavigate;
-                scanner.StartQrScanner();
+                QrScannerConfig config = new QrScannerConfig();
+                config.OnDecoded += SaveAndNavigate;
+                App.ZiggeoApplication.QrScannerConfig = config;
+                App.ZiggeoApplication.StartQrScanner();
             }
         }
 

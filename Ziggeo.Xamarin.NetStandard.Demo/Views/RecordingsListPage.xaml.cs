@@ -47,12 +47,12 @@ namespace Ziggeo.Xamarin.NetStandard.Demo.Views
 
         private void BtnVideo_OnClicked(object sender, EventArgs e)
         {
-            App.ZiggeoApplication.Recorder.StartRecorder();
+            App.ZiggeoApplication.StartCameraRecorder();
         }
 
         private void BtnScreen_OnClicked(object sender, EventArgs e)
         {
-            ShowComingSoonToast();
+            App.ZiggeoApplication.StartScreenRecorder();
         }
 
         private void BtnImage_OnClicked(object sender, EventArgs e)
@@ -62,7 +62,7 @@ namespace Ziggeo.Xamarin.NetStandard.Demo.Views
 
         private void BtnFolder_OnClicked(object sender, EventArgs e)
         {
-            ShowComingSoonToast();
+            App.ZiggeoApplication.StartFileSelector();
         }
 
         private void BtnMic_OnClicked(object sender, EventArgs e)

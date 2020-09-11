@@ -142,7 +142,7 @@
                     <ImageButton.Source>
                         <FontImageSource
                             FontFamily="{DynamicResource MaterialFontFamily}"
-                            Glyph="{StaticResource IconScreen}" />
+                            Glyph="{StaticResource IconMic}" />
                     </ImageButton.Source>
                 </ImageButton>
 
@@ -159,7 +159,7 @@
                     <ImageButton.Source>
                         <FontImageSource
                             FontFamily="{DynamicResource MaterialFontFamily}"
-                            Glyph="{StaticResource IconMic}" />
+                            Glyph="{StaticResource IconScreen}" />
                     </ImageButton.Source>
                 </ImageButton>
 
