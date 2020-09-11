@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <Application xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:utils="clr-namespace:Ziggeo.Xamarin.NetStandard.Demo.Utils;assembly=Ziggeo.Xamarin.NetStandard.Demo"
              x:Class="Ziggeo.Xamarin.NetStandard.Demo.App">
     <Application.Resources>
         <ResourceDictionary>
+            <utils:NegateBooleanConverter x:Key="Inverter"/>
+            
             <Color x:Key="Primary">#DC5163</Color>
             <Color x:Key="PrimaryDark">#AA3E4B</Color>
             <Color x:Key="Accent">#607D8B</Color>
@@ -35,6 +38,10 @@
             <x:String x:Key="IconImage">&#xf2e9;</x:String>
             <x:String x:Key="IconFolder">&#xf24b;</x:String>
             <x:String x:Key="IconMic">&#xf36c;</x:String>
+            <x:String x:Key="IconEdit">&#xf3eb;</x:String>
+            <x:String x:Key="IconDelete">&#xf1c0;</x:String>
+            <x:String x:Key="IconSave">&#xf193;</x:String>
+            <x:String x:Key="IconClose">&#xf156;</x:String>
 
             <OnPlatform x:Key="MaterialFontFamily" x:TypeArguments="x:String">
                 <On Platform="iOS" Value="Material Design Icons" />

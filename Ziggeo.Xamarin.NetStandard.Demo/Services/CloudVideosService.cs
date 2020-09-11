@@ -21,7 +21,7 @@ namespace Ziggeo.Xamarin.NetStandard.Demo.Services
             items.AddRange((await App.ZiggeoApplication.Videos.Index(null))
                 .Select(jsonObj =>
                 {
-                    var tags = jsonObj["tags"].ToString()
+                    var tags = jsonObj[VideoItem.KeyTags].ToString()
                         .Replace("[", "")
                         .Replace("]", "")
                         .Replace("\"", "")
@@ -29,11 +29,14 @@ namespace Ziggeo.Xamarin.NetStandard.Demo.Services
 
                     return new VideoItem()
                     {
-                        Token = jsonObj["token"].ToString(),
-                        Status = jsonObj["state_string"].ToString(),
+                        Token = jsonObj[VideoItem.KeyToken].ToString(),
+                        Key = jsonObj[VideoItem.KeyVideoKey].ToString(),
+                        Status = jsonObj[VideoItem.KeyState].ToString(),
+                        Title = jsonObj[VideoItem.KeyTitle].ToString(),
+                        Description = jsonObj[VideoItem.KeyDescription].ToString(),
                         Tags = tags,
                         Date = new DateTime(1970, 1, 1, 0, 0, 0, DateTimeKind.Utc)
-                            .AddSeconds((double) jsonObj["submission_date"])
+                            .AddSeconds((double) jsonObj[VideoItem.KeyDate])
                             .ToLocalTime().ToString("g"),
                     };
                 }));

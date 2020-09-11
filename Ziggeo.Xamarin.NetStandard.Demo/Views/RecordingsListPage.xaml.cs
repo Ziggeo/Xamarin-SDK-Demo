@@ -8,12 +8,12 @@ namespace Ziggeo.Xamarin.NetStandard.Demo.Views
     public partial class RecordingsListPage : ContentPage
     {
         private bool _isOpened;
-        RecordingsListViewModel viewModel;
+        private readonly RecordingsListViewModel _viewModel;
 
         public RecordingsListPage()
         {
             InitializeComponent();
-            BindingContext = viewModel = new RecordingsListViewModel();
+            BindingContext = _viewModel = new RecordingsListViewModel();
         }
 
         async void OnItemSelected(object sender, SelectedItemChangedEventArgs args)
@@ -22,7 +22,8 @@ namespace Ziggeo.Xamarin.NetStandard.Demo.Views
             if (item == null)
                 return;
 
-            await Navigation.PushAsync(new ItemDetailPage(new ItemDetailViewModel(item)));
+            RecordingDetailsViewModel model = new RecordingDetailsViewModel {Item = item};
+            await Navigation.PushAsync(new RecordingDetailsPage(model));
 
             // Manually deselect item
             ItemsListView.SelectedItem = null;
@@ -31,7 +32,7 @@ namespace Ziggeo.Xamarin.NetStandard.Demo.Views
         protected override void OnAppearing()
         {
             base.OnAppearing();
-            viewModel.LoadItemsCommand.Execute(null);
+            _viewModel.LoadItemsCommand.Execute(null);
         }
 
         private void BtnRoot_OnClicked(object sender, EventArgs e)
