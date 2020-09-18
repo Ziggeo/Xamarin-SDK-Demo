@@ -29,7 +29,7 @@ namespace Ziggeo.Xamarin.NetStandard.Demo.ViewModels
             else
             {
                 QrScannerConfig config = new QrScannerConfig();
-                config.OnDecoded += SaveAndNavigate;
+                config.Decoded += SaveAndNavigate;
                 App.ZiggeoApplication.QrScannerConfig = config;
                 App.ZiggeoApplication.StartQrScanner();
             }

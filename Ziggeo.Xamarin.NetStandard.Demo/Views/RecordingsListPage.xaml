@@ -9,7 +9,6 @@
     <ContentPage.BindingContext>
         <viewModels:RecordingsListViewModel />
     </ContentPage.BindingContext>
-
     <AbsoluteLayout>
         <ListView
             x:Name="ItemsListView"

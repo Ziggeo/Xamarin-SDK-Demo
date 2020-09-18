@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using Xamarin.Forms;
 using Ziggeo.Xamarin.NetStandard.Demo.Models;
 using Ziggeo.Xamarin.NetStandard.Demo.ViewModels;
@@ -48,6 +49,9 @@ namespace Ziggeo.Xamarin.NetStandard.Demo.Views
 
         private void BtnVideo_OnClicked(object sender, EventArgs e)
         {
+            CameraRecorderConfig config = new CameraRecorderConfig();
+            config.Error += exception => Console.WriteLine("Error:" + exception);
+            App.ZiggeoApplication.CameraRecorderConfig = config;
             App.ZiggeoApplication.StartCameraRecorder();
         }
 
