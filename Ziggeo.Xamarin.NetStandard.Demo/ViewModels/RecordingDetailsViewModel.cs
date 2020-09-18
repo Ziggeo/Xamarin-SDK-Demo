@@ -4,11 +4,13 @@ using System.Threading.Tasks;
 using System.Windows.Input;
 using Xamarin.Forms;
 using Ziggeo.Xamarin.NetStandard.Demo.Models;
+using Ziggeo.Xamarin.NetStandard.Demo.Views;
 
 namespace Ziggeo.Xamarin.NetStandard.Demo.ViewModels
 {
     public class RecordingDetailsViewModel : BaseViewModel
     {
+        public RecordingDetailsPage Page { get; set; }
         private bool _isLoading;
         private bool _isDeleted;
         private bool _isEditMode;
@@ -36,7 +38,11 @@ namespace Ziggeo.Xamarin.NetStandard.Demo.ViewModels
         public bool IsEditMode
         {
             get => _isEditMode;
-            set => SetProperty(ref _isEditMode, value);
+            set
+            {
+                SetProperty(ref _isEditMode, value);
+                Page.UpdateToolbar();
+            }
         }
 
         public bool IsError

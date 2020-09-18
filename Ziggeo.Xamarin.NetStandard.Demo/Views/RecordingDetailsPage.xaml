@@ -4,58 +4,12 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:resources="clr-namespace:Ziggeo.Xamarin.NetStandard.Demo;assembly=Ziggeo.Xamarin.NetStandard.Demo"
              xmlns:viewModels="clr-namespace:Ziggeo.Xamarin.NetStandard.Demo.ViewModels;assembly=Ziggeo.Xamarin.NetStandard.Demo"
-             xmlns:views="clr-namespace:Ziggeo.Xamarin.NetStandard.Demo.Views;assembly=Ziggeo.Xamarin.NetStandard.Demo"
              x:Class="Ziggeo.Xamarin.NetStandard.Demo.Views.RecordingDetailsPage"
              Title="{x:Static resources:AppResources.details_header}">
 
     <ContentPage.BindingContext>
         <viewModels:RecordingDetailsViewModel />
     </ContentPage.BindingContext>
-
-    <ContentPage.ToolbarItems>
-        <views:HideableToolbarItem
-            IsVisible="{Binding IsEditMode,
-             Converter={StaticResource Inverter}}"
-            Command="{Binding EditCommand}">
-            <ToolbarItem.IconImageSource>
-                <FontImageSource
-                    Size="48"
-                    FontFamily="{DynamicResource MaterialFontFamily}"
-                    Glyph="{StaticResource IconEdit}" />
-            </ToolbarItem.IconImageSource>
-        </views:HideableToolbarItem>
-        <views:HideableToolbarItem
-            Command="{Binding DeleteCommand}"
-            IsVisible="{Binding IsEditMode,
-             Converter={StaticResource Inverter}}">
-            <ToolbarItem.IconImageSource>
-                <FontImageSource
-                    Size="48"
-                    FontFamily="{DynamicResource MaterialFontFamily}"
-                    Glyph="{StaticResource IconDelete}" />
-            </ToolbarItem.IconImageSource>
-        </views:HideableToolbarItem>
-        <views:HideableToolbarItem
-            Command="{Binding SaveCommand}"
-            IsVisible="{Binding IsEditMode}">
-            <ToolbarItem.IconImageSource>
-                <FontImageSource
-                    Size="48"
-                    FontFamily="{DynamicResource MaterialFontFamily}"
-                    Glyph="{StaticResource IconSave}" />
-            </ToolbarItem.IconImageSource>
-        </views:HideableToolbarItem>
-        <views:HideableToolbarItem
-            Command="{Binding CancelCommand}"
-            IsVisible="{Binding IsEditMode}">
-            <ToolbarItem.IconImageSource>
-                <FontImageSource
-                    Size="48"
-                    FontFamily="{DynamicResource MaterialFontFamily}"
-                    Glyph="{StaticResource IconClose}" />
-            </ToolbarItem.IconImageSource>
-        </views:HideableToolbarItem>
-    </ContentPage.ToolbarItems>
 
     <StackLayout Spacing="20" Padding="5">
         <ActivityIndicator IsRunning="{Binding IsLoading}" />
