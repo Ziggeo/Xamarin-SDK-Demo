@@ -101,12 +101,12 @@ namespace Ziggeo.Xamarin.NetStandard.Demo.Views
             }
         }
 
-        private void ShowLoading()
+        public void ShowLoading()
         {
             UserDialogs.Instance.Loading().Show();
         }
 
-        private void HideLoading()
+        public void HideLoading()
         {
             UserDialogs.Instance.Loading().Hide();
         }

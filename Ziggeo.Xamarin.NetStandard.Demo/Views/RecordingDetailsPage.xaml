@@ -12,7 +12,6 @@
     </ContentPage.BindingContext>
 
     <StackLayout Spacing="20" Padding="5">
-        <ActivityIndicator IsRunning="{Binding IsLoading}" />
         <Image
             HeightRequest="200"
             Aspect="AspectFill"

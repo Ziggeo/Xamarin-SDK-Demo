@@ -25,7 +25,18 @@ namespace Ziggeo.Xamarin.NetStandard.Demo.ViewModels
         public bool IsLoading
         {
             get => _isLoading;
-            set => SetProperty(ref _isLoading, value);
+            set
+            {
+                SetProperty(ref _isLoading, value);
+                if (_isLoading)
+                {
+                    Page.ShowLoading();
+                }
+                else
+                {
+                    Page.HideLoading();
+                }
+            }
         }
 
         public bool IsEditMode
