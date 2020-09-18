@@ -63,7 +63,7 @@ namespace Ziggeo.Xamarin.NetStandard.Demo.ViewModels
 
         public string TokenOrKey
         {
-            get => Item.Key ?? Item.Token;
+            get => string.IsNullOrEmpty(Item.Key) ? Item.Token : Item.Key;
             set
             {
                 if (Item.Key != null)
