@@ -12,7 +12,6 @@ namespace Ziggeo.Xamarin.NetStandard.Demo.ViewModels
     {
         public RecordingDetailsPage Page { get; set; }
         private bool _isLoading;
-        private bool _isDeleted;
         private bool _isEditMode;
         private bool _isError;
         private ImageSource _imageSource;
@@ -27,12 +26,6 @@ namespace Ziggeo.Xamarin.NetStandard.Demo.ViewModels
         {
             get => _isLoading;
             set => SetProperty(ref _isLoading, value);
-        }
-
-        public bool IsDeleted
-        {
-            get => _isDeleted;
-            set => SetProperty(ref _isDeleted, value);
         }
 
         public bool IsEditMode
@@ -96,7 +89,7 @@ namespace Ziggeo.Xamarin.NetStandard.Demo.ViewModels
             ImageClickedCommand = new Command(() =>
                 App.ZiggeoApplication.StartPlayer(Item.Token)
             );
-            
+
             // xaml required default constructor
             Item = new VideoItem();
         }
@@ -120,7 +113,7 @@ namespace Ziggeo.Xamarin.NetStandard.Demo.ViewModels
             try
             {
                 await App.ZiggeoApplication.Videos.Destroy(Item.Token);
-                IsDeleted = true;
+                await Page.Navigation.PopAsync();
             }
             catch (Exception exception)
             {

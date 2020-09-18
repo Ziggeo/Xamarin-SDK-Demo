@@ -1,5 +1,4 @@
-﻿using System;
-using System.Linq;
+﻿using System.Linq;
 using Acr.UserDialogs;
 using Xamarin.Forms;
 using Ziggeo.Xamarin.NetStandard.Demo.Models;
