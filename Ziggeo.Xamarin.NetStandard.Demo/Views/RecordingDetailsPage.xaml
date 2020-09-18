@@ -22,14 +22,17 @@
             </Image.GestureRecognizers>
         </Image>
         <Entry
+            IsEnabled="{Binding IsEditMode}"
             Margin="0,16"
             Placeholder="{x:Static resources:AppResources.hint_token_or_key}"
             Text="{Binding TokenOrKey}" />
         <Entry
+            IsEnabled="{Binding IsEditMode}"
             Margin="0,16"
             Placeholder="{x:Static resources:AppResources.hint_title}"
             Text="{Binding Title}" />
         <Entry
+            IsEnabled="{Binding IsEditMode}"
             Margin="0,16"
             Placeholder="{x:Static resources:AppResources.hint_description}"
             Text="{Binding Description}" />
