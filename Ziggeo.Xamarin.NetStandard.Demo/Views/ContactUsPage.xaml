@@ -30,7 +30,7 @@
 
             <FlexLayout
                 RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.9}"
-                HeightRequest="35"
+                HeightRequest="45"
                 Direction="Row"
                 JustifyContent="SpaceEvenly">
                 <Button
