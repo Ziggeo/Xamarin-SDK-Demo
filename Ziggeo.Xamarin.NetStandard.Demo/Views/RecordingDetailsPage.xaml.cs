@@ -65,38 +65,34 @@ namespace Ziggeo.Xamarin.NetStandard.Demo.Views
                 var resources = Application.Current.Resources;
                 var font = (string) ((OnPlatform<string>) resources["MaterialFontFamily"])
                     .Platforms.FirstOrDefault(p => p.Platform[0] == Device.RuntimePlatform)?.Value;
-                var iconSize = 48;
+                const int iconSize = 48;
 
-                _editToolbarItem = new ToolbarItem();
-                _editToolbarItem.Command = _viewModel.EditCommand;
-                FontImageSource editImageSource = new FontImageSource();
-                editImageSource.Size = iconSize;
-                editImageSource.FontFamily = font;
-                editImageSource.Glyph = resources["IconEdit"] as string;
+                _editToolbarItem = new ToolbarItem {Command = _viewModel.EditCommand};
+                var editImageSource = new FontImageSource
+                {
+                    Size = iconSize, FontFamily = font, Glyph = resources["IconEdit"] as string
+                };
                 _editToolbarItem.IconImageSource = editImageSource;
 
-                _deleteToolbarItem = new ToolbarItem();
-                _deleteToolbarItem.Command = _viewModel.DeleteCommand;
-                FontImageSource deleteImageSource = new FontImageSource();
-                deleteImageSource.Size = iconSize;
-                deleteImageSource.FontFamily = font;
-                deleteImageSource.Glyph = resources["IconDelete"] as string;
+                _deleteToolbarItem = new ToolbarItem {Command = _viewModel.DeleteCommand};
+                var deleteImageSource = new FontImageSource
+                {
+                    Size = iconSize, FontFamily = font, Glyph = resources["IconDelete"] as string
+                };
                 _deleteToolbarItem.IconImageSource = deleteImageSource;
 
-                _saveToolbarItem = new ToolbarItem();
-                _saveToolbarItem.Command = _viewModel.SaveCommand;
-                FontImageSource saveImageSource = new FontImageSource();
-                saveImageSource.Size = iconSize;
-                saveImageSource.FontFamily = font;
-                saveImageSource.Glyph = resources["IconSave"] as string;
+                _saveToolbarItem = new ToolbarItem {Command = _viewModel.SaveCommand};
+                var saveImageSource = new FontImageSource
+                {
+                    Size = iconSize, FontFamily = font, Glyph = resources["IconSave"] as string
+                };
                 _saveToolbarItem.IconImageSource = saveImageSource;
 
-                _cancelToolbarItem = new ToolbarItem();
-                _cancelToolbarItem.Command = _viewModel.CancelCommand;
-                FontImageSource cancelImageSource = new FontImageSource();
-                cancelImageSource.Size = iconSize;
-                cancelImageSource.FontFamily = font;
-                cancelImageSource.Glyph = resources["IconClose"] as string;
+                _cancelToolbarItem = new ToolbarItem {Command = _viewModel.CancelCommand};
+                var cancelImageSource = new FontImageSource
+                {
+                    Size = iconSize, FontFamily = font, Glyph = resources["IconClose"] as string
+                };
                 _cancelToolbarItem.IconImageSource = cancelImageSource;
             }
         }
