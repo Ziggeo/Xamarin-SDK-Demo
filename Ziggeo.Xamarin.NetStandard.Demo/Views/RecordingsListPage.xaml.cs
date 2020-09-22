@@ -50,13 +50,16 @@ namespace Ziggeo.Xamarin.NetStandard.Demo.Views
         private void BtnVideo_OnClicked(object sender, EventArgs e)
         {
             CameraRecorderConfig config = new CameraRecorderConfig();
-            config.Error += exception => Console.WriteLine("Error:" + exception);
+            config.Error += exception => Console.WriteLine("SR.Error:" + exception);
             App.ZiggeoApplication.CameraRecorderConfig = config;
             App.ZiggeoApplication.StartCameraRecorder();
         }
 
         private void BtnScreen_OnClicked(object sender, EventArgs e)
         {
+            ScreenRecorderConfig config = new ScreenRecorderConfig();
+            config.Error += exception => Console.WriteLine("SR.Error:" + exception);
+            App.ZiggeoApplication.ScreenRecorderConfig = config;
             App.ZiggeoApplication.StartScreenRecorder();
         }
 
