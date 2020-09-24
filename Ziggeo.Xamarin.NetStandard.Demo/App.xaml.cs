@@ -16,7 +16,8 @@ namespace Ziggeo.Xamarin.NetStandard.Demo
     {
         public static bool UseMockDataStore = false;
         public static IZiggeoApplication ZiggeoApplication;
-        public const string ZiggeoApplicationToken = "ZIGGEO_APP_ID";
+        public static EventLogger EventLogger;
+        public const string ZiggeoApplicationToken = "ZIGGEO_APP_ID"; 
 
         public App()
         {
@@ -26,6 +27,7 @@ namespace Ziggeo.Xamarin.NetStandard.Demo
         public App(IZiggeoApplication instance)
         {
             InitializeComponent();
+            EventLogger = new EventLogger();
             ZiggeoApplication = instance;
 
             //ZiggeoApplication.ServerAuthToken = "SERVER_AUTH_TOKEN";
@@ -55,35 +57,35 @@ namespace Ziggeo.Xamarin.NetStandard.Demo
                 Console.WriteLine("{0} upload failed with error {1}", filename, error.ToString());
             };
 
-            ZiggeoApplication.Recorder.RecordingStarted += () =>
-            {
-                //recorder started
-                Console.WriteLine("recording started");
-            };
+            // ZiggeoApplication.Recorder.RecordingStarted += () =>
+            // {
+            //     //recorder started
+            //     Console.WriteLine("recording started");
+            // };
 
-            ZiggeoApplication.Recorder.RecordingStopped += () =>
-            {
-                //recording was stopped
-                Console.WriteLine("recording stopped");
-            };
-
-            ZiggeoApplication.Recorder.RecordingCanceled += () =>
-            {
-                //recorder was closed by the user
-                Console.WriteLine("recorded was closed manually, recording was canceled");
-            };
-
-            ZiggeoApplication.Recorder.RecordingFinishedUploadDone += (string token) =>
-            {
-                //done
-                Console.WriteLine("recording and file upload were finished with token {0}", token);
-            };
-
-            ZiggeoApplication.Recorder.RecordingError += (Exception ex) =>
-            {
-                //handle error
-                Console.WriteLine("recorder error: {0}", ex.ToString());
-            };
+            // ZiggeoApplication.Recorder.RecordingStopped += () =>
+            // {
+            //     //recording was stopped
+            //     Console.WriteLine("recording stopped");
+            // };
+            //
+            // ZiggeoApplication.Recorder.RecordingCanceled += () =>
+            // {
+            //     //recorder was closed by the user
+            //     Console.WriteLine("recorded was closed manually, recording was canceled");
+            // };
+            //
+            // ZiggeoApplication.Recorder.RecordingFinishedUploadDone += (string token) =>
+            // {
+            //     //done
+            //     Console.WriteLine("recording and file upload were finished with token {0}", token);
+            // };
+            //
+            // ZiggeoApplication.Recorder.RecordingError += (Exception ex) =>
+            // {
+            //     //handle error
+            //     Console.WriteLine("recorder error: {0}", ex.ToString());
+            // }; TODO remove this when all callbacks will be ready
 
             DependencyService.Register<InfoService>();
             if (UseMockDataStore)

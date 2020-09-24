@@ -11,9 +11,35 @@
     </ContentPage.BindingContext>
 
     <StackLayout
-        HorizontalOptions="CenterAndExpand"
-        VerticalOptions="Center">
+        Margin="16">
         <Label
-            Text="{x:Static resources:AppResources.coming_soon}" />
+            HorizontalTextAlignment="Center"
+            IsVisible="{Binding IsEmpty}"
+            Text="{x:Static resources:AppResources.message_log_empty}" />
+
+        <ListView
+            x:Name="ItemsListView"
+            ItemsSource="{Binding Items}"
+            VerticalOptions="FillAndExpand"
+            HasUnevenRows="True"
+            RefreshCommand="{Binding LoadItemsCommand}"
+            IsRefreshing="{Binding IsBusy, Mode=OneWay}"
+            CachingStrategy="RecycleElement">
+
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell IsEnabled="false">
+                        <StackLayout
+                            Margin="0,8"
+                            Orientation="Horizontal">
+                            <Label Text="{Binding FormattedOutput}" />
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        <Button
+            Command="{Binding SendReportCommand}"
+            Text="{x:Static resources:AppResources.btn_send_report}" />
     </StackLayout>
 </ContentPage>
