@@ -128,7 +128,27 @@ namespace Ziggeo.Xamarin.NetStandard.Demo.Views
         private void _initCameraRecorderConfig()
         {
             CameraRecorderConfig config = new CameraRecorderConfig();
-            config.Error += exception => Console.WriteLine("SR.Error:" + exception);
+            config.Error += exception => _logger.Add(AppResources.ev_rec_error, exception.ToString());
+            config.Loaded += () => _logger.Add(AppResources.ev_rec_loaded);
+            config.CanceledByUser += () => _logger.Add(AppResources.ev_rec_canceledByUser);
+            config.AccessGranted += () => _logger.Add(AppResources.ev_rec_accessGranted);
+            config.AccessForbidden += permissions =>
+                _logger.Add(AppResources.ev_rec_accessForbidden, permissions.ToString());
+            config.NoMicrophone += () => _logger.Add(AppResources.ev_rec_noMicrophone);
+            config.HasMicrophone += () => _logger.Add(AppResources.ev_rec_hasMicrophone);
+            config.HasCamera += () => _logger.Add(AppResources.ev_rec_hasCamera);
+            config.NoCamera += () => _logger.Add(AppResources.ev_rec_noCamera);
+            config.MicrophoneHealth += health =>
+                _logger.Add(AppResources.ev_rec_microphoneHealth, health);
+            config.StreamingStarted += () => _logger.Add(AppResources.ev_rec_streamingStarted);
+            config.StreamingStopped += () => _logger.Add(AppResources.ev_rec_streamingStopped);
+            config.RecordingStopped += path => _logger.Add(AppResources.ev_rec_recordingStopped);
+            config.ReadyToRecord += () => _logger.Add(AppResources.ev_rec_readyToRecord);
+            config.RecordingStarted += () => _logger.Add(AppResources.ev_rec_recordingStarted);
+            config.RecordingProgress += millisPassed => _logger.Add(AppResources.ev_rec_recordingProgress);
+            config.ManuallySubmitted += () => _logger.Add(AppResources.ev_rec_manuallySubmitted);
+            config.Countdown += secondsLeft => 
+                _logger.Add(AppResources.ev_rec_countdown,secondsLeft.ToString());
             App.ZiggeoApplication.CameraRecorderConfig = config;
         }
 
