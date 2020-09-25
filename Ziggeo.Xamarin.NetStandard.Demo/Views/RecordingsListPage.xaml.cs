@@ -12,7 +12,6 @@ namespace Ziggeo.Xamarin.NetStandard.Demo.Views
     {
         private bool _isOpened;
         private readonly RecordingsListViewModel _viewModel;
-        private readonly EventLogger _logger = App.EventLogger;
 
         public RecordingsListPage()
         {
@@ -52,111 +51,32 @@ namespace Ziggeo.Xamarin.NetStandard.Demo.Views
 
         private void BtnVideo_OnClicked(object sender, EventArgs e)
         {
-            _initConfigs();
             App.ZiggeoApplication.StartCameraRecorder();
         }
 
         private void BtnScreen_OnClicked(object sender, EventArgs e)
         {
-            _initConfigs();
             App.ZiggeoApplication.StartScreenRecorder();
         }
 
         private void BtnImage_OnClicked(object sender, EventArgs e)
         {
-            _initConfigs();
             ShowComingSoonToast();
         }
 
         private void BtnFolder_OnClicked(object sender, EventArgs e)
         {
-            _initConfigs();
             App.ZiggeoApplication.StartFileSelector();
         }
 
         private void BtnMic_OnClicked(object sender, EventArgs e)
         {
-            _initConfigs();
             ShowComingSoonToast();
         }
 
         private void ShowComingSoonToast()
         {
             Acr.UserDialogs.UserDialogs.Instance.Toast(AppResources.coming_soon, new TimeSpan(1));
-        }
-
-        private void _initConfigs()
-        {
-            _initPlayerConfig();
-            _initCameraRecorderConfig();
-            _initFileSelectorConfig();
-            _initScreenRecorderConfig();
-        }
-
-        private void _initPlayerConfig()
-        {
-            var plConfig = new PlayerConfig();
-            plConfig.Error += exception => _logger.Add(AppResources.ev_pl_error, exception.ToString());
-            plConfig.Loaded += () => _logger.Add(AppResources.ev_pl_loaded);
-            plConfig.CanceledByUser += () => _logger.Add(AppResources.ev_pl_canceledByUser);
-            plConfig.AccessGranted += () => _logger.Add(AppResources.ev_pl_accessGranted);
-            plConfig.AccessForbidden += (permissions) =>
-                _logger.Add(AppResources.ev_pl_accessForbidden, permissions.ToString());
-            plConfig.Playing += () => _logger.Add(AppResources.ev_pl_playing);
-            plConfig.Paused += () => _logger.Add(AppResources.ev_pl_paused);
-            plConfig.Ended += () => _logger.Add(AppResources.ev_pl_ended);
-            plConfig.Seek += (seekToMillis) =>
-                _logger.Add(AppResources.ev_pl_seek, seekToMillis.ToString());
-            plConfig.ReadyToPlay += () => _logger.Add(AppResources.ev_pl_readyToPlay);
-            App.ZiggeoApplication.PlayerConfig = plConfig;
-        }
-
-        private void _initFileSelectorConfig()
-        {
-            var fsConfig = new FileSelectorConfig();
-            fsConfig.Error += exception => _logger.Add(AppResources.ev_fs_loaded, exception.ToString());
-            fsConfig.Loaded += () => _logger.Add(AppResources.ev_fs_loaded);
-            fsConfig.CanceledByUser += () => _logger.Add(AppResources.ev_fs_canceledByUser);
-            fsConfig.AccessGranted += () => _logger.Add(AppResources.ev_fs_accessGranted);
-            fsConfig.AccessForbidden += (permissions) =>
-                _logger.Add(AppResources.ev_fs_accessForbidden, permissions.ToString());
-            fsConfig.UploadSelected += (paths) =>
-                _logger.Add(AppResources.ev_fs_uploadSelected, paths.ToString());
-            App.ZiggeoApplication.FileSelectorConfig = fsConfig;
-        }
-
-        private void _initCameraRecorderConfig()
-        {
-            CameraRecorderConfig config = new CameraRecorderConfig();
-            config.Error += exception => _logger.Add(AppResources.ev_rec_error, exception.ToString());
-            config.Loaded += () => _logger.Add(AppResources.ev_rec_loaded);
-            config.CanceledByUser += () => _logger.Add(AppResources.ev_rec_canceledByUser);
-            config.AccessGranted += () => _logger.Add(AppResources.ev_rec_accessGranted);
-            config.AccessForbidden += permissions =>
-                _logger.Add(AppResources.ev_rec_accessForbidden, permissions.ToString());
-            config.NoMicrophone += () => _logger.Add(AppResources.ev_rec_noMicrophone);
-            config.HasMicrophone += () => _logger.Add(AppResources.ev_rec_hasMicrophone);
-            config.HasCamera += () => _logger.Add(AppResources.ev_rec_hasCamera);
-            config.NoCamera += () => _logger.Add(AppResources.ev_rec_noCamera);
-            config.MicrophoneHealth += health =>
-                _logger.Add(AppResources.ev_rec_microphoneHealth, health);
-            config.StreamingStarted += () => _logger.Add(AppResources.ev_rec_streamingStarted);
-            config.StreamingStopped += () => _logger.Add(AppResources.ev_rec_streamingStopped);
-            config.RecordingStopped += path => _logger.Add(AppResources.ev_rec_recordingStopped);
-            config.ReadyToRecord += () => _logger.Add(AppResources.ev_rec_readyToRecord);
-            config.RecordingStarted += () => _logger.Add(AppResources.ev_rec_recordingStarted);
-            config.RecordingProgress += millisPassed => _logger.Add(AppResources.ev_rec_recordingProgress);
-            config.ManuallySubmitted += () => _logger.Add(AppResources.ev_rec_manuallySubmitted);
-            config.Countdown += secondsLeft => 
-                _logger.Add(AppResources.ev_rec_countdown,secondsLeft.ToString());
-            App.ZiggeoApplication.CameraRecorderConfig = config;
-        }
-
-        private void _initScreenRecorderConfig()
-        {
-            ScreenRecorderConfig config = new ScreenRecorderConfig();
-            config.Error += exception => Console.WriteLine("SR.Error:" + exception);
-            App.ZiggeoApplication.ScreenRecorderConfig = config;
         }
     }
 }
