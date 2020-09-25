@@ -29,7 +29,7 @@ namespace Ziggeo.Xamarin.NetStandard.Demo.Droid
             CachedImageRenderer.Init(true);
             CachedImageRenderer.InitImageViewHandler();
             UserDialogs.Init(this);
-            LoadApplication(new App(new ZiggeoApplication(App.ZiggeoApplicationToken)));
+            LoadApplication(new App(new ZiggeoApplication()));
         }
 
         public override void OnRequestPermissionsResult(int requestCode, string[] permissions, Permission[] grantResults)

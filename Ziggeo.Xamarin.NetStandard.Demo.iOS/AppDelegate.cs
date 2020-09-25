@@ -27,7 +27,7 @@ namespace Ziggeo.Xamarin.NetStandard.Demo.iOS
             global::Xamarin.Forms.FormsMaterial.Init();
             CachedImageRenderer.Init();
             CachedImageRenderer.InitImageSourceHandler();
-            LoadApplication(new App(new ZiggeoApplication(App.ZiggeoApplicationToken)));
+            LoadApplication(new App(new ZiggeoApplication()));
 
             return base.FinishedLaunching(app, options);
         }

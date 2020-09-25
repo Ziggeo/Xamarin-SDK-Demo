@@ -38,6 +38,7 @@ namespace Ziggeo.Xamarin.NetStandard.Demo.ViewModels
         private void SaveAndNavigate(string token)
         {
             Preferences.Set(Constants.KeyAppToken, token);
+            App.ZiggeoApplication.AppToken = token;
             MessagingCenter.Send(this, Constants.NavHome);
         }
 
