@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.ObjectModel;
+using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Input;
 using Xamarin.Forms;
@@ -34,7 +35,7 @@ namespace Ziggeo.Xamarin.NetStandard.Demo.ViewModels
 
             IsBusy = true;
             Items.Clear();
-            var items = App.EventLogger.GetLogs();
+            var items = App.EventLogger.GetLogs().Reverse();
             foreach (var item in items)
             {
                 Items.Add(item);
