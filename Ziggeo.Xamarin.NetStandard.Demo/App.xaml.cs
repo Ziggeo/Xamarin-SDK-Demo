@@ -128,7 +128,27 @@ namespace Ziggeo.Xamarin.NetStandard.Demo
         private void _initScreenRecorderConfig()
         {
             ScreenRecorderConfig config = new ScreenRecorderConfig();
-            config.Error += exception => Console.WriteLine("SR.Error:" + exception);
+            config.Error += exception => EventLogger.Add(AppResources.ev_rec_error, exception.ToString());
+            config.Loaded += () => EventLogger.Add(AppResources.ev_rec_loaded);
+            config.CanceledByUser += () => EventLogger.Add(AppResources.ev_rec_canceledByUser);
+            config.AccessGranted += () => EventLogger.Add(AppResources.ev_rec_accessGranted);
+            config.AccessForbidden += permissions =>
+                EventLogger.Add(AppResources.ev_rec_accessForbidden, permissions.ToString());
+            config.NoMicrophone += () => EventLogger.Add(AppResources.ev_rec_noMicrophone);
+            config.HasMicrophone += () => EventLogger.Add(AppResources.ev_rec_hasMicrophone);
+            config.HasCamera += () => EventLogger.Add(AppResources.ev_rec_hasCamera);
+            config.NoCamera += () => EventLogger.Add(AppResources.ev_rec_noCamera);
+            config.MicrophoneHealth += health =>
+                EventLogger.Add(AppResources.ev_rec_microphoneHealth, health);
+            config.StreamingStarted += () => EventLogger.Add(AppResources.ev_rec_streamingStarted);
+            config.StreamingStopped += () => EventLogger.Add(AppResources.ev_rec_streamingStopped);
+            config.RecordingStopped += path => EventLogger.Add(AppResources.ev_rec_recordingStopped);
+            config.ReadyToRecord += () => EventLogger.Add(AppResources.ev_rec_readyToRecord);
+            config.RecordingStarted += () => EventLogger.Add(AppResources.ev_rec_recordingStarted);
+            config.RecordingProgress += millisPassed => EventLogger.Add(AppResources.ev_rec_recordingProgress);
+            config.ManuallySubmitted += () => EventLogger.Add(AppResources.ev_rec_manuallySubmitted);
+            config.Countdown += secondsLeft =>
+                EventLogger.Add(AppResources.ev_rec_countdown, secondsLeft.ToString());
             ZiggeoApplication.ScreenRecorderConfig = config;
         }
 
