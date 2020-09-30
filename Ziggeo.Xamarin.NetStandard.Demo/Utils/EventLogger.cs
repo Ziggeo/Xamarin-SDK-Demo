@@ -1,23 +1,22 @@
 using System.Collections.Generic;
-using Ziggeo.Xamarin.NetStandard.Demo.Models;
 
 namespace Ziggeo.Xamarin.NetStandard.Demo.Utils
 {
     public class EventLogger
     {
-        private readonly IList<LogItem> _events;
+        private readonly IList<LogModel> _events;
 
         public EventLogger()
         {
-            _events = new List<LogItem>();
+            _events = new List<LogModel>();
         }
 
         public void Add(string reason, string details = null)
         {
-            _events.Add(new LogItem(reason, details));
+            _events.Add(new LogModel(reason, details));
         }
 
-        public IList<LogItem> GetLogs()
+        public IList<LogModel> GetLogs()
         {
             return _events;
         }

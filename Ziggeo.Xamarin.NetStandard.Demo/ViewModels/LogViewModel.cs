@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
 using System.Threading.Tasks;
@@ -10,7 +11,7 @@ namespace Ziggeo.Xamarin.NetStandard.Demo.ViewModels
 {
     public class LogViewModel : BaseViewModel
     {
-        public ObservableCollection<LogItem> Items { get; set; }
+        public ObservableCollection<LogModel> Items { get; set; }
         public ICommand SendReportCommand { get; }
         public Command LoadItemsCommand { get; set; }
         private bool _isEmpty;
@@ -23,8 +24,8 @@ namespace Ziggeo.Xamarin.NetStandard.Demo.ViewModels
 
         public LogViewModel()
         {
-            SendReportCommand = new Command(() => { });
-            Items = new ObservableCollection<LogItem>();
+            SendReportCommand = new Command(_sendReport);
+            Items = new ObservableCollection<LogModel>();
             LoadItemsCommand = new Command(async () => await ExecuteLoadCommand());
         }
 
@@ -43,6 +44,11 @@ namespace Ziggeo.Xamarin.NetStandard.Demo.ViewModels
 
             IsBusy = false;
             IsEmpty = Items.Count == 0;
+        }
+
+        private void _sendReport()
+        {
+            App.ZiggeoApplication.SendReport(Items.ToList());
         }
     }
 }
