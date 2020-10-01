@@ -17,7 +17,7 @@
             Margin="16">
             <StackLayout>
                 <Label
-                    FontSize="20"
+                    FontSize="{StaticResource TitleFontSize}"
                     FontAttributes="Bold"
                     HorizontalTextAlignment="Center"
                     Text="{x:Static resources:AppResources.contact_title}" />

@@ -14,7 +14,7 @@
         <StackLayout Padding="{StaticResource DefaultPadding}">
 
             <Label
-                FontSize="20"
+                FontSize="{StaticResource TitleFontSize}"
                 FontAttributes="Bold"
                 HorizontalTextAlignment="Center"
                 Text="{x:Static resources:AppResources.about_title}" />

@@ -40,6 +40,11 @@
                 x:TypeArguments="Thickness"
                 Default="8" />
 
+            <OnPlatform
+                x:Key="TitleFontSize"
+                x:TypeArguments="x:Double"
+                Default="20" />
+
             <!-- Icons -->
             <x:String x:Key="IconLogout">&#xf206;</x:String>
             <x:String x:Key="IconPlus">&#xf415;</x:String>
