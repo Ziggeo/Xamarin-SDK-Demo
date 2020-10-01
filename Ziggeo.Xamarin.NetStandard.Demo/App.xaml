@@ -5,8 +5,8 @@
              x:Class="Ziggeo.Xamarin.NetStandard.Demo.App">
     <Application.Resources>
         <ResourceDictionary>
-            <utils:NegateBooleanConverter x:Key="Inverter"/>
-            
+            <utils:NegateBooleanConverter x:Key="Inverter" />
+
             <Color x:Key="Primary">#DC5163</Color>
             <Color x:Key="PrimaryDark">#AA3E4B</Color>
             <Color x:Key="Accent">#607D8B</Color>
@@ -29,6 +29,16 @@
                 x:TypeArguments="x:Double"
                 Android="18"
                 iOS="20" />
+
+            <OnPlatform
+                x:Key="DefaultPadding"
+                x:TypeArguments="Thickness"
+                Default="16" />
+
+            <OnPlatform
+                x:Key="HalfPadding"
+                x:TypeArguments="Thickness"
+                Default="8" />
 
             <!-- Icons -->
             <x:String x:Key="IconLogout">&#xf206;</x:String>

@@ -11,7 +11,7 @@
         <viewModels:RecordingDetailsViewModel />
     </ContentPage.BindingContext>
 
-    <StackLayout Spacing="20" Padding="16">
+    <StackLayout Spacing="20" Padding="{StaticResource DefaultPadding}">
         <Image
             HeightRequest="200"
             Aspect="AspectFill"

@@ -16,7 +16,7 @@
             <StackLayout
                 Orientation="Vertical">
                 <StackLayout
-                    Padding="16"
+                    Padding="{StaticResource DefaultPadding}"
                     Orientation="Horizontal"
                     BackgroundColor="{StaticResource Primary}"
                     HeightRequest="50">

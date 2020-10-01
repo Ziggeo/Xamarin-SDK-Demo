@@ -4,8 +4,6 @@
              x:Class="Ziggeo.Xamarin.NetStandard.Demo.Views.AboutPage"
              xmlns:resources="clr-namespace:Ziggeo.Xamarin.NetStandard.Demo;"
              xmlns:viewModels="clr-namespace:Ziggeo.Xamarin.NetStandard.Demo.ViewModels;assembly=Ziggeo.Xamarin.NetStandard.Demo"
-             xmlns:utils="clr-namespace:Ziggeo.Xamarin.NetStandard.Demo.Utils;assembly=Ziggeo.Xamarin.NetStandard.Demo"
-             xmlns:views="clr-namespace:Ziggeo.Xamarin.NetStandard.Demo.Views;assembly=Ziggeo.Xamarin.NetStandard.Demo"
              Title="{x:Static resources:AppResources.about_header}">
 
     <ContentPage.BindingContext>
@@ -13,7 +11,7 @@
     </ContentPage.BindingContext>
 
     <ScrollView>
-        <StackLayout Padding="16">
+        <StackLayout Padding="{StaticResource DefaultPadding}">
 
             <Label
                 FontSize="20"

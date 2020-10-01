@@ -27,7 +27,7 @@
                         <StackLayout
                             HorizontalOptions="Center"
                             Orientation="Horizontal"
-                            Padding="16">
+                            Padding="{StaticResource DefaultPadding}">
                             <Image>
                                 <Image.Source>
                                     <FontImageSource
@@ -98,7 +98,7 @@
                     Clicked="BtnFolder_OnClicked"
                     IsVisible="False"
                     x:Name="BtnFolder"
-                    Padding="8"
+                    Padding="{StaticResource HalfPadding}"
                     WidthRequest="40"
                     HeightRequest="40"
                     CornerRadius="20"
@@ -115,7 +115,7 @@
                     Clicked="BtnImage_OnClicked"
                     IsVisible="False"
                     x:Name="BtnImage"
-                    Padding="8"
+                    Padding="{StaticResource HalfPadding}"
                     WidthRequest="40"
                     HeightRequest="40"
                     CornerRadius="20"
@@ -132,7 +132,7 @@
                     Clicked="BtnMic_OnClicked"
                     IsVisible="False"
                     x:Name="BtnMic"
-                    Padding="8"
+                    Padding="{StaticResource HalfPadding}"
                     WidthRequest="40"
                     HeightRequest="40"
                     CornerRadius="20"
@@ -149,7 +149,7 @@
                     Clicked="BtnScreen_OnClicked"
                     IsVisible="False"
                     x:Name="BtnScreen"
-                    Padding="8"
+                    Padding="{StaticResource HalfPadding}"
                     WidthRequest="40"
                     HeightRequest="40"
                     CornerRadius="20"
@@ -166,7 +166,7 @@
                     Clicked="BtnVideo_OnClicked"
                     IsVisible="False"
                     x:Name="BtnVideo"
-                    Padding="8"
+                    Padding="{StaticResource HalfPadding}"
                     WidthRequest="40"
                     HeightRequest="40"
                     CornerRadius="20"
@@ -182,7 +182,7 @@
                 <ImageButton
                     Clicked="BtnRoot_OnClicked"
                     x:Name="BtnRoot"
-                    Padding="16"
+                    Padding="{StaticResource DefaultPadding}"
                     WidthRequest="60"
                     HeightRequest="60"
                     CornerRadius="30"
