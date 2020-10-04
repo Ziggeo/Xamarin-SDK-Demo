@@ -20,7 +20,7 @@
                 Text="{x:Static resources:AppResources.about_title}" />
 
             <Label
-                FontSize="18">
+                FontSize="{StaticResource MessageFontSize}">
                 <Label.FormattedText>
                     <FormattedString>
                         <Span Text="Visit " />

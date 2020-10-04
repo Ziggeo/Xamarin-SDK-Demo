@@ -11,7 +11,7 @@
     </ContentPage.BindingContext>
 
     <StackLayout
-        Margin="16">
+        Margin="{StaticResource DefaultPadding}">
         <Label
             HorizontalTextAlignment="Center"
             IsVisible="{Binding IsEmpty}"

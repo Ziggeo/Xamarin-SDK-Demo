@@ -95,15 +95,10 @@
                 AlignItems="Center">
 
                 <ImageButton
+                    Style="{StaticResource SmallFabStyle}"
                     Clicked="BtnFolder_OnClicked"
-                    IsVisible="False"
                     x:Name="BtnFolder"
-                    Padding="{StaticResource HalfPadding}"
-                    WidthRequest="40"
-                    HeightRequest="40"
-                    CornerRadius="20"
-                    Margin="0,0,0,8"
-                    BackgroundColor="{StaticResource Accent}">
+                    Padding="{StaticResource HalfPadding}">
                     <ImageButton.Source>
                         <FontImageSource
                             FontFamily="{DynamicResource MaterialFontFamily}"
@@ -112,15 +107,9 @@
                 </ImageButton>
 
                 <ImageButton
+                    Style="{StaticResource SmallFabStyle}"
                     Clicked="BtnImage_OnClicked"
-                    IsVisible="False"
-                    x:Name="BtnImage"
-                    Padding="{StaticResource HalfPadding}"
-                    WidthRequest="40"
-                    HeightRequest="40"
-                    CornerRadius="20"
-                    Margin="0,0,0,8"
-                    BackgroundColor="{StaticResource Accent}">
+                    x:Name="BtnImage">
                     <ImageButton.Source>
                         <FontImageSource
                             FontFamily="{DynamicResource MaterialFontFamily}"
@@ -129,15 +118,9 @@
                 </ImageButton>
 
                 <ImageButton
+                    Style="{StaticResource SmallFabStyle}"
                     Clicked="BtnMic_OnClicked"
-                    IsVisible="False"
-                    x:Name="BtnMic"
-                    Padding="{StaticResource HalfPadding}"
-                    WidthRequest="40"
-                    HeightRequest="40"
-                    CornerRadius="20"
-                    Margin="0,0,0,8"
-                    BackgroundColor="{StaticResource Accent}">
+                    x:Name="BtnMic">
                     <ImageButton.Source>
                         <FontImageSource
                             FontFamily="{DynamicResource MaterialFontFamily}"
@@ -146,15 +129,9 @@
                 </ImageButton>
 
                 <ImageButton
+                    Style="{StaticResource SmallFabStyle}"
                     Clicked="BtnScreen_OnClicked"
-                    IsVisible="False"
-                    x:Name="BtnScreen"
-                    Padding="{StaticResource HalfPadding}"
-                    WidthRequest="40"
-                    HeightRequest="40"
-                    CornerRadius="20"
-                    Margin="0,0,0,8"
-                    BackgroundColor="{StaticResource Accent}">
+                    x:Name="BtnScreen">
                     <ImageButton.Source>
                         <FontImageSource
                             FontFamily="{DynamicResource MaterialFontFamily}"
@@ -163,15 +140,9 @@
                 </ImageButton>
 
                 <ImageButton
+                    Style="{StaticResource SmallFabStyle}"
                     Clicked="BtnVideo_OnClicked"
-                    IsVisible="False"
-                    x:Name="BtnVideo"
-                    Padding="{StaticResource HalfPadding}"
-                    WidthRequest="40"
-                    HeightRequest="40"
-                    CornerRadius="20"
-                    Margin="0,0,0,8"
-                    BackgroundColor="{StaticResource Accent}">
+                    x:Name="BtnVideo">
                     <ImageButton.Source>
                         <FontImageSource
                             FontFamily="{DynamicResource MaterialFontFamily}"
@@ -180,13 +151,9 @@
                 </ImageButton>
 
                 <ImageButton
+                    Style="{StaticResource FabStyle}"
                     Clicked="BtnRoot_OnClicked"
-                    x:Name="BtnRoot"
-                    Padding="{StaticResource DefaultPadding}"
-                    WidthRequest="60"
-                    HeightRequest="60"
-                    CornerRadius="30"
-                    BackgroundColor="{StaticResource Accent}">
+                    x:Name="BtnRoot">
                     <ImageButton.Source>
                         <FontImageSource
                             FontFamily="{DynamicResource MaterialFontFamily}"

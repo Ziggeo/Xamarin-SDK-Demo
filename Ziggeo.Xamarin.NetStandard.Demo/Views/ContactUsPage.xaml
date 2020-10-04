@@ -13,9 +13,9 @@
     </ContentPage.BindingContext>
 
     <ContentPage.Content>
-        <RelativeLayout
-            Margin="16">
-            <StackLayout>
+        <RelativeLayout>
+            <StackLayout
+                Padding="{StaticResource DefaultPadding}">
                 <Label
                     FontSize="{StaticResource TitleFontSize}"
                     FontAttributes="Bold"
@@ -23,7 +23,7 @@
                     Text="{x:Static resources:AppResources.contact_title}" />
 
                 <Label
-                    FontSize="18"
+                    FontSize="{StaticResource MessageFontSize}"
                     Margin="0,0,0,32"
                     Text="{x:Static resources:AppResources.contact_message}" />
             </StackLayout>
