@@ -30,14 +30,16 @@
 
             <FlexLayout
                 RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.9}"
-                HeightRequest="45"
+                HeightRequest="40"
                 Direction="Row"
-                JustifyContent="SpaceEvenly">
+                JustifyContent="SpaceAround">
                 <Button
+                    WidthRequest="{StaticResource ContactUsBtnWidth}"
                     Command="{Binding ContactUsCommand}"
                     Text="{x:Static resources:AppResources.btn_contact_us}" />
 
                 <Button
+                    WidthRequest="{StaticResource ContactUsBtnWidth}"
                     Command="{Binding VisitSupportCommand}"
                     Text="{x:Static resources:AppResources.btn_visit_support}" />
             </FlexLayout>

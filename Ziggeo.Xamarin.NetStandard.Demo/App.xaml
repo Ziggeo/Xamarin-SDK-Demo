@@ -64,6 +64,11 @@
                 x:Key="FabSize"
                 x:TypeArguments="x:Double"
                 Default="60" />
+            
+            <OnPlatform
+                x:Key="ContactUsBtnWidth"
+                x:TypeArguments="x:Double"
+                Default="150" />
 
             <!-- Icons -->
             <x:String x:Key="IconLogout">&#xf206;</x:String>
@@ -115,6 +120,12 @@
                 <Setter Property="Padding" Value="{StaticResource HalfPadding}" />
             </Style>
 
+            <Style x:Key="ContactUsBtnStyle" TargetType="Button">
+                <Setter Property="WidthRequest" Value="150" />
+                <Setter Property="BackgroundColor" Value="{StaticResource Primary}" />
+                <Setter Property="TextColor" Value="White" />
+            </Style>
+
             <Style TargetType="Button">
                 <Style.Triggers>
                     <Trigger TargetType="Button" Property="FontAttributes" Value="Bold">
@@ -125,6 +136,8 @@
 
                 <Setter Property="FontFamily"
                         Value="quicksand_regular" />
+                <Setter Property="BackgroundColor" Value="{StaticResource Primary}" />
+                <Setter Property="TextColor" Value="White" />
             </Style>
 
             <Style TargetType="Entry">

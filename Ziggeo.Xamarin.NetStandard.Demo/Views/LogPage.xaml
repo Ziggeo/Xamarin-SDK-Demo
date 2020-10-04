@@ -38,8 +38,10 @@
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
+        
         <Button
             Command="{Binding SendReportCommand}"
             Text="{x:Static resources:AppResources.btn_send_report}" />
+        
     </StackLayout>
 </ContentPage>

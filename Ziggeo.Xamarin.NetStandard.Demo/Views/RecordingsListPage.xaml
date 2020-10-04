@@ -156,8 +156,7 @@
                     <ImageButton.Source>
                         <FontImageSource
                             FontFamily="{DynamicResource MaterialFontFamily}"
-                            Glyph="{StaticResource IconPlus}"
-                            Size="16" />
+                            Glyph="{StaticResource IconPlus}" />
                     </ImageButton.Source>
                 </ImageButton>
 
