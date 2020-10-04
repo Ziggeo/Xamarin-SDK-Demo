@@ -97,8 +97,7 @@
                 <ImageButton
                     Style="{StaticResource SmallFabStyle}"
                     Clicked="BtnFolder_OnClicked"
-                    x:Name="BtnFolder"
-                    Padding="{StaticResource HalfPadding}">
+                    x:Name="BtnFolder">
                     <ImageButton.Source>
                         <FontImageSource
                             FontFamily="{DynamicResource MaterialFontFamily}"

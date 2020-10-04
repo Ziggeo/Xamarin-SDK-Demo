@@ -61,19 +61,9 @@
                 Default="40" />
 
             <OnPlatform
-                x:Key="SmallFabCornersRadius"
-                x:TypeArguments="x:Double"
-                Default="20" />
-
-            <OnPlatform
                 x:Key="FabSize"
                 x:TypeArguments="x:Double"
                 Default="60" />
-
-            <OnPlatform
-                x:Key="FabCornersRadius"
-                x:TypeArguments="x:Double"
-                Default="30" />
 
             <!-- Icons -->
             <x:String x:Key="IconLogout">&#xf206;</x:String>
@@ -109,7 +99,7 @@
             <Style x:Key="SmallFabStyle" TargetType="ImageButton">
                 <Setter Property="WidthRequest" Value="{StaticResource SmallFabSize}" />
                 <Setter Property="HeightRequest" Value="{StaticResource SmallFabSize}" />
-                <Setter Property="CornerRadius" Value="{StaticResource SmallFabCornersRadius}" />
+                <Setter Property="CornerRadius" Value="20" />
                 <Setter Property="IsVisible" Value="False" />
                 <Setter Property="Margin" Value="0,0,0,8" />
                 <Setter Property="BackgroundColor" Value="{StaticResource Accent}" />
@@ -119,7 +109,7 @@
             <Style x:Key="FabStyle" TargetType="ImageButton">
                 <Setter Property="WidthRequest" Value="{StaticResource FabSize}" />
                 <Setter Property="HeightRequest" Value="{StaticResource FabSize}" />
-                <Setter Property="CornerRadius" Value="{StaticResource FabCornersRadius}" />
+                <Setter Property="CornerRadius" Value="30" />
                 <Setter Property="Margin" Value="0,0,0,8" />
                 <Setter Property="BackgroundColor" Value="{StaticResource Accent}" />
                 <Setter Property="Padding" Value="{StaticResource HalfPadding}" />
