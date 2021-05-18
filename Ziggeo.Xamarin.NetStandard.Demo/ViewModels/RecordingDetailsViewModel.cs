@@ -109,8 +109,8 @@ namespace Ziggeo.Xamarin.NetStandard.Demo.ViewModels
         {
             try
             {
-                var stream = await App.ZiggeoApplication.Videos.DownloadImage(Item.Token);
-                ImageSource = ImageSource.FromStream(() => stream);
+                var url = await App.ZiggeoApplication.Videos.GetImageUrl(Item.Token);
+                ImageSource = ImageSource.FromUri(new Uri(url)); 
             }
             catch (Exception ex)
             {
