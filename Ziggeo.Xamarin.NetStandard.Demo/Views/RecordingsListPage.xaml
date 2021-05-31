@@ -29,13 +29,47 @@
                             Orientation="Horizontal"
                             Padding="{StaticResource DefaultPadding}">
                             <Image>
-                                <Image.Source>
-                                    <FontImageSource
-                                        Color="Black"
-                                        Size="60"
-                                        FontFamily="{DynamicResource MaterialFontFamily}"
-                                        Glyph="{StaticResource IconVideo}" />
-                                </Image.Source>
+                                <Image.Triggers>
+                                    <DataTrigger TargetType="Image"
+                                                 Binding="{Binding Type }"
+                                                 Value="VideoItem">
+                                        <Setter Property="Source">
+                                            <Setter.Value>
+                                                <FontImageSource
+                                                    Color="Black"
+                                                    Size="60"
+                                                    FontFamily="{DynamicResource MaterialFontFamily}"
+                                                    Glyph="{StaticResource IconVideo}" />
+                                            </Setter.Value>
+                                        </Setter>
+                                    </DataTrigger>
+                                    <DataTrigger TargetType="Image"
+                                                 Binding="{Binding Type }"
+                                                 Value="AudioItem">
+                                        <Setter Property="Source">
+                                            <Setter.Value>
+                                                <FontImageSource
+                                                    Color="Black"
+                                                    Size="60"
+                                                    FontFamily="{DynamicResource MaterialFontFamily}"
+                                                    Glyph="{StaticResource IconMic}" />
+                                            </Setter.Value>
+                                        </Setter>
+                                    </DataTrigger>
+                                    <DataTrigger TargetType="Image"
+                                                 Binding="{Binding Type }"
+                                                 Value="ImageItem">
+                                        <Setter Property="Source">
+                                            <Setter.Value>
+                                                <FontImageSource
+                                                    Color="Black"
+                                                    Size="60"
+                                                    FontFamily="{DynamicResource MaterialFontFamily}"
+                                                    Glyph="{StaticResource IconImage}" />
+                                            </Setter.Value>
+                                        </Setter>
+                                    </DataTrigger>
+                                </Image.Triggers>
                             </Image>
                             <StackLayout
                                 VerticalOptions="Center"

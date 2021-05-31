@@ -41,15 +41,19 @@ namespace Ziggeo.Xamarin.NetStandard.Demo
 
             DependencyService.Register<InfoService>();
             if (UseMockDataStore)
+            {
                 DependencyService.Register<MockVideosService>();
+                DependencyService.Register<MockAudiosService>();
+                DependencyService.Register<MockImagesService>();
+            }
             else
+            {
                 DependencyService.Register<CloudVideosService>();
+                DependencyService.Register<CloudAudiosService>();
+                DependencyService.Register<CloudImageService>();
+            }
 
-
-            if (Device.RuntimePlatform == Device.iOS)
-                MainPage = page;
-            else
-                MainPage = new NavigationPage(page);
+            MainPage = Device.RuntimePlatform == Device.iOS ? page : new NavigationPage(page);
         }
 
         public bool IsLoggedIn()

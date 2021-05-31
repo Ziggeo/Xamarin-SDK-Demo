@@ -1,23 +1,25 @@
 using System;
 using System.Collections.ObjectModel;
 using System.Diagnostics;
+using System.Linq;
 using System.Threading.Tasks;
 using Xamarin.Forms;
 using Ziggeo.Xamarin.NetStandard.Demo.Models;
 using Ziggeo.Xamarin.NetStandard.Demo.Services;
-using Ziggeo.Xamarin.NetStandard.Demo.Views;
 
 namespace Ziggeo.Xamarin.NetStandard.Demo.ViewModels
 {
     public class RecordingsListViewModel : BaseViewModel
     {
-        public ObservableCollection<VideoItem> Items { get; set; }
+        public ObservableCollection<MediaItem> Items { get; set; }
         public Command LoadItemsCommand { get; set; }
         public IVideosService VideosService => DependencyService.Get<IVideosService>() ?? new MockVideosService();
+        public IAudiosService AudiosService => DependencyService.Get<IAudiosService>() ?? new MockAudiosService();
+        public IImagesService ImagesService => DependencyService.Get<IImagesService>() ?? new MockImagesService();
 
         public RecordingsListViewModel()
         {
-            Items = new ObservableCollection<VideoItem>();
+            Items = new ObservableCollection<MediaItem>();
             LoadItemsCommand = new Command(async () => await ExecuteLoadCommand());
         }
 
@@ -31,8 +33,17 @@ namespace Ziggeo.Xamarin.NetStandard.Demo.ViewModels
             try
             {
                 Items.Clear();
-                var items = await VideosService.Index();
-                foreach (var item in items)
+                var videoItems = await VideosService.Index();
+                var audioItems = await AudiosService.Index();
+                var imageItems = await ImagesService.Index();
+
+                var items = videoItems.Concat<MediaItem>(audioItems).Concat(imageItems);
+                var mediaItems = items as MediaItem[] ?? items.ToArray();
+                var orderedEnumerable = mediaItems
+                        //todo sort with date
+                    // .OrderByDescending(item => item.Date)
+                    .ToList();
+                foreach (var item in orderedEnumerable)
                 {
                     Items.Add(item);
                 }

@@ -83,7 +83,7 @@ namespace Ziggeo.Xamarin.NetStandard.Demo.ViewModels
             set => Item.Description = value;
         }
 
-        public VideoItem Item;
+        public MediaItem Item;
 
         public ICommand EditCommand { get; set; }
         public ICommand DeleteCommand { get; set; }
@@ -98,7 +98,20 @@ namespace Ziggeo.Xamarin.NetStandard.Demo.ViewModels
             DeleteCommand = new Command(RunDelete);
             SaveCommand = new Command(RunSave);
             ImageClickedCommand = new Command(() =>
-                App.ZiggeoApplication.StartPlayer(Item.Token)
+                {
+                    switch (Item)
+                    {
+                        case VideoItem _:
+                            App.ZiggeoApplication.StartPlayer(Item.Token);
+                            break;
+                        case AudioItem _:
+                            App.ZiggeoApplication.StartPlayer(Item.Token);
+                            break;
+                        case ImageItem _:
+                            App.ZiggeoApplication.StartPlayer(Item.Token);
+                            break;
+                    }
+                }
             );
 
             // xaml required default constructor
@@ -109,8 +122,17 @@ namespace Ziggeo.Xamarin.NetStandard.Demo.ViewModels
         {
             try
             {
-                var url = await App.ZiggeoApplication.Videos.GetImageUrl(Item.Token);
-                ImageSource = ImageSource.FromUri(new Uri(url)); 
+                switch (Item)
+                {
+                    case VideoItem _:
+                        var url = await App.ZiggeoApplication.Videos.GetImageUrl(Item.Token);
+                        ImageSource = ImageSource.FromUri(new Uri(url));
+                        break;
+                    case AudioItem _:
+                    case ImageItem _:
+                        await App.ZiggeoApplication.Videos.Destroy(Item.Token);
+                        break;
+                }
             }
             catch (Exception ex)
             {
@@ -123,7 +145,19 @@ namespace Ziggeo.Xamarin.NetStandard.Demo.ViewModels
             IsLoading = true;
             try
             {
-                await App.ZiggeoApplication.Videos.Destroy(Item.Token);
+                switch (Item)
+                {
+                    case VideoItem _:
+                        await App.ZiggeoApplication.Videos.Destroy(Item.Token);
+                        break;
+                    case AudioItem _:
+                        await App.ZiggeoApplication.Audios.Destroy(Item.Token);
+                        break;
+                    case ImageItem _:
+                        await App.ZiggeoApplication.Images.Destroy(Item.Token);
+                        break;
+                }
+
                 await Page.Navigation.PopAsync();
             }
             catch (Exception exception)
@@ -149,7 +183,19 @@ namespace Ziggeo.Xamarin.NetStandard.Demo.ViewModels
                     data[VideoItem.KeyVideoKey] = Item.Key;
                 }
 
-                await App.ZiggeoApplication.Videos.Update(Item.Token, data);
+                switch (Item)
+                {
+                    case VideoItem _:
+                        await App.ZiggeoApplication.Videos.Update(Item.Token, data);
+                        break;
+                    case AudioItem _:
+                        await App.ZiggeoApplication.Audios.Update(Item.Token, data);
+                        break;
+                    case ImageItem _:
+                        await App.ZiggeoApplication.Images.Update(Item.Token, data);
+                        break;
+                }
+
                 IsEditMode = false;
             }
             catch (Exception exception)
