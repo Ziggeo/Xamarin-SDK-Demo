@@ -21,8 +21,7 @@ namespace Ziggeo.Xamarin.NetStandard.Demo.Views
 
         async void OnItemSelected(object sender, SelectedItemChangedEventArgs args)
         {
-            var item = args.SelectedItem as VideoItem;
-            if (item == null)
+            if (!(args.SelectedItem is MediaItem item))
                 return;
 
             RecordingDetailsViewModel model = new RecordingDetailsViewModel {Item = item};

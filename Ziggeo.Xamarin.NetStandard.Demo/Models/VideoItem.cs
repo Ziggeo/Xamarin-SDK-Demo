@@ -12,7 +12,7 @@
 
         public string Type { get; set; }
 
-        protected MediaItem(string type)
+        public MediaItem(string type)
         {
             Type = type;
         }
