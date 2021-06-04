@@ -5,7 +5,7 @@
         public virtual string Token { get; set; }
         public virtual string Key { get; set; }
         public virtual string Tags { get; set; }
-        public new virtual string Date { get; set; }
+        public virtual string Date { get; set; }
         public virtual string Status { get; set; }
         public virtual string Title { get; set; }
         public virtual string Description { get; set; }
@@ -49,9 +49,6 @@
 
         override
             public string Description { get; set; }
-
-        // override
-        //     public string Type = "VideoItem";
         public VideoItem() : base("VideoItem")
         {
         }
@@ -89,9 +86,7 @@
         override
             public string Description { get; set; }
         
-        // override
-            // public string Type = "AudioItem";
-            public AudioItem() : base("AudioItem")
+        public AudioItem() : base("AudioItem")
             {
             }
     }
@@ -128,8 +123,6 @@
         override
             public string Description { get; set; }
         
-        // override
-        //     public string Type = "ImageItem";
         public ImageItem() : base("ImageItem")
         {
         }

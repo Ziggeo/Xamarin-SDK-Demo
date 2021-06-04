@@ -40,8 +40,7 @@ namespace Ziggeo.Xamarin.NetStandard.Demo.ViewModels
                 var items = videoItems.Concat<MediaItem>(audioItems).Concat(imageItems);
                 var mediaItems = items as MediaItem[] ?? items.ToArray();
                 var orderedEnumerable = mediaItems
-                        //todo sort with date
-                    // .OrderByDescending(item => item.Date)
+                        .OrderByDescending(item => DateTime.Parse(item.Date))
                     .ToList();
                 foreach (var item in orderedEnumerable)
                 {
