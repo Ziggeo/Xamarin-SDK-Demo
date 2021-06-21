@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Input;
+using Acr.UserDialogs.Infrastructure;
 using Xamarin.Forms;
 using Ziggeo.Xamarin.NetStandard.Demo.Models;
 using Ziggeo.Xamarin.NetStandard.Demo.Views;
@@ -150,14 +151,9 @@ namespace Ziggeo.Xamarin.NetStandard.Demo.ViewModels
                         };
                         break;
                     case ImageItem _:
-                        AspectProp =  Aspect.AspectFit;
-                        ImageSource = new FontImageSource
-                        {   
-                            Color = Color.Gray,
-                            Size = iconSize,
-                            FontFamily = font,
-                            Glyph = resources["IconImage"]  as string
-                        };
+                        AspectProp =  Aspect.AspectFill;
+                        var imageUrl = await App.ZiggeoApplication.Images.GetImageUrl(Item.Token);
+                        ImageSource = ImageSource.FromUri(new Uri(imageUrl));
                         break;
                 }
             }
