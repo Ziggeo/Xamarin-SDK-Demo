@@ -17,8 +17,6 @@ namespace Ziggeo.Xamarin.NetStandard.Demo.Views
             MenuList = new List<MasterPageItem>();
             var recPage = new MasterPageItem
                 {Title = AppResources.item_recordings, TargetType = typeof(RecordingsListPage)};
-            var vidPage = new MasterPageItem
-                {Title = AppResources.item_video_editor, TargetType = typeof(VideoEditorPage)};
             var setPage = new MasterPageItem {Title = AppResources.item_settings, TargetType = typeof(SettingsPage)};
             var sdkPage = new MasterPageItem
                 {Title = AppResources.item_sdks, TargetType = typeof(AvailableSdksListPage)};
@@ -29,7 +27,6 @@ namespace Ziggeo.Xamarin.NetStandard.Demo.Views
             var logPage = new MasterPageItem {Title = AppResources.item_log, TargetType = typeof(LogPage)};
 
             MenuList.Add(recPage);
-            MenuList.Add(vidPage);
             MenuList.Add(setPage);
             MenuList.Add(sdkPage);
             MenuList.Add(clPage);
