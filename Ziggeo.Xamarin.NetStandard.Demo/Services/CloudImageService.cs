@@ -52,7 +52,7 @@ namespace Ziggeo.Xamarin.NetStandard.Demo.Services
         {
             try
             {
-                await App.ZiggeoApplication.Videos.Destroy(token);
+                await App.ZiggeoApplication.Images.Destroy(token);
                 return true;
             }
             catch (Exception ex)

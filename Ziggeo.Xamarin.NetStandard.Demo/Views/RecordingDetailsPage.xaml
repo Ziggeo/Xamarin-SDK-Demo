@@ -15,7 +15,7 @@
         <Image
             HeightRequest="200"
             Margin="{StaticResource DefaultPadding}"
-            Aspect="AspectFill"
+            Aspect="{Binding AspectProp}"
             Source="{Binding ImageSource}">
             <Image.GestureRecognizers>
                 <TapGestureRecognizer

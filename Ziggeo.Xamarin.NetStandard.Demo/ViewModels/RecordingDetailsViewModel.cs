@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Input;
+using Acr.UserDialogs.Infrastructure;
 using Xamarin.Forms;
 using Ziggeo.Xamarin.NetStandard.Demo.Models;
 using Ziggeo.Xamarin.NetStandard.Demo.Views;
@@ -15,14 +17,20 @@ namespace Ziggeo.Xamarin.NetStandard.Demo.ViewModels
         private bool _isEditMode;
         private bool _isError;
         private ImageSource _imageSource;
-
+        private Aspect _aspectProp;
+        
+        public Aspect AspectProp
+        {
+            get => _aspectProp;
+            set => SetProperty(ref _aspectProp, value);
+        }
         public ImageSource ImageSource
         {
             get => _imageSource;
             set => SetProperty(ref _imageSource, value);
         }
 
-        public bool IsLoading
+        private bool IsLoading
         {
             get => _isLoading;
             set
@@ -49,7 +57,7 @@ namespace Ziggeo.Xamarin.NetStandard.Demo.ViewModels
             }
         }
 
-        public bool IsError
+        private bool IsError
         {
             get => _isError;
             set => SetProperty(ref _isError, value);
@@ -105,32 +113,47 @@ namespace Ziggeo.Xamarin.NetStandard.Demo.ViewModels
                             App.ZiggeoApplication.StartPlayer(Item.Token);
                             break;
                         case AudioItem _:
-                            App.ZiggeoApplication.StartPlayer(Item.Token);
+                            App.ZiggeoApplication.StartAudio(null,Item.Token);
                             break;
                         case ImageItem _:
-                            App.ZiggeoApplication.StartPlayer(Item.Token);
+                            App.ZiggeoApplication.OpenImage(Item.Token);
                             break;
                     }
                 }
             );
 
             // xaml required default constructor
-            Item = new VideoItem();
+            Item = new MediaItem("");
         }
 
         public override async Task ExecuteLoadCommand()
         {
+            var resources = Application.Current.Resources;
+            const int iconSize = 200;
+            var font = (string) ((OnPlatform<string>) resources["MaterialFontFamily"])
+                .Platforms.FirstOrDefault(p => p.Platform[0] == Device.RuntimePlatform)?.Value;
             try
             {
                 switch (Item)
                 {
                     case VideoItem _:
+                        AspectProp =  Aspect.AspectFill;
                         var url = await App.ZiggeoApplication.Videos.GetImageUrl(Item.Token);
                         ImageSource = ImageSource.FromUri(new Uri(url));
                         break;
                     case AudioItem _:
+                        AspectProp =  Aspect.AspectFit;
+                        ImageSource = new FontImageSource
+                        {   Color = Color.Gray,
+                            Size = iconSize,
+                            FontFamily = font,
+                            Glyph = resources["IconMic"] as string
+                        };
+                        break;
                     case ImageItem _:
-                        await App.ZiggeoApplication.Videos.Destroy(Item.Token);
+                        AspectProp =  Aspect.AspectFill;
+                        var imageUrl = await App.ZiggeoApplication.Images.GetImageUrl(Item.Token);
+                        ImageSource = ImageSource.FromUri(new Uri(imageUrl));
                         break;
                 }
             }

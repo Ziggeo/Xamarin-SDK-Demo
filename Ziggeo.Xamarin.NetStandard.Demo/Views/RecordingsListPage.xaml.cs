@@ -21,8 +21,7 @@ namespace Ziggeo.Xamarin.NetStandard.Demo.Views
 
         async void OnItemSelected(object sender, SelectedItemChangedEventArgs args)
         {
-            var item = args.SelectedItem as VideoItem;
-            if (item == null)
+            if (!(args.SelectedItem is MediaItem item))
                 return;
 
             RecordingDetailsViewModel model = new RecordingDetailsViewModel {Item = item};
@@ -61,7 +60,7 @@ namespace Ziggeo.Xamarin.NetStandard.Demo.Views
 
         private void BtnImage_OnClicked(object sender, EventArgs e)
         {
-            ShowComingSoonToast();
+            App.ZiggeoApplication.StartImageRecorder();
         }
 
         private void BtnFolder_OnClicked(object sender, EventArgs e)
@@ -71,7 +70,7 @@ namespace Ziggeo.Xamarin.NetStandard.Demo.Views
 
         private void BtnMic_OnClicked(object sender, EventArgs e)
         {
-            ShowComingSoonToast();
+            App.ZiggeoApplication.StartAudioRecorder();
         }
 
         private void ShowComingSoonToast()
