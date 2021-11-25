@@ -113,7 +113,7 @@ namespace Ziggeo.Xamarin.NetStandard.Demo.ViewModels
                             App.ZiggeoApplication.StartPlayer(Item.Token);
                             break;
                         case AudioItem _:
-                            App.ZiggeoApplication.StartAudio(null,Item.Token);
+                            App.ZiggeoApplication.StartAudioWithToken(Item.Token);
                             break;
                         case ImageItem _:
                             App.ZiggeoApplication.OpenImage(Item.Token);
