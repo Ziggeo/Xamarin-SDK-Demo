@@ -6,12 +6,20 @@ namespace Ziggeo.Xamarin.NetStandard.Demo.ViewModels
 {
     public class SettingsViewModel : BaseViewModel
     {
-        public bool IsBlurMode { get; set; }
+        private bool _isBlurMode;
+        public bool IsBlurMode
+        {
+            get => _isBlurMode;
+            set {  _isBlurMode = value; OnPropertyChanged(nameof(IsBlurMode));  }
+        }
 
         public SettingsViewModel()
         {
-            IsBlurMode = false;
-            // IsBlurMode = Preferences.Get(Constants.BlurMode, false);
+        }
+        
+        public void GetBlurMode()
+        {
+            IsBlurMode = Preferences.Get(Constants.BlurMode, false);
         }
         
          public void SaveBlurMode()

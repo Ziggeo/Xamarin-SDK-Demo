@@ -14,6 +14,7 @@ namespace Ziggeo.Xamarin.NetStandard.Demo.Views
         {
             InitializeComponent();
             BindingContext = _viewModel = new SettingsViewModel();
+            _viewModel.GetBlurMode();
         }
 
         void OnBlurModeToggled(object sender, ToggledEventArgs e)
