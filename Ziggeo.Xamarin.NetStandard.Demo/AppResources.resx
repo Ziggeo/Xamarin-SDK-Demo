@@ -137,6 +137,12 @@
     <data name="coming_soon" xml:space="preserve">
     <value>Coming soon!</value>
   </data>
+  <data name="blur_settings" xml:space="preserve">
+    <value>Use blur Mode</value>
+  </data>
+  <data name="save_settings" xml:space="preserve">
+    <value>Save</value>
+  </data>
     <data name="common_confirm_message" xml:space="preserve">
     <value>Are you sure?</value>
   </data>

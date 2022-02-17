@@ -11,9 +11,32 @@
     </ContentPage.BindingContext>
 
     <StackLayout
-        HorizontalOptions="CenterAndExpand"
-        VerticalOptions="Center">
-        <Label
-            Text="{x:Static resources:AppResources.coming_soon}" />
+        HorizontalOptions="FillAndExpand"
+        VerticalOptions="FillAndExpand">
+        <StackLayout
+            HorizontalOptions="FillAndExpand"
+            Orientation="Horizontal"
+            Padding="{StaticResource DefaultPadding}">
+            <Label
+                Margin="{StaticResource DefaultPadding}"
+                Text="{x:Static resources:AppResources.blur_settings}" />
+
+            <StackLayout
+                VerticalOptions="Center"
+                HorizontalOptions="EndAndExpand">
+                <Switch
+                    IsEnabled="True"
+                    IsToggled="{Binding IsBlurMode}"
+                    Toggled="OnBlurModeToggled"
+                />
+            </StackLayout>
+        </StackLayout>
+        <Button
+            VerticalOptions="EndAndExpand"
+            HorizontalOptions="Center"
+            FontSize="12"
+            Margin="{StaticResource DefaultPadding}"
+            Clicked="SaveSettings"
+            Text="{x:Static resources:AppResources.save_settings}" />
     </StackLayout>
 </ContentPage>

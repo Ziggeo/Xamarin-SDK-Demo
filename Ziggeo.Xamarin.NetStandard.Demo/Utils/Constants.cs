@@ -4,6 +4,8 @@ namespace Ziggeo.Xamarin.NetStandard.Demo.Utils
     {
         // Preferences
         internal const string KeyAppToken = "KeyAppToken";
+        internal const string BlurMode = "BlurMode";
+
         
         // Messenger
         internal const string NavHome = "NavHome";
