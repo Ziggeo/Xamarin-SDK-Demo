@@ -32,7 +32,7 @@ namespace Ziggeo.Xamarin.NetStandard.Demo
             if (IsLoggedIn())
             {
                 page = new MainPage();
-                ZiggeoApplication.AppToken = Preferences.Get(Constants.KeyAppToken, null);
+                ZiggeoApplication.AppToken = Preferences.Get(Constants.KeyAppToken, "");
             }
 
             _initConfigs();
@@ -104,7 +104,12 @@ namespace Ziggeo.Xamarin.NetStandard.Demo
 
         private void _initCameraRecorderConfig()
         {
+            Console.WriteLine("AAAAAAAA _initCameraRecorderConfig");
+
             CameraRecorderConfig config = new CameraRecorderConfig();
+            config.BlurMode = Preferences.Get(Constants.BlurMode, false);
+            Console.WriteLine("AAAAAAAA_" + config.BlurMode);
+
             config.Error += exception => EventLogger.Add(AppResources.ev_rec_error, exception.ToString());
             config.Loaded += () => EventLogger.Add(AppResources.ev_rec_loaded);
             config.CanceledByUser += () => EventLogger.Add(AppResources.ev_rec_canceledByUser);

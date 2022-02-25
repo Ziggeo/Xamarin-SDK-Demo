@@ -1,4 +1,5 @@
-﻿using Xamarin.Essentials;
+﻿using System;
+using Xamarin.Essentials;
 using Xamarin.Forms;
 using Ziggeo.Xamarin.NetStandard.Demo.Utils;
 
@@ -24,7 +25,13 @@ namespace Ziggeo.Xamarin.NetStandard.Demo.ViewModels
         
          public void SaveBlurMode()
                 {
+                    Console.WriteLine("AAAAAAAA _SaveBlurMode"+ IsBlurMode);
+
                     Preferences.Set(Constants.BlurMode, IsBlurMode);
+                    App.ZiggeoApplication.CameraRecorderConfig.BlurMode = IsBlurMode;
+                    
+                    Console.WriteLine("AAAAAAAA BlurMode"+ App.ZiggeoApplication.CameraRecorderConfig.BlurMode);
+
                 }
     }
 }
