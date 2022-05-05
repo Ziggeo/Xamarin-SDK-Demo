@@ -85,6 +85,9 @@ namespace Ziggeo.Xamarin.NetStandard.Demo
             plConfig.Seek += (seekToMillis) =>
                 EventLogger.Add(AppResources.ev_pl_seek, seekToMillis.ToString());
             plConfig.ReadyToPlay += () => EventLogger.Add(AppResources.ev_pl_readyToPlay);
+            var plStyle = new PlayerStyle();
+            plStyle.ControllerStyle = 3;
+            plConfig.PlayerStyle = plStyle;
             ZiggeoApplication.PlayerConfig = plConfig;
         }
 

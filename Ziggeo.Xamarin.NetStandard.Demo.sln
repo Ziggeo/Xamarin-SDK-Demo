@@ -8,6 +8,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ziggeo.Xamarin.NetStandard.
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ziggeo.Xamarin.NetStandard.Demo", "Ziggeo.Xamarin.NetStandard.Demo\Ziggeo.Xamarin.NetStandard.Demo.csproj", "{5C15E693-FA67-4954-8CAA-1F738FA67B7A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AndroidTestProject2", "Ziggeo.Xamarin.NetStandard.Demo.Android\AndroidTestProject2\AndroidTestProject2.csproj", "{4DB5E526-537F-43A5-8EBC-440399F37A45}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -54,6 +56,18 @@ Global
 		{5C15E693-FA67-4954-8CAA-1F738FA67B7A}.Release|iPhone.Build.0 = Release|Any CPU
 		{5C15E693-FA67-4954-8CAA-1F738FA67B7A}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
 		{5C15E693-FA67-4954-8CAA-1F738FA67B7A}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
+		{4DB5E526-537F-43A5-8EBC-440399F37A45}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4DB5E526-537F-43A5-8EBC-440399F37A45}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4DB5E526-537F-43A5-8EBC-440399F37A45}.Debug|iPhone.ActiveCfg = Debug|Any CPU
+		{4DB5E526-537F-43A5-8EBC-440399F37A45}.Debug|iPhone.Build.0 = Debug|Any CPU
+		{4DB5E526-537F-43A5-8EBC-440399F37A45}.Debug|iPhoneSimulator.ActiveCfg = Debug|Any CPU
+		{4DB5E526-537F-43A5-8EBC-440399F37A45}.Debug|iPhoneSimulator.Build.0 = Debug|Any CPU
+		{4DB5E526-537F-43A5-8EBC-440399F37A45}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4DB5E526-537F-43A5-8EBC-440399F37A45}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4DB5E526-537F-43A5-8EBC-440399F37A45}.Release|iPhone.ActiveCfg = Release|Any CPU
+		{4DB5E526-537F-43A5-8EBC-440399F37A45}.Release|iPhone.Build.0 = Release|Any CPU
+		{4DB5E526-537F-43A5-8EBC-440399F37A45}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
+		{4DB5E526-537F-43A5-8EBC-440399F37A45}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
