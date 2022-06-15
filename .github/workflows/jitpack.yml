@@ -24,7 +24,7 @@ jobs:
           dotnet-version: '5.0.x'
 
       - name: Install dependencies
-        run: nuget restore ./Ziggeo.Xamarin.NetStandard.Demo.Android/AndroidTestProject2.AndroidTestProject2.sln
+        run: nuget restore AndroidTestProject2.sln
 
       - name: "Run Xamarin tests"
         uses: reactivecircus/android-emulator-runner@v2
