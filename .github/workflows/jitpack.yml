@@ -4,9 +4,6 @@ on: [ push, pull_request ]
 jobs:
   drive_android:
     runs-on: macos-latest
-    defaults:
-      run:
-        working-directory: ./AndroidTestProject2
     strategy:
       matrix:
         api-level: [ 23 ]
