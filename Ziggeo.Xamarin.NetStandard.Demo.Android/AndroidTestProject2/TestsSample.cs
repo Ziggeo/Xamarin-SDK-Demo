@@ -7,12 +7,6 @@ namespace AndroidTestProject2
     [TestFixture]
     public class TestsSample
     {
-        [Test]
-        public void Inconclusive()
-        {
-            Assert.Inconclusive("Inconclusive");
-        }
-
         private ZiggeoApplication _ziggeo;
         private string _appToken = "TOKEN";
         private string _ServerAuthToken = "ServerAuthToken";
