@@ -20,6 +20,7 @@ jobs:
             dotnet-version: '5.0.x'
 
       - name: Install dependencies
+      uses: actions/restore-dotnet@v2
         with:
           api-level: ${{ matrix.api-level }}
           target: ${{ matrix.target }}
