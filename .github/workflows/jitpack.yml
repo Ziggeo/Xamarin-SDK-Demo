@@ -14,15 +14,16 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: Set default Xamarin SDK versions
-         run: $VM_ASSETS/select-xamarin-sdk-v2.sh --mono=6.10 --android=10.2
-  
-      - name: Setup .NET Core SDK 5.0.x
+        run: |
+           $VM_ASSETS/select-xamarin-sdk-v2.sh --mono=12 --android=12
+
+      - name: Setup .NET Core SDK 6.0.x
         uses: actions/setup-dotnet@v2
-          with:
-            dotnet-version: '5.0.x'
+        with:
+            dotnet-version: '6.0.x'
 
       - name: Install dependencies
-        run: nuget restore <sln_file_path>
+        run: dotnet restore
 
       - name: "Run Xamarin tests"
         uses: reactivecircus/android-emulator-runner@v2
@@ -31,5 +32,5 @@ jobs:
           target: ${{ matrix.target }}
           working-directory: ./AndroidTestProject2
           profile: Nexus 4
-          script: "msbuild Ziggeo.Xamarin.NetStandard.Demo.Android/AndroidTestProject2/AndroidTestProject2.csproj /verbosity:normal /t:Rebuild /t:PackageForAndroid /t:SignAndroidPackage /p:Configuration=Debug"
+          script: "dotnet build Ziggeo.Xamarin.NetStandard.Demo.Android/AndroidTestProject2/AndroidTestProject2.csproj /verbosity:normal /t:Rebuild /t:PackageForAndroid /t:SignAndroidPackage /p:Configuration=Debug"
 
