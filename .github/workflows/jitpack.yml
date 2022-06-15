@@ -6,7 +6,7 @@ jobs:
     runs-on: macos-latest
     defaults:
       run:
-        working-directory: /Ziggeo.Xamarin.NetStandard.Demo.Android/AndroidTestProject2
+        working-directory: ./Ziggeo.Xamarin.NetStandard.Demo.Android/AndroidTestProject2
     
     strategy:
       matrix:
@@ -28,7 +28,7 @@ jobs:
         with:
           api-level: ${{ matrix.api-level }}
           target: ${{ matrix.target }}
-          working-directory: /Ziggeo.Xamarin.NetStandard.Demo.Android/AndroidTestProject2
+          working-directory: ./Ziggeo.Xamarin.NetStandard.Demo.Android/AndroidTestProject2
           profile: Nexus 4
           script: "dotnet build Ziggeo.Xamarin.NetStandard.Demo.Android/AndroidTestProject2/AndroidTestProject2.csproj /verbosity:normal /t:Rebuild /t:PackageForAndroid /t:SignAndroidPackage /p:Configuration=Debug"
 
