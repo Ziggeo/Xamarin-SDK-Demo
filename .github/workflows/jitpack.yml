@@ -23,8 +23,8 @@ jobs:
         with:
           dotnet-version: '5.0.x'
 
-#      - name: Install dependencies
-#        run: nuget install packages.config
+      - name: Install dependencies
+        run: dotnet install packages.config
 
       - name: Install dependencies
         run: dotnet restore
