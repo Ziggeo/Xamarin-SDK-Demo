@@ -9,7 +9,9 @@
         <OutputType>Library</OutputType>
         <RootNamespace>AndroidTestProject2</RootNamespace>
         <AssemblyName>AndroidTestProject2</AssemblyName>
-        <TargetFrameworkVersion>v10.0</TargetFrameworkVersion>
+        <TargetFrameworkVersion>v12.0</TargetFrameworkVersion>
+        <GenerateTargetFrameworkAttribute>false</GenerateTargetFrameworkAttribute>
+        <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
         <AndroidApplication>True</AndroidApplication>
         <AndroidResgenFile>Resources\Resource.designer.cs</AndroidResgenFile>
         <AndroidResgenClass>Resource</AndroidResgenClass>
@@ -41,10 +43,6 @@
         <AndroidSupportedAbis>armeabi-v7a;x86;arm64-v8a;x86_64</AndroidSupportedAbis>
     </PropertyGroup>
     <ItemGroup>
-        <Reference Include="BindingVideoCache, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
-          <HintPath>..\..\packages\ZiggeoXamarinSDK.1.2.6\lib\monoandroid81\BindingVideoCache.dll</HintPath>
-          <Private>True</Private>
-        </Reference>
         <Reference Include="ExoPlayer, Version=2.11.8.0, Culture=neutral, PublicKeyToken=null">
           <HintPath>..\..\packages\Xam.Plugins.Android.ExoPlayer.2.11.8\lib\monoandroid10.0\ExoPlayer.dll</HintPath>
           <Private>True</Private>
@@ -163,14 +161,6 @@
         </Reference>
         <Reference Include="Xamarin.Android.Support.Media.Compat, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
           <HintPath>..\..\packages\Xamarin.Android.Support.Media.Compat.27.0.2.1\lib\MonoAndroid81\Xamarin.Android.Support.Media.Compat.dll</HintPath>
-          <Private>True</Private>
-        </Reference>
-        <Reference Include="Xamarin.Android.Support.v4, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
-          <HintPath>..\..\packages\Xamarin.Android.Support.v4.27.0.2.1\lib\MonoAndroid81\Xamarin.Android.Support.v4.dll</HintPath>
-          <Private>True</Private>
-        </Reference>
-        <Reference Include="Xamarin.Android.Support.v7.AppCompat, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
-          <HintPath>..\..\packages\Xamarin.Android.Support.v7.AppCompat.27.0.2.1\lib\MonoAndroid81\Xamarin.Android.Support.v7.AppCompat.dll</HintPath>
           <Private>True</Private>
         </Reference>
         <Reference Include="Xamarin.Android.Support.Vector.Drawable, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
@@ -457,12 +447,16 @@
           <HintPath>..\..\packages\Xamarin.JavaX.Inject.1.0.0.2\lib\monoandroid90\Xamarin.JavaX.Inject.dll</HintPath>
           <Private>True</Private>
         </Reference>
-        <Reference Include="Ziggeo, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
-          <HintPath>..\..\packages\ZiggeoXamarinSDK.1.2.6\lib\monoandroid81\Ziggeo.dll</HintPath>
+        <Reference Include="Ziggeo.Xamarin.Android, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+          <HintPath>..\..\packages\Ziggeo.XamarinSDK.Netstandard.1.3.2\lib\MonoAndroid\Ziggeo.Xamarin.Android.dll</HintPath>
           <Private>True</Private>
         </Reference>
-        <Reference Include="Ziggeo.BindingAndroidSDK, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
-          <HintPath>..\..\packages\ZiggeoXamarinSDK.1.2.6\lib\monoandroid81\Ziggeo.BindingAndroidSDK.dll</HintPath>
+        <Reference Include="Ziggeo.Xamarin.Android.Binding, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+          <HintPath>..\..\packages\Ziggeo.XamarinSDK.Netstandard.1.3.2\lib\MonoAndroid\Ziggeo.Xamarin.Android.Binding.dll</HintPath>
+          <Private>True</Private>
+        </Reference>
+        <Reference Include="Ziggeo.Xamarin.NetStandard, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+          <HintPath>..\..\packages\Ziggeo.XamarinSDK.Netstandard.1.3.2\lib\MonoAndroid\Ziggeo.Xamarin.NetStandard.dll</HintPath>
           <Private>True</Private>
         </Reference>
     </ItemGroup>
@@ -473,6 +467,7 @@
         <Compile Include="Properties\AssemblyInfo.cs" />
     </ItemGroup>
     <ItemGroup>
+        <None Include="nuget.config" />
         <None Include="packages.config" />
         <None Include="Resources\AboutResources.txt" />
         <None Include="Assets\AboutAssets.txt" />
@@ -551,8 +546,6 @@
     <Import Project="..\..\packages\Xamarin.Android.Arch.Lifecycle.Runtime.1.0.3.1\build\MonoAndroid80\Xamarin.Android.Arch.Lifecycle.Runtime.targets" Condition="Exists('..\..\packages\Xamarin.Android.Arch.Lifecycle.Runtime.1.0.3.1\build\MonoAndroid80\Xamarin.Android.Arch.Lifecycle.Runtime.targets')" />
     <Import Project="..\..\packages\Xamarin.Android.Support.Compat.27.0.2.1\build\MonoAndroid81\Xamarin.Android.Support.Compat.targets" Condition="Exists('..\..\packages\Xamarin.Android.Support.Compat.27.0.2.1\build\MonoAndroid81\Xamarin.Android.Support.Compat.targets')" />
     <Import Project="..\..\packages\Xamarin.Android.Support.Media.Compat.27.0.2.1\build\MonoAndroid81\Xamarin.Android.Support.Media.Compat.targets" Condition="Exists('..\..\packages\Xamarin.Android.Support.Media.Compat.27.0.2.1\build\MonoAndroid81\Xamarin.Android.Support.Media.Compat.targets')" />
-    <Import Project="..\..\packages\Xamarin.Android.Support.v4.27.0.2.1\build\MonoAndroid81\Xamarin.Android.Support.v4.targets" Condition="Exists('..\..\packages\Xamarin.Android.Support.v4.27.0.2.1\build\MonoAndroid81\Xamarin.Android.Support.v4.targets')" />
     <Import Project="..\..\packages\Xamarin.Android.Support.Vector.Drawable.27.0.2.1\build\MonoAndroid81\Xamarin.Android.Support.Vector.Drawable.targets" Condition="Exists('..\..\packages\Xamarin.Android.Support.Vector.Drawable.27.0.2.1\build\MonoAndroid81\Xamarin.Android.Support.Vector.Drawable.targets')" />
     <Import Project="..\..\packages\Xamarin.Android.Support.Animated.Vector.Drawable.27.0.2.1\build\MonoAndroid81\Xamarin.Android.Support.Animated.Vector.Drawable.targets" Condition="Exists('..\..\packages\Xamarin.Android.Support.Animated.Vector.Drawable.27.0.2.1\build\MonoAndroid81\Xamarin.Android.Support.Animated.Vector.Drawable.targets')" />
-    <Import Project="..\..\packages\Xamarin.Android.Support.v7.AppCompat.27.0.2.1\build\MonoAndroid81\Xamarin.Android.Support.v7.AppCompat.targets" Condition="Exists('..\..\packages\Xamarin.Android.Support.v7.AppCompat.27.0.2.1\build\MonoAndroid81\Xamarin.Android.Support.v7.AppCompat.targets')" />
 </Project>
