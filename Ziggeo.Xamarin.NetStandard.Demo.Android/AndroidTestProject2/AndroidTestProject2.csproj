@@ -244,7 +244,7 @@
           <Private>True</Private>
         </Reference>
         <Reference Include="Xamarin.AndroidX.Media, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
-          <HintPath>..\..\packages\Xamarin.AndroidX.Media.1.1.0.1\lib\monoandroid90\Xamarin.AndroidX.Media.dll</HintPath>
+          <HintPath>..\..\packages\Xamarin.AndroidX.Media.1.2.0\lib\monoandroid90\Xamarin.AndroidX.Media.dll</HintPath>
           <Private>True</Private>
         </Reference>
         <Reference Include="Xamarin.AndroidX.Print, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
@@ -396,15 +396,15 @@
           <Private>True</Private>
         </Reference>
         <Reference Include="Ziggeo.Xamarin.Android, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
-          <HintPath>..\..\packages\Ziggeo.Xamarin.Netstandard.1.3.98\lib\MonoAndroid\Ziggeo.Xamarin.Android.dll</HintPath>
+          <HintPath>..\..\packages\Ziggeo.XamarinSDK.Netstandard.1.3.4\lib\MonoAndroid\Ziggeo.Xamarin.Android.dll</HintPath>
           <Private>True</Private>
         </Reference>
         <Reference Include="Ziggeo.Xamarin.Android.Binding, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
-          <HintPath>..\..\packages\Ziggeo.Xamarin.Netstandard.1.3.98\lib\MonoAndroid\Ziggeo.Xamarin.Android.Binding.dll</HintPath>
+          <HintPath>..\..\packages\Ziggeo.XamarinSDK.Netstandard.1.3.4\lib\MonoAndroid\Ziggeo.Xamarin.Android.Binding.dll</HintPath>
           <Private>True</Private>
         </Reference>
         <Reference Include="Ziggeo.Xamarin.NetStandard, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
-          <HintPath>..\..\packages\Ziggeo.Xamarin.Netstandard.1.3.98\lib\MonoAndroid\Ziggeo.Xamarin.NetStandard.dll</HintPath>
+          <HintPath>..\..\packages\Ziggeo.XamarinSDK.Netstandard.1.3.4\lib\MonoAndroid\Ziggeo.Xamarin.NetStandard.dll</HintPath>
           <Private>True</Private>
         </Reference>
     </ItemGroup>
@@ -462,7 +462,6 @@
       <Error Condition="!Exists('..\..\packages\Xamarin.AndroidX.DrawerLayout.1.1.1.2\build\monoandroid9.0\Xamarin.AndroidX.DrawerLayout.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\packages\Xamarin.AndroidX.DrawerLayout.1.1.1.2\build\monoandroid9.0\Xamarin.AndroidX.DrawerLayout.targets'))" />
       <Error Condition="!Exists('..\..\packages\Xamarin.AndroidX.Loader.1.1.0.7\build\monoandroid9.0\Xamarin.AndroidX.Loader.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\packages\Xamarin.AndroidX.Loader.1.1.0.7\build\monoandroid9.0\Xamarin.AndroidX.Loader.targets'))" />
       <Error Condition="!Exists('..\..\packages\Xamarin.AndroidX.Legacy.Support.Core.Utils.1.0.0.1\build\monoandroid90\Xamarin.AndroidX.Legacy.Support.Core.Utils.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\packages\Xamarin.AndroidX.Legacy.Support.Core.Utils.1.0.0.1\build\monoandroid90\Xamarin.AndroidX.Legacy.Support.Core.Utils.targets'))" />
-      <Error Condition="!Exists('..\..\packages\Xamarin.AndroidX.Media.1.1.0.1\build\monoandroid90\Xamarin.AndroidX.Media.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\packages\Xamarin.AndroidX.Media.1.1.0.1\build\monoandroid90\Xamarin.AndroidX.Media.targets'))" />
       <Error Condition="!Exists('..\..\packages\Xamarin.AndroidX.RecyclerView.1.2.1\build\monoandroid9.0\Xamarin.AndroidX.RecyclerView.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\packages\Xamarin.AndroidX.RecyclerView.1.2.1\build\monoandroid9.0\Xamarin.AndroidX.RecyclerView.targets'))" />
       <Error Condition="!Exists('..\..\packages\Xamarin.AndroidX.SlidingPaneLayout.1.0.0.1\build\monoandroid90\Xamarin.AndroidX.SlidingPaneLayout.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\packages\Xamarin.AndroidX.SlidingPaneLayout.1.0.0.1\build\monoandroid90\Xamarin.AndroidX.SlidingPaneLayout.targets'))" />
       <Error Condition="!Exists('..\..\packages\Xamarin.AndroidX.SwipeRefreshLayout.1.0.0.1\build\monoandroid90\Xamarin.AndroidX.SwipeRefreshLayout.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\packages\Xamarin.AndroidX.SwipeRefreshLayout.1.0.0.1\build\monoandroid90\Xamarin.AndroidX.SwipeRefreshLayout.targets'))" />
@@ -492,6 +491,7 @@
       <Error Condition="!Exists('..\..\packages\Xamarin.Google.MLKit.Common.117.3.0.3\build\monoandroid90\Xamarin.Google.MLKit.Common.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\packages\Xamarin.Google.MLKit.Common.117.3.0.3\build\monoandroid90\Xamarin.Google.MLKit.Common.targets'))" />
       <Error Condition="!Exists('..\..\packages\Xamarin.Google.MLKit.Vision.Common.116.4.0.3\build\monoandroid90\Xamarin.Google.MLKit.Vision.Common.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\packages\Xamarin.Google.MLKit.Vision.Common.116.4.0.3\build\monoandroid90\Xamarin.Google.MLKit.Vision.Common.targets'))" />
       <Error Condition="!Exists('..\..\packages\Xamarin.Google.MLKit.MediaPipe.Internal.116.0.0.3\build\monoandroid90\Xamarin.Google.MLKit.MediaPipe.Internal.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\packages\Xamarin.Google.MLKit.MediaPipe.Internal.116.0.0.3\build\monoandroid90\Xamarin.Google.MLKit.MediaPipe.Internal.targets'))" />
+      <Error Condition="!Exists('..\..\packages\Xamarin.AndroidX.Media.1.2.0\build\monoandroid90\Xamarin.AndroidX.Media.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\packages\Xamarin.AndroidX.Media.1.2.0\build\monoandroid90\Xamarin.AndroidX.Media.targets'))" />
     </Target>
     <Import Project="..\..\packages\Xamarin.AndroidX.Annotation.Experimental.1.1.0.5\build\monoandroid12.0\Xamarin.AndroidX.Annotation.Experimental.targets" Condition="Exists('..\..\packages\Xamarin.AndroidX.Annotation.Experimental.1.1.0.5\build\monoandroid12.0\Xamarin.AndroidX.Annotation.Experimental.targets')" />
     <Import Project="..\..\packages\Xamarin.AndroidX.Arch.Core.Common.2.1.0.13\build\monoandroid12.0\Xamarin.AndroidX.Arch.Core.Common.targets" Condition="Exists('..\..\packages\Xamarin.AndroidX.Arch.Core.Common.2.1.0.13\build\monoandroid12.0\Xamarin.AndroidX.Arch.Core.Common.targets')" />
@@ -528,7 +528,6 @@
     <Import Project="..\..\packages\Xamarin.AndroidX.DrawerLayout.1.1.1.2\build\monoandroid9.0\Xamarin.AndroidX.DrawerLayout.targets" Condition="Exists('..\..\packages\Xamarin.AndroidX.DrawerLayout.1.1.1.2\build\monoandroid9.0\Xamarin.AndroidX.DrawerLayout.targets')" />
     <Import Project="..\..\packages\Xamarin.AndroidX.Loader.1.1.0.7\build\monoandroid9.0\Xamarin.AndroidX.Loader.targets" Condition="Exists('..\..\packages\Xamarin.AndroidX.Loader.1.1.0.7\build\monoandroid9.0\Xamarin.AndroidX.Loader.targets')" />
     <Import Project="..\..\packages\Xamarin.AndroidX.Legacy.Support.Core.Utils.1.0.0.1\build\monoandroid90\Xamarin.AndroidX.Legacy.Support.Core.Utils.targets" Condition="Exists('..\..\packages\Xamarin.AndroidX.Legacy.Support.Core.Utils.1.0.0.1\build\monoandroid90\Xamarin.AndroidX.Legacy.Support.Core.Utils.targets')" />
-    <Import Project="..\..\packages\Xamarin.AndroidX.Media.1.1.0.1\build\monoandroid90\Xamarin.AndroidX.Media.targets" Condition="Exists('..\..\packages\Xamarin.AndroidX.Media.1.1.0.1\build\monoandroid90\Xamarin.AndroidX.Media.targets')" />
     <Import Project="..\..\packages\Xamarin.AndroidX.RecyclerView.1.2.1\build\monoandroid9.0\Xamarin.AndroidX.RecyclerView.targets" Condition="Exists('..\..\packages\Xamarin.AndroidX.RecyclerView.1.2.1\build\monoandroid9.0\Xamarin.AndroidX.RecyclerView.targets')" />
     <Import Project="..\..\packages\Xamarin.AndroidX.SlidingPaneLayout.1.0.0.1\build\monoandroid90\Xamarin.AndroidX.SlidingPaneLayout.targets" Condition="Exists('..\..\packages\Xamarin.AndroidX.SlidingPaneLayout.1.0.0.1\build\monoandroid90\Xamarin.AndroidX.SlidingPaneLayout.targets')" />
     <Import Project="..\..\packages\Xamarin.AndroidX.SwipeRefreshLayout.1.0.0.1\build\monoandroid90\Xamarin.AndroidX.SwipeRefreshLayout.targets" Condition="Exists('..\..\packages\Xamarin.AndroidX.SwipeRefreshLayout.1.0.0.1\build\monoandroid90\Xamarin.AndroidX.SwipeRefreshLayout.targets')" />
@@ -557,4 +556,5 @@
     <Import Project="..\..\packages\Xamarin.Google.MLKit.Common.117.3.0.3\build\monoandroid90\Xamarin.Google.MLKit.Common.targets" Condition="Exists('..\..\packages\Xamarin.Google.MLKit.Common.117.3.0.3\build\monoandroid90\Xamarin.Google.MLKit.Common.targets')" />
     <Import Project="..\..\packages\Xamarin.Google.MLKit.Vision.Common.116.4.0.3\build\monoandroid90\Xamarin.Google.MLKit.Vision.Common.targets" Condition="Exists('..\..\packages\Xamarin.Google.MLKit.Vision.Common.116.4.0.3\build\monoandroid90\Xamarin.Google.MLKit.Vision.Common.targets')" />
     <Import Project="..\..\packages\Xamarin.Google.MLKit.MediaPipe.Internal.116.0.0.3\build\monoandroid90\Xamarin.Google.MLKit.MediaPipe.Internal.targets" Condition="Exists('..\..\packages\Xamarin.Google.MLKit.MediaPipe.Internal.116.0.0.3\build\monoandroid90\Xamarin.Google.MLKit.MediaPipe.Internal.targets')" />
+    <Import Project="..\..\packages\Xamarin.AndroidX.Media.1.2.0\build\monoandroid90\Xamarin.AndroidX.Media.targets" Condition="Exists('..\..\packages\Xamarin.AndroidX.Media.1.2.0\build\monoandroid90\Xamarin.AndroidX.Media.targets')" />
 </Project>
