@@ -448,15 +448,15 @@
           <Private>True</Private>
         </Reference>
         <Reference Include="Ziggeo.Xamarin.Android, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
-          <HintPath>..\..\packages\Ziggeo.XamarinSDK.Netstandard.1.3.2\lib\MonoAndroid\Ziggeo.Xamarin.Android.dll</HintPath>
+          <HintPath>..\..\packages\Ziggeo.XamarinSDK.Netstandard.1.3.4\lib\MonoAndroid\Ziggeo.Xamarin.Android.dll</HintPath>
           <Private>True</Private>
         </Reference>
         <Reference Include="Ziggeo.Xamarin.Android.Binding, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
-          <HintPath>..\..\packages\Ziggeo.XamarinSDK.Netstandard.1.3.2\lib\MonoAndroid\Ziggeo.Xamarin.Android.Binding.dll</HintPath>
+          <HintPath>..\..\packages\Ziggeo.XamarinSDK.Netstandard.1.3.4\lib\MonoAndroid\Ziggeo.Xamarin.Android.Binding.dll</HintPath>
           <Private>True</Private>
         </Reference>
         <Reference Include="Ziggeo.Xamarin.NetStandard, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
-          <HintPath>..\..\packages\Ziggeo.XamarinSDK.Netstandard.1.3.2\lib\MonoAndroid\Ziggeo.Xamarin.NetStandard.dll</HintPath>
+          <HintPath>..\..\packages\Ziggeo.XamarinSDK.Netstandard.1.3.4\lib\MonoAndroid\Ziggeo.Xamarin.NetStandard.dll</HintPath>
           <Private>True</Private>
         </Reference>
     </ItemGroup>
@@ -472,6 +472,9 @@
         <None Include="Resources\AboutResources.txt" />
         <None Include="Assets\AboutAssets.txt" />
         <None Include="Properties\AndroidManifest.xml" />
+    </ItemGroup>
+    <ItemGroup>
+      <Content Include="package.json" />
     </ItemGroup>
     <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
     <Import Project="..\..\packages\Xamarin.AndroidX.Annotation.1.3.0.2\build\monoandroid12.0\Xamarin.AndroidX.Annotation.targets" Condition="Exists('..\..\packages\Xamarin.AndroidX.Annotation.1.3.0.2\build\monoandroid12.0\Xamarin.AndroidX.Annotation.targets')" />

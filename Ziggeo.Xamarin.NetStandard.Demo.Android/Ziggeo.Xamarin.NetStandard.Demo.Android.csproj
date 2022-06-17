@@ -99,14 +99,13 @@
       <Version>2.5.25</Version>
     </PackageReference>
     <PackageReference Include="Ziggeo.XamarinSDK.Netstandard">
-      <Version>1.3.2</Version>
+      <Version>1.3.4</Version>
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="MainActivity.cs" />
     <Compile Include="Resources\Resource.designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="TestConfiguration.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="..\..\Android-SDK\demo_release_info\key.properties">
