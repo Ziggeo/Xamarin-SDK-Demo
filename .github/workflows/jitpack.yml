@@ -33,7 +33,9 @@ jobs:
         run: nuget restore -o ./Ziggeo.Xamarin.NetStandard.Demo.Android/AndroidTestProject2
 
       - Find Tests
-        run: adb shell pm list instrumentation
+        uses: reactivecircus/android-emulator-runner@v2
+        with:
+           script: " adb shell pm list instrumentation"
 
       - name: "Run Xamarin tests"
         run: adb shell am instrument -w AndroidTestProject2.AndroidTestProject2/app.tests.TestInstrumentation
