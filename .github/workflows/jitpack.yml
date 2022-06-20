@@ -19,7 +19,7 @@ jobs:
           dotnet-version: '5.0.x'
 
       - name: "update Nuget"
-        run: nuget.exe update -self
+        run: nuget update -self
 
       - name: Install dependencies
         run: nuget restore -o ./Ziggeo.Xamarin.NetStandard.Demo
