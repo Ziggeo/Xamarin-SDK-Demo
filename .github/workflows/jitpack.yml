@@ -19,7 +19,7 @@ jobs:
           dotnet-version: '5.0.x'
 
       - name: Install dependencies
-        run: nuget restore
+        run: nuget restore -o ./Ziggeo.Xamarin.NetStandard.Demo
 
       - name: Build
         run: msbuild Ziggeo.Xamarin.NetStandard.Demo.Android.csproj /t:PackageForAndroid /p:Configuration=Debug
