@@ -154,6 +154,7 @@
   <ItemGroup>
     <Reference Include="Mono.Android" />
     <Reference Include="System" />
+    <Reference Include="Xamarin.Android.NUnitLite" />
     <Reference Include="Xamarin.UITest, Version=2.2.4.0, Culture=neutral, PublicKeyToken=null">
       <HintPath>..\..\..\..\.nuget\packages\xamarin.uitest\2.2.4\lib\net45\Xamarin.UITest.dll</HintPath>
     </Reference>
@@ -215,5 +216,14 @@
   <ItemGroup>
     <AndroidAsset Include="Assets\materialdesignicons-webfont.ttf" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="nuget.config" />
+  </ItemGroup>
+<!--  <ItemGroup>-->
+<!--    <Compile Include="TestConfiguration.cs" />-->
+<!--  </ItemGroup>-->
+<!--  <Target Name="RunTests" DependsOnTargets="_ValidateAndroidPackageProperties">-->
+<!--    <Exec Command="&quot;$(_AndroidPlatformToolsDirectory)adb&quot; $(AdbTarget) $(AdbOptions) shell am instrument -w $(_AndroidPackage)/ziggeo.xamarin.netStandard.demo.droid.TestInstrumentation" />-->
+<!--  </Target>-->
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
 </Project>

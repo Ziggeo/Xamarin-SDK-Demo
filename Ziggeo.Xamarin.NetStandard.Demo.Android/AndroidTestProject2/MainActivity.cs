@@ -22,7 +22,7 @@ namespace AndroidTestProject2
     // }
 
 
-    [Instrumentation(Name = "AndroidTestProject2.TestInstrumentation")]
+    [Instrumentation(Name = "app.tests.TestInstrumentation")]
     public class TestInstrumentation : TestSuiteInstrumentation
     {
         public TestInstrumentation(IntPtr handle, JniHandleOwnership transfer) : base(handle, transfer)

@@ -1,25 +1,21 @@
-
+using System;
 using System.Reflection;
 using Android.App;
-using Android.OS;
-using Xunit.Sdk;
+using Android.Runtime;
+using Xamarin.Android.NUnitLite;
 
 namespace Ziggeo.Xamarin.NetStandard.Demo.Droid
 {
-    [Activity(Label = "TestConfiguration")]
-    public class TestConfiguration : Xunit.Runners.UI.RunnerActivity
+    [Instrumentation(Name = "ziggeo.xamarin.netStandard.demo.droid.TestInstrumentation")]
+    public class TestInstrumentation : TestSuiteInstrumentation
     {
-        //public static Context Context { get; set; }
-
-        protected override void OnCreate(Bundle bundle)
+        public TestInstrumentation(IntPtr handle, JniHandleOwnership transfer) : base(handle, transfer)
         {
-            // tests can be inside the main assembly
-            AddTestAssembly(Assembly.GetExecutingAssembly());
-            AddExecutionAssembly(typeof(ExtensibilityPointFactory).Assembly);
-            // or in any reference assemblies   
-            //this.AutoStart = true;
-            base.OnCreate(bundle);
-            //Context = this;
+        }
+
+        protected override void AddTests()
+        {
+            AddTest(Assembly.GetExecutingAssembly());
         }
     }
 }
