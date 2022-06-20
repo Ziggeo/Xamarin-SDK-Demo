@@ -6,7 +6,7 @@ jobs:
     runs-on: macos-latest
     defaults:
       run:
-        working-directory: ./Ziggeo.Xamarin.NetStandard.Demo.Android/AndroidTestProject2
+        working-directory: ./Ziggeo.Xamarin.NetStandard.Demo.Android
     
     strategy:
       matrix:
@@ -30,14 +30,14 @@ jobs:
         run: dotnet restore
         
       - name: Install Ziggeo
-        run: nuget restore -o ./Ziggeo.Xamarin.NetStandard.Demo.Android/AndroidTestProject2
+        run: nuget restore -o ./Ziggeo.Xamarin.NetStandard.Demo.Android
       
       - name: "Run Xamarin tests"
         uses: reactivecircus/android-emulator-runner@v2
         with:
           api-level: ${{ matrix.api-level }}
           target: ${{ matrix.target }}
-          working-directory: ./Ziggeo.Xamarin.NetStandard.Demo.Android/AndroidTestProject2
+          working-directory: ./Ziggeo.Xamarin.NetStandard.Demo.Android
           profile: Nexus 4
-          script: "msbuild AndroidTestProject2.csproj /verbosity:normal /t:Rebuild /t:PackageForAndroid /t:SignAndroidPackage /p:Configuration=Debug"
+          script: "msbuild Ziggeo.Xamarin.NetStandard.Demo.Android.csproj /verbosity:normal /t:Rebuild /t:PackageForAndroid /t:SignAndroidPackage /p:Configuration=Debug"
 
