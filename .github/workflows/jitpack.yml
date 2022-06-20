@@ -4,9 +4,6 @@ on: [ push, pull_request ]
 jobs:
   drive_android:
     runs-on: macos-latest
-    defaults:
-      run:
-        working-directory: ./Ziggeo.Xamarin.NetStandard.Demo.Android
     
     strategy:
       matrix:
@@ -30,7 +27,7 @@ jobs:
         run: dotnet restore
         
       - name: Install Ziggeo
-        run: nuget restore -o ./Ziggeo.Xamarin.NetStandard.Demo.Android
+        run: nuget restore 
       
       - name: "Run Xamarin tests"
         uses: reactivecircus/android-emulator-runner@v2
