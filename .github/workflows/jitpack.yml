@@ -21,11 +21,11 @@ jobs:
 #      - name: "update Nuget"
 #        run: nuget update -self
 
-#      - name: Install dependencies
-#        run: nuget restore -o ./Ziggeo.Xamarin.NetStandard.Demo
-
       - name: Install dependencies
-        run: nuget restore -o ./Ziggeo.Xamarin.NetStandard.Demo/Ziggeo.Xamarin.NetStandard.Demo.Android
+        run: dotnet restore -o ./Ziggeo.Xamarin.NetStandard.Demo
+
+#      - name: Install dependencies
+#        run: nuget restore -o ./Ziggeo.Xamarin.NetStandard.Demo/Ziggeo.Xamarin.NetStandard.Demo.Android
 
       - name: Build
         run: msbuild Ziggeo.Xamarin.NetStandard.Demo.Android.csproj /t:PackageForAndroid /p:Configuration=Debug
