@@ -28,7 +28,7 @@ jobs:
 #        run: nuget restore -o ./Ziggeo.Xamarin.NetStandard.Demo/Ziggeo.Xamarin.NetStandard.Demo.Android
 
       - name: Build
-        run: msbuild Ziggeo.Xamarin.NetStandard.Demo.Android.csproj /t:PackageForAndroid /p:Configuration=Debug
+        run: msbuild ./Ziggeo.Xamarin.NetStandard.Demo/Ziggeo.Xamarin.NetStandard.Demo.Android/Ziggeo.Xamarin.NetStandard.Demo.Android.csproj /t:PackageForAndroid /p:Configuration=Debug
       #jobs:
       #  drive_android:
       #    runs-on: macos-latest
