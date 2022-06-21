@@ -1,0 +1,60 @@
+# We keep all fields for every generated proto file as the runtime uses
+# reflection over them that ProGuard cannot detect. Without this keep
+# rule, fields may be removed that would cause runtime failures.
+-keepclassmembers class * extends com.google.android.gms.internal.mlkit_vision_mediapipe.zzfb {
+  <fields>;
+}
+
+# Uses reflection to determine if these classes are present and has a graceful
+# fallback if they aren't.
+-dontwarn dalvik.system.VMStack
+-dontwarn com.google.common.flogger.backend.google.GooglePlatform
+-dontwarn com.google.common.flogger.backend.system.DefaultPlatform
+
+# Auto-generated proguard rule with obfuscated symbol
+-keep public class com.google.android.gms.internal.mlkit_vision_mediapipe.zzdf {
+  *;
+}
+
+
+# Auto-generated proguard rule with obfuscated symbol
+-keep public class com.google.android.gms.internal.mlkit_vision_mediapipe.zzdh {
+  *;
+}
+
+
+# Auto-generated proguard rule with obfuscated symbol
+-keep public class com.google.android.gms.internal.mlkit_vision_mediapipe.zzcv {
+  *;
+}
+
+
+# Auto-generated proguard rule with obfuscated symbol
+-keep public class com.google.android.gms.internal.mlkit_vision_mediapipe.zzdg {
+  *;
+}
+
+
+# Auto-generated proguard rule with obfuscated symbol
+-keep public class com.google.android.gms.internal.mlkit_vision_mediapipe.zzde {
+  *;
+}
+
+
+# Auto-generated proguard rule with obfuscated symbol
+-keep public class com.google.android.gms.internal.mlkit_vision_mediapipe.zzcx {
+  *;
+}
+
+
+# Auto-generated proguard rule with obfuscated symbol
+-keep public class com.google.android.gms.internal.mlkit_vision_mediapipe.zzdd {
+  *;
+}
+
+
+# Auto-generated proguard rule with obfuscated symbol
+-keep public class com.google.android.gms.internal.mlkit_vision_mediapipe.zzcw {
+  *;
+}
+
