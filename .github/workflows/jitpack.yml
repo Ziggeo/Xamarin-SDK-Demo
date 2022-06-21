@@ -1,12 +1,17 @@
 name: Ziggeo Integration Tests
 on: [ push, pull_request ]
 
-
 jobs:
-  build:
-
+  drive_android:
     runs-on: macos-latest
-
+    defaults:
+      run:
+        working-directory: ./Ziggeo.Xamarin.NetStandard.Demo.Android/AndroidTestProject2
+    
+    strategy:
+      matrix:
+        api-level: [ 23 ]
+        target: [ default ]
     steps:
       - uses: actions/checkout@v3
       - name: Set default Xamarin SDK versions
@@ -18,63 +23,34 @@ jobs:
         with:
           dotnet-version: '5.0.x'
 
-#      - name: "update Nuget"
-#        run: nuget update -self
+      - name: Install dependencies
+        run: nuget install packages.config
 
       - name: Install dependencies
         run: dotnet restore
 
-#      - name: Install dependencies
-#        run: nuget restore -o ./Ziggeo.Xamarin.NetStandard.Demo.Android
+      - name: Install Ziggeo
+        run: nuget restore -o ./Ziggeo.Xamarin.NetStandard.Demo.Android/AndroidTestProject2
+
+#      - name: "Find Tests"
+#        uses: reactivecircus/android-emulator-runner@v2
+#        with:
+#          api-level: ${{ matrix.api-level }}
+#          target: ${{ matrix.target }}
+#          working-directory: ./Ziggeo.Xamarin.NetStandard.Demo.Android/AndroidTestProject2
+#          profile: Nexus 4
+#          script: "adb shell pm list instrumentation"
+
 
       - name: Build
-        run: msbuild ./Ziggeo.Xamarin.NetStandard.Demo.Android/Ziggeo.Xamarin.NetStandard.Demo.Android.csproj /t:PackageForAndroid /p:Configuration=Debug
-      #jobs:
-      #  drive_android:
-      #    runs-on: macos-latest
-      #    defaults:
-      #      run:
-      #        working-directory: ./Ziggeo.Xamarin.NetStandard.Demo.Android/AndroidTestProject2
-      #    
-      #    strategy:
-      #      matrix:
-      #        api-level: [ 23 ]
-      #        target: [ default ]
-      #    steps:
-      #      - uses: actions/checkout@v3
-      #      - name: Set default Xamarin SDK versions
-      #        run: |
-      #          $VM_ASSETS/select-xamarin-sdk-v2.sh --mono=6.12.0 --android=12.0.0.3
-      #
-      #      - name: Setup .NET Core SDK 5.0.x
-      #        uses: actions/setup-dotnet@v2
-      #        with:
-      #          dotnet-version: '5.0.x'
-      #
-      #      - name: Install dependencies
-      #        run: nuget install packages.config
-      #
-      #      - name: Install dependencies
-      #        run: dotnet restore
-      #
-      #      - name: Install Ziggeo
-      #        run: nuget restore -o ./Ziggeo.Xamarin.NetStandard.Demo.Android/AndroidTestProject2
-      #
-      #      - name: "Find Tests"
-      #        uses: reactivecircus/android-emulator-runner@v2
-      #        with:
-      #          api-level: ${{ matrix.api-level }}
-      #          target: ${{ matrix.target }}
-      #          working-directory: ./Ziggeo.Xamarin.NetStandard.Demo.Android/AndroidTestProject2
-      #          profile: Nexus 4
-      #          script: "adb shell pm list instrumentation"
-      #
-      #      - name: "Run Xamarin tests"
-      #        uses: reactivecircus/android-emulator-runner@v2
-      #        with:
-      #          api-level: ${{ matrix.api-level }}
-      #          target: ${{ matrix.target }}
-      #          working-directory: ./Ziggeo.Xamarin.NetStandard.Demo.Android/AndroidTestProject2
-      #          profile: Nexus 4
-      #          script: " adb shell am instrument -w AndroidTestProject2.AndroidTestProject2/app.tests.TestInstrumentation "
+        run: msbuild AndroidTestProject2.csproj /t:PackageForAndroid /p:Configuration=Debug
+
+#      - name: "Run Xamarin tests"
+#        uses: reactivecircus/android-emulator-runner@v2
+#        with:
+#          api-level: ${{ matrix.api-level }}
+#          target: ${{ matrix.target }}
+#          working-directory: ./Ziggeo.Xamarin.NetStandard.Demo.Android/AndroidTestProject2
+#          profile: Nexus 4
+#          script: "msbuild AndroidTestProject2.csproj /t:PackageForAndroid /p:Configuration=Debug"
       
