@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2013/05/nuspec.xsd">
+  <metadata>
+    <id>Xamarin.Android.Glide</id>
+    <version>4.11.0</version>
+    <title>Glide for Xamarin.Android</title>
+    <authors>Microsoft</authors>
+    <owners>Microsoft</owners>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <licenseUrl>https://go.microsoft.com/fwlink/?linkid=865026</licenseUrl>
+    <projectUrl>https://go.microsoft.com/fwlink/?linkid=864954</projectUrl>
+    <description>Xamarin.Android bindings for Glide</description>
+    <copyright>© Microsoft Corporation. All rights reserved.</copyright>
+    <repository type="git" url="https://github.com/xamarin/XamarinComponents" branch="Glide-4.11.0" commit="255876178c51f2dd7f6d8761bec5e1131e9a67c4" />
+    <dependencies>
+      <group targetFramework="MonoAndroid10.0">
+        <dependency id="Xamarin.Android.Glide.DiskLruCache" version="4.11.0" exclude="Build,Analyzers" />
+        <dependency id="Xamarin.Android.Glide.GifDecoder" version="4.11.0" exclude="Build,Analyzers" />
+        <dependency id="Xamarin.AndroidX.ExifInterface" version="1.1.0.1" exclude="Build,Analyzers" />
+        <dependency id="Xamarin.AndroidX.Fragment" version="1.2.4.1" exclude="Build,Analyzers" />
+        <dependency id="Xamarin.AndroidX.VectorDrawable.Animated" version="1.1.0.1" exclude="Build,Analyzers" />
+      </group>
+    </dependencies>
+    <frameworkAssemblies>
+      <frameworkAssembly assemblyName="Java.Interop" targetFramework="MonoAndroid10.0" />
+    </frameworkAssemblies>
+  </metadata>
+</package>

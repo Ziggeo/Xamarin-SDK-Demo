@@ -1,0 +1,10 @@
+Xamarin apps built using ComponentOne Studio for Xamarin controls require a valid app key to compile and run. App keys are validated once, upon creation, and continue to remain active indefinitely until the app identifier changes, or the controls are updated to a version outside the subscription window. App keys can be generated once the developer purchases a subscription to Studio for Xamarin, Studio Enterprise or other product bundle that includes Xamarin components. 
+
+For trial purposes, download the ComponentOne Studio for Xamarin samples at github.com/GoXuni/C1-Studio-for-Xamarin/ or from the www.grapecity.com website.
+
+If you have a subscription, generate an app key from your account licenses page at www.grapecity.com/licensing/generate-app-key.
+
+Additional notes about Studio for Xamarin Subscription Licensing:
+-A subscription license entitles you to build applications using Studio for Xamarin components. The applications you build can be distributed royalty-free.
+-A subscription license entitles you to one year of free upgrades, including bug fixes and new features. After one year, you are no longer entitled to updates, but you may continue to use the products received with your subscription after your subscription has expired.
+-Source code is not included.

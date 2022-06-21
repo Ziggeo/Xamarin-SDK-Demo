@@ -1,0 +1,3221 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>C1.Android.Core</name>
+    </assembly>
+    <members>
+        <member name="T:C1.Android.Core.C1Behavior`1">
+            <summary>
+            Base class for control behaviors.
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="M:C1.Android.Core.C1Behavior`1.Attach(`0)">
+            <summary>
+            Attaches the behavior to a <see cref="T:Android.Views.View"/>.
+            </summary>
+            <param name="view">The view to which the behavior is attached.</param>
+        </member>
+        <member name="M:C1.Android.Core.C1Behavior`1.Detach(`0)">
+            <summary>
+            Detaches the behavior from the <see cref="T:Android.Views.View"/>.
+            </summary>
+        </member>
+        <member name="M:C1.Android.Core.C1Behavior`1.OnAttachedTo(`0)">
+            <summary>
+            Called when the behavior is attached to the control.
+            </summary>
+            <param name="view">The view to which the behavior is attached.</param>
+        </member>
+        <member name="M:C1.Android.Core.C1Behavior`1.OnDetachingFrom(`0)">
+            <summary>
+            Called before the behavior is detached from the control.
+            </summary>
+            <param name="view">The view to which the behavior is attached.</param>
+        </member>
+        <member name="T:C1.Android.Core.C1Border">
+            <summary>
+            Basic control used to draw a border around another view.
+            </summary>
+        </member>
+        <member name="M:C1.Android.Core.C1Border.#ctor(Android.Content.Context)">
+            <summary>
+            Initializes a new instance of the <see cref="T:C1.Android.Core.C1Border"/> class.
+            </summary>
+        </member>
+        <member name="P:C1.Android.Core.C1Border.BackgroundColor">
+            <summary>
+            Gets or sets the background color.
+            </summary>
+        </member>
+        <member name="P:C1.Android.Core.C1Border.BorderThickness">
+            <summary>
+            Gets or sets the border thickness.
+            </summary>
+        </member>
+        <member name="P:C1.Android.Core.C1Border.BorderColor">
+            <summary>
+            Gets or sets the color of the border.
+            </summary>
+        </member>
+        <member name="P:C1.Android.Core.C1Border.Padding">
+            <summary>
+            Gets or sets the padding of the cell.
+            </summary>
+        </member>
+        <member name="P:C1.Android.Core.C1Border.Content">
+            <summary>
+            Gets the content view of the cell.
+            </summary>
+        </member>
+        <member name="P:C1.Android.Core.C1Border.BorderAlignment">
+            <summary>
+            Gets or sets the way to draw the borders.
+            </summary>
+        </member>
+        <member name="E:C1.Android.Core.C1Border.PropertyChanged">
+            <summary>
+            Called when a property changed.
+            </summary>
+        </member>
+        <member name="M:C1.Android.Core.C1Border.OnPropertyChanged(System.String)">
+            <summary>
+            Raises <see cref="E:PropertyChanged"/> event.
+            </summary>
+            <param name="propertyName"></param>
+        </member>
+        <member name="M:C1.Android.Core.C1Border.Dispose(System.Boolean)">
+            <summary>
+            Releases the resources used by the UIView object.
+            </summary>
+            <param name="disposing">If set to <see langword="true" />, the method is invoked directly and will dispose manage and unmanaged resources;   If set to <see langword="false" /> the method is being called by the garbage collector finalizer and should only release unmanaged resources.</param>
+            <remarks>
+            <para>This Dispose method releases the resources used by the UIView class.</para>
+            <para>This method is called by both the Dispose() method and the object finalizer (Finalize).    When invoked by the Dispose method, the parameter disposing <paramref name="disposing" /> is set to <see langword="true" /> and any managed object references that this object holds are also disposed or released;  when invoked by the object finalizer, on the finalizer thread the value is set to <see langword="false" />. </para>
+            <para>Calling the Dispose method when the application is finished using the UIView ensures that all external resources used by this managed object are released as soon as possible.  Once developers have invoked the Dispose method, the object is no longer useful and developers should no longer make any calls to it.</para>
+            <para>  For more information on how to override this method and on the Dispose/IDisposable pattern, read the ``Implementing a Dispose Method'' document at http://msdn.microsoft.com/en-us/library/fs2xkftw.aspx</para>
+            </remarks>
+        </member>
+        <member name="T:C1.Android.Core.BorderAlignment">
+            <summary>
+            Determines the way to draw the borders of <see cref="T:C1.Android.Core.C1Border"/>.
+            </summary>
+        </member>
+        <member name="F:C1.Android.Core.BorderAlignment.Inner">
+            <summary>
+            Draw the borders inside the bound's edges
+            </summary>
+        </member>
+        <member name="F:C1.Android.Core.BorderAlignment.Center">
+            <summary>
+            Draw the borders centering the bound's edges
+            </summary>
+        </member>
+        <member name="F:C1.Android.Core.BorderAlignment.Outer">
+            <summary>
+            Draw the border outer the bound's edges
+            </summary>
+        </member>
+        <member name="T:C1.Android.Core.C1CheckBox">
+            <summary>
+            Represents a control that a user can select and clear.
+            </summary>
+        </member>
+        <member name="M:C1.Android.Core.C1CheckBox.#ctor(Android.Content.Context)">
+            <summary>
+            Initializes a new instance of the <see cref="T:C1.Android.Core.C1CheckBox"/> class.
+            </summary>
+        </member>
+        <member name="P:C1.Android.Core.C1CheckBox.Color">
+            <summary>
+            Gets or sets the color used to paint the control.
+            </summary>
+        </member>
+        <member name="M:C1.Android.Core.C1CheckBox.OnDraw(Android.Graphics.Canvas)">
+            <summary>
+            Customize the native checkbox drawing.
+            </summary>
+            <param name="canvas"></param>
+        </member>
+        <member name="T:C1.Android.Core.C1CornerRadius">
+            <summary>
+            Describes the thickness of a frame around a rectangle. Four System.Double values describe the C1Thickness.Left, C1Thickness.Top, C1Thickness.Right, and C1Thickness.Bottom sides of the rectangle, respectively.
+            </summary>
+        </member>
+        <member name="M:C1.Android.Core.C1CornerRadius.#ctor(C1.Android.Core.C1CornerValue)">
+            <summary>
+            Initializes a <see cref="T:C1.Android.Core.C1CornerRadius"/> structure that has the specified uniform corners.
+            </summary>
+            <param name="uniformLength">The uniform length applied to all four corners of the bounding rectangle.</param>
+        </member>
+        <member name="M:C1.Android.Core.C1CornerRadius.#ctor(C1.Android.Core.C1CornerValue,C1.Android.Core.C1CornerValue,C1.Android.Core.C1CornerValue,C1.Android.Core.C1CornerValue)">
+            <summary>
+            Initializes a <see cref="T:C1.Android.Core.C1CornerRadius"/> structure that has specific radius (supplied as a System.Double) applied to each corner of the rectangle.
+            </summary>
+            <param name="topLeft">The radius for the top-left corner of the rectangle.</param>
+            <param name="topRight">The radius for the top-right corner of the rectangle.</param>
+            <param name="bottomRight">The radius for the bottom-right corner of the rectangle.</param>
+            <param name="bottomLeft">The radius for the bottom-left corner of the rectangle.</param>
+        </member>
+        <member name="P:C1.Android.Core.C1CornerRadius.BottomLeft">
+            <summary>
+            Gets or sets the radius, in pixels, of the bottom-left corner of the bounding rectangle.
+            </summary>
+        </member>
+        <member name="P:C1.Android.Core.C1CornerRadius.TopLeft">
+            <summary>
+            Gets or sets the radius, in pixels, of the top-left corner of the bounding rectangle.
+            </summary>
+        </member>
+        <member name="P:C1.Android.Core.C1CornerRadius.BottomRight">
+            <summary>
+            Gets or sets the radius, in pixels, of the bottom-right corner of the bounding rectangle.
+            </summary>
+        </member>
+        <member name="P:C1.Android.Core.C1CornerRadius.TopRight">
+            <summary>
+            Gets or sets the radius, in pixels, of the top-right corner of the bounding rectangle.
+            </summary>
+        </member>
+        <member name="P:C1.Android.Core.C1CornerRadius.IsUniform">
+            <summary>
+            Gets whether the radius is uniform in all corners and the same.
+            </summary>
+        </member>
+        <member name="P:C1.Android.Core.C1CornerRadius.IsCircle">
+            <summary>
+            Gets whether all the corners are a circle radius (They can be different).
+            </summary>
+        </member>
+        <member name="P:C1.Android.Core.C1CornerRadius.IsZero">
+            <summary>
+            Gets whether the radius is zero in all edges.
+            </summary>
+        </member>
+        <member name="M:C1.Android.Core.C1CornerRadius.Equals(System.Object)">
+            <summary>
+            Determines whether the specified <see cref="T:System.Object" />, is equal to this instance.
+            </summary>
+            <param name="obj">The <see cref="T:System.Object" /> to compare with this instance.</param>
+            <returns>
+              <c>true</c> if the specified <see cref="T:System.Object" /> is equal to this instance; otherwise, <c>false</c>.
+            </returns>
+        </member>
+        <member name="M:C1.Android.Core.C1CornerRadius.GetHashCode">
+            <summary>
+            Returns a hash code for this instance.
+            </summary>
+            <returns>
+            A hash code for this instance, suitable for use in hashing algorithms and data structures like a hash table. 
+            </returns>
+        </member>
+        <member name="M:C1.Android.Core.C1CornerRadius.op_Equality(C1.Android.Core.C1CornerRadius,C1.Android.Core.C1CornerRadius)">
+            <summary>
+            Compares two <see cref="T:C1.Android.Core.C1CornerRadius"/> structures for equality.
+            </summary>
+            <param name="c1">The first structure to compare.</param>
+            <param name="c2">The other structure to compare.</param>
+        </member>
+        <member name="M:C1.Android.Core.C1CornerRadius.op_Inequality(C1.Android.Core.C1CornerRadius,C1.Android.Core.C1CornerRadius)">
+            <summary>
+            Compares two <see cref="T:C1.Android.Core.C1CornerRadius"/> structures for inequality.
+            </summary>
+            <param name="c1">The first structure to compare.</param>
+            <param name="c2">The other structure to compare.</param>
+        </member>
+        <member name="M:C1.Android.Core.C1CornerRadius.op_Implicit(System.Double)~C1.Android.Core.C1CornerRadius">
+            <summary>
+            Casting operator to convert a C1StyleLength into a uniform <see cref="T:C1.Android.Core.C1CornerRadius"/>.
+            </summary>
+            <param name="uniformLength">The string specifying the length.</param>
+        </member>
+        <member name="M:C1.Android.Core.C1CornerRadius.op_Implicit(C1.Android.Core.C1CornerValue)~C1.Android.Core.C1CornerRadius">
+            <summary>
+            Casting operator to convert a C1CornerValue into a uniform <see cref="T:C1.Android.Core.C1CornerRadius"/>.
+            </summary>
+            <param name="uniformLength">The string specifying the length.</param>
+        </member>
+        <member name="T:C1.Android.Core.C1CornerValue">
+            <summary>
+            Represents on of the corners.
+            </summary>
+        </member>
+        <member name="M:C1.Android.Core.C1CornerValue.#ctor(System.Double)">
+            <summary>
+            Initializes a new instance of the <see cref="T:C1.Android.Core.C1CornerValue"/> struct.
+            </summary>
+            <param name="length">The length to create a circle corner.</param>
+        </member>
+        <member name="M:C1.Android.Core.C1CornerValue.#ctor(System.Double,System.Double)">
+            <summary>
+            Initializes a new instance of the <see cref="T:C1.Android.Core.C1CornerValue"/> struct.
+            </summary>
+            <param name="horizontal">The horizontal corner value.</param>
+            <param name="vertical">The vertical corner value.</param>
+        </member>
+        <member name="P:C1.Android.Core.C1CornerValue.Horizontal">
+            <summary>
+            Gets the horizontal corner value.
+            </summary>
+        </member>
+        <member name="P:C1.Android.Core.C1CornerValue.Vertical">
+            <summary>
+            Gets the vertical corner value.
+            </summary>
+        </member>
+        <member name="P:C1.Android.Core.C1CornerValue.IsZero">
+            <summary>
+            Gets whether the radius is zero.
+            </summary>
+        </member>
+        <member name="P:C1.Android.Core.C1CornerValue.IsCircle">
+            <summary>
+            Gets whether the radius is uniform.
+            </summary>
+        </member>
+        <member name="M:C1.Android.Core.C1CornerValue.op_Implicit(System.Double)~C1.Android.Core.C1CornerValue">
+            <summary>
+            Casting operator to convert a C1StyleLength into a <see cref="T:C1.Android.Core.C1CornerValue"/>.
+            </summary>
+            <param name="length">The value of the length.</param>
+        </member>
+        <member name="M:C1.Android.Core.C1CornerValue.op_Equality(C1.Android.Core.C1CornerValue,C1.Android.Core.C1CornerValue)">
+            <summary>
+            Compares two <see cref="T:C1.Android.Core.C1CornerValue"/> structures for equality.
+            </summary>
+            <param name="c1">The first structure to compare.</param>
+            <param name="c2">The other structure to compare.</param>
+        </member>
+        <member name="M:C1.Android.Core.C1CornerValue.op_Inequality(C1.Android.Core.C1CornerValue,C1.Android.Core.C1CornerValue)">
+            <summary>
+            Compares two <see cref="T:C1.Android.Core.C1CornerValue"/> structures for inequality.
+            </summary>
+            <param name="c1">The first structure to compare.</param>
+            <param name="c2">The other structure to compare.</param>
+        </member>
+        <member name="T:C1.Android.Core.C1Icon">
+            <summary>
+            Represents a visual icon that can be tinted and resized.
+            </summary>
+        </member>
+        <member name="F:C1.Android.Core.C1Icon.DEFAULT_WIDTH">
+            <summary>
+            The default width of an icon.
+            </summary>
+        </member>
+        <member name="F:C1.Android.Core.C1Icon.DEFAULT_HEIGHT">
+            <summary>
+            The default height of an icon.
+            </summary>
+        </member>
+        <member name="M:C1.Android.Core.C1Icon.#ctor(Android.Content.Context)">
+            <summary>
+            Initializes a new instance of the <see cref="T:C1.Android.Core.C1Icon"/> class.
+            </summary>
+            <param name="context">The context.</param>
+        </member>
+        <member name="M:C1.Android.Core.C1Icon.InitializeUI">
+            <summary>
+            Initializes the UI.
+            </summary>
+        </member>
+        <member name="M:C1.Android.Core.C1Icon.FinalizeUI">
+            <summary>
+            Finalizes the user interface.
+            </summary>
+        </member>
+        <member name="P:C1.Android.Core.C1Icon.Color">
+            <summary>
+            Gets or sets the color used to paint the icon.
+            </summary>
+        </member>
+        <member name="P:C1.Android.Core.C1Icon.Padding">
+            <summary>
+            Gets or sets the padding of the icon.
+            </summary>
+        </member>
+        <member name="M:C1.Android.Core.C1Icon.OnColorChanged(System.Nullable{Android.Graphics.Color},System.Nullable{Android.Graphics.Color})">
+            <summary>
+            Called when the <see cref="F:C1.Android.Core.C1Icon.ColorProperty"/> is updated.
+            </summary>
+            <param name="oldColor">The old color.</param>
+            <param name="newColor">The new color.</param>
+        </member>
+        <member name="M:C1.Android.Core.C1Icon.OnPaddingChanged(C1.Android.Core.C1Thickness,C1.Android.Core.C1Thickness)">
+            <summary>
+            Called when the <see cref="F:C1.Android.Core.C1Icon.PaddingProperty"/> is updated.
+            </summary>
+            <param name="oldPadding">The old padding.</param>
+            <param name="newPadding">The new padding.</param>
+        </member>
+        <member name="M:C1.Android.Core.C1Icon.OnRenderWidthChanged(System.Double,System.Double)">
+            <summary>
+            Called when <see cref="F:C1.Android.Core.C1Icon.RenderWidthProperty"/> changed.
+            </summary>
+            <param name="oldRenderWidth">Old render width.</param>
+            <param name="newRenderWidth">New render width.</param>
+        </member>
+        <member name="M:C1.Android.Core.C1Icon.OnRenderHeightChanged(System.Double,System.Double)">
+            <summary>
+            Called when <see cref="F:C1.Android.Core.C1Icon.RenderHeightProperty"/> changed.
+            </summary>
+            <param name="oldRenderHeight">Old render height.</param>
+            <param name="newRenderHeight">New render h.</param>
+        </member>
+        <member name="P:C1.Android.Core.C1Icon.RenderWidth">
+            <summary>
+            Gets the width of the icon. If Nan, the arrange width will be used.
+            </summary>
+        </member>
+        <member name="P:C1.Android.Core.C1Icon.RenderHeight">
+            <summary>
+            Gets the height of the icon. If Nan, the arrange height will be used.
+            </summary>
+        </member>
+        <member name="M:C1.Android.Core.C1Icon.GetIntrinsicIconSize">
+            <summary>
+            Gets the intrinsic size of the icon.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:C1.Android.Core.C1CompositeIcon">
+            <summary>
+            Represent an icon created from a list of icons superposed one on top of the other.
+            </summary>
+        </member>
+        <member name="M:C1.Android.Core.C1CompositeIcon.#ctor(Android.Content.Context)">
+            <summary>
+            Initializes a new instance of the <see cref="T:C1.Android.Core.C1CompositeIcon"/> class.
+            </summary>
+            <param name="context">The context.</param>
+        </member>
+        <member name="P:C1.Android.Core.C1CompositeIcon.Icons">
+            <summary>
+            Gets the list of icons that will be rendered.
+            </summary>
+        </member>
+        <member name="E:C1.Android.Core.C1CompositeIcon.PropertyChanged">
+            <summary>
+            Occurs when property changed.
+            </summary>
+        </member>
+        <member name="M:C1.Android.Core.C1CompositeIcon.OnPropertyChanged(System.String)">
+            <summary>
+            Called when a property changed.
+            </summary>
+            <param name="propertyName">Property name.</param>
+        </member>
+        <member name="T:C1.Android.Core.C1FontIcon">
+            <summary>
+            Represents an icon created from a font.
+            </summary>
+        </member>
+        <member name="M:C1.Android.Core.C1FontIcon.#ctor(Android.Content.Context)">
+            <summary>
+            Initializes a new instance of the <see cref="T:C1.Android.Core.C1FontIcon"/> class.
+            </summary>
+            <param name="context">The context.</param>
+        </member>
+        <member name="M:C1.Android.Core.C1FontIcon.InitializeUI">
+            <summary>
+            Initializes the UI.
+            </summary>
+        </member>
+        <member name="P:C1.Android.Core.C1FontIcon.Text">
+            <summary>
+            Gets the text that represents the icon in the specified <see cref="P:C1.Android.Core.C1FontIcon.FontFamily"/>.
+            </summary>
+        </member>
+        <member name="P:C1.Android.Core.C1FontIcon.FontFamily">
+            <summary>
+            Gets the font family containing the icon.
+            </summary>
+        </member>
+        <member name="P:C1.Android.Core.C1FontIcon.FontSize">
+            <value>
+            Gets the size of the font.
+            </value>
+        </member>
+        <member name="T:C1.Android.Core.C1VectorIcon">
+            <summary>
+            Represents an icon created from a vector definition.
+            </summary>
+        </member>
+        <member name="F:C1.Android.Core.C1VectorIcon._geometry">
+            <summary>
+            Gets the geometry of the vector.
+            </summary>
+        </member>
+        <member name="M:C1.Android.Core.C1VectorIcon.#ctor(Android.Content.Context)">
+            <summary>
+            Initializes a new instance of the <see cref="T:C1.Android.Core.C1VectorIcon" /> class.
+            </summary>
+            <param name="context">The context.</param>
+        </member>
+        <member name="M:C1.Android.Core.C1VectorIcon.InitializeUI">
+            <summary>
+            Initializes the UI.
+            </summary>
+        </member>
+        <member name="M:C1.Android.Core.C1VectorIcon.FinalizeUI">
+            <summary>
+            Finalizes the user interface.
+            </summary>
+        </member>
+        <member name="P:C1.Android.Core.C1VectorIcon.ViewBox">
+            <summary>
+            Gets or sets the rectangle (in the path coordinates) which will determine what part will be drawn.
+            </summary>
+        </member>
+        <member name="P:C1.Android.Core.C1VectorIcon.StrokeThickness">
+            <summary>
+            The stroke thickness
+            </summary>
+        </member>
+        <member name="P:C1.Android.Core.C1VectorIcon.StrokeColor">
+            <summary>
+            Gets or sets the color of the stroke.
+            </summary>
+        </member>
+        <member name="M:C1.Android.Core.C1VectorIcon.UpdateGeometry">
+            <summary>
+            This will recreate the geometry and update the path.
+            </summary>
+        </member>
+        <member name="M:C1.Android.Core.C1VectorIcon.CreateGeometry">
+            <summary>
+            This method is called to create the geometry of the shape.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:C1.Android.Core.C1PathIcon">
+            <summary>
+            Represent an icon created from a path string.
+            </summary>
+        </member>
+        <member name="M:C1.Android.Core.C1PathIcon.#ctor(Android.Content.Context)">
+            <summary>
+            Initializes a new instance of the <see cref="T:C1.Android.Core.C1PathIcon" /> class.
+            </summary>
+            <param name="context">The context.</param>
+        </member>
+        <member name="P:C1.Android.Core.C1PathIcon.Data">
+            <summary>
+            Gets or sets the svg string describing the shape.
+            </summary>
+        </member>
+        <member name="T:C1.Android.Core.C1PolygonIcon">
+            <summary>
+            Represents an icon created from a vector definition.
+            </summary>
+        </member>
+        <member name="M:C1.Android.Core.C1PolygonIcon.#ctor(Android.Content.Context)">
+            <summary>
+            Initializes a new instance of the <see cref="T:C1.Android.Core.C1PolygonIcon" /> class.
+            </summary>
+            <param name="context">The context.</param>
+        </member>
+        <member name="P:C1.Android.Core.C1PolygonIcon.Points">
+            <summary>
+            Gets the points that describe the shape.
+            </summary>
+        </member>
+        <member name="P:C1.Android.Core.C1PolygonIcon.IsClosed">
+            <summary>
+            Gets whether the last point will connect with the first one.
+            </summary>
+        </member>
+        <member name="T:C1.Android.Core.C1BitmapIcon">
+            <summary>
+            Represents an icon created from an image.
+            </summary>
+            <remarks>
+            The file that you use should be a solid image on a transparent background.
+            The bitmap image is expected to be a true bitmap that has transparent pixels and non-transparent pixels.
+            The recommended format is PNG. Other file-format image sources will load but result in a solid block of the foreground color.
+            </remarks>
+        </member>
+        <member name="M:C1.Android.Core.C1BitmapIcon.#ctor(Android.Content.Context)">
+            <summary>
+            Initializes a new instance of the <see cref="T:C1.Android.Core.C1BitmapIcon"/> class.
+            </summary>
+            <param name="context">The context.</param>
+        </member>
+        <member name="M:C1.Android.Core.C1BitmapIcon.InitializeUI">
+            <summary>
+            Initializes the UI.
+            </summary>
+        </member>
+        <member name="P:C1.Android.Core.C1BitmapIcon.Source">
+            <summary>
+            Gets or sets the image source.
+            </summary>
+        </member>
+        <member name="P:C1.Android.Core.C1BitmapIcon.ShowAsMonochrome">
+            <summary>
+            Gets or sets a value that indicates whether the bitmap is shown in a single color.
+            </summary>
+        </member>
+        <member name="T:C1.Android.Core.C1Symbol">
+            <summary>
+            Specifies a set of predefined icons.
+            </summary>
+        </member>
+        <member name="F:C1.Android.Core.C1Symbol.Edit">
+            <summary>
+            The edit icon.
+            </summary>
+        </member>
+        <member name="F:C1.Android.Core.C1Symbol.Asterisk">
+            <summary>
+            The asterisk icon.
+            </summary>
+        </member>
+        <member name="F:C1.Android.Core.C1Symbol.ArrowUp">
+            <summary>
+            The arrow up icon.
+            </summary>
+        </member>
+        <member name="F:C1.Android.Core.C1Symbol.ArrowDown">
+            <summary>
+            The arrow down icon.
+            </summary>
+        </member>
+        <member name="F:C1.Android.Core.C1Symbol.ChevronUp">
+            <summary>
+            The chevron up icon.
+            </summary>
+        </member>
+        <member name="F:C1.Android.Core.C1Symbol.ChevronDown">
+            <summary>
+            The chevron down icon.
+            </summary>
+        </member>
+        <member name="F:C1.Android.Core.C1Symbol.ChevronRight">
+            <summary>
+            The chevron right icon.
+            </summary>
+        </member>
+        <member name="F:C1.Android.Core.C1Symbol.ChevronLeft">
+            <summary>
+            The chevron left icon.
+            </summary>
+        </member>
+        <member name="F:C1.Android.Core.C1Symbol.TriangleNorth">
+            <summary>
+            The triangle north icon.
+            </summary>
+        </member>
+        <member name="F:C1.Android.Core.C1Symbol.TriangleSouth">
+            <summary>
+            The triangle south icon.
+            </summary>
+        </member>
+        <member name="F:C1.Android.Core.C1Symbol.TriangleEast">
+            <summary>
+            The triangle east icon.
+            </summary>
+        </member>
+        <member name="F:C1.Android.Core.C1Symbol.TriangleWest">
+            <summary>
+            The triangle west icon.
+            </summary>
+        </member>
+        <member name="F:C1.Android.Core.C1Symbol.TriangleSouthEast">
+            <summary>
+            The triangle south east icon.
+            </summary>
+        </member>
+        <member name="F:C1.Android.Core.C1Symbol.TriangleNorthEast">
+            <summary>
+            The triangle north east icon.
+            </summary>
+        </member>
+        <member name="T:C1.Android.Core.C1IconTemplate">
+            <summary>
+            This factory allows creating <see cref="T:C1.Android.Core.C1Icon"/>.
+            </summary>
+        </member>
+        <member name="M:C1.Android.Core.C1IconTemplate.#ctor(System.Func{C1.Android.Core.C1Icon})">
+            <summary>
+            Initializes a new instance of the <see cref="T:C1.Android.Core.C1IconTemplate" /> class.
+            </summary>
+            <param name="createIcon">The function that creates the icon. New instances must be created every time.</param>
+        </member>
+        <member name="M:C1.Android.Core.C1IconTemplate.CreateIcon">
+            <summary>
+            Creates a new icon.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:C1.Android.Core.C1IconTemplate.Edit">
+            <summary>
+            Gets an icon representing an arrow pointing up.
+            </summary>
+        </member>
+        <member name="P:C1.Android.Core.C1IconTemplate.Asterisk">
+            <summary>
+            Gets an icon representing an arrow pointing up.
+            </summary>
+        </member>
+        <member name="P:C1.Android.Core.C1IconTemplate.ArrowUp">
+            <summary>
+            Gets an icon representing an arrow pointing up.
+            </summary>
+        </member>
+        <member name="P:C1.Android.Core.C1IconTemplate.ArrowDown">
+            <summary>
+            Gets an icon representing an arrow pointing up.
+            </summary>
+        </member>
+        <member name="P:C1.Android.Core.C1IconTemplate.ChevronUp">
+            <summary>
+            Gets an icon representing a chevron pointing up.
+            </summary>
+        </member>
+        <member name="P:C1.Android.Core.C1IconTemplate.ChevronDown">
+            <summary>
+            Gets an icon representing a chevron pointing down.
+            </summary>
+        </member>
+        <member name="P:C1.Android.Core.C1IconTemplate.ChevronLeft">
+            <summary>
+            Gets an icon representing a chevron pointing to the left.
+            </summary>
+        </member>
+        <member name="P:C1.Android.Core.C1IconTemplate.ChevronRight">
+            <summary>
+            Gets an icon representing a chevron pointing to the right.
+            </summary>
+        </member>
+        <member name="P:C1.Android.Core.C1IconTemplate.TriangleNorth">
+            <summary>
+            Gets an icon representing a triangle with one of the vertices pointing up.
+            </summary>
+        </member>
+        <member name="P:C1.Android.Core.C1IconTemplate.TriangleNorthEast">
+            <summary>
+            Gets an icon representing a triangle with one of the vertices pointing north east.
+            </summary>
+        </member>
+        <member name="P:C1.Android.Core.C1IconTemplate.TriangleEast">
+            <summary>
+            Gets an icon representing a triangle with one of the vertices pointing east.
+            </summary>
+        </member>
+        <member name="P:C1.Android.Core.C1IconTemplate.TriangleSouthEast">
+            <summary>
+            Gets an icon representing a triangle with one of the vertices pointing south east.
+            </summary>
+        </member>
+        <member name="P:C1.Android.Core.C1IconTemplate.TriangleSouth">
+            <summary>
+            Gets an icon representing a triangle with one of the vertices pointing down.
+            </summary>
+        </member>
+        <member name="P:C1.Android.Core.C1IconTemplate.TriangleSouthWest">
+            <summary>
+            Gets an icon representing a triangle with one of the vertices pointing south west.
+            </summary>
+        </member>
+        <member name="P:C1.Android.Core.C1IconTemplate.TriangleWest">
+            <summary>
+            Gets an icon representing a triangle with one of the vertices pointing west.
+            </summary>
+        </member>
+        <member name="P:C1.Android.Core.C1IconTemplate.TriangleNorthWest">
+            <summary>
+            Gets an icon representing a triangle with one of the vertices pointing north west.
+            </summary>
+        </member>
+        <member name="P:C1.Android.Core.C1IconTemplate.TriangleUp">
+            <summary>
+            Gets an icon representing a triangle with one of the vertices pointing upwards.
+            </summary>
+        </member>
+        <member name="P:C1.Android.Core.C1IconTemplate.TriangleRightUp">
+            <summary>
+            Gets an icon representing a triangle with one of the vertices pointing to the right up.
+            </summary>
+        </member>
+        <member name="P:C1.Android.Core.C1IconTemplate.TriangleRight">
+            <summary>
+            Gets an icon representing a triangle with one of the vertices pointing to the right.
+            </summary>
+        </member>
+        <member name="P:C1.Android.Core.C1IconTemplate.TriangleRightDown">
+            <summary>
+            Gets an icon representing a triangle with one of the vertices pointing to the right down.
+            </summary>
+        </member>
+        <member name="P:C1.Android.Core.C1IconTemplate.TriangleDown">
+            <summary>
+            Gets an icon representing a triangle with one of the vertices pointing downwards.
+            </summary>
+        </member>
+        <member name="P:C1.Android.Core.C1IconTemplate.TriangleLeftDown">
+            <summary>
+            Gets an icon representing a triangle with one of the vertices pointing to the left down.
+            </summary>
+        </member>
+        <member name="P:C1.Android.Core.C1IconTemplate.TriangleLeft">
+            <summary>
+            Gets an icon representing a triangle with one of the vertices pointing to the left.
+            </summary>
+        </member>
+        <member name="P:C1.Android.Core.C1IconTemplate.TriangleLeftUp">
+            <summary>
+            Gets an icon representing a triangle with one of the vertices pointing to the left up.
+            </summary>
+        </member>
+        <member name="P:C1.Android.Core.C1IconTemplate.Star5">
+            <summary>
+            Gets an icon representing a 5-pointed star.
+            </summary>
+        </member>
+        <member name="T:C1.Android.Core.SVGParser">
+            @author Larva Labs, LLC
+        </member>
+        <member name="M:C1.Android.Core.SVGParser.parsePath(System.String)">
+            Parses a single SVG path and returns it as a <code>android.graphics.Path</code> object. An example path is
+            <code>M250,150L150,350L350,350Z</code>, which draws a triangle.
+            
+            @param pathString the SVG path, see the specification <a href="http://www.w3.org/TR/SVG/paths.html">here</a>.
+        </member>
+        <member name="M:C1.Android.Core.SVGParser.doPath(System.String)">
+            This is where the hard-to-parse paths are handled. Uppercase rules are absolute positions, lowercase are
+            relative. Types of path rules:
+            + M/m - (x y)+ - Move to (without drawing)
+            + Z/z - (no params) - Close path (back to starting point)
+            + L/l - (x y)+ - Line to
+            + H/h - x+ - Horizontal ine to
+            + V/v - y+ - Vertical line to
+            + C/c - (x1 y1 x2 y2 x y)+ - Cubic bezier to
+            + S/s - (x2 y2 x y)+ - Smooth cubic bezier to (shorthand that assumes the x2, y2 from previous C/S is the x1,
+            y1 of this bezier)
+            + Q/q - (x1 y1 x y)+ - Quadratic bezier to
+            + T/t - (x y)+ - Smooth quadratic bezier to (assumes previous control point is "reflection" of last one w.r.t.
+            to current point)
+            Numbers are separate by whitespace, comma or nothing at all (!) if they are self-delimiting, (ie. begin with a -
+            sign)
+            
+            @param s the path string from the XML
+        </member>
+        <member name="T:C1.Android.Core.ParserHelper">
+            Parses numbers from SVG text. Based on the Batik Number Parser (Apache 2 License).
+            
+            @author Apache Software Foundation, Larva Labs LLC
+        </member>
+        <member name="M:C1.Android.Core.ParserHelper.parseFloat">
+            Parses the content of the buffer and converts it to a float.
+        </member>
+        <member name="M:C1.Android.Core.ParserHelper.buildFloat(System.Int32,System.Int32)">
+            Computes a float from mantissa and exponent.
+        </member>
+        <member name="F:C1.Android.Core.ParserHelper.pow10">
+            Array of powers of ten. Using double instead of float gives a tiny bit more precision.
+        </member>
+        <member name="T:C1.Android.Core.C1Point">
+            <summary>
+            Represents an x- and y-coordinate pair in two-dimensional space. Can also represent a logical point for certain property usages.
+            </summary>
+        </member>
+        <member name="M:C1.Android.Core.C1Point.#ctor(System.Double,System.Double)">
+            <summary>
+            Initializes a new instance of the <see cref="T:C1.Android.Core.C1Point"/> struct.
+            </summary>
+            <param name="x">The x-coordinate value of the <see cref="T:C1.Android.Core.C1Point"/> structure.</param>
+            <param name="y">The y-coordinate value of the <see cref="T:C1.Android.Core.C1Point"/> structure.</param>
+        </member>
+        <member name="P:C1.Android.Core.C1Point.X">
+            <summary>
+            Gets or sets the x-coordinate value of this <see cref="T:C1.Android.Core.C1Point"/> structure.
+            </summary>
+            <value>
+            The x.
+            </value>
+        </member>
+        <member name="P:C1.Android.Core.C1Point.Y">
+            <summary>
+            Gets or sets the y-coordinate value of this <see cref="T:C1.Android.Core.C1Point"/>.
+            </summary>
+            <value>
+            The y.
+            </value>
+        </member>
+        <member name="M:C1.Android.Core.C1Point.Equals(System.Object)">
+            <summary>
+            Determines whether the specified <see cref="T:System.Object" />, is equal to this instance.
+            </summary>
+            <param name="o">The <see cref="T:System.Object" /> to compare with this instance.</param>
+            <returns>
+              <c>true</c> if the specified <see cref="T:System.Object" /> is equal to this instance; otherwise, <c>false</c>.
+            </returns>
+        </member>
+        <member name="M:C1.Android.Core.C1Point.GetHashCode">
+            <summary>
+            Returns a hash code for this instance.
+            </summary>
+            <returns>
+            A hash code for this instance, suitable for use in hashing algorithms and data structures like a hash table. 
+            </returns>
+        </member>
+        <member name="M:C1.Android.Core.C1Point.ToString">
+            <summary>
+            Returns a <see cref="T:System.String" /> that represents this instance.
+            </summary>
+            <returns>
+            A <see cref="T:System.String" /> that represents this instance.
+            </returns>
+        </member>
+        <member name="M:C1.Android.Core.C1Point.op_Equality(C1.Android.Core.C1Point,C1.Android.Core.C1Point)">
+            <summary>
+            Implements the operator ==.
+            </summary>
+            <param name="point1">The point1.</param>
+            <param name="point2">The point2.</param>
+            <returns>
+            The result of the operator.
+            </returns>
+        </member>
+        <member name="M:C1.Android.Core.C1Point.op_Inequality(C1.Android.Core.C1Point,C1.Android.Core.C1Point)">
+            <summary>
+            Implements the operator !=.
+            </summary>
+            <param name="point1">The point1.</param>
+            <param name="point2">The point2.</param>
+            <returns>
+            The result of the operator.
+            </returns>
+        </member>
+        <member name="T:C1.Android.Core.C1Rect">
+            <summary>
+            Describes the width, height, and point origin of a rectangle.
+            </summary>
+        </member>
+        <member name="M:C1.Android.Core.C1Rect.ToString">
+            <summary>
+            Gets a string representation of <see cref="T:C1.Android.Core.C1Rect"/>
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:C1.Android.Core.C1Rect.#ctor(C1.Android.Core.C1Point,C1.Android.Core.C1Point)">
+            <summary>
+            Initializes a <see cref="T:C1.Android.Core.C1Rect"/> structure that is exactly large enough to contain the two specified points.
+            </summary>
+            <param name="point1">The first point that the new rectangle must contain.</param>
+            <param name="point2">The second point that the new rectangle must contain.</param>
+        </member>
+        <member name="M:C1.Android.Core.C1Rect.#ctor(C1.Android.Core.C1Point,C1.Android.Core.C1Size)">
+            <summary>
+            Initializes a <see cref="T:C1.Android.Core.C1Rect"/> structure based on an origin and size.
+            </summary>
+            <param name="location">The location.</param>
+            <param name="size">The size.</param>
+        </member>
+        <member name="M:C1.Android.Core.C1Rect.#ctor(System.Double,System.Double,System.Double,System.Double)">
+            <summary>
+            Initializes a <see cref="T:C1.Android.Core.C1Rect"/> structure that has the specified x-coordinate, y-coordinate, width, and height.
+            </summary>
+            <param name="x">The x-coordinate of the top-left corner of the rectangle.</param>
+            <param name="y">The y-coordinate of the top-left corner of the rectangle.</param>
+            <param name="width">The width of the rectangle.</param>
+            <param name="height">The height of the rectangle.</param>
+        </member>
+        <member name="P:C1.Android.Core.C1Rect.Empty">
+            <summary>
+            Gets a special value that represents a rectangle with no position or area.
+            </summary>
+            <value>
+            The empty rectangle, which has X and Y property values of System.Double.PositiveInfinity, and has Width and Height property values of System.Double.NegativeInfinity.
+            </value>
+        </member>
+        <member name="P:C1.Android.Core.C1Rect.Bottom">
+            <summary>
+            Gets the y-axis value of the bottom of the rectangle.
+            </summary>
+        </member>
+        <member name="P:C1.Android.Core.C1Rect.Height">
+            <summary>
+            Gets or sets the height of the rectangle.
+            </summary>
+        </member>
+        <member name="P:C1.Android.Core.C1Rect.IsEmpty">
+            <summary>
+            Gets a value that indicates whether the rectangle is the C1Rect.Empty rectangle.
+            </summary>
+            <value>
+              <c>true</c> if this instance is empty; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:C1.Android.Core.C1Rect.Left">
+            <summary>
+            Gets the x-axis value of the left side of the rectangle.
+            </summary>
+        </member>
+        <member name="P:C1.Android.Core.C1Rect.Right">
+            <summary>
+            Gets the x-axis value of the right side of the rectangle.
+            </summary>
+        </member>
+        <member name="P:C1.Android.Core.C1Rect.Top">
+            <summary>
+            Gets the y-axis position of the top of the rectangle.
+            </summary>
+        </member>
+        <member name="P:C1.Android.Core.C1Rect.Width">
+            <summary>
+            Gets or sets the width of the rectangle.
+            </summary>
+        </member>
+        <member name="P:C1.Android.Core.C1Rect.X">
+            <summary>
+            Gets or sets the x-axis value of the left side of the rectangle.
+            </summary>
+        </member>
+        <member name="P:C1.Android.Core.C1Rect.Y">
+            <summary>
+            Gets or sets the y-axis value of the top side of the rectangle.
+            </summary>
+        </member>
+        <member name="M:C1.Android.Core.C1Rect.Contains(C1.Android.Core.C1Point)">
+            <summary>
+            Indicates whether the rectangle described by the C1Rect contains the specified point.
+            </summary>
+            <param name="point">The point to check.</param>
+        </member>
+        <member name="M:C1.Android.Core.C1Rect.Equals(System.Object)">
+            <summary>
+            Determines whether the specified <see cref="T:System.Object" />, is equal to this instance.
+            </summary>
+            <param name="o">The <see cref="T:System.Object" /> to compare with this instance.</param>
+            <returns>
+              <c>true</c> if the specified <see cref="T:System.Object" /> is equal to this instance; otherwise, <c>false</c>.
+            </returns>
+        </member>
+        <member name="M:C1.Android.Core.C1Rect.GetHashCode">
+            <summary>
+            Returns a hash code for this instance.
+            </summary>
+            <returns>
+            A hash code for this instance, suitable for use in hashing algorithms and data structures like a hash table. 
+            </returns>
+        </member>
+        <member name="M:C1.Android.Core.C1Rect.Intersect(C1.Android.Core.C1Rect)">
+            <summary>
+            Finds the intersection of the rectangle represented by the C1Rect and the rectangle represented by the specified C1Rect, and stores the result as the current C1Rect.
+            </summary>
+            <param name="rect">The rectangle to intersect with the current rectangle. </param>
+        </member>
+        <member name="M:C1.Android.Core.C1Rect.Union(C1.Android.Core.C1Rect)">
+            <summary>
+            Expands the rectangle represented by the current C1Rect exactly enough to contain the specified rectangle.
+            </summary>
+            <param name="rect">The rectangle to include.</param>
+            <exception cref="T:System.NotImplementedException"></exception>
+        </member>
+        <member name="M:C1.Android.Core.C1Rect.Union(C1.Android.Core.C1Point)">
+            <summary>
+            Expands the rectangle represented by the current C1Rect exactly enough to contain the specified point.
+            </summary>
+            <param name="point">The point to include.</param>
+            <exception cref="T:System.NotImplementedException"></exception>
+        </member>
+        <member name="M:C1.Android.Core.C1Rect.Inflate(System.Double,System.Double)">
+            <summary>
+            Inflates the rectangle that results from expanding the specified rectangle by the specified width and height, in all directions.
+            </summary>
+            <param name="width"></param>
+            <param name="height"></param>
+        </member>
+        <member name="M:C1.Android.Core.C1Rect.Inflate(C1.Android.Core.C1Size)">
+            <summary>
+            Returns the rectangle that results from expanding the specified rectangle by the specified Size, in all directions.
+            </summary>
+            <param name="size"></param>
+        </member>
+        <member name="M:C1.Android.Core.C1Rect.op_Equality(C1.Android.Core.C1Rect,C1.Android.Core.C1Rect)">
+            <summary>
+            Compares two C1Rect structures for equality.
+            </summary>
+            <param name="rect1">The rect1.</param>
+            <param name="rect2">The rect2.</param>
+            <returns>
+            The result of the operator.
+            </returns>
+        </member>
+        <member name="M:C1.Android.Core.C1Rect.op_Inequality(C1.Android.Core.C1Rect,C1.Android.Core.C1Rect)">
+            <summary>
+            Compares two C1Rect structures for inequality.
+            </summary>
+            <param name="rect1">The rect1.</param>
+            <param name="rect2">The rect2.</param>
+            <returns>
+            The result of the operator.
+            </returns>
+        </member>
+        <member name="M:C1.Android.Core.C1Rect.Union(C1.Android.Core.C1Rect,C1.Android.Core.C1Rect)">
+            <summary>
+            Returns a new rectangle exactly enough to contain the specified rectangles.
+            </summary>
+            <param name="rect1">The first rectangle.</param>
+            <param name="rect2">The second rectangle.</param>
+            <returns></returns>
+        </member>
+        <member name="T:C1.Android.Core.C1ScrollViewer">
+            <summary>
+            Represents a scrollable area that can contain other visible elements.
+            </summary>
+        </member>
+        <member name="M:C1.Android.Core.C1ScrollViewer.#ctor(Android.Content.Context)">
+            <summary>
+            Initializes a new instance of the <see cref="T:C1.Android.Core.C1ScrollViewer"/> class.
+            </summary>
+        </member>
+        <member name="P:C1.Android.Core.C1ScrollViewer.Content">
+            <summary>
+            Gets or sets the content of the top, left header.
+            </summary>
+        </member>
+        <member name="P:C1.Android.Core.C1ScrollViewer.TopLeftHeader">
+            <summary>
+            Gets or sets the content of the top, left header.
+            </summary>
+        </member>
+        <member name="P:C1.Android.Core.C1ScrollViewer.TopHeader">
+            <summary>
+            Gets or sets the content of the top header.
+            </summary>
+        </member>
+        <member name="P:C1.Android.Core.C1ScrollViewer.LeftHeader">
+            <summary>
+            Gets or sets the content of the left header.
+            </summary>
+        </member>
+        <member name="P:C1.Android.Core.C1ScrollViewer.HorizontalScrollBarVisibility">
+            <summary>
+            Gets or sets a value that indicates whether a horizontal ScrollBar should be displayed.
+            </summary>
+        </member>
+        <member name="P:C1.Android.Core.C1ScrollViewer.VerticalScrollBarVisibility">
+            <summary>
+            Gets or sets a value that indicates whether a vertical ScrollBar should be displayed.
+            </summary>
+        </member>
+        <member name="P:C1.Android.Core.C1ScrollViewer.ZoomMode">
+            <summary>
+            Gets or sets a value that indicates whether zoom behavior in the ScrollViewer content is enabled.
+            </summary>
+        </member>
+        <member name="P:C1.Android.Core.C1ScrollViewer.MinZoomFactor">
+            <summary>
+            Gets or sets a value that indicates the minimum permitted run-time value of <see cref="P:C1.Android.Core.C1ScrollViewer.ZoomFactor"/>.
+            </summary>
+        </member>
+        <member name="P:C1.Android.Core.C1ScrollViewer.MaxZoomFactor">
+            <summary>
+            Gets or sets a value that indicates the maximum permitted run-time value of <see cref="P:C1.Android.Core.C1ScrollViewer.ZoomFactor"/>.
+            </summary>
+        </member>
+        <member name="P:C1.Android.Core.C1ScrollViewer.HorizontalOffset">
+            <summary>
+            Gets the distance the content has been scrolled horizontally.
+            </summary>
+        </member>
+        <member name="P:C1.Android.Core.C1ScrollViewer.VerticalOffset">
+            <summary>
+            Gets the distance the content has been scrolled vertically.
+            </summary>
+        </member>
+        <member name="P:C1.Android.Core.C1ScrollViewer.ZoomFactor">
+            <summary>
+            Gets a value that indicates the current zoom factor engaged for content scaling.
+            </summary>
+        </member>
+        <member name="P:C1.Android.Core.C1ScrollViewer.ViewportHeight">
+            <summary>
+            Gets the vertical size of the viewable content.
+            </summary>
+        </member>
+        <member name="P:C1.Android.Core.C1ScrollViewer.ViewportWidth">
+            <summary>
+            Gets the horizontal size of the viewable content.
+            </summary>
+        </member>
+        <member name="P:C1.Android.Core.C1ScrollViewer.ExtentWidth">
+            <summary>
+            Gets the horizontal size of all the scrollable content in the <see cref="T:C1.Android.Core.C1ScrollViewer"/>.
+            </summary>
+        </member>
+        <member name="P:C1.Android.Core.C1ScrollViewer.ExtentHeight">
+            <summary>
+            Gets the vertical size of all the scrollable content in the <see cref="T:C1.Android.Core.C1ScrollViewer"/>.
+            </summary>
+        </member>
+        <member name="P:C1.Android.Core.C1ScrollViewer.ScrollableWidth">
+            <summary>
+            Gets a value that represents the horizontal size of the area that can be scrolled; the difference between the width of the extent and the width of the viewport.
+            </summary>
+        </member>
+        <member name="P:C1.Android.Core.C1ScrollViewer.ScrollableHeight">
+            <summary>
+            Gets a value that represents the vertical size of the area that can be scrolled; the difference between the height of the extent and the height of the viewport.
+            </summary>
+        </member>
+        <member name="E:C1.Android.Core.C1ScrollViewer.ViewChanging">
+            <summary>
+            Occurs when manipulations such as scrolling and zooming cause the view to change.
+            </summary>
+        </member>
+        <member name="E:C1.Android.Core.C1ScrollViewer.ViewChanged">
+            <summary>
+            Occurs when manipulations such as scrolling and zooming have caused the view to change.
+            </summary>
+        </member>
+        <member name="M:C1.Android.Core.C1ScrollViewer.OnViewChanging(C1.Android.Core.C1ScrollViewerViewChangingEventArgs)">
+            <summary>
+            Raises the <see cref="E:ViewChanging" /> event.
+            </summary>
+            <param name="e">The <see cref="T:C1.Android.Core.C1ScrollViewerViewChangingEventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:C1.Android.Core.C1ScrollViewer.OnViewChanged(C1.Android.Core.C1ScrollViewerViewChangedEventArgs)">
+            <summary>
+            Raises the <see cref="E:ViewChanged" /> event.
+            </summary>
+            <param name="e">The <see cref="T:C1.Android.Core.C1ScrollViewerViewChangedEventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="E:C1.Android.Core.C1ScrollViewer.SizeChanged">
+            <summary>
+            Occurs after the size of the control changed.
+            </summary>
+        </member>
+        <member name="M:C1.Android.Core.C1ScrollViewer.OnSizeChanged(C1.Android.Core.C1ScrollViewerSizeChangedEventArgs)">
+            <summary>
+            Raises the <see cref="E:SizeChanged" /> event.
+            </summary>
+            <param name="e">The <see cref="T:C1.Android.Core.C1ScrollViewerSizeChangedEventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:C1.Android.Core.C1ScrollViewer.ChangeView(System.Nullable{System.Double},System.Nullable{System.Double},System.Nullable{System.Double},System.Boolean)">
+            <summary>
+            Changes the view.
+            </summary>
+            <param name="horizontalOffset">The horizontal offset.</param>
+            <param name="verticalOffset">The vertical offset.</param>
+            <param name="zoomFactor">The zoom factor.</param>
+            <param name="disableAnimation">if set to <c>true</c> [disable animation].</param>
+        </member>
+        <member name="P:C1.Android.Core.C1ScrollViewer.RefreshEnabled">
+            <summary>
+            Gets or sets a value indicating whether refreshing is enabled.
+            </summary>
+        </member>
+        <member name="P:C1.Android.Core.C1ScrollViewer.Refreshing">
+            <summary>
+            Gets a value indicating whether this <see cref="T:C1.Android.Core.C1ScrollViewer"/> is refreshing.
+            </summary>
+        </member>
+        <member name="M:C1.Android.Core.C1ScrollViewer.BeginRefreshing">
+            <summary>
+            Begins refreshing.
+            </summary>
+        </member>
+        <member name="M:C1.Android.Core.C1ScrollViewer.EndRefreshing">
+            <summary>
+            Ends refreshing.
+            </summary>
+        </member>
+        <member name="E:C1.Android.Core.C1ScrollViewer.Refresh">
+            <summary>
+            Occurs when the viewer is pulled to be refreshed.
+            </summary>
+        </member>
+        <member name="M:C1.Android.Core.C1ScrollViewer.OnRefreshAsync">
+            <summary>
+            Called when the viewer is pulled to be refreshed.
+            </summary>
+        </member>
+        <member name="T:C1.Android.Core.ZoomMode">
+            <summary>
+            Defines constants that specify the current mode for zoom behavior.
+            </summary>
+        </member>
+        <member name="F:C1.Android.Core.ZoomMode.Disabled">
+            <summary>
+            Zoom of content is disabled.
+            </summary>
+        </member>
+        <member name="F:C1.Android.Core.ZoomMode.Enabled">
+            <summary>
+            Zoom of content is enabled.
+            </summary>
+        </member>
+        <member name="T:C1.Android.Core.C1ScrollViewerViewChangingEventArgs">
+            <summary>
+            Provides event data for the <see cref="E:C1ScrollViewer.ViewChanging"/> event.
+            </summary>
+        </member>
+        <member name="P:C1.Android.Core.C1ScrollViewerViewChangingEventArgs.NextView">
+            <summary>
+            Gets the view that the <see cref="T:C1.Android.Core.C1ScrollViewer"/> will show next.
+            </summary>
+        </member>
+        <member name="T:C1.Android.Core.C1ScrollViewerViewChangedEventArgs">
+            <summary>
+            Provides event data for the <see cref="E:C1ScrollViewer.ViewChanged"/> event.
+            </summary>
+        </member>
+        <member name="T:C1.Android.Core.C1ScrollViewerSizeChangedEventArgs">
+            <summary>
+            Provides event data for the <see cref="E:C1ScrollViewer.SizeChanged"/> event.
+            </summary>
+        </member>
+        <member name="T:C1.Android.Core.C1ScrollViewerView">
+            <summary>
+            Provides a view for a <see cref="T:C1.Android.Core.C1ScrollViewer"/> when its view is changing.
+            </summary>
+        </member>
+        <member name="P:C1.Android.Core.C1ScrollViewerView.HorizontalOffset">
+            <summary>
+            Gets the distance the content has been scrolled horizontally.
+            </summary>
+        </member>
+        <member name="P:C1.Android.Core.C1ScrollViewerView.VerticalOffset">
+            <summary>
+            Gets the distance the content has been scrolled vertically.
+            </summary>
+        </member>
+        <member name="P:C1.Android.Core.C1ScrollViewerView.ZoomFactor">
+            <summary>
+            Gets a value that indicates the current zoom factor engaged for content scaling.
+            </summary>
+            <value>
+            The current zoom factor engaged for content scaling. The default is 1.0, where 1.0 indicates no additional scaling.
+            </value>
+        </member>
+        <member name="T:C1.Android.Core.ScrollBarVisibility">
+            <summary>
+            Specifies the visibility of a ScrollBar for scrollable content.
+            </summary>
+        </member>
+        <member name="F:C1.Android.Core.ScrollBarVisibility.Disabled">
+            <summary>
+            A ScrollBar does not appear even when the
+            viewport cannot display all of the content. The dimension of the content is set
+            to the corresponding dimension of the ScrollViewer parent.
+            For a horizontal ScrollBar, the width of the
+            content is set to the ScrollViewer.ViewportWidth of the
+            ScrollViewer. For a vertical ScrollBar,
+            the height of the content is set to the ScrollViewer.ViewportHeight
+            of the ScrollViewer.        
+            </summary>
+        </member>
+        <member name="F:C1.Android.Core.ScrollBarVisibility.Auto">
+            <summary>
+            A ScrollBar appears and the dimension of the
+            ScrollViewer is applied to the content when the viewport
+            cannot display all of the content. For a horizontal ScrollBar,
+            the width of the content is set to the ScrollViewer.ViewportWidth
+            of the ScrollViewer. For a vertical ScrollBar,
+            the height of the content is set to the ScrollViewer.ViewportHeight
+            of the ScrollViewer.
+            </summary>
+        </member>
+        <member name="F:C1.Android.Core.ScrollBarVisibility.Hidden">
+            <summary>
+            A ScrollBar does not appear even when the
+            viewport cannot display all of the content. The dimension of the ScrollViewer
+            is not applied to the content.
+            </summary>
+        </member>
+        <member name="F:C1.Android.Core.ScrollBarVisibility.Visible">
+            <summary>
+            A ScrollBar always appears. The dimension
+            of the ScrollViewer is applied to the content. For a
+            horizontal ScrollBar, the width of the content
+            is set to the ScrollViewer.ViewportWidth of the ScrollViewer.
+            For a vertical ScrollBar, the height of the
+            content is set to the ScrollViewer.ViewportHeight of
+            the ScrollViewer.
+            </summary>
+        </member>
+        <member name="T:C1.Android.Core.C1Size">
+            <summary>
+            Describes the width and height of an object.
+            </summary>
+        </member>
+        <member name="M:C1.Android.Core.C1Size.#ctor(System.Double,System.Double)">
+            <summary>
+            Initializes a new instance of the <see cref="T:C1.Android.Core.C1Size"/> structure and assigns it an initial width and height.
+            </summary>
+            <param name="width">The initial width of the instance of <see cref="T:C1.Android.Core.C1Size"/>.</param>
+            <param name="height">The initial height of the instance of <see cref="T:C1.Android.Core.C1Size"/>.</param>
+        </member>
+        <member name="P:C1.Android.Core.C1Size.Empty">
+            <summary>
+            Gets a value that represents a static empty <see cref="T:C1.Android.Core.C1Size"/>.
+            </summary>
+        </member>
+        <member name="P:C1.Android.Core.C1Size.Height">
+            <summary>
+            Gets or sets the height.
+            </summary>
+            <value>
+            The height.
+            </value>
+        </member>
+        <member name="P:C1.Android.Core.C1Size.IsEmpty">
+            <summary>
+            Gets a value indicating whether this instance is empty.
+            </summary>
+        </member>
+        <member name="P:C1.Android.Core.C1Size.Width">
+            <summary>
+            Gets or sets the width.
+            </summary>
+            <value>
+            The width.
+            </value>
+        </member>
+        <member name="M:C1.Android.Core.C1Size.Equals(System.Object)">
+            <summary>
+            ompares an object to an instance of <see cref="T:C1.Android.Core.C1Size"/> for equality.
+            </summary>
+            <param name="o">The <see cref="T:System.Object" /> to compare with this instance.</param>
+            <returns>
+              <c>true</c> if the specified <see cref="T:System.Object" /> is equal to this instance; otherwise, <c>false</c>.
+            </returns>
+        </member>
+        <member name="M:C1.Android.Core.C1Size.GetHashCode">
+            <summary>
+            Returns a hash code for this instance.
+            </summary>
+            <returns>
+            A hash code for this instance, suitable for use in hashing algorithms and data structures like a hash table. 
+            </returns>
+            <remarks>
+            To be added.
+            </remarks>
+        </member>
+        <member name="M:C1.Android.Core.C1Size.ToString">
+            <summary>
+            Returns a <see cref="T:System.String" /> that represents this instance.
+            </summary>
+            <returns>
+            A <see cref="T:System.String" /> that represents this instance.
+            </returns>
+        </member>
+        <member name="M:C1.Android.Core.C1Size.op_Equality(C1.Android.Core.C1Size,C1.Android.Core.C1Size)">
+            <summary>
+            Compares two instances of <see cref="T:C1.Android.Core.C1Size"/> for equality.
+            </summary>
+            <param name="size1">The size1.</param>
+            <param name="size2">The size2.</param>
+        </member>
+        <member name="M:C1.Android.Core.C1Size.op_Inequality(C1.Android.Core.C1Size,C1.Android.Core.C1Size)">
+            <summary>
+            Compares two instances of <see cref="T:C1.Android.Core.C1Size"/> for inequality.
+            </summary>
+            <param name="size1">The size1.</param>
+            <param name="size2">The size2.</param>
+        </member>
+        <member name="T:C1.Android.Core.C1ThemeInfo">
+            <summary>
+            This class allows accessing theme-related properties.
+            </summary>
+        </member>
+        <member name="P:C1.Android.Core.C1ThemeInfo.ApplicationTheme">
+            <summary>
+            Gets the application-level theme.
+            </summary>
+        </member>
+        <member name="P:C1.Android.Core.C1ThemeInfo.IsDark">
+            <summary>
+            Gets a value indicating whether the theme is dark.
+            </summary>
+        </member>
+        <member name="P:C1.Android.Core.C1ThemeInfo.BackgroundColor">
+            <summary>
+            Gets the background color of the theme.
+            </summary>
+        </member>
+        <member name="P:C1.Android.Core.C1ThemeInfo.TextColor">
+            <summary>
+            Gets the text color of the theme.
+            </summary>
+        </member>
+        <member name="P:C1.Android.Core.C1ThemeInfo.SecondBackgroundColor">
+            <summary>
+            Get the second background of the theme
+            </summary>
+        </member>
+        <member name="T:C1.Android.Core.C1Thickness">
+            <summary>
+            Describes the thickness of a frame around a rectangle. Four System.Double values describe the C1Thickness.Left, C1Thickness.Top, C1Thickness.Right, and C1Thickness.Bottom sides of the rectangle, respectively.
+            </summary>
+        </member>
+        <member name="M:C1.Android.Core.C1Thickness.#ctor(System.Double)">
+            <summary>
+            Initializes a <see cref="T:C1.Android.Core.C1Thickness"/> structure that has the specified uniform length on each side.
+            </summary>
+            <param name="uniformLength">The uniform length applied to all four sides of the bounding rectangle.</param>
+        </member>
+        <member name="M:C1.Android.Core.C1Thickness.#ctor(System.Double,System.Double,System.Double,System.Double)">
+            <summary>
+            Initializes a <see cref="T:C1.Android.Core.C1Thickness"/> structure that has specific lengths (supplied as a System.Double) applied to each side of the rectangle.
+            </summary>
+            <param name="left">The thickness for the left side of the rectangle.</param>
+            <param name="top">The thickness for the upper side of the rectangle.</param>
+            <param name="right">The thickness for the right side of the rectangle.</param>
+            <param name="bottom">The thickness for the lower side of the rectangle.</param>
+        </member>
+        <member name="P:C1.Android.Core.C1Thickness.Bottom">
+            <summary>
+            Gets or sets the width, in pixels, of the lower side of the bounding rectangle.
+            </summary>
+        </member>
+        <member name="P:C1.Android.Core.C1Thickness.Left">
+            <summary>
+            Gets or sets the width, in pixels, of the left side of the bounding rectangle.
+            </summary>
+        </member>
+        <member name="P:C1.Android.Core.C1Thickness.Right">
+            <summary>
+            Gets or sets the width, in pixels, of the right side of the bounding rectangle.
+            </summary>
+        </member>
+        <member name="P:C1.Android.Core.C1Thickness.Top">
+            <summary>
+            Gets or sets the width, in pixels, of the upper side of the bounding rectangle.
+            </summary>
+        </member>
+        <member name="P:C1.Android.Core.C1Thickness.IsUniform">
+            <summary>
+            Gets whether the thickness is uniform.
+            </summary>
+        </member>
+        <member name="P:C1.Android.Core.C1Thickness.IsZero">
+            <summary>
+            Gets whether the thickness is zero in all edges.
+            </summary>
+        </member>
+        <member name="M:C1.Android.Core.C1Thickness.Clone">
+            <summary>
+            Creates a new object that is a copy of the current instance.
+            </summary>
+        </member>
+        <member name="M:C1.Android.Core.C1Thickness.Equals(System.Object)">
+            <summary>
+            Determines whether the specified <see cref="T:System.Object" />, is equal to this instance.
+            </summary>
+            <param name="obj">The <see cref="T:System.Object" /> to compare with this instance.</param>
+            <returns>
+              <c>true</c> if the specified <see cref="T:System.Object" /> is equal to this instance; otherwise, <c>false</c>.
+            </returns>
+            <remarks>
+            To be added.
+            </remarks>
+        </member>
+        <member name="M:C1.Android.Core.C1Thickness.GetHashCode">
+            <summary>
+            Returns a hash code for this instance.
+            </summary>
+            <returns>
+            A hash code for this instance, suitable for use in hashing algorithms and data structures like a hash table. 
+            </returns>
+        </member>
+        <member name="M:C1.Android.Core.C1Thickness.op_Equality(C1.Android.Core.C1Thickness,C1.Android.Core.C1Thickness)">
+            <summary>
+            Compares two <see cref="T:C1.Android.Core.C1Thickness"/> structures for equality.
+            </summary>
+            <param name="t1">The first structure to compare.</param>
+            <param name="t2">The other structure to compare.</param>
+        </member>
+        <member name="M:C1.Android.Core.C1Thickness.op_Inequality(C1.Android.Core.C1Thickness,C1.Android.Core.C1Thickness)">
+            <summary>
+            Compares two <see cref="T:C1.Android.Core.C1Thickness"/> structures for inequality.
+            </summary>
+            <param name="t1">The first structure to compare.</param>
+            <param name="t2">The other structure to compare.</param>
+        </member>
+        <member name="M:C1.Android.Core.C1Thickness.op_Implicit(System.Double)~C1.Android.Core.C1Thickness">
+            <summary>
+            Casting operator to convert a double into a uniform <see cref="T:C1.Android.Core.C1Thickness"/>.
+            </summary>
+            <param name="uniformLength">The double specifying uniform length.</param>
+        </member>
+        <member name="M:C1.Android.Core.C1Thickness.op_Implicit(System.String)~C1.Android.Core.C1Thickness">
+            <summary>
+            Casting operator to convert a string into a <see cref="T:C1.Android.Core.C1Thickness"/>.
+            </summary>
+            <param name="thicknessString">The string specifying the thickness.</param>
+        </member>
+        <member name="F:C1.Android.Core.C1DataType.Null">
+            C1DataTypeNull.
+        </member>
+        <member name="F:C1.Android.Core.C1DataType.Object">
+            C1DataTypeObject.
+        </member>
+        <member name="F:C1.Android.Core.C1DataType.String">
+            C1DataTypeString.
+        </member>
+        <member name="F:C1.Android.Core.C1DataType.Number">
+            C1DataTypeNumber.
+        </member>
+        <member name="F:C1.Android.Core.C1DataType.Boolean">
+            C1DataTypeBoolean.
+        </member>
+        <member name="F:C1.Android.Core.C1DataType.Date">
+            C1DataTypeDate.
+        </member>
+        <member name="F:C1.Android.Core.C1DataType.Array">
+            C1DataTypeArray.
+        </member>
+        <member name="T:C1.Android.Core.FlowDirection">
+            <summary>
+            Flow Direction mode.
+            </summary>
+        </member>
+        <member name="F:C1.Android.Core.FlowDirection.Default">
+            <summary>
+            Indicates that content should flow from left to right in default
+            </summary>
+        </member>
+        <member name="F:C1.Android.Core.FlowDirection.LeftToRight">
+            <summary> 	
+            Indicates that content should flow from left to right.
+            </summary>
+        </member>
+        <member name="F:C1.Android.Core.FlowDirection.RightToLeft">
+            <summary>
+            Indicates that content should flow from right to left.
+            </summary>
+        </member>
+        <member name="T:C1.Android.Core.IFlowDirection">
+            <summary>Implement this interface to change layout direction</summary>
+        </member>
+        <member name="P:C1.Android.Core.IFlowDirection.FlowDirection">
+            <summary>Gets or sets the flow direction.</summary>
+            <value>The flow direction.</value>
+        </member>
+        <member name="M:C1.Android.Core.IFlowDirection.UpdateLayoutDirection(C1.Android.Core.FlowDirection)">
+            <summary>Update layout of control based on FlowDirection property.</summary>
+            <param name="direction"></param>
+        </member>
+        <member name="T:C1.Android.Core.AsyncEventArgs">
+            <summary>
+            Provides event data for asynchronous events.
+            </summary>
+        </member>
+        <member name="P:C1.Android.Core.AsyncEventArgs.Awaiter">
+            <summary>
+            Gets the deferrals awaiter.
+            </summary>
+        </member>
+        <member name="M:C1.Android.Core.AsyncEventArgs.GetDeferral">
+            <summary>
+            Gets the deferral.
+            </summary>
+            <remarks>
+            The event won't finish until all the deferrals call the complete method.
+            </remarks>
+        </member>
+        <member name="M:C1.Android.Core.AsyncEventArgs.WaitDeferralsAsync">
+            <summary>
+            Waits until all the deferrals are complete.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:C1.Android.Core.AsyncEventArgsDeferralsAwaiter">
+            <summary>
+            Deferrals awaiter used to wait for the deferrals of an async event.
+            </summary>
+        </member>
+        <member name="M:C1.Android.Core.AsyncEventArgsDeferralsAwaiter.GetDeferral">
+            <summary>
+            Gets the deferral.
+            </summary>
+            <remarks>
+            The event won't finish until all the deferrals call the complete method.
+            </remarks>
+        </member>
+        <member name="M:C1.Android.Core.AsyncEventArgsDeferralsAwaiter.WaitDeferralsAsync">
+            <summary>
+            Waits until all the deferrals are complete.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:C1.Android.Core.AsyncEventArgsDeferral">
+            <summary>
+            Deferral used to block the event until <see cref="M:C1.Android.Core.AsyncEventArgsDeferral.Complete"/> method is called. 
+            </summary>
+        </member>
+        <member name="M:C1.Android.Core.AsyncEventArgsDeferral.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:C1.Android.Core.AsyncEventArgsDeferral"/> class.
+            </summary>
+        </member>
+        <member name="M:C1.Android.Core.AsyncEventArgsDeferral.Complete">
+            <summary>
+            Notifies the event the handler is ready to continue.
+            </summary>
+        </member>
+        <member name="M:C1.Android.Core.RenderEngineEx.SetPan(C1.Android.Core.RenderEngine,System.Double,System.Double)">
+            <summary>
+            Sets the pan.
+            </summary>
+            <param name="renderEngine">the render engine.</param>
+            <param name="panX">pan in X-Axis.</param>
+            <param name="panY">pan in Y-Axis.</param>
+        </member>
+        <member name="M:C1.Android.Core.RenderEngineEx.SetScale(C1.Android.Core.RenderEngine,System.Double,System.Double)">
+            <summary>
+            Sets the scale.
+            </summary>
+            <param name="renderEngine">the render engine.</param>
+            <param name="scaleX">scale in X-Axis.</param>
+            <param name="scaleY">scale in Y-Axis.</param>
+        </member>
+        <member name="T:C1.Android.Core.ColorEx">
+            <summary>
+            Provides access to system colors according to the current theme.
+            </summary>
+        </member>
+        <member name="M:C1.Android.Core.ColorEx.IsDefaultColor(System.Nullable{Android.Graphics.Color})">
+            <summary>
+            Determines whether the specified color is the default color.
+            </summary>
+            <param name="color">The color.</param>
+        </member>
+        <member name="M:C1.Android.Core.ColorEx.Cascade(System.Func{System.Nullable{Android.Graphics.Color}}[])">
+            <summary>
+            Returns the first color different from the default.
+            </summary>
+            <param name="colors">The list of colors to look up.</param>
+        </member>
+        <member name="M:C1.Android.Core.ColorEx.FromARGB(System.Byte,System.Byte,System.Byte,System.Byte)">
+            <summary>
+            Creates a color from the ARGB components.
+            </summary>
+            <param name="a">The alpha channel.</param>
+            <param name="r">The Red component.</param>
+            <param name="g">The Green component.</param>
+            <param name="b">The Blue component.</param>
+            <returns></returns>
+        </member>
+        <member name="M:C1.Android.Core.ColorEx.GetARGB(Android.Graphics.Color,System.Byte@,System.Byte@,System.Byte@,System.Byte@)">
+            <summary>
+            Gets the ARGB components of a color.
+            </summary>
+            <param name="color">The color.</param>
+            <param name="a">The alpha channel.</param>
+            <param name="r">The red component.</param>
+            <param name="g">The green component.</param>
+            <param name="b">The blue component.</param>
+        </member>
+        <member name="M:C1.Android.Core.ColorEx.WithAlpha(System.Nullable{Android.Graphics.Color},System.Byte)">
+            <summary>
+            Creates a new color modifying the alpha channel.
+            </summary>
+            <param name="color">The color.</param>
+            <param name="a">a.</param>
+            <returns></returns>
+        </member>
+        <member name="M:C1.Android.Core.ColorEx.WithAlpha(Android.Graphics.Color,System.Byte)">
+            <summary>
+            Creates a new color modifying the alpha channel.
+            </summary>
+            <param name="color">The color.</param>
+            <param name="a">a.</param>
+            <returns></returns>
+        </member>
+        <member name="M:C1.Android.Core.ColorEx.Blend(Android.Graphics.Color,Android.Graphics.Color,System.Double)">
+            <summary>
+            Blends the specified colors together.
+            </summary>
+            <param name="color">The color to blend onto the <paramref name="backgroundColor"/>.</param>
+            <param name="backgroundColor">The background color.</param>
+            <param name="amount">How much of <paramref name="color"/> to keep,
+            “on top of” <paramref name="backgroundColor"/>.</param>
+            <returns></returns>
+        </member>
+        <member name="M:C1.Android.Core.ColorEx.RGBtoHSV(System.Single,System.Single,System.Single,System.Single@,System.Single@,System.Single@)">
+            <summary>
+            r,g,b values are from 0 to 1
+            h = [0,360], s = [0,1], v = [0,1]
+            if s == 0, then h = -1(undefined)
+            </summary>
+            <param name="r"></param>
+            <param name="g"></param>
+            <param name="b"></param>
+            <param name="h"></param>
+            <param name="s"></param>
+            <param name="v"></param>
+        </member>
+        <member name="M:C1.Android.Core.ColorEx.HSVtoRGB(System.Single@,System.Single@,System.Single@,System.Single,System.Single,System.Single)">
+            <summary>
+            r,g,b values are from 0 to 1
+            h = [0,360], s = [0,1], v = [0,1]
+            if s == 0, then h = -1(undefined)
+            </summary>
+            <param name="r"></param>
+            <param name="g"></param>
+            <param name="b"></param>
+            <param name="h"></param>
+            <param name="s"></param>
+            <param name="v"></param>
+        </member>
+        <member name="M:C1.Android.Core.ColorEx.GetIntColor(System.Object)">
+            <summary>
+            Convert color in platforms to a int color.
+            </summary>
+            <param name="color">Color in each platform.</param>
+            <returns>a color defined in a int value.</returns>
+        </member>
+        <member name="T:C1.Android.Core.DeviceEx">
+            <summary>
+            Provides information about the device
+            </summary>
+        </member>
+        <member name="P:C1.Android.Core.DeviceEx.RuntimePlatform">
+            <summary>
+            Gets the runtime platform.
+            </summary>
+        </member>
+        <member name="P:C1.Android.Core.DeviceEx.DeviceType">
+            <summary>
+            Gets the device type.
+            </summary>
+        </member>
+        <member name="P:C1.Android.Core.DeviceEx.DeviceOrientation">
+            <summary>
+            Gets the device orientation.
+            </summary>
+        </member>
+        <member name="P:C1.Android.Core.DeviceEx.ScreenDensity">
+            <summary>
+            Gets the screen density.
+            </summary>
+        </member>
+        <member name="P:C1.Android.Core.DeviceEx.ScreenPPI">
+            <summary>
+            Gets the number of pixels per inch of the screen.
+            </summary>
+        </member>
+        <member name="T:C1.Android.Core.DeviceType">
+            <summary>
+            Indicates which device type the forms are running on.
+            </summary>
+        </member>
+        <member name="F:C1.Android.Core.DeviceType.Phone">
+            <summary>
+            Indicates that the device is a phone.
+            </summary>
+        </member>
+        <member name="F:C1.Android.Core.DeviceType.Desktop">
+            <summary>
+            Indicates that the device is desktop.
+            </summary>
+        </member>
+        <member name="F:C1.Android.Core.DeviceType.Other">
+            <summary>
+            Indicates the type of device is unknown.
+            </summary>
+        </member>
+        <member name="T:C1.Android.Core.DeviceOrientation">
+            <summary>
+            Indicates device Orientation.
+            </summary>
+        </member>
+        <member name="F:C1.Android.Core.DeviceOrientation.Undefined">
+            <summary>
+            Indicates device Orientation is Undefined.
+            </summary>
+        </member>
+        <member name="F:C1.Android.Core.DeviceOrientation.Landscape">
+            <summary>
+            Indicates device Orientation is Landscape.
+            </summary>
+        </member>
+        <member name="F:C1.Android.Core.DeviceOrientation.Portrait">
+            <summary>
+            Indicates device Orientation is Portrait.
+            </summary>
+        </member>
+        <member name="T:C1.Android.Core.IEnumerableEx">
+            <summary>
+            Provides convenience method for working with LINQ and enumberables
+            </summary>
+        </member>
+        <member name="M:C1.Android.Core.IEnumerableEx.ForEach``1(System.Collections.Generic.IEnumerable{``0},System.Action{``0})">
+            <summary>
+            Performs an action for each collection item
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="enumeration">enumeration to process</param>
+            <param name="action">action to perform</param>
+        </member>
+        <member name="M:C1.Android.Core.IEnumerableEx.MaxOrDefault``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.Double})">
+            <summary>
+            Returns the maximum number in the sequence or default if not items in the sequence.
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="enumeration">The enumeration.</param>
+            <param name="selector">The selector.</param>
+            <returns></returns>
+        </member>
+        <member name="M:C1.Android.Core.IEnumerableEx.MaxOrDefault``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.Int32})">
+            <summary>
+            Returns the maximum number in the sequence or default if not items in the sequence.
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="enumeration">The enumeration.</param>
+            <param name="selector">The selector.</param>
+            <returns></returns>
+        </member>
+        <member name="T:C1.Android.Core.ThemeEx">
+            <summary>
+            Provides access to system colors according to the current theme.
+            </summary>
+        </member>
+        <member name="P:C1.Android.Core.ThemeEx.IsDark">
+            <summary>
+            Gets a value indicating whether the app is using a dark theme.
+            </summary>
+        </member>
+        <member name="P:C1.Android.Core.ThemeEx.BackgroundColor">
+            <summary>
+            Gets the color of the theme background.
+            </summary>
+        </member>
+        <member name="P:C1.Android.Core.ThemeEx.ForegroundColor">
+            <summary>
+            Gets the color of the theme foreground.
+            </summary>
+        </member>
+        <member name="P:C1.Android.Core.ThemeEx.AccentBackground">
+            <summary>
+            Gets the accent background.
+            </summary>
+        </member>
+        <member name="P:C1.Android.Core.ThemeEx.AccentForeground">
+            <summary>
+            Gets the accent foreground.
+            </summary>
+        </member>
+        <member name="P:C1.Android.Core.ThemeEx.SelectionBackgroundColor">
+            <summary>
+            Gets the selection background.
+            </summary>
+        </member>
+        <member name="P:C1.Android.Core.ThemeEx.SelectionForegroundColor">
+            <summary>
+            Gets the selection foreground.
+            </summary>
+        </member>
+        <member name="P:C1.Android.Core.ThemeEx.CursorBackgroundColor">
+            <summary>
+            Gets the cursor background.
+            </summary>
+        </member>
+        <member name="P:C1.Android.Core.ThemeEx.CursorForegroundColor">
+            <summary>
+            Gets the cursor foreground.
+            </summary>
+        </member>
+        <member name="P:C1.Android.Core.ThemeEx.EditorBackgroundColor">
+            <summary>
+            Gets the color of the theme used to pain the background of the editors.
+            </summary>
+        </member>
+        <member name="P:C1.Android.Core.ThemeEx.EditorForegroundColor">
+            <summary>
+            Gets the color of the theme used to pain the foreground of the editors.
+            </summary>
+        </member>
+        <member name="P:C1.Android.Core.ThemeEx.HeaderBackgroundColor">
+            <summary>
+            Gets the color of the theme used to pain the headers.
+            </summary>
+        </member>
+        <member name="P:C1.Android.Core.ThemeEx.HeaderForegroundColor">
+            <summary>
+            Gets the color of the theme used to pain the headers foreground.
+            </summary>
+        </member>
+        <member name="P:C1.Android.Core.ThemeEx.HeaderTextSize">
+            <summary>
+            Gets the size of the text in headers.
+            </summary>
+        </member>
+        <member name="P:C1.Android.Core.ThemeEx.BorderColor">
+            <summary>
+            Gets the color of the theme used to pain the borders.
+            </summary>
+        </member>
+        <member name="T:C1.Android.Core.ViewEx">
+            <summary>
+            View extensions
+            </summary>
+        </member>
+        <member name="M:C1.Android.Core.ViewEx.GetChildren(Android.Views.View,System.Boolean,System.Boolean)">
+            <summary>
+            Finds all the children of a given <see cref="T:Android.Views.View"/>.
+            </summary>
+        </member>
+        <member name="M:C1.Android.Core.ViewEx.GetImage(Android.Views.View)">
+            <summary>
+            Get the byte array of the control image.
+            This byte array comes from a UIImagePNGRepresentation in iOS, TrueColorAlpha of PNG format in WP, Bitmap in Android.
+            </summary>
+            <returns>A byte array with certain image format.</returns>
+        </member>
+        <member name="T:C1.Android.Core.C1ZoomHelper">
+            <summary>
+            Cross-platform helper for listening to zoom gestures either using the mouse or fingers.
+            </summary>
+        </member>
+        <member name="M:C1.Android.Core.C1ZoomHelper.#ctor(Android.Views.View,System.Boolean,System.Boolean,System.Boolean)">
+            <summary>
+            Initializes a new <see cref="T:C1.Android.Core.C1ZoomHelper"/>.
+            </summary>
+            <param name="element">An <see cref="T:Android.Views.View"/> on which the zoom gesture will be listened.</param>
+            <param name="ctrlRequired">Sets whether is required to press Ctrl key in order to start the gesture.</param>
+            <param name="continuousZoom">If set to true it will raise intermediate events to perform a continuous zoom, otherwise the events will be raised from native mouse wheel events.</param>
+            <param name="handleMouseWheel">Sets whether Handled property of mouse wheel events will be set to true.</param>
+        </member>
+        <member name="E:C1.Android.Core.C1ZoomHelper.ZoomStarted">
+            <summary>
+            Occurs when a zoom gesture started.
+            </summary>
+        </member>
+        <member name="E:C1.Android.Core.C1ZoomHelper.ZoomDelta">
+            <summary>
+            Occurs while a zoom gesture is performed.
+            </summary>
+        </member>
+        <member name="E:C1.Android.Core.C1ZoomHelper.ZoomCompleted">
+            <summary>
+            Occurs after a zoom gesture completed.
+            </summary>
+        </member>
+        <member name="M:C1.Android.Core.C1ZoomHelper.FinalizeHelper">
+            <summary>
+            Detaches all the events handlers.
+            </summary>
+        </member>
+        <member name="T:C1.Android.Core.C1ZoomEventArgs">
+            <summary>
+            Contains information of the zoom events.
+            </summary>
+        </member>
+        <member name="T:C1.Android.Core.C1ZoomStartedEventArgs">
+            <summary>
+            Contains information of the ZoomStarted event.
+            </summary>
+        </member>
+        <member name="T:C1.Android.Core.C1ZoomDeltaEventArgs">
+            <summary>
+            Contains information of the ZoomDelta event.
+            </summary>
+        </member>
+        <member name="P:C1.Android.Core.C1ZoomDeltaEventArgs.DeltaScale">
+            <summary>
+            Gets the delta scale.
+            </summary>
+        </member>
+        <member name="P:C1.Android.Core.C1ZoomDeltaEventArgs.CumulativeScale">
+            <summary>
+            Gets the accumulated scale.
+            </summary>
+        </member>
+        <member name="P:C1.Android.Core.C1ZoomDeltaEventArgs.UniformDeltaScale">
+            <summary>
+            Gets the uniform delta scale.
+            </summary>
+        </member>
+        <member name="P:C1.Android.Core.C1ZoomDeltaEventArgs.UniformCumulativeScale">
+            <summary>
+            Gets the uniform cumulative scale.
+            </summary>
+        </member>
+        <member name="P:C1.Android.Core.C1ZoomDeltaEventArgs.DeltaTranslation">
+            <summary>
+            Gets the delta translation.
+            </summary>
+        </member>
+        <member name="P:C1.Android.Core.C1ZoomDeltaEventArgs.CumulativeTranslation">
+            <summary>
+            Gets the accumulated translation.
+            </summary>
+        </member>
+        <member name="M:C1.Android.Core.C1ZoomDeltaEventArgs.Complete">
+            <summary>
+            Completes the manipulation without inertia.
+            </summary>
+        </member>
+        <member name="T:C1.Android.Core.C1ZoomCompletedEventArgs">
+            <summary>
+            Contains information of the ZoomCompleted event.
+            </summary>
+        </member>
+        <member name="P:C1.Android.Core.C1ZoomCompletedEventArgs.CumulativeScale">
+            <summary>
+            Gets the accumulated scale.
+            </summary>
+        </member>
+        <member name="P:C1.Android.Core.C1ZoomCompletedEventArgs.UniformCumulativeScale">
+            <summary>
+            Gets the uniform cumulative scale.
+            </summary>
+        </member>
+        <member name="P:C1.Android.Core.C1ZoomCompletedEventArgs.CumulativeTranslation">
+            <summary>
+            Gets the accumulated translation.
+            </summary>
+        </member>
+        <member name="M:C1.Android.Core.IRenderEngine.SetStroke(System.Object)">
+            <summary>
+            Sets the current stroke brush.
+            </summary>
+            <param name="brush">Native brush or argb color as integer.</param>
+        </member>
+        <member name="M:C1.Android.Core.IRenderEngine.SetStrokeThickness(System.Double)">
+            <summary>
+            Sets the stroke thickness.
+            </summary>
+            <param name="thickness"></param>
+        </member>
+        <member name="M:C1.Android.Core.IRenderEngine.SetStrokePattern(System.Double[])">
+            <summary>
+            Sets the stroke pattern.
+            </summary>
+            <param name="pattern"></param>
+        </member>
+        <member name="M:C1.Android.Core.IRenderEngine.SetFill(System.Object)">
+            <summary>
+            Sets the fill brush.
+            </summary>
+            <param name="brush"></param>
+        </member>
+        <member name="M:C1.Android.Core.IRenderEngine.SetOpacity(System.Object,System.Double)">
+            <summary>
+            Changes the brush opacity.
+            </summary>
+            <param name="brush">Brush object</param>
+            <param name="opacity">Opacity</param>
+            <returns>Brush object</returns>
+        </member>
+        <member name="M:C1.Android.Core.IRenderEngine.SetFont(C1.Android.Core.C1Font)">
+            <summary>
+            Sets the font.
+            </summary>
+            <param name="font">Native font object.</param>
+        </member>
+        <member name="M:C1.Android.Core.IRenderEngine.DrawLine(System.Double,System.Double,System.Double,System.Double)">
+            <summary>
+            Draw line between two points using current stroke attributes.
+            </summary>
+            <param name="x1">x-coordinate of first point.</param>
+            <param name="y1">y-coordinate of first point.</param>
+            <param name="x2">x-coordinate of second point.</param>
+            <param name="y2">y-coordinate of second point.</param>
+        </member>
+        <member name="M:C1.Android.Core.IRenderEngine.DrawLines(System.Double[],System.Double[])">
+            <summary>
+            Draw lines using specified coordinates.
+            </summary>
+            <param name="xs">Array of x-coordinates.</param>
+            <param name="ys">Array of y-coordinates.</param>
+        </member>
+        <member name="M:C1.Android.Core.IRenderEngine.DrawRect(System.Double,System.Double,System.Double,System.Double)">
+            <summary>
+            Draw rectangle with currect stroke and fill.
+            </summary>
+            <param name="x">x-coordinate of rectangle.</param>
+            <param name="y">y-coordinate of rectangle.</param>
+            <param name="w">Rectangle width.</param>
+            <param name="h">Rectangle height.</param>
+        </member>
+        <member name="M:C1.Android.Core.IRenderEngine.DrawPolygon(System.Double[],System.Double[])">
+            <summary>
+            Draw polygon with currect stroke and fill.
+            </summary>
+            <param name="xs">Array of x-coordinates.</param>
+            <param name="ys">Array of y-coordinates.</param>
+        </member>
+        <member name="M:C1.Android.Core.IRenderEngine.DrawEllipse(System.Double,System.Double,System.Double,System.Double)">
+            <summary>
+            Draw ellipse with currect stroke and fill.
+            </summary>
+            <param name="cx">X-coordinate of ellipse center.</param>
+            <param name="cy">Y-coordinate of ellipse center.</param>
+            <param name="rx">x-radius.</param>
+            <param name="ry">y-radius.</param>
+        </member>
+        <member name="M:C1.Android.Core.IRenderEngine.DrawImage(System.Object,System.Double,System.Double,System.Double,System.Double)">
+            <summary>
+            Draw image using special source.
+            </summary>
+            <param name="source">the source of image.</param>
+            <param name="x">x-coordinate of image.</param>
+            <param name="y">y-coordinate of image.</param>
+            <param name="w">Image width.</param>
+            <param name="h">Image height.</param>
+        </member>
+        <member name="M:C1.Android.Core.IRenderEngine.MeasureString(System.String)">
+            <summary>
+            Measures size of string.
+            </summary>
+            <param name="s">String to measure.</param>
+            <returns>Size.</returns>
+        </member>
+        <member name="M:C1.Android.Core.IRenderEngine.DrawString(System.String,C1.Android.Core.C1Point)">
+            <summary>
+            Draw string at specified position.
+            </summary>
+            <param name="s">String to draw.</param>
+            <param name="pos">ChartPositionType.</param>
+        </member>
+        <member name="M:C1.Android.Core.IRenderEngine.DrawStringRotated(System.String,C1.Android.Core.C1Point,C1.Android.Core.C1Point,System.Double)">
+            <summary>
+            Draw rotated string at specified position.
+            </summary>
+            <param name="s"></param>
+            <param name="pos"></param>
+            <param name="center"></param>
+            <param name="angle"></param>
+        </member>
+        <member name="M:C1.Android.Core.IRenderEngine.SetClipRect(System.Nullable{C1.Android.Core.C1Rect})">
+            <summary>
+            Sets clip rectangle.
+            </summary>
+            <param name="rect">Clip rectangle. Null clear clipping rectangle.</param>
+        </member>
+        <member name="M:C1.Android.Core.IRenderEngine.DrawPieSegment(System.Double,System.Double,System.Double,System.Double,System.Double)">
+            <summary>
+            Draws pie segment at specified point.
+            </summary>
+            <param name="cx">X-coordinate.</param>
+            <param name="cy">Y-coordinate.</param>
+            <param name="radius">Radius.</param>
+            <param name="angle">Angle.</param>
+            <param name="sweep">Sweep angle.</param>
+        </member>
+        <member name="M:C1.Android.Core.IRenderEngine.DrawDonutSegment(System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Boolean)">
+            <summary>
+            Draws donut segment at specified point.
+            </summary>
+            <param name="cx">X-coordinate.</param>
+            <param name="cy">Y-coordinate.</param>
+            <param name="radius">Radius.</param>
+            <param name="innerRadius">Inner radius.</param>
+            <param name="angle">Angle.</param>
+            <param name="sweep">Sweep angle.</param>
+            <param name="reversedAngle">Rendering with reversed angle.</param>
+        </member>
+        <member name="M:C1.Android.Core.RenderEngine.DrawImageWithStream(System.IO.Stream,Android.Graphics.RectF)">
+            <summary>
+            Draw image from stream to destination rect
+            </summary>
+            <param name="stream"></param>
+            <param name="destRect"></param>
+        </member>
+        <member name="M:C1.Android.Core.RenderEngine.DrawStringWithMutipleLines(System.String,C1.Android.Core.C1Point,C1.Android.Core.C1Rect)">
+            Draw a String with multiple lines. The lines are separated by "\n".
+            
+            @param s
+                       - string to draw.
+            @param x
+                       - The x-coordinate of the origin of the first line text being drawn.
+            @param y
+                       - The y-coordinate of the origin of the first line text being drawn.
+            
+        </member>
+        <member name="M:C1.Android.Core.RenderEngine.drawString(System.String,Android.Graphics.Rect,Android.Views.GravityFlags,C1.Android.Core.TruncateType,System.Int32,Android.Graphics.Canvas,Android.Graphics.Paint)">
+                     * @param s
+                     *            : string to draw.
+                     * @param parentRect
+                     *            : rectangle to show the text inside.
+                     * @param gravity
+                     *            : the gravity of the string in the parentRect
+                     * @param truncateType
+                     *            : how to truncate the string if the string's width is larger than the parentRect.
+                     *            NONE/ELLIPSIZE/CLIPRECT
+                     * @param angle
+                     *            : the angle of the string in anti-clockwise. e.g. 0 is from left to right. 90 is
+                     *            from bottom to top.
+                     * @param canvas
+                     *            the canvas to draw onto, can be null to use already set canvas.
+                     * @param paint
+                     *            the paint used to draw the string, can be null to use default paint.
+                 * 
+        </member>
+        <member name="T:C1.Android.Core.TruncateType">
+            TruncateType used for drawing strings using the CanvasRenderEngine.
+            
+            @author chrisr
+            
+        </member>
+        <member name="F:C1.Android.Core.TruncateType.NONE">
+            No truncate.
+        </member>
+        <member name="F:C1.Android.Core.TruncateType.ELLIPSIZE">
+            Apply "..." when truncated.
+        </member>
+        <member name="F:C1.Android.Core.TruncateType.CLIPRECT">
+            Just cut characters off the end.
+        </member>
+        <member name="T:C1.Android.Core.DefaultValueConverter">
+            <summary>
+            Converts a value into a specified type.
+            </summary>
+        </member>
+        <member name="T:C1.Android.Core.DependencyProperty">
+            <summary>
+            Class used to store property values.
+            </summary>
+        </member>
+        <member name="T:C1.Android.Core.IDependencyObject">
+            <summary>
+            Stub interface to have cross-platform compatibility.
+            </summary>
+        </member>
+        <member name="M:C1.Android.Core.DateTimeEx.FromOADate(System.Double)">
+            <summary>
+            Returns a System.DateTime equivalent to the specified OLE Automation date.
+            </summary>
+            <param name="d">An OLE Automation date value.</param>
+            <returns>An object that represents the same date and time as the d parameter.</returns>
+        </member>
+        <member name="M:C1.Android.Core.DateTimeEx.ToOADate(System.DateTime)">
+            <summary>
+            Converts the value of this instance to the equivalent OLE Automation date.
+            </summary>
+            <param name="date">The date that will be converted</param>
+            <returns>A double-precision floating-point number that contains an OLE Automation date equivalent to the value of this instance.</returns>
+        </member>
+        <member name="M:C1.Android.Core.ObjectEx.GetPropertyValue(System.Object,System.String)">
+            <summary>
+            Gets the value of a property or property path of the specified object.
+            </summary>
+            <remarks>
+            This extension DON'T evaluate ICustomTypeDescriptor interface. 
+            Use generic extension with the same name if you are evaluating the path 
+            of a DataTable or any object that implements ICustomTypeDescriptor.
+            </remarks>
+            <param name="target">The target object.</param>
+            <param name="path">The name of the property or the property path.</param>
+            <returns>The value contained in the property</returns>
+        </member>
+        <member name="M:C1.Android.Core.ObjectEx.SetPropertyValue``1(System.Object,System.String,``0,C1.Android.Core.IValueConverter,System.Object,System.String)">
+            <summary>
+            Sets the value of a property or property path of the specified object.
+            </summary>
+            <typeparam name="T">Type of the property to set.</typeparam>
+            <param name="target">Object that contains the property.</param>
+            <param name="path">Name or path of the property that contains the value.</param>
+            <param name="value">New value for the property.</param>
+            <param name="converter">Converter to use when setting the property.</param>
+            <param name="converterParameter">Parameter passed to the converter.</param>
+            <param name="culture">Culture information to use when converting values.</param>
+        </member>
+        <member name="M:C1.Android.Core.RectEx.Union(C1.Android.Core.C1Rect,C1.Android.Core.C1Rect)">
+            <summary>
+            Returns a new rectangle exactly enough to contain the specified rectangles.
+            </summary>
+            <param name="rect1">The first rectangle.</param>
+            <param name="rect2">The second rectangle.</param>
+            <returns></returns>
+        </member>
+        <member name="M:C1.Android.Core.StringEx.SplitCamel(System.String,System.Boolean)">
+            <summary>
+            Insert spaces between words identified by the camel nomenclature.
+            </summary>
+            <param name="s">The original string.</param>
+            <param name="capitalizeFirst">When set to true the resulting string will have its first word capitalized despite the original string capitalization.</param>
+            <returns></returns>
+        </member>
+        <member name="T:C1.Android.Core.TypeEx">
+            <summary>
+            The <see cref="T:C1.Android.Core.TypeEx"/> class provides useful extension methods for the <see cref="T:System.Type"/> class.
+            </summary>
+        </member>
+        <member name="M:C1.Android.Core.TypeEx.New``1(System.Type)">
+            <summary>
+            Creates a new instance of this type using the default constructor.
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="type">The type.</param>
+            <returns>A new instance of type T.</returns>
+        </member>
+        <member name="M:C1.Android.Core.TypeEx.New(System.Type)">
+            <summary>
+            Creates a new instance of this type using the default constructor.
+            </summary>
+            <param name="type">The type.</param>
+            <returns>A new instance of type T.</returns>
+        </member>
+        <member name="M:C1.Android.Core.TypeEx.GetDefaultPublicCtor(System.Type)">
+            <summary>
+            Returns default public instance parameter-less constructor for the specified type.
+            </summary>
+            <param name="type">The type.</param>
+            <returns>The default constructor for the specified type if it exists; Null otherwise.</returns>
+        </member>
+        <member name="M:C1.Android.Core.TypeEx.New``1(System.Type,System.Action{``0})">
+            <summary>
+            Creates a new instance of this type using the default constructor.
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="type">The type.</param>
+            <param name="initializers">The initializers.</param>
+            <returns>A new instance of type T</returns>
+        </member>
+        <member name="M:C1.Android.Core.TypeEx.GetNonNullableType(System.Type)">
+            <summary>
+            Returns the underlying type of a nullable type:
+            e.g. if Type = double?, then returns double.
+            </summary>
+            <param name="type">Type.</param>
+            <returns>The underlying type.</returns>
+        </member>
+        <member name="M:C1.Android.Core.TypeEx.IsNullableType(System.Type)">
+            <summary>
+            Returns true if the type is a nullable type.
+            </summary>
+            <param name="type">Type.</param>
+            <returns>True if the type is nullable.</returns>
+        </member>
+        <member name="M:C1.Android.Core.TypeEx.IsNumeric(System.Type)">
+            <summary>
+            Returns true if the type is any of the numeric data types:
+            double, float, int, uint, long, ulong, short, ushort, sbyte, byte and decimal.
+            </summary>
+            <param name="type">Type.</param>
+            <returns>True if the type is numeric.</returns>
+        </member>
+        <member name="M:C1.Android.Core.TypeEx.IsNumericIntegral(System.Type)">
+            <summary>
+            Returns true if the type is any of the integral numeric data types:
+            int, uint, long, ulong, short, ushort, sbyte and byte.
+            </summary>
+            <param name="type">Type.</param>
+            <returns>True if the type is an integral numeric.</returns>
+        </member>
+        <member name="M:C1.Android.Core.TypeEx.IsNumericIntegralSigned(System.Type)">
+            <summary>
+            Returns true if the type is any of the integral signed numeric data types:
+            int, long, short and sbyte.
+            </summary>
+            <param name="type">Type.</param>
+            <returns>True if the type is a signed integral numeric.</returns>
+        </member>
+        <member name="M:C1.Android.Core.TypeEx.IsNumericIntegralUnsigned(System.Type)">
+            <summary>
+            Returns true if the type is any of the integral unsigned numeric data types:
+            uint, ulong, ushort and byte.
+            </summary>
+            <param name="type">Type.</param>
+            <returns>True if the type is an unsigned integral numeric.</returns>
+        </member>
+        <member name="M:C1.Android.Core.TypeEx.ReadStaticField``1(System.Type,System.String)">
+            <summary>
+            Return a static field value by name using reflection.
+            </summary>
+            <typeparam name="TValue"></typeparam>
+            <param name="type"></param>
+            <param name="name"></param>
+            <returns></returns>
+        </member>
+        <member name="M:C1.Android.Core.TypeEx.IsNumericNonIntegral(System.Type)">
+            <summary>
+            Returns true if the type is any of the numeric non-integral data types:
+            double, float and decimal.
+            </summary>
+            <param name="type">Type.</param>
+            <returns>True if the type is a non-integral numeric.</returns>
+        </member>
+        <member name="M:C1.Android.Core.TypeEx.GetEnumValues``1(System.Type)">
+            <summary>
+            Returns the values of an Enum type (Type.IsEnum == true).
+            </summary>
+            <typeparam name="T">Enum type.</typeparam>
+            <param name="enumType">Enum type.</param>
+            <returns>The list of values for that enum type.</returns>
+        </member>
+        <member name="T:C1.Android.Core.C1DragHelper">
+            <summary>
+            Cross-platform helper for listening to drag gestures supporting inertia.
+            </summary>
+        </member>
+        <member name="M:C1.Android.Core.C1DragHelper.#ctor(Android.Views.View,C1.Android.Core.C1DragHelperMode,System.Nullable{System.Double},System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean)">
+            <summary>
+            Initializes a new <see cref="T:C1.Android.Core.C1DragHelper"/>.
+            </summary>
+            <param name="element">An <see cref="T:Android.Views.View"/> on which the drag gesture will be listened.</param>
+            <param name="mode">Indicates the sort of drag to be listened. Combine inertia flag with other flags so that DragDelta events are raised after the manipulation finish. i.e. C1DragHelperMode.FreeDrag | C1DragHelperMode.Inertia</param>
+            <param name="initialThreshold">Specifies the number of pixels the gesture will have to pass in order to start. if 0 is set the gesture will start on pointer down, and captureElementOnPointerPressed will be true despite the specified parameter, otherwise the gesture will start on mouse move, default value is 1</param>
+            <param name="captureElementOnPointerPressed">Indicates whether the element will be captured in pointer pressed event (MouseLeftButtonDown in SL and WPF and PointerPressed in UWP) or in the first pointer move event (MouseMove in SL and WPF and PointerMoved in UWP). If initialThreshold is 0 this parameter will be ignored.<remarks>Capturing the element on mouse down will cause Click, DoubleClick and MouseLeftButtonUp events not to be fired in sub-elements (nested elements in the visual tree), whereas capturing the element on the first mouse move can make it difficult for final users to drag small elements quickly.</remarks></param>
+            <param name="handledEventsToo">Indicates whether drag gestures will be listened despite mouse events were already handled. (It only applies to mouse gestures)</param>
+            <param name="useManipulationEvents">When set to true it uses Manipulation events to listen to the gesture, otherwise it will use Pointer events.</param>
+            <param name="useRightButton">if set to <c>true</c> it will listen to mouse right button down/up events instead of left button events(In UWP it only applies if useManipulationEvents is set to false).</param>
+            <param name="startByHolding">if set to <c>true</c> the drag action will be initiated by a hold operation .</param>
+        </member>
+        <member name="E:C1.Android.Core.C1DragHelper.DragPreview">
+            <summary>
+            Occurs before a drag gesture starts giving the user the opportunity to configure the kind of gesture that will be listened based on the point where the manipulation started.
+            </summary>
+        </member>
+        <member name="E:C1.Android.Core.C1DragHelper.DragStarted">
+            <summary>
+            Occurs when a drag gesture started.
+            </summary>
+        </member>
+        <member name="E:C1.Android.Core.C1DragHelper.DragDelta">
+            <summary>
+            Occurs while a drag gesture is performed.
+            </summary>
+        </member>
+        <member name="E:C1.Android.Core.C1DragHelper.DragCompleted">
+            <summary>
+            Occurs after a drag gesture completed.
+            </summary>
+        </member>
+        <member name="E:C1.Android.Core.C1DragHelper.DragInertiaStarted">
+            <summary>
+            Occurs when the inertia is about to start.
+            </summary>
+        </member>
+        <member name="M:C1.Android.Core.C1DragHelper.FinalizeHelper">
+            <summary>
+            Detaches all the events handlers and releases captured element.
+            </summary>
+        </member>
+        <member name="M:C1.Android.Core.C1DragHelper.Complete">
+            <summary>
+            Finalizes drag gesture.
+            </summary>
+        </member>
+        <member name="T:C1.Android.Core.C1DragEventArgs">
+            <summary>
+            Contains information of the drag events.
+            </summary>
+        </member>
+        <member name="P:C1.Android.Core.C1DragEventArgs.DragHelper">
+            <summary>
+            Gets a reference to the <see cref="T:C1.Android.Core.C1DragHelper"/> that originated the event.
+            </summary>
+        </member>
+        <member name="T:C1.Android.Core.C1DragPreviewEventArgs">
+            <summary>
+            Contains information of the DragStarting event.
+            </summary>
+        </member>
+        <member name="P:C1.Android.Core.C1DragPreviewEventArgs.StartByHolding">
+            <summary>
+            Gets or sets a value indicating whether drag will be initiated by a hold operation.
+            </summary>
+        </member>
+        <member name="P:C1.Android.Core.C1DragPreviewEventArgs.Mode">
+            <summary>
+            Gets or sets the mode indicating the sort of drag to be listened.
+            </summary>
+        </member>
+        <member name="P:C1.Android.Core.C1DragPreviewEventArgs.CaptureElementOnPointerPressed">
+            <summary>
+            Gets or sets a value indicating whether the element will be captured in pointer pressed event (MouseLeftButtonDown in SL and WPF and PointerPressed in UWP) or in the first pointer move event (MouseMove in SL and WPF and PointerMoved in UWP).<remarks>Capturing the element on mouse down will cause Click, DoubleClick and MouseLeftButtonUp events not to be fired in sub-elements (nested elements in the visual tree), whereas capturing the element on the first mouse move can make it difficult for final users to drag small elements quickly.</remarks>
+            </summary>
+        </member>
+        <member name="P:C1.Android.Core.C1DragPreviewEventArgs.InitialThreshold">
+            <summary>
+            Gets or sets the number of pixels the gesture will have to pass in order to start.
+            </summary>
+        </member>
+        <member name="P:C1.Android.Core.C1DragPreviewEventArgs.Cancel">
+            <summary>
+            Gets or sets a value indicating whether the recognizion of this gesture is canceled.
+            </summary>
+        </member>
+        <member name="P:C1.Android.Core.C1DragPreviewEventArgs.Origin">
+            <summary>
+            Gets the position of original touch point.
+            </summary>
+        </member>
+        <member name="T:C1.Android.Core.C1DragStartedEventArgs">
+            <summary>
+            Contains information of the DragStarted event.
+            </summary>
+        </member>
+        <member name="P:C1.Android.Core.C1DragStartedEventArgs.Origin">
+            <summary>
+            Gets the absolute point where the gesture started.
+            </summary>
+        </member>
+        <member name="P:C1.Android.Core.C1DragStartedEventArgs.Direction">
+            <summary>
+            Gets the initial direction of the drag gesture.
+            </summary>
+        </member>
+        <member name="T:C1.Android.Core.C1DragDeltaEventArgs">
+            <summary>
+            Contains information of the DragDelta event.
+            </summary>
+        </member>
+        <member name="P:C1.Android.Core.C1DragDeltaEventArgs.DeltaTranslation">
+            <summary>
+            Gets the delta translation.
+            </summary>
+        </member>
+        <member name="P:C1.Android.Core.C1DragDeltaEventArgs.CumulativeTranslation">
+            <summary>
+            Gets the accumulated translation.
+            </summary>
+        </member>
+        <member name="P:C1.Android.Core.C1DragDeltaEventArgs.IsInertial">
+            <summary>
+            Gets a value indicating whether this event is raised because of a direct manipulation or is inertial.
+            </summary>
+        </member>
+        <member name="P:C1.Android.Core.C1DragDeltaEventArgs.Velocities">
+            <summary>
+            Gets the velocity of the inertia.
+            </summary>
+        </member>
+        <member name="M:C1.Android.Core.C1DragDeltaEventArgs.Complete">
+            <summary>
+            Completes the manipulation without inertia.
+            </summary>
+        </member>
+        <member name="T:C1.Android.Core.C1DragInertiaStartedEventArgs">
+            <summary>
+            Contains information of the DragInertiaStarted event.
+            </summary>
+        </member>
+        <member name="P:C1.Android.Core.C1DragInertiaStartedEventArgs.Velocity">
+            <summary>
+            Gets the velocity of the gesture before the inertia started.
+            </summary>
+        </member>
+        <member name="P:C1.Android.Core.C1DragInertiaStartedEventArgs.DesiredDeceleration">
+            <summary>
+            Gets or sets the deceleration of the drag inertia (pixels by millisecond)
+            </summary>
+        </member>
+        <member name="T:C1.Android.Core.C1DragCompletedEventArgs">
+            <summary>
+            Contains information of the DragCompleted event.
+            </summary>
+        </member>
+        <member name="P:C1.Android.Core.C1DragCompletedEventArgs.CumulativeTranslation">
+            <summary>
+            Gets the accumulated translation.
+            </summary>
+        </member>
+        <member name="P:C1.Android.Core.C1DragCompletedEventArgs.Cancelled">
+            <summary>
+            Gets a value indicating whether the drag gesture was cancelled.
+            </summary>
+        </member>
+        <member name="T:C1.Android.Core.C1DragHelperMode">
+            <summary>
+            Determines the kind of drag gesture that will be listened.
+            </summary>
+        </member>
+        <member name="F:C1.Android.Core.C1DragHelperMode.TranslateX">
+            <summary>
+            The drag will be performed only considering x coordinates.
+            </summary>
+        </member>
+        <member name="F:C1.Android.Core.C1DragHelperMode.TranslateY">
+            <summary>
+            The drag will be performed only considering y coordinates.
+            </summary>
+        </member>
+        <member name="F:C1.Android.Core.C1DragHelperMode.TranslateXY">
+            <summary>
+            Both x and y coordinates will be considered in the gesture.
+            </summary>
+        </member>
+        <member name="F:C1.Android.Core.C1DragHelperMode.Inertia">
+            <summary>
+            Apply inertia when drag finish.
+            </summary>
+        </member>
+        <member name="F:C1.Android.Core.C1DragHelperMode.TranslateRailX">
+            <summary>
+            The drag will be performed in the x coordinates if it starts in this direction.
+            </summary>
+        </member>
+        <member name="F:C1.Android.Core.C1DragHelperMode.TranslateRailY">
+            <summary>
+            The drag will be performed in the y coordinates if it starts in this direction.
+            </summary>
+        </member>
+        <member name="T:C1.Android.Core.C1InputEventArgs">
+            <summary>
+            Contains information about gesture events.
+            </summary>
+        </member>
+        <member name="M:C1.Android.Core.C1InputEventArgs.#ctor(Android.Views.View,Android.Views.View.TouchEventArgs)">
+            <summary>
+            Initializes a new instance of the <see cref="T:C1.Android.Core.C1InputEventArgs"/> class.
+            </summary>
+            <param name="element">Element where the gesture is being listened.</param>
+            <param name="originalArgs">The <see cref="P:C1.Android.Core.C1InputEventArgs.OriginalEventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:C1.Android.Core.C1InputEventArgs.#ctor(Android.Views.View,Android.Views.View.TouchEventArgs,C1.Android.Core.C1PointerDeviceType)">
+            <summary>
+            Initializes a new instance of the <see cref="T:C1.Android.Core.C1InputEventArgs"/> class.
+            </summary>
+            <param name="element">Element where the gesture is being listened.</param>
+            <param name="originalArgs">The <see cref="P:C1.Android.Core.C1InputEventArgs.OriginalEventArgs"/> instance containing the event data.</param>
+            <param name="pointerType">Type of the pointer.</param>
+        </member>
+        <member name="M:C1.Android.Core.C1InputEventArgs.#ctor(Android.Views.View.TouchEventArgs,C1.Android.Core.C1PointerDeviceType)">
+            <summary>
+            Initializes a new instance of the <see cref="T:C1.Android.Core.C1InputEventArgs"/> class.
+            </summary>
+            <param name="originalArgs">The <see cref="P:C1.Android.Core.C1InputEventArgs.OriginalEventArgs"/> instance containing the event data.</param>
+            <param name="pointerType">Type of the pointer.</param>
+        </member>
+        <member name="P:C1.Android.Core.C1InputEventArgs.OriginalEventArgs">
+            <summary>
+            Gets the arguments of the original event which raised this event.
+            </summary>
+        </member>
+        <member name="P:C1.Android.Core.C1InputEventArgs.Handled">
+            <summary>
+            Gets or sets a value that marks the routed event as handled. Setting to true
+            prevents most handlers along the event route from handling the same event again.
+            </summary>
+        </member>
+        <member name="P:C1.Android.Core.C1InputEventArgs.OriginalSource">
+            <summary>
+            Gets a reference to the object that raised the event.
+            </summary>
+        </member>
+        <member name="P:C1.Android.Core.C1InputEventArgs.PointerDeviceType">
+            <summary>
+            Gets the type of pointer which performed the action.
+            </summary>
+        </member>
+        <member name="M:C1.Android.Core.C1InputEventArgs.GetPosition(Android.Views.View)">
+            <summary>
+            Gets the position of the pointer performing the drag gesture relatively to the specified element.
+            </summary>
+            <param name="relativeTo">Any visual object that is connected to the same object tree. To specify the object relative to the overall coordinate system, use a relativeTo value of null.</param>
+            <returns></returns>
+        </member>
+        <member name="P:C1.Android.Core.C1InputEventArgs.IsShiftPressed">
+            <summary>
+            Gets whether shift key is pressed.
+            </summary>
+        </member>
+        <member name="P:C1.Android.Core.C1InputEventArgs.IsCtrlPressed">
+            <summary>
+            Gets whether ctrl key is pressed.
+            </summary>
+        </member>
+        <member name="M:C1.Android.Core.C1InputEventArgs.GetPosition(Android.Views.View.TouchEventArgs,Android.Views.View)">
+            <summary>
+            Gets the position of the pointer or finger.
+            </summary>
+            <param name="args">The <see cref="P:C1.Android.Core.C1InputEventArgs.OriginalEventArgs" /> instance containing the manipulation data.</param>
+            <param name="relativeTo">Any visual object that is connected to the same object tree. To specify the object relative to the overall coordinate system, use a relativeTo value of null.</param>
+            <returns></returns>
+        </member>
+        <member name="M:C1.Android.Core.C1InputEventArgs.GetPointerType(Android.Views.View.TouchEventArgs)">
+            <summary>
+            Gets the type of the pointer.
+            </summary>
+            <param name="originalArgs">The <see cref="P:C1.Android.Core.C1InputEventArgs.OriginalEventArgs"/> instance containing the event data.</param>
+            <returns></returns>
+        </member>
+        <member name="M:C1.Android.Core.C1InputEventArgs.GetIsHandled(Android.Views.View.TouchEventArgs)">
+            <summary>
+            Gets a value indicating whether the specified event is handled.
+            </summary>
+            <param name="e">The <see cref="P:C1.Android.Core.C1InputEventArgs.OriginalEventArgs"/> instance containing the event data.</param>
+            <returns></returns>
+        </member>
+        <member name="M:C1.Android.Core.C1InputEventArgs.SetIsHandled(Android.Views.View.TouchEventArgs,System.Boolean)">
+            <summary>
+            Sets whether the event is handled.
+            </summary>
+            <param name="e">The <see cref="P:C1.Android.Core.C1InputEventArgs.OriginalEventArgs"/> instance containing the event data.</param>
+            <param name="handled"><c>true</c> if the event is handled.</param>
+        </member>
+        <member name="M:C1.Android.Core.C1InputEventArgs.HitTest``1(System.Double)">
+            <summary>
+            Returns the first visual element which is hit by this event.
+            </summary>
+            <typeparam name="T"></typeparam>
+            <returns></returns>
+        </member>
+        <member name="T:C1.Android.Core.C1PointerDeviceType">
+            <summary>
+            Enumerates the different kind of devices which can perform drag operations.
+            </summary>
+        </member>
+        <member name="F:C1.Android.Core.C1PointerDeviceType.Mouse">
+            <summary>
+            Mouse device
+            </summary>
+        </member>
+        <member name="F:C1.Android.Core.C1PointerDeviceType.Touch">
+            <summary>
+            Touch screen
+            </summary>
+        </member>
+        <member name="F:C1.Android.Core.C1PointerDeviceType.Pen">
+            <summary>
+            Pen device
+            </summary>
+        </member>
+        <member name="M:C1.Android.Core.C1SwipeHelper.#ctor(Android.Views.View)">
+            <summary>
+            Initializes a new <see cref="T:C1.Android.Core.C1SwipeHelper"/>.
+            </summary>
+            <param name="element">An <see cref="T:Android.Views.View"/> on which the swipe gesture will be listened.</param>
+        </member>
+        <member name="E:C1.Android.Core.C1SwipeHelper.Swipe">
+            <summary>
+            Occurs when a drag gesture is about to start.
+            </summary>
+        </member>
+        <member name="M:C1.Android.Core.C1SwipeHelper.FinalizeHelper">
+            <summary>
+            Detaches all the events handlers and releases captured element.
+            </summary>
+        </member>
+        <member name="T:C1.Android.Core.C1SwipeDirection">
+            <summary>
+            Describes the direction of the swipe gesture.
+            </summary>
+        </member>
+        <member name="F:C1.Android.Core.C1SwipeDirection.Up">
+            <summary>
+            Upwards swipe.
+            </summary>
+        </member>
+        <member name="F:C1.Android.Core.C1SwipeDirection.Down">
+            <summary>
+            Downwards swipe.
+            </summary>
+        </member>
+        <member name="F:C1.Android.Core.C1SwipeDirection.Left">
+            <summary>
+            Swipe to the left.
+            </summary>
+        </member>
+        <member name="F:C1.Android.Core.C1SwipeDirection.Right">
+            <summary>
+            Swipe to the right.
+            </summary>
+        </member>
+        <member name="T:C1.Android.Core.C1TapHelper">
+            <summary>
+            Cross-platform helper for listening to tapped and double-tapped events.
+            </summary>
+        </member>
+        <member name="M:C1.Android.Core.C1TapHelper.#ctor(Android.Views.View,System.Boolean,System.Boolean,System.Boolean)">
+            <summary>
+            Initializes a new instance of the <see cref="T:C1.Android.Core.C1TapHelper"/> class.
+            </summary>
+            <param name="element">An <see cref="T:Android.Views.View"/> on which the tap gestures will be listened.</param>
+            <param name="handledEventsToo">Indicates whether tap gestures will be listened despite mouse events were already handled. (It only applies to mouse gestures)</param>
+            <param name="raiseTapOnPointerPressed">Raise the <see cref="E:C1.Android.Core.C1TapHelper.Tapped"/> event when the mouse or pen is pressed.</param>
+            <param name="useManipulationEvents">When set to true it uses Manipulation events to listen to the gesture, otherwise it will use Pointer events.</param>
+        </member>
+        <member name="M:C1.Android.Core.C1TapHelper.FinalizeHelper">
+            <summary>
+            Detaches all the events handlers.
+            </summary>
+        </member>
+        <member name="E:C1.Android.Core.C1TapHelper.ManipulationStarted">
+            <summary>
+            Occurs when one or more fingers get in contact with the screen or mouse button was pressed.
+            </summary>
+        </member>
+        <member name="E:C1.Android.Core.C1TapHelper.ManipulationCompleted">
+            <summary>
+            Occurs when the fingers are lift from the screen or mouse button was released.
+            </summary>
+        </member>
+        <member name="E:C1.Android.Core.C1TapHelper.Tapped">
+            <summary>
+            Occurs when the element is tapped (clicked if performed with the mouse).
+            </summary>
+        </member>
+        <member name="E:C1.Android.Core.C1TapHelper.DoubleTapped">
+            <summary>
+            Occurs when the element is double-tapped (double-clicked if performed with the mouse).
+            </summary>
+        </member>
+        <member name="E:C1.Android.Core.C1TapHelper.Holding">
+            <summary>
+            Occurs when a Hold gesture is performed over the element.
+            </summary>
+        </member>
+        <member name="M:C1.Android.Core.C1TapHelper.InsideTouchThreshold(C1.Android.Core.C1PointerDeviceType,C1.Android.Core.C1Point,C1.Android.Core.C1Point)">
+            <summary>
+            Returns true if the distance between specified points in less or equal to the tap threshold.
+            </summary>
+            <param name="deviceType">The kind of device.</param>
+            <param name="p1">The p1.</param>
+            <param name="p2">The p2.</param>
+            <returns></returns>
+        </member>
+        <member name="T:C1.Android.Core.C1TappedEventArgs">
+            <summary>
+            Contains information of the tap events.
+            </summary>
+        </member>
+        <member name="M:C1.Android.Core.C1TappedEventArgs.#ctor(Android.Views.View,Android.Views.View.TouchEventArgs,System.Boolean,System.Boolean)">
+            <summary>
+            Initializes a new instance of the <see cref="T:C1.Android.Core.C1TappedEventArgs" /> class.
+            </summary>
+            <param name="element">Element where the gesture is being listened.</param>
+            <param name="originalArgs">The <see cref="T:Android.Views.View.TouchEventArgs" /> instance containing the event data.</param>
+            <param name="isRightTapped">if set to <c>true</c> the event was performed with the right button of the mouse.</param>
+            <param name="isDown">if set to <c>true</c> the event was performed with the mouse down.</param>
+        </member>
+        <member name="P:C1.Android.Core.C1TappedEventArgs.IsRightTapped">
+            <summary>
+            Gets a value indicating whether the event is performed with the right button of the mouse.
+            </summary>
+        </member>
+        <member name="P:C1.Android.Core.C1TappedEventArgs.IsDown">
+            <summary>
+            Gets a value indicating whether the event is performed with the mouse down.
+            </summary>
+        </member>
+        <member name="P:C1.Android.Core.C1TappedEventArgs.IsBarrelButtonDown">
+            <summary>
+            Gets a value indicating whether the barrel button of the pen is pressed.
+            </summary>
+        </member>
+        <member name="T:C1.Android.Core.C1LicensedControlAttribute">
+            <summary>
+            Marks a control class that must depend on C1 license
+            </summary>
+        </member>
+        <member name="M:C1.Android.Core.C1LicensedControlAttribute.#ctor">
+            <summary>
+            Constructs an entity of C1LicensedControlAttribute
+            </summary>
+        </member>
+        <member name="T:C1.Android.Core.LicenseManager">
+            <summary>
+            Allows the users to set a license in the <see cref="P:Key"/> property.
+            </summary>
+            <remarks>
+            See https://www.grapecity.com/licensing/componentone for more information.
+            </remarks>
+        </member>
+        <member name="T:C1.Android.Core.C1Animation">
+            <summary>
+            Contains information about a specific animation.      
+            </summary>
+        </member>
+        <member name="M:C1.Android.Core.C1Animation.#ctor">
+            <summary>
+            Initializes a new instance of a <see cref="T:C1.Android.Core.C1Animation"/>.
+            </summary>
+        </member>
+        <member name="P:C1.Android.Core.C1Animation.StartDelay">
+            <summary>
+            Gets or sets the elapsed time before the animation starts.
+            </summary>
+        </member>
+        <member name="P:C1.Android.Core.C1Animation.Duration">
+            <summary>
+            Gets or sets the duration time of the animation.
+            </summary>
+        </member>
+        <member name="P:C1.Android.Core.C1Animation.Easing">
+            <summary>
+            Gets or sets the easing funtion used to interpolate the values of the animation.
+            </summary>
+        </member>
+        <member name="T:C1.Android.Core.C1Easing">
+            <summary>
+            Easing function used to interpolate the values of an animation.
+            </summary>
+        </member>
+        <member name="M:C1.Android.Core.C1Easing.#ctor">
+            <summary>
+            Initializes a new instance of a <see cref="T:C1.Android.Core.C1Easing"/>.
+            </summary>
+        </member>
+        <member name="M:C1.Android.Core.C1Easing.#ctor(System.Func{System.Double,System.Double})">
+            <summary>
+            Initializes a new instance of a <see cref="T:C1.Android.Core.C1Easing"/>.
+            </summary>
+            <param name="function">Easing function.</param>
+        </member>
+        <member name="P:C1.Android.Core.C1Easing.CircleOut">
+            <summary>
+            Gets a circle easing function.
+            </summary>
+        </member>
+        <member name="P:C1.Android.Core.C1Easing.CircleIn">
+            <summary>
+            Gets a circle easing function.
+            </summary>
+        </member>
+        <member name="P:C1.Android.Core.C1Easing.Linear">
+            <summary>
+            Gets a linear easing function.
+            </summary>
+        </member>
+        <member name="M:C1.Android.Core.C1Easing.Ease(System.Double)">
+            <summary>
+            Applies the easing function to the specified value input.
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:C1.Android.Core.C1Easing.GetEasingFunction">
+            <summary>
+            Gets the easing function.
+            </summary>
+        </member>
+        <member name="M:C1.Android.Core.C1Easing.op_Implicit(Android.Views.Animations.BaseInterpolator)~C1.Android.Core.C1Easing">
+            <summary>
+            Allows assigning a <see cref="T:C1.Android.Core.C1Easing"/> from an Android <see cref="T:Android.Views.Animations.BaseInterpolator"/>.
+            </summary>
+            <param name="easing"></param>
+        </member>
+        <member name="T:C1.Android.Core.C1ToggleButton">
+            <summary>
+            Represents a button that a user can expand and collapse.
+            </summary>
+        </member>
+        <member name="M:C1.Android.Core.C1ToggleButton.#ctor(Android.Content.Context)">
+            <summary>
+            Initializes a new instance of the <see cref="T:C1.Android.Core.C1ToggleButton"/> class.
+            </summary>
+        </member>
+        <member name="P:C1.Android.Core.C1ToggleButton.IsChecked">
+            <summary>
+            Gets or sets whether the <see cref="T:C1.Android.Core.C1ToggleButton"/> is checked.
+            </summary>
+        </member>
+        <member name="P:C1.Android.Core.C1ToggleButton.Color">
+            <summary>
+            Gets or sets the color used to paint the control.
+            </summary>
+        </member>
+        <member name="P:C1.Android.Core.C1ToggleButton.BorderWidth">
+            <summary>
+            Gets or sets the width of the border.
+            </summary>
+            <remarks>
+            Set this value to a non-zero value in order to have a visible border.
+            </remarks>
+        </member>
+        <member name="P:C1.Android.Core.C1ToggleButton.Padding">
+            <summary>
+            Gets or sets the padding of the button.
+            </summary>
+        </member>
+        <member name="P:C1.Android.Core.C1ToggleButton.IsFocusable">
+            <summary>
+            Gets or sets whether the button can receive the focus.
+            </summary>
+        </member>
+        <member name="P:C1.Android.Core.C1ToggleButton.CheckedText">
+            <summary>
+            Gets or sets the text show when the button is checked.
+            </summary>
+        </member>
+        <member name="P:C1.Android.Core.C1ToggleButton.UncheckedText">
+            <summary>
+            Gets or sets the text shown when the button is unchecked.
+            </summary>
+        </member>
+        <member name="P:C1.Android.Core.C1ToggleButton.CheckedImageSource">
+            <summary>
+            Gets or sets the image show when the button is checked.
+            </summary>
+        </member>
+        <member name="P:C1.Android.Core.C1ToggleButton.UncheckedImageSource">
+            <summary>
+            Gets or sets the image shown when the button is unchecked.
+            </summary>
+        </member>
+        <member name="P:C1.Android.Core.C1ToggleButton.CheckedContent">
+            <summary>
+            Gets or sets the content show when the button is checked.
+            </summary>
+        </member>
+        <member name="P:C1.Android.Core.C1ToggleButton.UncheckedContent">
+            <summary>
+            Gets or sets the content shown when the button is unchecked.
+            </summary>
+        </member>
+        <member name="E:C1.Android.Core.C1ToggleButton.Checked">
+            <summary>
+            Occurs after the value of checkBox changes
+            </summary>
+        </member>
+        <member name="M:C1.Android.Core.C1ToggleButton.OnChecked(System.EventArgs)">
+            <summary>
+            Raises the <see cref="E:Checked" /> event.
+            </summary>
+            <param name="e">The <see cref="T:System.EventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="E:C1.Android.Core.C1ToggleButton.Disposed">
+            <summary>
+            Occurs when the object is disposed.
+            </summary>
+        </member>
+        <member name="T:C1.Android.Core.IValueConverter">
+            <summary>
+            Converts a value into a specified type.
+            </summary>
+        </member>
+        <member name="M:C1.Android.Core.IValueConverter.Convert(System.Object,System.Type,System.Object,System.String)">
+            <summary>
+            Converts the specified value.
+            </summary>
+            <param name="value">The value.</param>
+            <param name="targetType">Type of the target.</param>
+            <param name="parameter">The parameter.</param>
+            <param name="language">The language.</param>
+            <returns></returns>
+        </member>
+        <member name="M:C1.Android.Core.IValueConverter.ConvertBack(System.Object,System.Type,System.Object,System.String)">
+            <summary>
+            Converts back to the source type.
+            </summary>
+            <param name="value">The value.</param>
+            <param name="targetType">Type of the target.</param>
+            <param name="parameter">The parameter.</param>
+            <param name="language">The language.</param>
+            <returns></returns>
+        </member>
+        <member name="T:C1.Android.Core.C1ClearableEditText">
+            <summary>
+            Edit text with clear button.
+            </summary>
+        </member>
+        <member name="F:C1.Android.Core.C1ClearableEditText.hasRealValue">
+            <summary>
+            The has real value
+            </summary>
+        </member>
+        <member name="F:C1.Android.Core.C1ClearableEditText.showClearButton">
+            <summary>
+            The show clear button
+            </summary>
+        </member>
+        <member name="P:C1.Android.Core.C1ClearableEditText.FlowDirection">
+            <summary>
+            Indicate value of flow direction layout
+            </summary>
+        </member>
+        <member name="F:C1.Android.Core.C1ClearableEditText.showPaddingButton">
+            <summary>
+            The show padding button
+            </summary>
+        </member>
+        <member name="M:C1.Android.Core.C1ClearableEditText.#ctor(Android.Content.Context)">
+            <summary>
+            Initializes a new instance of the <see cref="T:C1.Android.Core.C1ClearableEditText"/> class.
+            </summary>
+            <param name="context">The context.</param>
+        </member>
+        <member name="M:C1.Android.Core.C1ClearableEditText.#ctor(Android.Content.Context,System.Boolean)">
+            <summary>
+            Initializes a new instance of the <see cref="T:C1.Android.Core.C1ClearableEditText"/> class.
+            </summary>
+            <param name="context">The context.</param>
+            <param name="showClearButton">if set to <c>true</c> [show clear button].</param>
+        </member>
+        <member name="M:C1.Android.Core.C1ClearableEditText.#ctor(Android.Content.Context,System.Boolean,Android.Util.IAttributeSet)">
+            <summary>
+            Initializes a new instance of the <see cref="T:C1.Android.Core.C1ClearableEditText"/> class.
+            </summary>
+            <param name="context">The context.</param>
+            <param name="showClearButton">if set to <c>true</c> [show clear button].</param>
+            <param name="attrs">The attrs.</param>
+        </member>
+        <member name="M:C1.Android.Core.C1ClearableEditText.#ctor(Android.Content.Context,System.Boolean,System.Int32)">
+            <summary>
+            Initializes a new instance of the <see cref="T:C1.Android.Core.C1ClearableEditText"/> class.
+            </summary>
+            <param name="context">The context.</param>
+            <param name="showPaddingButton">if set to <c>true</c> [show padding button].</param>
+            <param name="paddingRight">The padding right.</param>
+        </member>
+        <member name="M:C1.Android.Core.C1ClearableEditText.Init(Android.Content.Context,Android.Util.IAttributeSet)">
+            <summary>
+            Initializes the specified attrs.
+            </summary>
+            <param name="context">The context.</param>
+            <param name="attrs">The attrs.</param>
+        </member>
+        <member name="M:C1.Android.Core.C1ClearableEditText.UpdateLayoutDirection(C1.Android.Core.FlowDirection)">
+            <summary>
+            Update layout direction
+            </summary>
+        </member>
+        <member name="M:C1.Android.Core.C1ClearableEditText.ClearText">
+            <summary>
+            Handles the click clear button.
+            </summary>
+        </member>
+        <member name="T:C1.Android.Core.C1ArrayAdapter`1">
+            <summary>
+            Tailored ArrayAdapter which allow customizing items appeareance programmatically.
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="M:C1.Android.Core.DoubleEx.EqualsOrBothNanOrInfinity(System.Double,System.Double)">
+            <summary>
+            Returns true when both numbers are equal or both are Nan or both are PositiveInfinity or both are NegativeInfinity.
+            </summary>
+            <param name="x">The first value.</param>
+            <param name="y">The second value.</param>
+        </member>
+        <member name="T:DelayCallback">
+            <summary>
+            Help for sending message to end of queue message to delay a callback after native message is finished.
+            </summary>
+        </member>
+        <member name="M:DelayCallback.#ctor(System.Object,System.Action{System.Object,System.Object})">
+            <summary>
+            Initializes a new instance of the <see cref="T:DelayCallback"/> class.
+            </summary>
+            <param name="sender">The sender.</param>
+            <param name="handleMessageAction">The handle message action.</param>
+        </member>
+        <member name="M:DelayCallback.ProcessMessage(System.Object,System.Boolean)">
+            <summary>
+            Processes the message.
+            </summary>
+            <param name="callbackInfo">The information of callback.</param>
+            <param name="fontOfQueue">if set to <c>true</c> [font of queue].</param>
+        </member>
+        <member name="M:DelayCallback.SetCallbackInfo(System.Object)">
+            <summary>
+            Sets the callback information.
+            </summary>
+            <param name="callbackInfo">The callback information.</param>
+        </member>
+        <member name="M:DelayCallback.HandleMessage(Android.OS.Message)">
+            <summary>
+            Handles the message with message counter to invoke the first message in messages loop.
+            </summary>
+            <param name="msg">The message data.</param>
+            <returns></returns>
+        </member>
+        <member name="M:DelayCallback.Reset">
+            <summary>
+            Resets current handle message.
+            </summary>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,63 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Acr.UserDialogs</name>
+    </assembly>
+    <members>
+        <member name="P:Acr.UserDialogs.ActionSheetConfig.UseBottomSheet">
+            <summary>
+            This only currently applies to android
+            </summary>
+        </member>
+        <member name="P:Acr.UserDialogs.ActionSheetConfig.ItemIcon">
+            <summary>
+            This icon is applied to the list items, not to destructive or cancel
+            </summary>
+        </member>
+        <member name="P:Acr.UserDialogs.PromptTextChangedArgs.IsValid">
+            <summary>
+            Setting this to false will disable the positive button (defaults to true)
+            </summary>
+        </member>
+        <member name="P:Acr.UserDialogs.PromptTextChangedArgs.Value">
+            <summary>
+            This will give you the current value as well as allow you to set the value of the textbox
+            </summary>
+        </member>
+        <member name="P:Acr.UserDialogs.TimePromptConfig.MinimumMinutesTimeOfDay">
+            <summary>
+            Only valid on iOS
+            </summary>
+        </member>
+        <member name="P:Acr.UserDialogs.TimePromptConfig.MaximumMinutesTimeOfDay">
+            <summary>
+            Only valid on iOS
+            </summary>
+        </member>
+        <member name="P:Acr.UserDialogs.TimePromptConfig.MinuteInterval">
+            <summary>
+            Only valid on iOS
+            </summary>
+        </member>
+        <member name="P:Acr.UserDialogs.ToastConfig.DefaultDuration">
+            <summary>
+            The default duration for how long the toast should remain on-screen.  Defaults to 2.5 seconds
+            </summary>
+        </member>
+        <member name="P:Acr.UserDialogs.ToastConfig.DefaultMessageTextColor">
+            <summary>
+            The default message text color to use.  If not set, defaults very depending on platform.
+            </summary>
+        </member>
+        <member name="P:Acr.UserDialogs.ToastConfig.DefaultActionTextColor">
+            <summary>
+            The default text color in the action button.  If not set, defaults very depending on platform.
+            </summary>
+        </member>
+        <member name="P:Acr.UserDialogs.ToastConfig.DefaultBackgroundColor">
+            <summary>
+            The default toast background color.  If not set, defaults very depending on platform.
+            </summary>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>FFImageLoading.Forms.Platform</name>
+    </assembly>
+    <members>
+        <member name="T:FFImageLoading.Forms.Platform.CachedImageRenderer">
+            <summary>
+            CachedImage Implementation
+            </summary>
+        </member>
+        <member name="M:FFImageLoading.Forms.Platform.CachedImageRenderer.Init">
+            <summary>
+              Used for registration with dependency service
+            </summary>
+        </member>
+        <member name="M:FFImageLoading.Forms.Platform.CachedImageRenderer.InitImageSourceHandler">
+            <summary>
+            Call this after Xamarin.Forms.Init to use FFImageLoading in all Xamarin.Forms views,
+            including Xamarin.Forms.Image
+            </summary>
+        </member>
+    </members>
+</doc>

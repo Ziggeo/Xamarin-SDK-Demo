@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2013/05/nuspec.xsd">
+  <metadata>
+    <id>Xamarin.Firebase.Annotations</id>
+    <version>116.0.0.3</version>
+    <title>Xamarin.Android Bindings for Google Play Services -  Xamarin.Firebase.Annotations</title>
+    <authors>Microsoft</authors>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <licenseUrl>https://github.com/xamarin/GooglePlayServicesComponents/blob/master/LICENSE.md</licenseUrl>
+    <projectUrl>https://github.com/xamarin/GooglePlayServicesComponents</projectUrl>
+    <description>Xamarin.Android Bindings for Google Play Services - Xamarin.Firebase.Annotations 116.0.0.3 artifact=com.google.firebase:firebase-annotations artifact_versioned=com.google.firebase:firebase-annotations:16.0.0
+
+        N/A</description>
+    <copyright>© Microsoft Corporation. All rights reserved.</copyright>
+    <tags>Xamarin.Android Bindings for Google Play Services artifact=com.google.firebase:firebase-annotations:16.0.0</tags>
+    <repository type="git" url="https://github.com/xamarin/GooglePlayServicesComponents" branch="100.20211212-nuget-version-bump-to-unblock-grpc-template-set" commit="69cfa7190fc8ea012c63e09e81c11ef6ab747a14" />
+    <dependencies>
+      <group targetFramework="MonoAndroid9.0">
+        <dependency id="Xamarin.Build.Download" version="0.10.0" exclude="Build,Analyzers" />
+      </group>
+      <group targetFramework="net6.0-android31.0">
+        <dependency id="Xamarin.Build.Download" version="0.10.0" exclude="Build,Analyzers" />
+      </group>
+    </dependencies>
+    <frameworkAssemblies>
+      <frameworkAssembly assemblyName="Java.Interop" targetFramework="MonoAndroid9.0" />
+      <frameworkAssembly assemblyName="Mono.Android" targetFramework="MonoAndroid9.0" />
+      <frameworkAssembly assemblyName="mscorlib" targetFramework="MonoAndroid9.0" />
+      <frameworkAssembly assemblyName="System.Core" targetFramework="MonoAndroid9.0" />
+      <frameworkAssembly assemblyName="System" targetFramework="MonoAndroid9.0" />
+      <frameworkAssembly assemblyName="System.Net.Http" targetFramework="MonoAndroid9.0" />
+      <frameworkAssembly assemblyName="System.Numerics" targetFramework="MonoAndroid9.0" />
+      <frameworkAssembly assemblyName="System.Numerics.Vectors" targetFramework="MonoAndroid9.0" />
+      <frameworkAssembly assemblyName="System.Xml" targetFramework="MonoAndroid9.0" />
+    </frameworkAssemblies>
+  </metadata>
+</package>

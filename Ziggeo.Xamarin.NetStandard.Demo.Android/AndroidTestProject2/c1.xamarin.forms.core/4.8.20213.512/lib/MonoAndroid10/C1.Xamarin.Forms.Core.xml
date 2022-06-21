@@ -1,0 +1,1477 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>C1.Xamarin.Forms.Core</name>
+    </assembly>
+    <members>
+        <member name="T:C1.Xamarin.Forms.Core.KeyEventArgs">
+            <summary>
+            Provides information for keyboard events.
+            </summary>
+        </member>
+        <member name="P:C1.Xamarin.Forms.Core.KeyEventArgs.Key">
+            <summary>
+            Gets the key identifier.
+            </summary>
+        </member>
+        <member name="P:C1.Xamarin.Forms.Core.KeyEventArgs.Alt">
+            <summary>
+            Gets a value indicating whether alt key is pressed.
+            </summary>
+        </member>
+        <member name="P:C1.Xamarin.Forms.Core.KeyEventArgs.Command">
+            <summary>
+            Gets a value indicating whether command key is pressed.
+            </summary>
+        </member>
+        <member name="P:C1.Xamarin.Forms.Core.KeyEventArgs.Ctrl">
+            <summary>
+            Gets a value indicating whether control key is pressed.
+            </summary>
+        </member>
+        <member name="P:C1.Xamarin.Forms.Core.KeyEventArgs.Shift">
+            <summary>
+            Gets a value indicating whether shift key is pressed.
+            </summary>
+        </member>
+        <member name="P:C1.Xamarin.Forms.Core.KeyEventArgs.OriginalEvent">
+            <summary>
+            Gets the original event that originated this event.
+            </summary>
+        </member>
+        <member name="P:C1.Xamarin.Forms.Core.KeyEventArgs.Char">
+            <summary>
+            Gets the char associated with the key that originated this event.
+            </summary>
+        </member>
+        <member name="T:C1.Xamarin.Forms.Core.C1DoubleCollectionTypeConverter">
+            <summary>
+            Converts a coma-separated list of values to an array of double's.
+            </summary>
+        </member>
+        <member name="M:C1.Xamarin.Forms.Core.C1DoubleCollectionTypeConverter.CanConvertFrom(System.Type)">
+            <summary>
+            Returns a Boolean value that indicates whether or not the derived type converter can convert <paramref name="sourceType" /> to its target type.
+            </summary>
+            <param name="sourceType">To type to be converted.</param>
+        </member>
+        <member name="M:C1.Xamarin.Forms.Core.C1DoubleCollectionTypeConverter.ConvertFromInvariantString(System.String)">
+            <summary>
+            Converts an string that can be cast to the target type.
+            </summary>
+            <param name="value">The value to be converted.</param>
+        </member>
+        <member name="T:C1.Xamarin.Forms.Core.C1LayoutOptionsConverter">
+            <summary>
+            Converts a string into a <see cref="T:Xamarin.Forms.LayoutOptions"/> value.
+            </summary>
+        </member>
+        <member name="M:C1.Xamarin.Forms.Core.C1LayoutOptionsConverter.CanConvertFrom(System.Type)">
+            <summary>
+            Returns true if the sourceType is string.
+            </summary>
+            <param name="sourceType">the type of the source</param>
+            <returns></returns>
+        </member>
+        <member name="M:C1.Xamarin.Forms.Core.C1LayoutOptionsConverter.ConvertFromInvariantString(System.String)">
+            <summary>
+            Converts to <see cref="T:Xamarin.Forms.LayoutOptions"/> value.
+            </summary>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="T:C1.Xamarin.Forms.Core.C1TimeSpanTypeConverter">
+            <summary>
+            Converts a <see cref="T:System.String"/> containing a number(milliseconds) into a <see cref="T:System.TimeSpan"/>.
+            </summary>
+            <seealso cref="T:Xamarin.Forms.TypeConverter" />
+        </member>
+        <member name="M:C1.Xamarin.Forms.Core.C1TimeSpanTypeConverter.CanConvertFrom(System.Type)">
+            <summary>
+            Returns a Boolean value that indicates whether or not the derived type converter can convert <paramref name="sourceType" /> to its target type.
+            </summary>
+            <param name="sourceType">To type to be converted.</param>
+        </member>
+        <member name="M:C1.Xamarin.Forms.Core.C1TimeSpanTypeConverter.ConvertFromInvariantString(System.String)">
+            <summary>
+            Converts an string that can be cast to the target type.
+            </summary>
+            <param name="value">The value to be converted.</param>
+        </member>
+        <member name="T:C1.Xamarin.Forms.Core.C1ActivityIndicator">
+            <summary>
+            A visual control used to indicate that something is ongoing.
+            </summary>
+        </member>
+        <member name="T:C1.Xamarin.Forms.Core.C1Animation">
+            <summary>
+            Contains information about a specific animation.      
+            </summary>
+        </member>
+        <member name="M:C1.Xamarin.Forms.Core.C1Animation.#ctor">
+            <summary>
+            Initializes a new instance of a <see cref="T:C1.Xamarin.Forms.Core.C1Animation"/>.
+            </summary>
+        </member>
+        <member name="P:C1.Xamarin.Forms.Core.C1Animation.StartDelay">
+            <summary>
+            Gets or sets the elapsed time before the animation starts.
+            </summary>
+        </member>
+        <member name="P:C1.Xamarin.Forms.Core.C1Animation.Duration">
+            <summary>
+            Gets or sets the duration time of the animation.
+            </summary>
+        </member>
+        <member name="P:C1.Xamarin.Forms.Core.C1Animation.Easing">
+            <summary>
+            Gets or sets the easing funtion used to interpolate the values of the animation.
+            </summary>
+        </member>
+        <member name="T:C1.Xamarin.Forms.Core.C1Easing">
+            <summary>
+            Easing function used to interpolate the values of an animation.
+            </summary>
+        </member>
+        <member name="M:C1.Xamarin.Forms.Core.C1Easing.#ctor">
+            <summary>
+            Initializes a new instance of a <see cref="T:C1.Xamarin.Forms.Core.C1Easing"/>.
+            </summary>
+        </member>
+        <member name="M:C1.Xamarin.Forms.Core.C1Easing.#ctor(System.Func{System.Double,System.Double})">
+            <summary>
+            Initializes a new instance of a <see cref="T:C1.Xamarin.Forms.Core.C1Easing"/>.
+            </summary>
+            <param name="function">Easing function.</param>
+        </member>
+        <member name="P:C1.Xamarin.Forms.Core.C1Easing.CircleOut">
+            <summary>
+            Gets a circle easing function.
+            </summary>
+        </member>
+        <member name="P:C1.Xamarin.Forms.Core.C1Easing.CircleIn">
+            <summary>
+            Gets a circle easing function.
+            </summary>
+        </member>
+        <member name="P:C1.Xamarin.Forms.Core.C1Easing.Linear">
+            <summary>
+            Gets a linear easing function.
+            </summary>
+        </member>
+        <member name="M:C1.Xamarin.Forms.Core.C1Easing.Ease(System.Double)">
+            <summary>
+            Applies the easing function to the specified value input.
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:C1.Xamarin.Forms.Core.C1Easing.GetEasingFunction">
+            <summary>
+            Gets the easing function.
+            </summary>
+        </member>
+        <member name="M:C1.Xamarin.Forms.Core.C1Easing.op_Implicit(Xamarin.Forms.Easing)~C1.Xamarin.Forms.Core.C1Easing">
+            <summary>
+            Allows assigning a <see cref="T:C1.Xamarin.Forms.Core.C1Easing"/> from a Xamarin Forms counterpart.
+            </summary>
+            <param name="easing"></param>
+        </member>
+        <member name="T:C1.Xamarin.Forms.Core.C1Border">
+            <summary>
+            Basic control used to draw a border around another view.
+            </summary>
+        </member>
+        <member name="M:C1.Xamarin.Forms.Core.C1Border.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:C1.Xamarin.Forms.Core.C1Border"/> class.
+            </summary>
+        </member>
+        <member name="P:C1.Xamarin.Forms.Core.C1Border.BorderThickness">
+            <summary>
+            Gets or sets the border thickness.
+            </summary>
+        </member>
+        <member name="P:C1.Xamarin.Forms.Core.C1Border.BorderColor">
+            <summary>
+            Gets or sets the color of the border.
+            </summary>
+        </member>
+        <member name="P:C1.Xamarin.Forms.Core.C1Border.Padding">
+            <summary>
+            Gets or sets the padding of the cell.
+            </summary>
+        </member>
+        <member name="P:C1.Xamarin.Forms.Core.C1Border.Content">
+            <summary>
+            Gets the content view of the cell.
+            </summary>
+        </member>
+        <member name="T:C1.Xamarin.Forms.Core.BorderAlignment">
+            <summary>
+            Determines the way to draw the borders of <see cref="T:C1.Xamarin.Forms.Core.C1Border"/>.
+            </summary>
+        </member>
+        <member name="F:C1.Xamarin.Forms.Core.BorderAlignment.Inner">
+            <summary>
+            Draw the borders inside the bound's edges
+            </summary>
+        </member>
+        <member name="F:C1.Xamarin.Forms.Core.BorderAlignment.Center">
+            <summary>
+            Draw the borders centering the bound's edges
+            </summary>
+        </member>
+        <member name="F:C1.Xamarin.Forms.Core.BorderAlignment.Outer">
+            <summary>
+            Draw the border outer the bound's edges
+            </summary>
+        </member>
+        <member name="T:C1.Xamarin.Forms.Core.C1CheckBox">
+            <summary>
+            Represents a control that a user can select and clear.
+            </summary>
+        </member>
+        <member name="M:C1.Xamarin.Forms.Core.C1CheckBox.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:C1.Xamarin.Forms.Core.C1CheckBox"/> class.
+            </summary>
+        </member>
+        <member name="P:C1.Xamarin.Forms.Core.C1CheckBox.IsChecked">
+            <summary>
+            Gets or sets whether the <see cref="T:C1.Xamarin.Forms.Core.C1CheckBox"/> is checked.
+            </summary>
+        </member>
+        <member name="P:C1.Xamarin.Forms.Core.C1CheckBox.IsThreeState">
+            <summary>
+            Gets or sets whether <see cref="T:C1.Xamarin.Forms.Core.C1CheckBox"/> supports indeterminate state.
+            </summary>
+        </member>
+        <member name="P:C1.Xamarin.Forms.Core.C1CheckBox.IsReadOnly">
+            <summary>
+            Gets or sets whether the <see cref="T:C1.Xamarin.Forms.Core.C1CheckBox"/> is read only.
+            </summary>
+        </member>
+        <member name="P:C1.Xamarin.Forms.Core.C1CheckBox.Color">
+            <summary>
+            Gets or sets the color used to paint the control.
+            </summary>
+        </member>
+        <member name="P:C1.Xamarin.Forms.Core.C1CheckBox.Tag">
+            <summary>
+            Gets or sets an arbitrary object value that can be used to store custom information about this object.
+            </summary>
+        </member>
+        <member name="E:C1.Xamarin.Forms.Core.C1CheckBox.Checked">
+            <summary>
+            Occurs after the value of checkBox changes
+            </summary>
+        </member>
+        <member name="M:C1.Xamarin.Forms.Core.C1CheckBox.OnChecked(System.EventArgs)">
+            <summary>
+            Raises the <see cref="E:Checked" /> event.
+            </summary>
+            <param name="e">The <see cref="T:System.EventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:C1.Xamarin.Forms.Core.C1CheckBox.Dispose">
+            <summary>
+            Performs application-defined tasks associated with freeing, releasing, or resetting unmanaged resources.
+            </summary>
+        </member>
+        <member name="T:C1.Xamarin.Forms.Core.C1Icon">
+            <summary>
+            Represents a visual icon that can be tinted and resized.
+            </summary>
+        </member>
+        <member name="F:C1.Xamarin.Forms.Core.C1Icon.DEFAULT_WIDTH">
+            <summary>
+            The default width of an icon.
+            </summary>
+        </member>
+        <member name="F:C1.Xamarin.Forms.Core.C1Icon.DEFAULT_HEIGHT">
+            <summary>
+            The default height of an icon.
+            </summary>
+        </member>
+        <member name="M:C1.Xamarin.Forms.Core.C1Icon.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:C1.Xamarin.Forms.Core.C1Icon"/> class.
+            </summary>
+        </member>
+        <member name="M:C1.Xamarin.Forms.Core.C1Icon.InitializeUI">
+            <summary>
+            Initializes the UI.
+            </summary>
+        </member>
+        <member name="M:C1.Xamarin.Forms.Core.C1Icon.FinalizeUI">
+            <summary>
+            Finalizes the user interface.
+            </summary>
+        </member>
+        <member name="P:C1.Xamarin.Forms.Core.C1Icon.Color">
+            <summary>
+            Gets or sets the color used to paint the icon.
+            </summary>
+        </member>
+        <member name="P:C1.Xamarin.Forms.Core.C1Icon.Padding">
+            <summary>
+            Gets or sets the padding of the icon.
+            </summary>
+        </member>
+        <member name="M:C1.Xamarin.Forms.Core.C1Icon.OnColorChanged(Xamarin.Forms.Color,Xamarin.Forms.Color)">
+            <summary>
+            Called when the <see cref="F:C1.Xamarin.Forms.Core.C1Icon.ColorProperty"/> is updated.
+            </summary>
+            <param name="oldColor">The old color.</param>
+            <param name="newColor">The new color.</param>
+        </member>
+        <member name="M:C1.Xamarin.Forms.Core.C1Icon.OnPaddingChanged(Xamarin.Forms.Thickness,Xamarin.Forms.Thickness)">
+            <summary>
+            Called when the <see cref="F:C1.Xamarin.Forms.Core.C1Icon.PaddingProperty"/> is updated.
+            </summary>
+            <param name="oldPadding">The old padding.</param>
+            <param name="newPadding">The new padding.</param>
+        </member>
+        <member name="T:C1.Xamarin.Forms.Core.C1CompositeIcon">
+            <summary>
+            Represent an icon created from a list of icons superposed one on top of the other.
+            </summary>
+        </member>
+        <member name="M:C1.Xamarin.Forms.Core.C1CompositeIcon.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:C1.Xamarin.Forms.Core.C1CompositeIcon" /> class.
+            </summary>
+        </member>
+        <member name="P:C1.Xamarin.Forms.Core.C1CompositeIcon.Icons">
+            <summary>
+            Gets the list of icons that will be rendered.
+            </summary>
+        </member>
+        <member name="T:C1.Xamarin.Forms.Core.C1FontIcon">
+            <summary>
+            Represents an icon created from a font.
+            </summary>
+        </member>
+        <member name="M:C1.Xamarin.Forms.Core.C1FontIcon.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:C1.Xamarin.Forms.Core.C1FontIcon"/> class.
+            </summary>
+        </member>
+        <member name="M:C1.Xamarin.Forms.Core.C1FontIcon.InitializeUI">
+            <summary>
+            Initializes the UI.
+            </summary>
+        </member>
+        <member name="P:C1.Xamarin.Forms.Core.C1FontIcon.Text">
+            <summary>
+            Gets the text that represents the icon in the specified <see cref="P:C1.Xamarin.Forms.Core.C1FontIcon.FontFamily"/>.
+            </summary>
+        </member>
+        <member name="P:C1.Xamarin.Forms.Core.C1FontIcon.FontFamily">
+            <summary>
+            Gets the font family containing the icon.
+            </summary>
+        </member>
+        <member name="P:C1.Xamarin.Forms.Core.C1FontIcon.FontSize">
+            <value>
+            Gets the size of the font.
+            </value>
+        </member>
+        <member name="T:C1.Xamarin.Forms.Core.C1VectorIcon">
+            <summary>
+            Represents an icon created from a vector definition.
+            </summary>
+        </member>
+        <member name="M:C1.Xamarin.Forms.Core.C1VectorIcon.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:C1.Xamarin.Forms.Core.C1VectorIcon"/> class.
+            </summary>
+        </member>
+        <member name="M:C1.Xamarin.Forms.Core.C1VectorIcon.InitializeUI">
+            <summary>
+            Initializes the UI.
+            </summary>
+        </member>
+        <member name="M:C1.Xamarin.Forms.Core.C1VectorIcon.FinalizeUI">
+            <summary>
+            Finalizes the user interface.
+            </summary>
+        </member>
+        <member name="P:C1.Xamarin.Forms.Core.C1VectorIcon.ViewBox">
+            <summary>
+            Gets or sets the rectangle (in the path coordinates) which will determine what part will be drawn.
+            </summary>
+        </member>
+        <member name="P:C1.Xamarin.Forms.Core.C1VectorIcon.StrokeThickness">
+            <summary>
+            The stroke thickness
+            </summary>
+        </member>
+        <member name="P:C1.Xamarin.Forms.Core.C1VectorIcon.StrokeColor">
+            <summary>
+            Gets or sets the color of the stroke.
+            </summary>
+        </member>
+        <member name="M:C1.Xamarin.Forms.Core.C1VectorIcon.UpdateGeometry">
+            <summary>
+            This will recreate the geometry and update the path.
+            </summary>
+        </member>
+        <member name="T:C1.Xamarin.Forms.Core.C1PathIcon">
+            <summary>
+            Represent an icon created from a path string.
+            </summary>
+        </member>
+        <member name="M:C1.Xamarin.Forms.Core.C1PathIcon.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:C1.Xamarin.Forms.Core.C1PathIcon"/> class.
+            </summary>
+        </member>
+        <member name="P:C1.Xamarin.Forms.Core.C1PathIcon.Data">
+            <summary>
+            Gets or sets the svg string describing the shape.
+            </summary>
+        </member>
+        <member name="T:C1.Xamarin.Forms.Core.C1PolygonIcon">
+            <summary>
+            Represents an icon created from a vector definition.
+            </summary>
+        </member>
+        <member name="M:C1.Xamarin.Forms.Core.C1PolygonIcon.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:C1.Xamarin.Forms.Core.C1PolygonIcon" /> class.
+            </summary>
+        </member>
+        <member name="P:C1.Xamarin.Forms.Core.C1PolygonIcon.Points">
+            <summary>
+            Gets the points that describe the shape.
+            </summary>
+        </member>
+        <member name="P:C1.Xamarin.Forms.Core.C1PolygonIcon.IsClosed">
+            <summary>
+            Gets whether the last point will connect with the first one.
+            </summary>
+        </member>
+        <member name="T:C1.Xamarin.Forms.Core.C1BitmapIcon">
+            <summary>
+            Represents an icon created from an image.
+            </summary>
+            <remarks>
+            The file that you use should be a solid image on a transparent background.
+            The bitmap image is expected to be a true bitmap that has transparent pixels and non-transparent pixels.
+            The recommended format is PNG. Other file-format image sources will load but result in a solid block of the foreground color.
+            </remarks>
+        </member>
+        <member name="M:C1.Xamarin.Forms.Core.C1BitmapIcon.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:C1.Xamarin.Forms.Core.C1BitmapIcon"/> class.
+            </summary>
+        </member>
+        <member name="M:C1.Xamarin.Forms.Core.C1BitmapIcon.InitializeUI">
+            <summary>
+            Initializes the UI.
+            </summary>
+        </member>
+        <member name="P:C1.Xamarin.Forms.Core.C1BitmapIcon.Source">
+            <summary>
+            Gets or sets the image source.
+            </summary>
+        </member>
+        <member name="P:C1.Xamarin.Forms.Core.C1BitmapIcon.ShowAsMonochrome">
+            <summary>
+            Gets or sets a value that indicates whether the bitmap is shown in a single color.
+            </summary>
+        </member>
+        <member name="T:C1.Xamarin.Forms.Core.C1Symbol">
+            <summary>
+            Specifies a set of predefined icons.
+            </summary>
+        </member>
+        <member name="F:C1.Xamarin.Forms.Core.C1Symbol.Edit">
+            <summary>
+            The edit icon.
+            </summary>
+        </member>
+        <member name="F:C1.Xamarin.Forms.Core.C1Symbol.Asterisk">
+            <summary>
+            The asterisk icon.
+            </summary>
+        </member>
+        <member name="F:C1.Xamarin.Forms.Core.C1Symbol.ArrowUp">
+            <summary>
+            The arrow up icon.
+            </summary>
+        </member>
+        <member name="F:C1.Xamarin.Forms.Core.C1Symbol.ArrowDown">
+            <summary>
+            The arrow down icon.
+            </summary>
+        </member>
+        <member name="F:C1.Xamarin.Forms.Core.C1Symbol.ChevronUp">
+            <summary>
+            The chevron up icon.
+            </summary>
+        </member>
+        <member name="F:C1.Xamarin.Forms.Core.C1Symbol.ChevronDown">
+            <summary>
+            The chevron down icon.
+            </summary>
+        </member>
+        <member name="F:C1.Xamarin.Forms.Core.C1Symbol.ChevronRight">
+            <summary>
+            The chevron right icon.
+            </summary>
+        </member>
+        <member name="F:C1.Xamarin.Forms.Core.C1Symbol.ChevronLeft">
+            <summary>
+            The chevron left icon.
+            </summary>
+        </member>
+        <member name="F:C1.Xamarin.Forms.Core.C1Symbol.TriangleNorth">
+            <summary>
+            The triangle north icon.
+            </summary>
+        </member>
+        <member name="F:C1.Xamarin.Forms.Core.C1Symbol.TriangleSouth">
+            <summary>
+            The triangle south icon.
+            </summary>
+        </member>
+        <member name="F:C1.Xamarin.Forms.Core.C1Symbol.TriangleEast">
+            <summary>
+            The triangle east icon.
+            </summary>
+        </member>
+        <member name="F:C1.Xamarin.Forms.Core.C1Symbol.TriangleWest">
+            <summary>
+            The triangle west icon.
+            </summary>
+        </member>
+        <member name="F:C1.Xamarin.Forms.Core.C1Symbol.TriangleSouthEast">
+            <summary>
+            The triangle south east icon.
+            </summary>
+        </member>
+        <member name="F:C1.Xamarin.Forms.Core.C1Symbol.TriangleNorthEast">
+            <summary>
+            The triangle north east icon.
+            </summary>
+        </member>
+        <member name="T:C1.Xamarin.Forms.Core.C1SymbolIcon">
+            <summary>
+            Represent a pre-defined icon used in Xamarin Forms.
+            </summary>
+        </member>
+        <member name="T:C1.Xamarin.Forms.Core.C1IconTemplate">
+            <summary>
+            This factory allows creating <see cref="T:C1.Xamarin.Forms.Core.C1Icon"/>.
+            </summary>
+        </member>
+        <member name="M:C1.Xamarin.Forms.Core.C1IconTemplate.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:C1.Xamarin.Forms.Core.C1IconTemplate"/> class.
+            </summary>
+        </member>
+        <member name="M:C1.Xamarin.Forms.Core.C1IconTemplate.#ctor(System.Func{C1.Xamarin.Forms.Core.C1Icon})">
+            <summary>
+            Initializes a new instance of the <see cref="T:C1.Xamarin.Forms.Core.C1IconTemplate" /> class.
+            </summary>
+            <param name="createIcon">The function that creates the icon. New instances must be created every time.</param>
+        </member>
+        <member name="P:C1.Xamarin.Forms.Core.C1IconTemplate.Template">
+            <summary>
+            Gets or sets the template containing the icon.
+            </summary>
+        </member>
+        <member name="M:C1.Xamarin.Forms.Core.C1IconTemplate.CreateIcon">
+            <summary>
+            Creates a new icon.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:C1.Xamarin.Forms.Core.C1IconTemplate.Edit">
+            <summary>
+            Gets an icon representing an arrow pointing up.
+            </summary>
+        </member>
+        <member name="P:C1.Xamarin.Forms.Core.C1IconTemplate.Asterisk">
+            <summary>
+            Gets an icon representing an arrow pointing up.
+            </summary>
+        </member>
+        <member name="P:C1.Xamarin.Forms.Core.C1IconTemplate.ArrowUp">
+            <summary>
+            Gets an icon representing an arrow pointing up.
+            </summary>
+        </member>
+        <member name="P:C1.Xamarin.Forms.Core.C1IconTemplate.ArrowDown">
+            <summary>
+            Gets an icon representing an arrow pointing up.
+            </summary>
+        </member>
+        <member name="P:C1.Xamarin.Forms.Core.C1IconTemplate.ChevronUp">
+            <summary>
+            Gets an icon representing a chevron pointing up.
+            </summary>
+        </member>
+        <member name="P:C1.Xamarin.Forms.Core.C1IconTemplate.ChevronDown">
+            <summary>
+            Gets an icon representing a chevron pointing down.
+            </summary>
+        </member>
+        <member name="P:C1.Xamarin.Forms.Core.C1IconTemplate.ChevronLeft">
+            <summary>
+            Gets an icon representing a chevron pointing to the left.
+            </summary>
+        </member>
+        <member name="P:C1.Xamarin.Forms.Core.C1IconTemplate.ChevronRight">
+            <summary>
+            Gets an icon representing a chevron pointing to the right.
+            </summary>
+        </member>
+        <member name="P:C1.Xamarin.Forms.Core.C1IconTemplate.TriangleNorth">
+            <summary>
+            Gets an icon representing a triangle with one of the vertices pointing up.
+            </summary>
+        </member>
+        <member name="P:C1.Xamarin.Forms.Core.C1IconTemplate.TriangleNorthEast">
+            <summary>
+            Gets an icon representing a triangle with one of the vertices pointing north east.
+            </summary>
+        </member>
+        <member name="P:C1.Xamarin.Forms.Core.C1IconTemplate.TriangleEast">
+            <summary>
+            Gets an icon representing a triangle with one of the vertices pointing east.
+            </summary>
+        </member>
+        <member name="P:C1.Xamarin.Forms.Core.C1IconTemplate.TriangleSouthEast">
+            <summary>
+            Gets an icon representing a triangle with one of the vertices pointing south east.
+            </summary>
+        </member>
+        <member name="P:C1.Xamarin.Forms.Core.C1IconTemplate.TriangleSouth">
+            <summary>
+            Gets an icon representing a triangle with one of the vertices pointing down.
+            </summary>
+        </member>
+        <member name="P:C1.Xamarin.Forms.Core.C1IconTemplate.TriangleSouthWest">
+            <summary>
+            Gets an icon representing a triangle with one of the vertices pointing south west.
+            </summary>
+        </member>
+        <member name="P:C1.Xamarin.Forms.Core.C1IconTemplate.TriangleWest">
+            <summary>
+            Gets an icon representing a triangle with one of the vertices pointing west.
+            </summary>
+        </member>
+        <member name="P:C1.Xamarin.Forms.Core.C1IconTemplate.TriangleNorthWest">
+            <summary>
+            Gets an icon representing a triangle with one of the vertices pointing north west.
+            </summary>
+        </member>
+        <member name="P:C1.Xamarin.Forms.Core.C1IconTemplate.TriangleUp">
+            <summary>
+            Gets an icon representing a triangle with one of the vertices pointing upwards.
+            </summary>
+        </member>
+        <member name="P:C1.Xamarin.Forms.Core.C1IconTemplate.TriangleRightUp">
+            <summary>
+            Gets an icon representing a triangle with one of the vertices pointing to the right up.
+            </summary>
+        </member>
+        <member name="P:C1.Xamarin.Forms.Core.C1IconTemplate.TriangleRight">
+            <summary>
+            Gets an icon representing a triangle with one of the vertices pointing to the right.
+            </summary>
+        </member>
+        <member name="P:C1.Xamarin.Forms.Core.C1IconTemplate.TriangleRightDown">
+            <summary>
+            Gets an icon representing a triangle with one of the vertices pointing to the right down.
+            </summary>
+        </member>
+        <member name="P:C1.Xamarin.Forms.Core.C1IconTemplate.TriangleDown">
+            <summary>
+            Gets an icon representing a triangle with one of the vertices pointing downwards.
+            </summary>
+        </member>
+        <member name="P:C1.Xamarin.Forms.Core.C1IconTemplate.TriangleLeftDown">
+            <summary>
+            Gets an icon representing a triangle with one of the vertices pointing to the left down.
+            </summary>
+        </member>
+        <member name="P:C1.Xamarin.Forms.Core.C1IconTemplate.TriangleLeft">
+            <summary>
+            Gets an icon representing a triangle with one of the vertices pointing to the left.
+            </summary>
+        </member>
+        <member name="P:C1.Xamarin.Forms.Core.C1IconTemplate.TriangleLeftUp">
+            <summary>
+            Gets an icon representing a triangle with one of the vertices pointing to the left up.
+            </summary>
+        </member>
+        <member name="P:C1.Xamarin.Forms.Core.C1IconTemplate.Star5">
+            <summary>
+            Gets an icon representing a 5-pointed star.
+            </summary>
+        </member>
+        <member name="T:C1.Xamarin.Forms.Core.C1ThemeInfo">
+            <summary>
+            This class allows accessing theme-related properties.
+            </summary>
+        </member>
+        <member name="P:C1.Xamarin.Forms.Core.C1ThemeInfo.ApplicationTheme">
+            <summary>
+            Gets the application-level theme.
+            </summary>
+        </member>
+        <member name="P:C1.Xamarin.Forms.Core.C1ThemeInfo.IsDark">
+            <summary>
+            Gets a value indicating whether the theme is dark.
+            </summary>
+        </member>
+        <member name="P:C1.Xamarin.Forms.Core.C1ThemeInfo.BackgroundColor">
+            <summary>
+            Gets the background color of the theme.
+            </summary>
+        </member>
+        <member name="P:C1.Xamarin.Forms.Core.C1ThemeInfo.TextColor">
+            <summary>
+            Gets the text color of the theme.
+            </summary>
+        </member>
+        <member name="P:C1.Xamarin.Forms.Core.C1ThemeInfo.SecondBackgroundColor">
+            <summary>
+            Get the second background of the theme
+            </summary>
+        </member>
+        <member name="T:C1.Xamarin.Forms.Core.C1ToggleButton">
+            <summary>
+            Represents a button that a user can expand and collapse.
+            </summary>
+        </member>
+        <member name="M:C1.Xamarin.Forms.Core.C1ToggleButton.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:C1.Xamarin.Forms.Core.C1ToggleButton"/> class.
+            </summary>
+        </member>
+        <member name="P:C1.Xamarin.Forms.Core.C1ToggleButton.IsChecked">
+            <summary>
+            Gets or sets whether the <see cref="T:C1.Xamarin.Forms.Core.C1ToggleButton"/> is checked.
+            </summary>
+        </member>
+        <member name="P:C1.Xamarin.Forms.Core.C1ToggleButton.Color">
+            <summary>
+            Gets or sets the color used to paint the control.
+            </summary>
+        </member>
+        <member name="P:C1.Xamarin.Forms.Core.C1ToggleButton.BorderWidth">
+            <summary>
+            Gets or sets the width of the border.
+            </summary>
+            <remarks>
+            Set this value to a non-zero value in order to have a visible border.
+            </remarks>
+        </member>
+        <member name="P:C1.Xamarin.Forms.Core.C1ToggleButton.Padding">
+            <summary>
+            Gets or sets the padding of the button.
+            </summary>
+        </member>
+        <member name="P:C1.Xamarin.Forms.Core.C1ToggleButton.IsFocusable">
+            <summary>
+            Gets or sets whether the button can receive the focus.
+            </summary>
+        </member>
+        <member name="P:C1.Xamarin.Forms.Core.C1ToggleButton.CheckedText">
+            <summary>
+            Gets or sets the text show when the button is checked.
+            </summary>
+        </member>
+        <member name="P:C1.Xamarin.Forms.Core.C1ToggleButton.UncheckedText">
+            <summary>
+            Gets or sets the text shown when the button is unchecked.
+            </summary>
+        </member>
+        <member name="P:C1.Xamarin.Forms.Core.C1ToggleButton.CheckedImageSource">
+            <summary>
+            Gets or sets the image show when the button is checked.
+            </summary>
+        </member>
+        <member name="P:C1.Xamarin.Forms.Core.C1ToggleButton.UncheckedImageSource">
+            <summary>
+            Gets or sets the image shown when the button is unchecked.
+            </summary>
+        </member>
+        <member name="P:C1.Xamarin.Forms.Core.C1ToggleButton.CheckedContent">
+            <summary>
+            Gets or sets the content show when the button is checked.
+            </summary>
+        </member>
+        <member name="P:C1.Xamarin.Forms.Core.C1ToggleButton.UncheckedContent">
+            <summary>
+            Gets or sets the content shown when the button is unchecked.
+            </summary>
+        </member>
+        <member name="E:C1.Xamarin.Forms.Core.C1ToggleButton.Checked">
+            <summary>
+            Occurs after the value of checkBox changes
+            </summary>
+        </member>
+        <member name="M:C1.Xamarin.Forms.Core.C1ToggleButton.OnChecked(System.EventArgs)">
+            <summary>
+            Raises the <see cref="E:Checked" /> event.
+            </summary>
+            <param name="e">The <see cref="T:System.EventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:C1.Xamarin.Forms.Core.C1ToggleButton.Dispose">
+            <summary>
+            Performs application-defined tasks associated with freeing, releasing, or resetting unmanaged resources.
+            </summary>
+        </member>
+        <member name="E:C1.Xamarin.Forms.Core.C1ToggleButton.Disposed">
+            <summary>
+            Occurs when the object is disposed.
+            </summary>
+        </member>
+        <member name="T:C1.Xamarin.Forms.Core.AsyncEventArgs">
+            <summary>
+            Provides event data for asynchronous events.
+            </summary>
+        </member>
+        <member name="P:C1.Xamarin.Forms.Core.AsyncEventArgs.Awaiter">
+            <summary>
+            Gets the deferrals awaiter.
+            </summary>
+        </member>
+        <member name="M:C1.Xamarin.Forms.Core.AsyncEventArgs.GetDeferral">
+            <summary>
+            Gets the deferral.
+            </summary>
+            <remarks>
+            The event won't finish until all the deferrals call the complete method.
+            </remarks>
+        </member>
+        <member name="M:C1.Xamarin.Forms.Core.AsyncEventArgs.WaitDeferralsAsync">
+            <summary>
+            Waits until all the deferrals are complete.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:C1.Xamarin.Forms.Core.AsyncEventArgsDeferralsAwaiter">
+            <summary>
+            Deferrals awaiter used to wait for the deferrals of an async event.
+            </summary>
+        </member>
+        <member name="M:C1.Xamarin.Forms.Core.AsyncEventArgsDeferralsAwaiter.GetDeferral">
+            <summary>
+            Gets the deferral.
+            </summary>
+            <remarks>
+            The event won't finish until all the deferrals call the complete method.
+            </remarks>
+        </member>
+        <member name="M:C1.Xamarin.Forms.Core.AsyncEventArgsDeferralsAwaiter.WaitDeferralsAsync">
+            <summary>
+            Waits until all the deferrals are complete.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:C1.Xamarin.Forms.Core.AsyncEventArgsDeferral">
+            <summary>
+            Deferral used to block the event until <see cref="M:C1.Xamarin.Forms.Core.AsyncEventArgsDeferral.Complete"/> method is called. 
+            </summary>
+        </member>
+        <member name="M:C1.Xamarin.Forms.Core.AsyncEventArgsDeferral.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:C1.Xamarin.Forms.Core.AsyncEventArgsDeferral"/> class.
+            </summary>
+        </member>
+        <member name="M:C1.Xamarin.Forms.Core.AsyncEventArgsDeferral.Complete">
+            <summary>
+            Notifies the event the handler is ready to continue.
+            </summary>
+        </member>
+        <member name="T:C1.Xamarin.Forms.Core.ColorEx">
+            <summary>
+            Provides access to system colors according to the current theme.
+            </summary>
+        </member>
+        <member name="M:C1.Xamarin.Forms.Core.ColorEx.IsDefaultColor(Xamarin.Forms.Color)">
+            <summary>
+            Determines whether the specified color is the default color.
+            </summary>
+            <param name="color">The color.</param>
+        </member>
+        <member name="M:C1.Xamarin.Forms.Core.ColorEx.Cascade(System.Func{Xamarin.Forms.Color}[])">
+            <summary>
+            Returns the first color different from the default.
+            </summary>
+            <param name="colors">The list of colors to look up.</param>
+        </member>
+        <member name="M:C1.Xamarin.Forms.Core.ColorEx.FromARGB(System.Byte,System.Byte,System.Byte,System.Byte)">
+            <summary>
+            Creates a color from the ARGB components.
+            </summary>
+            <param name="a">The alpha channel.</param>
+            <param name="r">The Red component.</param>
+            <param name="g">The Green component.</param>
+            <param name="b">The Blue component.</param>
+            <returns></returns>
+        </member>
+        <member name="M:C1.Xamarin.Forms.Core.ColorEx.GetARGB(Xamarin.Forms.Color,System.Byte@,System.Byte@,System.Byte@,System.Byte@)">
+            <summary>
+            Gets the ARGB components of a color.
+            </summary>
+            <param name="color">The color.</param>
+            <param name="a">The alpha channel.</param>
+            <param name="r">The red component.</param>
+            <param name="g">The green component.</param>
+            <param name="b">The blue component.</param>
+        </member>
+        <member name="M:C1.Xamarin.Forms.Core.ColorEx.WithAlpha(Xamarin.Forms.Color,System.Byte)">
+            <summary>
+            Creates a new color modifying the alpha channel.
+            </summary>
+            <param name="color">The color.</param>
+            <param name="a">a.</param>
+            <returns></returns>
+        </member>
+        <member name="M:C1.Xamarin.Forms.Core.ColorEx.Blend(Xamarin.Forms.Color,Xamarin.Forms.Color,System.Double)">
+            <summary>
+            Blends the specified colors together.
+            </summary>
+            <param name="color">The color to blend onto the <paramref name="backgroundColor"/>.</param>
+            <param name="backgroundColor">The background color.</param>
+            <param name="amount">How much of <paramref name="color"/> to keep,
+            “on top of” <paramref name="backgroundColor"/>.</param>
+            <returns></returns>
+        </member>
+        <member name="M:C1.Xamarin.Forms.Core.ColorEx.RGBtoHSV(System.Single,System.Single,System.Single,System.Single@,System.Single@,System.Single@)">
+            <summary>
+            r,g,b values are from 0 to 1
+            h = [0,360], s = [0,1], v = [0,1]
+            if s == 0, then h = -1(undefined)
+            </summary>
+            <param name="r"></param>
+            <param name="g"></param>
+            <param name="b"></param>
+            <param name="h"></param>
+            <param name="s"></param>
+            <param name="v"></param>
+        </member>
+        <member name="M:C1.Xamarin.Forms.Core.ColorEx.HSVtoRGB(System.Single@,System.Single@,System.Single@,System.Single,System.Single,System.Single)">
+            <summary>
+            r,g,b values are from 0 to 1
+            h = [0,360], s = [0,1], v = [0,1]
+            if s == 0, then h = -1(undefined)
+            </summary>
+            <param name="r"></param>
+            <param name="g"></param>
+            <param name="b"></param>
+            <param name="h"></param>
+            <param name="s"></param>
+            <param name="v"></param>
+        </member>
+        <member name="M:C1.Xamarin.Forms.Core.ColorEx.GetIntColor(System.Object)">
+            <summary>
+            Convert color in platforms to a int color.
+            </summary>
+            <param name="color">Color in each platform.</param>
+            <returns>a color defined in a int value.</returns>
+        </member>
+        <member name="M:C1.Xamarin.Forms.Core.DateTimeEx.FromOADate(System.Double)">
+            <summary>
+            Returns a System.DateTime equivalent to the specified OLE Automation date.
+            </summary>
+            <param name="d">An OLE Automation date value.</param>
+            <returns>An object that represents the same date and time as the d parameter.</returns>
+        </member>
+        <member name="M:C1.Xamarin.Forms.Core.DateTimeEx.ToOADate(System.DateTime)">
+            <summary>
+            Converts the value of this instance to the equivalent OLE Automation date.
+            </summary>
+            <param name="date">The date that will be converted</param>
+            <returns>A double-precision floating-point number that contains an OLE Automation date equivalent to the value of this instance.</returns>
+        </member>
+        <member name="T:C1.Xamarin.Forms.Core.DeviceEx">
+            <summary>
+            Provides information about the device
+            </summary>
+        </member>
+        <member name="P:C1.Xamarin.Forms.Core.DeviceEx.RuntimePlatform">
+            <summary>
+            Gets the runtime platform.
+            </summary>
+        </member>
+        <member name="P:C1.Xamarin.Forms.Core.DeviceEx.DeviceType">
+            <summary>
+            Gets the device type.
+            </summary>
+        </member>
+        <member name="P:C1.Xamarin.Forms.Core.DeviceEx.DeviceOrientation">
+            <summary>
+            Gets the device orientation.
+            </summary>
+        </member>
+        <member name="P:C1.Xamarin.Forms.Core.DeviceEx.ScreenDensity">
+            <summary>
+            Gets the screen density.
+            </summary>
+        </member>
+        <member name="P:C1.Xamarin.Forms.Core.DeviceEx.ScreenPPI">
+            <summary>
+            Gets the number of pixels per inch of the screen.
+            </summary>
+        </member>
+        <member name="T:C1.Xamarin.Forms.Core.DeviceType">
+            <summary>
+            Indicates which device type the forms are running on.
+            </summary>
+        </member>
+        <member name="F:C1.Xamarin.Forms.Core.DeviceType.Phone">
+            <summary>
+            Indicates that the device is a phone.
+            </summary>
+        </member>
+        <member name="F:C1.Xamarin.Forms.Core.DeviceType.Desktop">
+            <summary>
+            Indicates that the device is desktop.
+            </summary>
+        </member>
+        <member name="F:C1.Xamarin.Forms.Core.DeviceType.Other">
+            <summary>
+            Indicates the type of device is unknown.
+            </summary>
+        </member>
+        <member name="T:C1.Xamarin.Forms.Core.DeviceOrientation">
+            <summary>
+            Indicates device Orientation.
+            </summary>
+        </member>
+        <member name="F:C1.Xamarin.Forms.Core.DeviceOrientation.Undefined">
+            <summary>
+            Indicates device Orientation is Undefined.
+            </summary>
+        </member>
+        <member name="F:C1.Xamarin.Forms.Core.DeviceOrientation.Landscape">
+            <summary>
+            Indicates device Orientation is Landscape.
+            </summary>
+        </member>
+        <member name="F:C1.Xamarin.Forms.Core.DeviceOrientation.Portrait">
+            <summary>
+            Indicates device Orientation is Portrait.
+            </summary>
+        </member>
+        <member name="M:C1.Xamarin.Forms.Core.DoubleEx.EqualsOrBothNanOrInfinity(System.Double,System.Double)">
+            <summary>
+            Returns true when both numbers are equal or both are Nan or both are PositiveInfinity or both are NegativeInfinity.
+            </summary>
+            <param name="x">The first value.</param>
+            <param name="y">The second value.</param>
+        </member>
+        <member name="M:C1.Xamarin.Forms.Core.ObjectEx.GetPropertyValue(System.Object,System.String)">
+            <summary>
+            Gets the value of a property or property path of the specified object.
+            </summary>
+            <remarks>
+            This extension DON'T evaluate ICustomTypeDescriptor interface. 
+            Use generic extension with the same name if you are evaluating the path 
+            of a DataTable or any object that implements ICustomTypeDescriptor.
+            </remarks>
+            <param name="target">The target object.</param>
+            <param name="path">The name of the property or the property path.</param>
+            <returns>The value contained in the property</returns>
+        </member>
+        <member name="M:C1.Xamarin.Forms.Core.ObjectEx.SetPropertyValue``1(System.Object,System.String,``0,Xamarin.Forms.IValueConverter,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            Sets the value of a property or property path of the specified object.
+            </summary>
+            <typeparam name="T">Type of the property to set.</typeparam>
+            <param name="target">Object that contains the property.</param>
+            <param name="path">Name or path of the property that contains the value.</param>
+            <param name="value">New value for the property.</param>
+            <param name="converter">Converter to use when setting the property.</param>
+            <param name="converterParameter">Parameter passed to the converter.</param>
+            <param name="culture">Culture information to use when converting values.</param>
+        </member>
+        <member name="M:C1.Xamarin.Forms.Core.RectEx.Union(Xamarin.Forms.Rectangle,Xamarin.Forms.Rectangle)">
+            <summary>
+            Returns a new rectangle exactly enough to contain the specified rectangles.
+            </summary>
+            <param name="rect1">The first rectangle.</param>
+            <param name="rect2">The second rectangle.</param>
+            <returns></returns>
+        </member>
+        <member name="M:C1.Xamarin.Forms.Core.StringEx.SplitCamel(System.String,System.Boolean)">
+            <summary>
+            Insert spaces between words identified by the camel nomenclature.
+            </summary>
+            <param name="s">The original string.</param>
+            <param name="capitalizeFirst">When set to true the resulting string will have its first word capitalized despite the original string capitalization.</param>
+            <returns></returns>
+        </member>
+        <member name="T:C1.Xamarin.Forms.Core.ThemeEx">
+            <summary>
+            Provides access to system colors according to the current theme.
+            </summary>
+        </member>
+        <member name="P:C1.Xamarin.Forms.Core.ThemeEx.IsDark">
+            <summary>
+            Gets a value indicating whether the app is using a dark theme.
+            </summary>
+        </member>
+        <member name="P:C1.Xamarin.Forms.Core.ThemeEx.BackgroundColor">
+            <summary>
+            Gets the color of the theme background.
+            </summary>
+        </member>
+        <member name="P:C1.Xamarin.Forms.Core.ThemeEx.ForegroundColor">
+            <summary>
+            Gets the color of the theme foreground.
+            </summary>
+        </member>
+        <member name="P:C1.Xamarin.Forms.Core.ThemeEx.AccentBackground">
+            <summary>
+            Gets the accent background.
+            </summary>
+        </member>
+        <member name="P:C1.Xamarin.Forms.Core.ThemeEx.AccentForeground">
+            <summary>
+            Gets the accent foreground.
+            </summary>
+        </member>
+        <member name="P:C1.Xamarin.Forms.Core.ThemeEx.SelectionBackgroundColor">
+            <summary>
+            Gets the selection background.
+            </summary>
+        </member>
+        <member name="P:C1.Xamarin.Forms.Core.ThemeEx.SelectionForegroundColor">
+            <summary>
+            Gets the selection foreground.
+            </summary>
+        </member>
+        <member name="P:C1.Xamarin.Forms.Core.ThemeEx.CursorBackgroundColor">
+            <summary>
+            Gets the cursor background.
+            </summary>
+        </member>
+        <member name="P:C1.Xamarin.Forms.Core.ThemeEx.CursorForegroundColor">
+            <summary>
+            Gets the cursor foreground.
+            </summary>
+        </member>
+        <member name="P:C1.Xamarin.Forms.Core.ThemeEx.EditorBackgroundColor">
+            <summary>
+            Gets the color of the theme used to pain the background of the editors.
+            </summary>
+        </member>
+        <member name="P:C1.Xamarin.Forms.Core.ThemeEx.EditorForegroundColor">
+            <summary>
+            Gets the color of the theme used to pain the foreground of the editors.
+            </summary>
+        </member>
+        <member name="P:C1.Xamarin.Forms.Core.ThemeEx.HeaderBackgroundColor">
+            <summary>
+            Gets the color of the theme used to pain the headers.
+            </summary>
+        </member>
+        <member name="P:C1.Xamarin.Forms.Core.ThemeEx.HeaderForegroundColor">
+            <summary>
+            Gets the color of the theme used to pain the headers foreground.
+            </summary>
+        </member>
+        <member name="P:C1.Xamarin.Forms.Core.ThemeEx.BorderColor">
+            <summary>
+            Gets the color of the theme used to pain the borders.
+            </summary>
+        </member>
+        <member name="T:C1.Xamarin.Forms.Core.TypeEx">
+            <summary>
+            The <see cref="T:C1.Xamarin.Forms.Core.TypeEx"/> class provides useful extension methods for the <see cref="T:System.Type"/> class.
+            </summary>
+        </member>
+        <member name="M:C1.Xamarin.Forms.Core.TypeEx.New``1(System.Type)">
+            <summary>
+            Creates a new instance of this type using the default constructor.
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="type">The type.</param>
+            <returns>A new instance of type T.</returns>
+        </member>
+        <member name="M:C1.Xamarin.Forms.Core.TypeEx.New(System.Type)">
+            <summary>
+            Creates a new instance of this type using the default constructor.
+            </summary>
+            <param name="type">The type.</param>
+            <returns>A new instance of type T.</returns>
+        </member>
+        <member name="M:C1.Xamarin.Forms.Core.TypeEx.GetDefaultPublicCtor(System.Type)">
+            <summary>
+            Returns default public instance parameter-less constructor for the specified type.
+            </summary>
+            <param name="type">The type.</param>
+            <returns>The default constructor for the specified type if it exists; Null otherwise.</returns>
+        </member>
+        <member name="M:C1.Xamarin.Forms.Core.TypeEx.New``1(System.Type,System.Action{``0})">
+            <summary>
+            Creates a new instance of this type using the default constructor.
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="type">The type.</param>
+            <param name="initializers">The initializers.</param>
+            <returns>A new instance of type T</returns>
+        </member>
+        <member name="M:C1.Xamarin.Forms.Core.TypeEx.GetNonNullableType(System.Type)">
+            <summary>
+            Returns the underlying type of a nullable type:
+            e.g. if Type = double?, then returns double.
+            </summary>
+            <param name="type">Type.</param>
+            <returns>The underlying type.</returns>
+        </member>
+        <member name="M:C1.Xamarin.Forms.Core.TypeEx.IsNullableType(System.Type)">
+            <summary>
+            Returns true if the type is a nullable type.
+            </summary>
+            <param name="type">Type.</param>
+            <returns>True if the type is nullable.</returns>
+        </member>
+        <member name="M:C1.Xamarin.Forms.Core.TypeEx.IsNumeric(System.Type)">
+            <summary>
+            Returns true if the type is any of the numeric data types:
+            double, float, int, uint, long, ulong, short, ushort, sbyte, byte and decimal.
+            </summary>
+            <param name="type">Type.</param>
+            <returns>True if the type is numeric.</returns>
+        </member>
+        <member name="M:C1.Xamarin.Forms.Core.TypeEx.IsNumericIntegral(System.Type)">
+            <summary>
+            Returns true if the type is any of the integral numeric data types:
+            int, uint, long, ulong, short, ushort, sbyte and byte.
+            </summary>
+            <param name="type">Type.</param>
+            <returns>True if the type is an integral numeric.</returns>
+        </member>
+        <member name="M:C1.Xamarin.Forms.Core.TypeEx.IsNumericIntegralSigned(System.Type)">
+            <summary>
+            Returns true if the type is any of the integral signed numeric data types:
+            int, long, short and sbyte.
+            </summary>
+            <param name="type">Type.</param>
+            <returns>True if the type is a signed integral numeric.</returns>
+        </member>
+        <member name="M:C1.Xamarin.Forms.Core.TypeEx.IsNumericIntegralUnsigned(System.Type)">
+            <summary>
+            Returns true if the type is any of the integral unsigned numeric data types:
+            uint, ulong, ushort and byte.
+            </summary>
+            <param name="type">Type.</param>
+            <returns>True if the type is an unsigned integral numeric.</returns>
+        </member>
+        <member name="M:C1.Xamarin.Forms.Core.TypeEx.ReadStaticField``1(System.Type,System.String)">
+            <summary>
+            Return a static field value by name using reflection.
+            </summary>
+            <typeparam name="TValue"></typeparam>
+            <param name="type"></param>
+            <param name="name"></param>
+            <returns></returns>
+        </member>
+        <member name="M:C1.Xamarin.Forms.Core.TypeEx.IsNumericNonIntegral(System.Type)">
+            <summary>
+            Returns true if the type is any of the numeric non-integral data types:
+            double, float and decimal.
+            </summary>
+            <param name="type">Type.</param>
+            <returns>True if the type is a non-integral numeric.</returns>
+        </member>
+        <member name="M:C1.Xamarin.Forms.Core.TypeEx.GetEnumValues``1(System.Type)">
+            <summary>
+            Returns the values of an Enum type (Type.IsEnum == true).
+            </summary>
+            <typeparam name="T">Enum type.</typeparam>
+            <param name="enumType">Enum type.</param>
+            <returns>The list of values for that enum type.</returns>
+        </member>
+        <member name="T:C1.Xamarin.Forms.Core.ViewEx">
+            <summary>
+            View extensions
+            </summary>
+        </member>
+        <member name="M:C1.Xamarin.Forms.Core.ViewEx.GetChildren(Xamarin.Forms.View,System.Boolean,System.Boolean)">
+            <summary>
+            Finds all the children of a given <see cref="T:Xamarin.Forms.View"/>.
+            </summary>
+        </member>
+        <member name="M:C1.Xamarin.Forms.Core.ViewEx.GetImage(Xamarin.Forms.View)">
+            <summary>
+            Get the byte array of the control image.
+            This byte array comes from a UIImagePNGRepresentation in iOS, TrueColorAlpha of PNG format in WP, Bitmap in Android.
+            </summary>
+            <returns>A byte array with certain image format.</returns>
+        </member>
+        <member name="T:C1.Xamarin.Forms.Core.C1InputEventArgs">
+            <summary>
+            Contains information about gesture events.
+            </summary>
+        </member>
+        <member name="M:C1.Xamarin.Forms.Core.C1InputEventArgs.#ctor(System.Object)">
+            <summary>
+            Initializes a new instance of the <see cref="T:C1.Xamarin.Forms.Core.C1InputEventArgs"/> class.
+            </summary>
+            <param name="originalArgs">The <see cref="P:C1.Xamarin.Forms.Core.C1InputEventArgs.OriginalEventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="P:C1.Xamarin.Forms.Core.C1InputEventArgs.OriginalEventArgs">
+            <summary>
+            Gets the arguments of the original event which raised this event.
+            </summary>
+        </member>
+        <member name="P:C1.Xamarin.Forms.Core.C1InputEventArgs.Handled">
+            <summary>
+            Gets or sets a value that marks the routed event as handled. Setting to true
+            prevents most handlers along the event route from handling the same event again.
+            </summary>
+        </member>
+        <member name="P:C1.Xamarin.Forms.Core.C1InputEventArgs.PointerDeviceType">
+            <summary>
+            Gets the type of pointer which performed the action.
+            </summary>
+        </member>
+        <member name="M:C1.Xamarin.Forms.Core.C1InputEventArgs.GetPosition(Xamarin.Forms.View)">
+            <summary>
+            Gets the position of the pointer performing the drag gesture relatively to the specified element.
+            </summary>
+            <param name="relativeTo">Any visual object that is connected to the same object tree. To specify the object relative to the overall coordinate system, use a relativeTo value of null.</param>
+            <returns></returns>
+        </member>
+        <member name="P:C1.Xamarin.Forms.Core.C1InputEventArgs.IsShiftPressed">
+            <summary>
+            Gets whether shift key is pressed.
+            </summary>
+        </member>
+        <member name="P:C1.Xamarin.Forms.Core.C1InputEventArgs.IsCtrlPressed">
+            <summary>
+            Gets whether ctrl key is pressed.
+            </summary>
+        </member>
+        <member name="M:C1.Xamarin.Forms.Core.C1InputEventArgs.GetPosition(System.Object,Xamarin.Forms.View)">
+            <summary>
+            Gets the position of the pointer or finger.
+            </summary>
+            <param name="args">The <see cref="P:C1.Xamarin.Forms.Core.C1InputEventArgs.OriginalEventArgs" /> instance containing the manipulation data.</param>
+            <param name="relativeTo">Any visual object that is connected to the same object tree. To specify the object relative to the overall coordinate system, use a relativeTo value of null.</param>
+            <returns></returns>
+        </member>
+        <member name="M:C1.Xamarin.Forms.Core.C1InputEventArgs.GetPointerType(System.Object)">
+            <summary>
+            Gets the type of the pointer.
+            </summary>
+            <param name="originalArgs">The <see cref="P:C1.Xamarin.Forms.Core.C1InputEventArgs.OriginalEventArgs"/> instance containing the event data.</param>
+            <returns></returns>
+        </member>
+        <member name="M:C1.Xamarin.Forms.Core.C1InputEventArgs.GetIsHandled(System.Object)">
+            <summary>
+            Gets a value indicating whether the specified event is handled.
+            </summary>
+            <param name="e">The <see cref="P:C1.Xamarin.Forms.Core.C1InputEventArgs.OriginalEventArgs"/> instance containing the event data.</param>
+            <returns></returns>
+        </member>
+        <member name="M:C1.Xamarin.Forms.Core.C1InputEventArgs.SetIsHandled(System.Object,System.Boolean)">
+            <summary>
+            Sets whether the event is handled.
+            </summary>
+            <param name="e">The <see cref="P:C1.Xamarin.Forms.Core.C1InputEventArgs.OriginalEventArgs"/> instance containing the event data.</param>
+            <param name="handled"><c>true</c> if the event is handled.</param>
+        </member>
+        <member name="T:C1.Xamarin.Forms.Core.C1PointerDeviceType">
+            <summary>
+            Enumerates the different kind of devices which can perform drag operations.
+            </summary>
+        </member>
+        <member name="F:C1.Xamarin.Forms.Core.C1PointerDeviceType.Mouse">
+            <summary>
+            Mouse device
+            </summary>
+        </member>
+        <member name="F:C1.Xamarin.Forms.Core.C1PointerDeviceType.Touch">
+            <summary>
+            Touch screen
+            </summary>
+        </member>
+        <member name="F:C1.Xamarin.Forms.Core.C1PointerDeviceType.Pen">
+            <summary>
+            Pen device
+            </summary>
+        </member>
+        <member name="T:C1.Xamarin.Forms.Core.C1TappedEventArgs">
+            <summary>
+            Contains information of the tap events.
+            </summary>
+        </member>
+        <member name="M:C1.Xamarin.Forms.Core.C1TappedEventArgs.#ctor(System.Object,System.Boolean,System.Boolean,System.Boolean)">
+            <summary>
+            Initializes a new instance of the <see cref="T:C1.Xamarin.Forms.Core.C1TappedEventArgs" /> class.
+            </summary>
+            <param name="originalArgs">The <see cref="T:System.Object" /> instance containing the event data.</param>
+            <param name="isRightTapped">if set to <c>true</c> the event was performed with the right button of the mouse.</param>
+            <param name="isDown">if set to <c>true</c> the event was performed with the mouse down.</param>
+            <param name="isBarrelButtonDown">if set to <c>true</c> the barrel button of the pen is pressed.</param>
+        </member>
+        <member name="P:C1.Xamarin.Forms.Core.C1TappedEventArgs.IsRightTapped">
+            <summary>
+            Gets a value indicating whether the event is performed with the right button of the mouse.
+            </summary>
+        </member>
+        <member name="P:C1.Xamarin.Forms.Core.C1TappedEventArgs.IsDown">
+            <summary>
+            Gets a value indicating whether the event is performed with the mouse down.
+            </summary>
+        </member>
+        <member name="P:C1.Xamarin.Forms.Core.C1TappedEventArgs.IsBarrelButtonDown">
+            <summary>
+            Gets a value indicating whether the barrel button of the pen is pressed.
+            </summary>
+        </member>
+        <member name="P:C1.Xamarin.Forms.Core.C1TappedEventArgs.HitPoint">
+            <summary>
+            The x- and y-coordinates of the pointer position
+            </summary>
+        </member>
+        <member name="T:C1.Xamarin.Forms.Core.C1LicensedControlAttribute">
+            <summary>
+            Marks a control class that must depend on C1 license
+            </summary>
+        </member>
+        <member name="M:C1.Xamarin.Forms.Core.C1LicensedControlAttribute.#ctor">
+            <summary>
+            Constructs an entity of C1LicensedControlAttribute
+            </summary>
+        </member>
+        <member name="T:C1.Xamarin.Forms.Core.LicenseManager">
+            <summary>
+            Allows the users to set a license in the <see cref="P:Key"/> property.
+            </summary>
+            <remarks>
+            See https://www.grapecity.com/licensing/componentone for more information.
+            </remarks>
+        </member>
+        <member name="T:C1.Xamarin.Forms.Core.C1PointArrayTypeConverter">
+            <summary>
+            Converts a string into an array of <see cref="T:Xamarin.Forms.Point"/>.
+            </summary>
+        </member>
+        <member name="M:C1.Xamarin.Forms.Core.C1PointArrayTypeConverter.Parse(System.String)">
+            <summary>
+            Parses a string and convert it to an array of points.
+            </summary>
+            <param name="str"></param>
+            <returns></returns>
+        </member>
+        <member name="T:C1.Xamarin.Forms.Core.DefaultValueConverter">
+            <summary>
+            Converts a value into a specified type.
+            </summary>
+        </member>
+    </members>
+</doc>

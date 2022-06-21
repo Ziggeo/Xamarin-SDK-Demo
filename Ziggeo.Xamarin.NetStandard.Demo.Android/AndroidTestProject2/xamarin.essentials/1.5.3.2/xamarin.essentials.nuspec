@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2013/05/nuspec.xsd">
+  <metadata>
+    <id>Xamarin.Essentials</id>
+    <version>1.5.3.2</version>
+    <title>Xamarin.Essentials</title>
+    <authors>Microsoft</authors>
+    <owners>Microsoft</owners>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <license type="file">LICENSE</license>
+    <licenseUrl>https://aka.ms/deprecateLicenseUrl</licenseUrl>
+    <projectUrl>https://go.microsoft.com/fwlink/?linkid=868960</projectUrl>
+    <iconUrl>https://raw.githubusercontent.com/xamarin/Essentials/master/Assets/xamarin.essentials_128x128.png</iconUrl>
+    <description>Xamarin.Essentials: a kit of essential API's for your apps</description>
+    <releaseNotes>See: https://aka.ms/xamarinessentials-releasenotes</releaseNotes>
+    <copyright>© Microsoft Corporation. All rights reserved.</copyright>
+    <tags>xamarin, windows, uwp, ios, android, watchos, tvos, tizen, toolkit, xamarin.forms, Xamarin.Essentials, kit</tags>
+    <repository type="git" url="https://github.com/xamarin/Essentials" commit="972fc4969f630b07bd20f06568a07e278a559ab5" />
+    <dependencies>
+      <group targetFramework=".NETStandard1.0">
+        <dependency id="NETStandard.Library" version="1.6.1" exclude="Build,Analyzers" />
+        <dependency id="System.Numerics.Vectors" version="4.5.0" exclude="Build,Analyzers" />
+        <dependency id="System.ValueTuple" version="4.5.0" exclude="Build,Analyzers" />
+      </group>
+      <group targetFramework="MonoAndroid8.0">
+        <dependency id="Xamarin.Android.Support.Compat" version="28.0.0.3" exclude="Build,Analyzers" />
+        <dependency id="Xamarin.Android.Support.Core.Utils" version="28.0.0.3" exclude="Build,Analyzers" />
+        <dependency id="Xamarin.Android.Support.CustomTabs" version="28.0.0.3" exclude="Build,Analyzers" />
+      </group>
+      <group targetFramework="MonoAndroid8.1">
+        <dependency id="Xamarin.Android.Support.Compat" version="28.0.0.3" exclude="Build,Analyzers" />
+        <dependency id="Xamarin.Android.Support.Core.Utils" version="28.0.0.3" exclude="Build,Analyzers" />
+        <dependency id="Xamarin.Android.Support.CustomTabs" version="28.0.0.3" exclude="Build,Analyzers" />
+      </group>
+      <group targetFramework="MonoAndroid9.0">
+        <dependency id="Xamarin.Android.Support.Compat" version="28.0.0.3" exclude="Build,Analyzers" />
+        <dependency id="Xamarin.Android.Support.CustomTabs" version="28.0.0.3" exclude="Build,Analyzers" />
+      </group>
+      <group targetFramework="MonoAndroid10.0">
+        <dependency id="Xamarin.AndroidX.Browser" version="1.0.0" exclude="Build,Analyzers" />
+      </group>
+      <group targetFramework="Tizen4.0">
+        <dependency id="Tizen.NET" version="4.0.0" exclude="Build,Analyzers" />
+      </group>
+      <group targetFramework="Xamarin.iOS1.0" />
+      <group targetFramework="Xamarin.TVOS1.0" />
+      <group targetFramework="Xamarin.WatchOS1.0" />
+      <group targetFramework=".NETStandard2.0">
+        <dependency id="System.Numerics.Vectors" version="4.5.0" exclude="Build,Analyzers" />
+      </group>
+      <group targetFramework="UAP10.0.16299">
+        <dependency id="Microsoft.NETCore.UniversalWindowsPlatform" version="6.2.9" exclude="Build,Analyzers" />
+      </group>
+    </dependencies>
+    <frameworkAssemblies>
+      <frameworkAssembly assemblyName="Java.Interop" targetFramework="MonoAndroid10.00.0" />
+      <frameworkAssembly assemblyName="System.Numerics" targetFramework="MonoAndroid10.00.0" />
+      <frameworkAssembly assemblyName="System.Numerics.Vectors" targetFramework="MonoAndroid10.00.0" />
+      <frameworkAssembly assemblyName="OpenTK-1.0" targetFramework="Xamarin.iOS1.00.0" />
+      <frameworkAssembly assemblyName="System.Drawing.Common.dll" targetFramework="Xamarin.iOS1.00.0" />
+    </frameworkAssemblies>
+  </metadata>
+</package>

@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2013/05/nuspec.xsd">
+  <metadata>
+    <id>Xamarin.AndroidX.Fragment</id>
+    <version>1.3.2</version>
+    <title>Xamarin AndroidX - fragment</title>
+    <authors>Microsoft</authors>
+    <owners>Microsoft</owners>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <license type="file">LICENSE.md</license>
+    <licenseUrl>https://aka.ms/deprecateLicenseUrl</licenseUrl>
+    <projectUrl>https://go.microsoft.com/fwlink/?linkid=2113238</projectUrl>
+    <iconUrl>https://go.microsoft.com/fwlink/?linkid=2099392</iconUrl>
+    <description>Xamarin.Android bindings for AndroidX - fragment</description>
+    <copyright>© Microsoft Corporation. All rights reserved.</copyright>
+    <tags>Xamarin AndroidX Xamarin.AndroidX Support Google fragment</tags>
+    <repository type="git" url="https://github.com/xamarin/AndroidX.git" branch="refs/tags/20210401-stable-releases" commit="aa6d6af76ed8b4f53efa75a4efedfdea3a0a8dfc" />
+    <dependencies>
+      <group targetFramework="MonoAndroid9.0">
+        <dependency id="Xamarin.AndroidX.Activity" version="1.2.2" include="All" />
+        <dependency id="Xamarin.AndroidX.Annotation.Experimental" version="1.0.0.9" include="All" />
+        <dependency id="Xamarin.AndroidX.Annotation" version="1.2.0" include="All" />
+        <dependency id="Xamarin.AndroidX.Collection" version="1.1.0.7" include="All" />
+        <dependency id="Xamarin.AndroidX.Core" version="1.3.2.3" include="All" />
+        <dependency id="Xamarin.AndroidX.Lifecycle.LiveData.Core" version="2.3.1" include="All" />
+        <dependency id="Xamarin.AndroidX.Lifecycle.ViewModelSavedState" version="2.3.1" include="All" />
+        <dependency id="Xamarin.AndroidX.Lifecycle.ViewModel" version="2.3.1" include="All" />
+        <dependency id="Xamarin.AndroidX.Loader" version="1.1.0.7" include="All" />
+        <dependency id="Xamarin.AndroidX.SavedState" version="1.1.0.1" include="All" />
+        <dependency id="Xamarin.AndroidX.ViewPager" version="1.0.0.7" include="All" />
+      </group>
+    </dependencies>
+    <frameworkAssemblies>
+      <frameworkAssembly assemblyName="Java.Interop" targetFramework="MonoAndroid9.0" />
+    </frameworkAssemblies>
+  </metadata>
+</package>

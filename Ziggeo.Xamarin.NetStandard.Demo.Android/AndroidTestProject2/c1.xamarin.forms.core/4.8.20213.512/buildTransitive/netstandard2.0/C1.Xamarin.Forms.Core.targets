@@ -1,0 +1,140 @@
+﻿<Project>
+  <!-- Please replace the target name with "ApplyLicenseFor[YourProductGUID]",
+       otherwise the target may be overridden because of the same name  -->
+  <!-- Since the Studio product will be the same for multiple installs that may differ otherwise,
+       add unique info to the target name, e.g. WF, WPF, SL, ETC -->
+
+  <Target Name="ApplyLicense-Rev1-de2b5824-e24d-4e7f-86d1-a87c1729993c" AfterTargets="CompileLicxFiles" 
+        Inputs="" Outputs="$(IntermediateOutputPath).gclicx" Condition="$(DisableGclm) != true">
+
+    <PropertyGroup>
+      <!-- Your Product GUID. In most cases, the GCPID specifies the GUID of the most inclusive
+           product and the product for which there is a trial license
+      -->
+      <GCPID>331cf6cd-b73c-429f-ba79-fa2f85eebd68</GCPID>
+
+      <!-- The BuildID element below specifies SE and SU - SU should be last.
+           These guids are all checked for a valid license until one is found.
+           The BuildID for now is disabled and MyBuildID below is used instead
+      -->
+      <!-- BuildID>338e8154-a14e-42ba-a433-7f4339af93f7,6db7542a-a9b8-477e-8651-3ddda4d3aacd</BuildID -->
+
+      <!-- Your Product Info, the LocalNames element is optional.  The content of GCPInfo specifies the
+           content of the .info file in the license folder.  The Name is shown in the GCLM.exe dialog.
+      -->
+      <GCPInfo>
+        <Product Name="ComponentOne Studio Enterprise">
+          <!-- The local names are optional -->
+          <!--<LocalNames>
+            <LocalName Culture="ja" Name="Sample .NET Core Component v1.0 (JA)" />
+            <LocalName Culture="zh" Name="Sample .NET Core Component v1.0 (ZH)" />
+          </LocalNames>-->
+        </Product>
+      </GCPInfo>
+
+      <!-- The min version of GCLM tool that your Product needs -->
+      <GclmMinVersion>1.7</GclmMinVersion>
+
+      <!-- The Built-in Trial License Data (Remember to replace ";" with %3B ) -->
+      <!-- The GCPTrialLic element can contain a built in trial license which must be specified
+           as a Base64 string.  ToDo: check this statement for accuracy -->
+            <GCPTrialLic>MzMxY2Y2Y2QtYjczYy00MjlmLWJhNzktZmEyZjg1ZWViZDY4,NDYwNTkwMDZYWFhYWFhYWDA5Nw,Kg,VHJ1ZQ,NzQ0MA,VHJ1ZQ,LTMw,LTMw,VHJpYWw,,%3BFOh5mQqnDeQRF5vyT/FbVqgtHaqARg2xoIG6CtHFzVC6tc/7/ApSMCWZKiCd8vJMYBTTZ+Xbr/KzcD55MFob2rfjKSR0UWap2oexQP9njn6xf1zg5ytl1CJm/8Wxd2d0p5KxUgJbAVQcSx9F3qk1Ao9NI+3KVneEVkhn1SEdCUk</GCPTrialLic>
+      
+      <!-- License folder path -->
+      <!-- Linux (per user) -->
+      <GrapeCityRootFolder Condition="$([MSBuild]::IsOSUnixLike())">$([System.Environment]::GetFolderPath(System.Environment+SpecialFolder.LocalApplicationData))</GrapeCityRootFolder>
+      <GclmExe Condition="$([MSBuild]::IsOSUnixLike())">gclm</GclmExe>
+      <!-- Windows (per machine) -->
+      <GrapeCityRootFolder Condition="!$([MSBuild]::IsOSUnixLike())">$([System.Environment]::GetFolderPath(System.Environment+SpecialFolder.CommonApplicationData))</GrapeCityRootFolder>
+      <GclmPath Condition="!$([MSBuild]::IsOSUnixLike())">$([MSBuild]::NormalizePath($(GrapeCityRootFolder),'GrapeCity','gclm'))</GclmPath>
+      <GclmExe Condition="!$([MSBuild]::IsOSUnixLike())">$([MSBuild]::NormalizePath($(GclmPath),'gclm.exe'))</GclmExe>
+      <TempFolder>$([System.IO.Path]::GetTempPath())</TempFolder>
+      <DeployPath>$([MSBuild]::NormalizePath($(TempFolder),'gclm_deploy.exe'))</DeployPath>
+
+      <!-- Common -->
+      <!-- GCPInfoPath property element specifies the path the GCPID .info file. -->
+      <GCPInfoPath>$([MSBuild]::NormalizePath($(GrapeCityRootFolder),'GrapeCity',$(GCPID),'.info'))</GCPInfoPath>
+
+    </PropertyGroup>
+
+    <!-- Register the Product Info in GrapeCity licensing folder -->
+    <!-- Include each guid and name as appropriate for the nuget install.
+         Note that these guids and names correspond to the C1Product classes in GCLicensing code.
+         The guids of these entries are used to both create .info files in the licensing folder
+         so that the entries appear in the GLCM dialog and also to build the MyBuildID property
+         which is specifies which products can be used for licensing the installed assemblies.
+         C1Product entries without a name are not initialized for GCLM, but are checked for a license.
+         Each is checked and the first valid license will be used to generate .gclicx. -->
+    <!-- The product that has the trial license should always be last -->
+    <ItemGroup>
+      <C1Product Remove="@(C1Product)" />
+      <C1Product Include="de2b5824-e24d-4e7f-86d1-a87c1729993c"><Name>ComponentOne Studio for Xamarin</Name></C1Product>
+<C1Product Include="EB58417C-27BB-4F62-ACFA-4D36582D2D0C"><Name /></C1Product>
+<C1Product Include="154B86E3-6B5B-4B2E-ACDC-91D24D249879"><Name /></C1Product>
+<C1Product Include="331cf6cd-b73c-429f-ba79-fa2f85eebd68"><Name>ComponentOne Studio Enterprise</Name></C1Product>
+    </ItemGroup>
+
+    <!-- create .info files for each product to allow any of them to be activated -->
+    <MakeDir Directories="$([MSBuild]::NormalizePath($(GrapeCityRootFolder),'GrapeCity',%(Identity)))" Condition="'%(C1Product.Name)' != ''" />
+    <WriteLinesToFile File="$([MSBuild]::NormalizePath($(GrapeCityRootFolder),'GrapeCity',%(Identity),'.info'))"
+                      Condition="!Exists($([MSBuild]::NormalizePath($(GrapeCityRootFolder),'GrapeCity',%(Identity),'.info'))) And '%(C1Product.Name)' != ''"
+                      Lines='&lt;?xml version="1.0" encoding="utf-8"?&gt;&#13;&#10;&lt;Product Name="%(C1Product.Name)"/&gt;' 
+                      Encoding="utf-8" Overwrite ="false" />
+
+    <!-- create the MyBuildID property from the elements of the ItemGroup above -->
+    <CreateProperty Value="@(C1Product,',')">
+      <Output PropertyName="MyBuildID" TaskParameter="Value"/>
+    </CreateProperty>
+
+    <!-- If multiple products are not to be added, only the GCPInfo project has it's .info file created -->
+    <!-- WriteLinesToFile Condition="!Exists($(GCPInfoPath))" File="$(GCPInfoPath)" Lines="$(GCPInfo)" Encoding="utf-8" Overwrite="true"/ -->
+    
+    <!--Check License Tool installation-->
+    <Exec Command="$(GclmExe) --version" ConsoleToMsBuild="true" ContinueOnError="true" IgnoreExitCode="true">
+      <Output PropertyName="GclmVersionResult" TaskParameter="ConsoleOutput"/>
+    </Exec>
+    <CreateProperty Value="true" Condition="$(GclmVersionResult.StartsWith('GrapeCity License Manager'))">
+      <Output PropertyName="GclmInstalled" TaskParameter="Value"/>
+    </CreateProperty>
+    <CreateProperty Value="$(GclmVersionResult.Split(',')[1])" Condition="$(GclmInstalled) == true">
+      <Output PropertyName="GclmVersion" TaskParameter="Value"/>
+    </CreateProperty>
+
+    <!-- For Linux -->
+    <!-- If not installed, install the License Tool -->
+    <Exec Command="dotnet tool install -g GrapeCity.LicenseManagerTool" ContinueOnError="true"
+      IgnoreExitCode="true" Condition="$([MSBuild]::IsOSUnixLike()) AND $(GclmInstalled) != true"/>
+    <!-- If not latest, update the License Tool -->
+    <Exec Command="dotnet tool update -g GrapeCity.LicenseManagerTool" ContinueOnError="true"
+      IgnoreExitCode="true" Condition="$([MSBuild]::IsOSUnixLike()) AND $(GclmInstalled) == true AND $(GclmVersion) &lt; $(GclmMinVersion)"/>
+    <!-- End Linux -->
+
+    <!-- For Windows -->
+    <!-- Verify need download gclm tool or not -->
+    <CreateProperty Value="Yes" Condition="!$([MSBuild]::IsOSUnixLike()) AND ($(GclmInstalled) != true OR ($(GclmInstalled) == true AND $(GclmVersion) &lt; $(GclmMinVersion)))">
+      <Output PropertyName="NeedDownloadGclm" TaskParameter="Value"/>
+    </CreateProperty>
+    <!-- Download gclm deploy tool -->
+    <DownloadFile SourceUrl="https://cdn.grapecity.com/license/gclm_deploy.exe" DestinationFolder="$(TempFolder)" Condition="$(NeedDownloadGclm) == 'Yes'" SkipUnchangedFiles="false"/>
+    <!-- Run gclm deploy tool -->
+    <Exec Command="$(DeployPath)" IgnoreExitCode="true" Condition="$(NeedDownloadGclm) == 'Yes'"/>
+    <!-- End Windows -->
+
+    <!-- Initialize the Trial Product License if a license is not already present -->
+    <Exec Command="$(GCLMExe) $(GCPID) -init &quot;$(GCPTrialLic)&quot;" IgnoreExitCode="true" />
+
+    <!-- Compile the Product License into .gclicx file and link it with the output assembly -->
+    <FindInList List="@(CompiledLicenseFile)" ItemSpecToFind="$(IntermediateOutputPath).gclicx">
+      <Output TaskParameter="ItemFound" ItemName="GclicxItems"/>
+    </FindInList>
+
+    <!-- Execute GCLM.EXE to generate the .gclicx file to be added to the resources -->
+    <!-- Note that MyBuildID property is specified.  If BuildId if not disable can be used instead. -->
+    <Exec Command="$(GCLMExe) $(MyBuildID) -lc &quot;$(IntermediateOutputPath).gclicx&quot; &quot;$(TargetFileName)&quot;"
+          Outputs="$(IntermediateOutputPath).gclicx"
+          IgnoreExitCode="true">
+      <Output Condition="@(GclicxItems->Count()) == 0"  TaskParameter="Outputs" ItemName="CompiledLicenseFile" />
+    </Exec>
+
+  </Target>
+</Project>

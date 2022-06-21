@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2013/05/nuspec.xsd">
+  <metadata>
+    <id>xunit.runner.devices</id>
+    <version>2.5.25</version>
+    <authors>Oren Novotny</authors>
+    <owners>Oren Novotny</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <license type="expression">MIT</license>
+    <licenseUrl>https://licenses.nuget.org/MIT</licenseUrl>
+    <projectUrl>https://github.com/xunit/devices.xunit</projectUrl>
+    <iconUrl>https://raw.githubusercontent.com/xunit/media/master/logo-512-transparent.png</iconUrl>
+    <description>Includes support for running xUnit.net v2 tests on iOS, Android, and UWP devices</description>
+    <copyright>Copyright (C) .NET Foundation</copyright>
+    <tags>xunit uwp xamarin android ios monoandroid tdd unit test</tags>
+    <repository type="git" url="https://github.com/xunit/devices.xunit" commit="5f214858db876ccba750f8125e566acd1aefe6f1" />
+    <dependencies>
+      <group targetFramework="MonoAndroid8.1">
+        <dependency id="Xamarin.Forms" version="3.3.0.912540" exclude="Build,Analyzers" />
+      </group>
+      <group targetFramework="UAP10.0" />
+      <group targetFramework="Xamarin.iOS1.0">
+        <dependency id="Xamarin.Forms" version="3.3.0.912540" exclude="Build,Analyzers" />
+      </group>
+    </dependencies>
+    <frameworkAssemblies>
+      <frameworkAssembly assemblyName="Java.Interop" targetFramework="MonoAndroid8.1" />
+    </frameworkAssemblies>
+  </metadata>
+</package>

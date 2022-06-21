@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2013/05/nuspec.xsd">
+  <metadata>
+    <id>C1.Xamarin.Forms.Core</id>
+    <version>4.8.20213.512</version>
+    <title>C1.Xamarin.Forms.Core</title>
+    <authors>GrapeCity, Inc.</authors>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <license type="file">license_EN.txt</license>
+    <licenseUrl>https://aka.ms/deprecateLicenseUrl</licenseUrl>
+    <icon>images\icon.png</icon>
+    <projectUrl>https://www.grapecity.com/en/componentone</projectUrl>
+    <iconUrl>http://files.grapecity.com/gccontent/gcbrand/samples/xamarin/C1logo_nuget.png</iconUrl>
+    <description>The core library includes common classes and controls.</description>
+    <copyright>(c) GrapeCity, Inc.. All rights reserved.</copyright>
+    <language>en-US</language>
+    <tags>Core ComponentOne Xamarin Xamarin.Forms</tags>
+    <readme>docs\README.md</readme>
+    <dependencies>
+      <group>
+        <dependency id="System.Xml.XmlSerializer" version="4.3.0" />
+        <dependency id="Xamarin.Forms" version="4.8.0.1560" />
+      </group>
+      <group targetFramework="Xamarin.iOS1.0">
+        <dependency id="System.Xml.XmlSerializer" version="4.3.0" />
+        <dependency id="Xamarin.Forms" version="4.8.0.1560" />
+        <dependency id="C1.iOS.Core" version="[4.8.20213.512]" />
+      </group>
+      <group targetFramework="MonoAndroid1.0">
+        <dependency id="System.Xml.XmlSerializer" version="4.3.0" />
+        <dependency id="Xamarin.Forms" version="4.8.0.1560" />
+        <dependency id="C1.Android.Core" version="[4.8.20213.512]" />
+      </group>
+    </dependencies>
+  </metadata>
+</package>

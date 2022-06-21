@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2013/05/nuspec.xsd">
+  <metadata>
+    <id>Xamarin.Android.Glide.GifDecoder</id>
+    <version>4.11.0</version>
+    <title>Glide GIF Decoder for Xamarin.Android</title>
+    <authors>Microsoft</authors>
+    <owners>Microsoft</owners>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <licenseUrl>https://go.microsoft.com/fwlink/?linkid=865026</licenseUrl>
+    <projectUrl>https://go.microsoft.com/fwlink/?linkid=864954</projectUrl>
+    <description>Xamarin.Android bindings for Glide GIF Decoder</description>
+    <copyright>© Microsoft Corporation. All rights reserved.</copyright>
+    <repository type="git" url="https://github.com/xamarin/XamarinComponents" branch="Glide-4.11.0" commit="255876178c51f2dd7f6d8761bec5e1131e9a67c4" />
+    <dependencies>
+      <group targetFramework="MonoAndroid10.0">
+        <dependency id="Xamarin.AndroidX.Annotation" version="1.1.0.1" exclude="Build,Analyzers" />
+      </group>
+    </dependencies>
+    <frameworkAssemblies>
+      <frameworkAssembly assemblyName="Java.Interop" targetFramework="MonoAndroid10.0" />
+    </frameworkAssemblies>
+  </metadata>
+</package>

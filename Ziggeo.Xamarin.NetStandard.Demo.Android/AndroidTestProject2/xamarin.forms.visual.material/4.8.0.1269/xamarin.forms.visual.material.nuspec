@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2013/05/nuspec.xsd">
+  <metadata>
+    <id>Xamarin.Forms.Visual.Material</id>
+    <version>4.8.0.1269+325-sha.f6490bf7d-azdo.3951545</version>
+    <authors>Microsoft</authors>
+    <owners>microsoft xamarin</owners>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <license type="expression">MIT</license>
+    <licenseUrl>https://licenses.nuget.org/MIT</licenseUrl>
+    <icon>Assets\xamarin_128x128.png</icon>
+    <projectUrl>http://xamarin.com/forms</projectUrl>
+    <description>Material renderers for Xamarin.Forms</description>
+    <copyright>© Microsoft Corporation. All rights reserved.</copyright>
+    <tags>xamarin forms visual material xamarinforms xamarinformsvisualmaterial xamarin.forms.visual.material</tags>
+    <repository type="git" url="https://github.com/xamarin/xamarin.forms" />
+    <dependencies>
+      <group>
+        <dependency id="Xamarin.Forms" version="4.8.0.1269" />
+      </group>
+      <group targetFramework="MonoAndroid1.0">
+        <dependency id="Xamarin.Forms" version="4.8.0.1269" />
+      </group>
+      <group targetFramework="MonoAndroid9.0">
+        <dependency id="Xamarin.Android.Support.Design" version="28.0.0.3" />
+        <dependency id="Xamarin.Android.Support.v7.AppCompat" version="28.0.0.3" />
+      </group>
+      <group targetFramework="MonoAndroid10.0">
+        <dependency id="Xamarin.AndroidX.Lifecycle.LiveData" version="2.1.0.1" />
+        <dependency id="Xamarin.Google.Android.Material" version="1.0.0.1" />
+      </group>
+      <group targetFramework="Xamarin.iOS1.0">
+        <dependency id="Xamarin.iOS.MaterialComponents" version="92.0.0" />
+      </group>
+      <group targetFramework="Tizen4.0">
+        <dependency id="Tizen.NET" version="4.0.0" />
+        <dependency id="Tizen.NET.MaterialComponents" version="0.9.7-preview" />
+      </group>
+    </dependencies>
+  </metadata>
+</package>

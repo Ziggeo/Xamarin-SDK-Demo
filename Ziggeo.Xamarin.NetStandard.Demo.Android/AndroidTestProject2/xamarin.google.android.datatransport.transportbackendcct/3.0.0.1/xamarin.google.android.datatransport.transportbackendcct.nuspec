@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2013/05/nuspec.xsd">
+  <metadata>
+    <id>Xamarin.Google.Android.DataTransport.TransportBackendCct</id>
+    <version>3.0.0.1</version>
+    <title>Xamarin.Google.Android.DataTransport.TransportBackendCct</title>
+    <authors>Microsoft</authors>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <licenseUrl>https://go.microsoft.com/fwlink/?linkid=865373</licenseUrl>
+    <projectUrl>https://go.microsoft.com/fwlink/?linkid=865435</projectUrl>
+    <description>Bindings for Xamarin Google.Android.DataTransport.TransportBackendCct package</description>
+    <copyright>© Microsoft Corporation. All rights reserved.</copyright>
+    <tags>xamarin, android, bindings, google, datatransport, transport, backend, cct</tags>
+    <repository type="git" url="https://maven.google.com/web/index.html#com.google.android.datatransport" branch="100.20211212-nuget-version-bump-to-unblock-grpc-template-set" commit="69cfa7190fc8ea012c63e09e81c11ef6ab747a14" />
+    <dependencies>
+      <group targetFramework="MonoAndroid9.0">
+        <dependency id="Xamarin.Google.Android.DataTransport.TransportApi" version="3.0.0.1" include="All" />
+        <dependency id="Xamarin.Google.Android.DataTransport.TransportRuntime" version="3.0.1.1" include="All" />
+        <dependency id="Xamarin.Firebase.Encoders.JSON" version="118.0.0.3" include="All" />
+        <dependency id="Xamarin.Firebase.Encoders" version="117.0.0.3" include="All" />
+        <dependency id="Xamarin.AndroidX.Annotation" version="1.2.0" exclude="Build,Analyzers" />
+      </group>
+      <group targetFramework="net6.0-android31.0">
+        <dependency id="Xamarin.Google.Android.DataTransport.TransportApi" version="3.0.0.1" include="All" />
+        <dependency id="Xamarin.Google.Android.DataTransport.TransportRuntime" version="3.0.1.1" include="All" />
+        <dependency id="Xamarin.Firebase.Encoders.JSON" version="118.0.0.3" include="All" />
+        <dependency id="Xamarin.Firebase.Encoders" version="117.0.0.3" include="All" />
+        <dependency id="Xamarin.AndroidX.Annotation" version="1.2.0" exclude="Build,Analyzers" />
+      </group>
+    </dependencies>
+    <frameworkAssemblies>
+      <frameworkAssembly assemblyName="Java.Interop" targetFramework="MonoAndroid9.0" />
+      <frameworkAssembly assemblyName="Mono.Android" targetFramework="MonoAndroid9.0" />
+      <frameworkAssembly assemblyName="mscorlib" targetFramework="MonoAndroid9.0" />
+      <frameworkAssembly assemblyName="System.Core" targetFramework="MonoAndroid9.0" />
+      <frameworkAssembly assemblyName="System" targetFramework="MonoAndroid9.0" />
+      <frameworkAssembly assemblyName="System.Numerics" targetFramework="MonoAndroid9.0" />
+      <frameworkAssembly assemblyName="System.Numerics.Vectors" targetFramework="MonoAndroid9.0" />
+      <frameworkAssembly assemblyName="System.Xml" targetFramework="MonoAndroid9.0" />
+    </frameworkAssemblies>
+  </metadata>
+</package>

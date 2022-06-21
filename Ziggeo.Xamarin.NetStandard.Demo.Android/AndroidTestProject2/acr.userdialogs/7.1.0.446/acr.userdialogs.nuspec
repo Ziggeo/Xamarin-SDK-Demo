@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2013/05/nuspec.xsd">
+  <metadata>
+    <id>Acr.UserDialogs</id>
+    <version>7.1.0.446</version>
+    <authors>Allan Ritchie</authors>
+    <owners>Allan Ritchie</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <license type="expression">MIT</license>
+    <licenseUrl>https://licenses.nuget.org/MIT</licenseUrl>
+    <projectUrl>https://github.com/aritchie/userdialogs</projectUrl>
+    <iconUrl>https://github.com/aritchie/userdialogs/raw/master/icon.png</iconUrl>
+    <description>A cross platform library that allows you to call for standard user dialogs from a shared/portable library. Supports Android, iOS, and UWP</description>
+    <releaseNotes>https://github.com/aritchie/userdialogs/raw/master/ChangeLog.md</releaseNotes>
+    <tags>windows ios android xamarin xam.pcl dialogs plugin</tags>
+    <repository type="git" url="https://github.com/aritchie/userdialogs" />
+    <dependencies>
+      <group targetFramework="MonoAndroid9.0">
+        <dependency id="AndHUD" version="1.4.2" exclude="Build,Analyzers" />
+        <dependency id="Xamarin.Android.Support.Design" version="28.0.0.3" exclude="Build,Analyzers" />
+      </group>
+      <group targetFramework="MonoAndroid10.0">
+        <dependency id="AndHUD" version="1.4.2" exclude="Build,Analyzers" />
+        <dependency id="Xamarin.Google.Android.Material" version="1.0.0" exclude="Build,Analyzers" />
+      </group>
+      <group targetFramework="Xamarin.iOS1.0">
+        <dependency id="BTProgressHUD" version="1.3.1" exclude="Build,Analyzers" />
+      </group>
+      <group targetFramework="Xamarin.Mac2.0" />
+      <group targetFramework="Xamarin.TVOS1.0" />
+      <group targetFramework=".NETStandard2.0" />
+      <group targetFramework="UAP10.0.16299">
+        <dependency id="Coding4Fun.Toolkit.Controls" version="2.1.8" exclude="Build,Analyzers" />
+      </group>
+    </dependencies>
+    <frameworkAssemblies>
+      <frameworkAssembly assemblyName="Java.Interop" targetFramework="MonoAndroid10.0, MonoAndroid9.0" />
+      <frameworkAssembly assemblyName="System.Drawing.Common" targetFramework="Xamarin.Mac2.0, Xamarin.TVOS1.0" />
+    </frameworkAssemblies>
+  </metadata>
+</package>
