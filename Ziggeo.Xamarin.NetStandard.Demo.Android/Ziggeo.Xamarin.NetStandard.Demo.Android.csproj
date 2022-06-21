@@ -69,6 +69,9 @@
     <PackageReference Include="Xamarin.Android.Glide">
       <Version>4.11.0</Version>
     </PackageReference>
+    <PackageReference Include="Xamarin.Android.Support.v4">
+      <Version>28.0.0.3</Version>
+    </PackageReference>
     <PackageReference Include="Xamarin.AndroidX.Media">
       <Version>1.2.0</Version>
     </PackageReference>
@@ -219,11 +222,5 @@
   <ItemGroup>
     <None Include="nuget.config" />
   </ItemGroup>
-<!--  <ItemGroup>-->
-<!--    <Compile Include="TestConfiguration.cs" />-->
-<!--  </ItemGroup>-->
-<!--  <Target Name="RunTests" DependsOnTargets="_ValidateAndroidPackageProperties">-->
-<!--    <Exec Command="&quot;$(_AndroidPlatformToolsDirectory)adb&quot; $(AdbTarget) $(AdbOptions) shell am instrument -w $(_AndroidPackage)/ziggeo.xamarin.netStandard.demo.droid.TestInstrumentation" />-->
-<!--  </Target>-->
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
 </Project>
