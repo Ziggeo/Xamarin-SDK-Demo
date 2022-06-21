@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-    <Import Project="..\..\packages\Xamarin.AndroidX.Migration.1.0.10\build\monoandroid120\Xamarin.AndroidX.Migration.props" Condition="Exists('..\..\packages\Xamarin.AndroidX.Migration.1.0.10\build\monoandroid120\Xamarin.AndroidX.Migration.props')" />
-    <Import Project="..\..\packages\Xamarin.Build.Download.0.10.0\build\Xamarin.Build.Download.props" Condition="Exists('..\..\packages\Xamarin.Build.Download.0.10.0\build\Xamarin.Build.Download.props')" />
+    <Import Project="packages\Xamarin.AndroidX.Migration.1.0.10\build\monoandroid120\Xamarin.AndroidX.Migration.props" Condition="Exists('..\..\packages\Xamarin.AndroidX.Migration.1.0.10\build\monoandroid120\Xamarin.AndroidX.Migration.props')" />
+    <Import Project="packages\Xamarin.Build.Download.0.10.0\build\Xamarin.Build.Download.props" Condition="Exists('..\..\packages\Xamarin.Build.Download.0.10.0\build\Xamarin.Build.Download.props')" />
     <PropertyGroup>
         <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
         <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
@@ -43,49 +43,49 @@
     </PropertyGroup>
     <ItemGroup>
         <Reference Include="ExoPlayer, Version=2.11.8.0, Culture=neutral, PublicKeyToken=null">
-          <HintPath>..\..\packages\Xam.Plugins.Android.ExoPlayer.2.11.8\lib\monoandroid10.0\ExoPlayer.dll</HintPath>
+          <HintPath>packages\Xam.Plugins.Android.ExoPlayer.2.11.8\lib\monoandroid10.0\ExoPlayer.dll</HintPath>
           <Private>True</Private>
         </Reference>
         <Reference Include="ExoPlayer.Core, Version=2.11.8.0, Culture=neutral, PublicKeyToken=null">
-          <HintPath>..\..\packages\Xam.Plugins.Android.ExoPlayer.Core.2.11.8\lib\monoandroid10.0\ExoPlayer.Core.dll</HintPath>
+          <HintPath>packages\Xam.Plugins.Android.ExoPlayer.Core.2.11.8\lib\monoandroid10.0\ExoPlayer.Core.dll</HintPath>
           <Private>True</Private>
         </Reference>
         <Reference Include="ExoPlayer.Dash, Version=2.11.8.0, Culture=neutral, PublicKeyToken=null">
-          <HintPath>..\..\packages\Xam.Plugins.Android.ExoPlayer.Dash.2.11.8\lib\monoandroid10.0\ExoPlayer.Dash.dll</HintPath>
+          <HintPath>packages\Xam.Plugins.Android.ExoPlayer.Dash.2.11.8\lib\monoandroid10.0\ExoPlayer.Dash.dll</HintPath>
           <Private>True</Private>
         </Reference>
         <Reference Include="ExoPlayer.Hls, Version=2.11.8.0, Culture=neutral, PublicKeyToken=null">
-          <HintPath>..\..\packages\Xam.Plugins.Android.ExoPlayer.Hls.2.11.8\lib\monoandroid10.0\ExoPlayer.Hls.dll</HintPath>
+          <HintPath>packages\Xam.Plugins.Android.ExoPlayer.Hls.2.11.8\lib\monoandroid10.0\ExoPlayer.Hls.dll</HintPath>
           <Private>True</Private>
         </Reference>
         <Reference Include="ExoPlayer.SmoothStreaming, Version=2.11.8.0, Culture=neutral, PublicKeyToken=null">
-          <HintPath>..\..\packages\Xam.Plugins.Android.ExoPlayer.SmoothStreaming.2.11.8\lib\monoandroid10.0\ExoPlayer.SmoothStreaming.dll</HintPath>
+          <HintPath>packages\Xam.Plugins.Android.ExoPlayer.SmoothStreaming.2.11.8\lib\monoandroid10.0\ExoPlayer.SmoothStreaming.dll</HintPath>
           <Private>True</Private>
         </Reference>
         <Reference Include="ExoPlayer.UI, Version=2.11.8.0, Culture=neutral, PublicKeyToken=null">
-          <HintPath>..\..\packages\Xam.Plugins.Android.ExoPlayer.UI.2.11.8\lib\monoandroid10.0\ExoPlayer.UI.dll</HintPath>
+          <HintPath>packages\Xam.Plugins.Android.ExoPlayer.UI.2.11.8\lib\monoandroid10.0\ExoPlayer.UI.dll</HintPath>
           <Private>True</Private>
         </Reference>
         <Reference Include="Google.ZXing.Core, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null">
-          <HintPath>..\..\packages\Xamarin.Google.ZXing.Core.3.3.3\lib\monoandroid90\Google.ZXing.Core.dll</HintPath>
+          <HintPath>packages\Xamarin.Google.ZXing.Core.3.3.3\lib\monoandroid90\Google.ZXing.Core.dll</HintPath>
           <Private>True</Private>
         </Reference>
         <Reference Include="GoogleGson, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
-          <HintPath>..\..\packages\GoogleGson.2.8.6\lib\monoandroid90\GoogleGson.dll</HintPath>
+          <HintPath>packages\GoogleGson.2.8.6\lib\monoandroid90\GoogleGson.dll</HintPath>
           <Private>True</Private>
         </Reference>
         <Reference Include="Java.Interop" />
         <Reference Include="Karumi.Dexter, Version=6.2.0.0, Culture=neutral, PublicKeyToken=null">
-          <HintPath>..\..\packages\Karamunting.Android.Karumi.Dexter.6.2.0\lib\monoandroid90\Karumi.Dexter.dll</HintPath>
+          <HintPath>packages\Karamunting.Android.Karumi.Dexter.6.2.0\lib\monoandroid90\Karumi.Dexter.dll</HintPath>
           <Private>True</Private>
         </Reference>
         <Reference Include="mscorlib" />
         <Reference Include="Naxam.SquareUp.OkHttp3.LoggingInterceptor, Version=3.11.0.0, Culture=neutral, PublicKeyToken=null">
-          <HintPath>..\..\packages\Naxam.SquareUp.OkHttp3.LoggingInterceptor.3.11.0\lib\MonoAndroid10\Naxam.SquareUp.OkHttp3.LoggingInterceptor.dll</HintPath>
+          <HintPath>packages\Naxam.SquareUp.OkHttp3.LoggingInterceptor.3.11.0\lib\MonoAndroid10\Naxam.SquareUp.OkHttp3.LoggingInterceptor.dll</HintPath>
           <Private>True</Private>
         </Reference>
         <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed">
-          <HintPath>..\..\packages\Newtonsoft.Json.12.0.2\lib\netstandard2.0\Newtonsoft.Json.dll</HintPath>
+          <HintPath>packages\Newtonsoft.Json.12.0.2\lib\netstandard2.0\Newtonsoft.Json.dll</HintPath>
           <Private>True</Private>
         </Reference>
         <Reference Include="Square.OkHttp3, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null">
@@ -557,19 +557,19 @@
           <Private>True</Private>
         </Reference>
         <Reference Include="Xamarin.KotlinX.Coroutines.Core.Jvm, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
-          <HintPath>..\..\packages\Xamarin.KotlinX.Coroutines.Core.Jvm.1.6.2.1\lib\monoandroid12.0\Xamarin.KotlinX.Coroutines.Core.Jvm.dll</HintPath>
+          <HintPath>packages\Xamarin.KotlinX.Coroutines.Core.Jvm.1.6.2.1\lib\monoandroid12.0\Xamarin.KotlinX.Coroutines.Core.Jvm.dll</HintPath>
           <Private>True</Private>
         </Reference>
         <Reference Include="Ziggeo.Xamarin.Android, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
-          <HintPath>..\..\packages\Ziggeo.XamarinSDK.Netstandard.1.3.4\lib\MonoAndroid\Ziggeo.Xamarin.Android.dll</HintPath>
+          <HintPath>packages\Ziggeo.XamarinSDK.Netstandard.1.3.4\lib\MonoAndroid\Ziggeo.Xamarin.Android.dll</HintPath>
           <Private>True</Private>
         </Reference>
         <Reference Include="Ziggeo.Xamarin.Android.Binding, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
-          <HintPath>..\..\packages\Ziggeo.XamarinSDK.Netstandard.1.3.4\lib\MonoAndroid\Ziggeo.Xamarin.Android.Binding.dll</HintPath>
+          <HintPath>packages\Ziggeo.XamarinSDK.Netstandard.1.3.4\lib\MonoAndroid\Ziggeo.Xamarin.Android.Binding.dll</HintPath>
           <Private>True</Private>
         </Reference>
         <Reference Include="Ziggeo.Xamarin.NetStandard, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
-          <HintPath>..\..\packages\Ziggeo.XamarinSDK.Netstandard.1.3.4\lib\MonoAndroid\Ziggeo.Xamarin.NetStandard.dll</HintPath>
+          <HintPath>packages\Ziggeo.XamarinSDK.Netstandard.1.3.4\lib\MonoAndroid\Ziggeo.Xamarin.NetStandard.dll</HintPath>
           <Private>True</Private>
         </Reference>
     </ItemGroup>
