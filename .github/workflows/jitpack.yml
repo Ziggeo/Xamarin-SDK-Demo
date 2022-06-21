@@ -29,8 +29,8 @@ jobs:
 #      - name: Install dependencies
 #        run: nuget install ./Ziggeo.Xamarin.NetStandard.Demo.Android/AndroidTestProject2/packages.config
       
-      - name: Install Ziggeo
-        run: nuget restore -o ./Ziggeo.Xamarin.NetStandard.Demo.Android/AndroidTestProject2
+#      - name: Install Ziggeo
+#        run: nuget restore -o ./Ziggeo.Xamarin.NetStandard.Demo.Android/AndroidTestProject2
 
       - name: Build
         run: msbuild Ziggeo.Xamarin.NetStandard.Demo.Android/AndroidTestProject2/AndroidTestProject2.csproj /t:Clean;Rebuild /t:PackageForAndroid /p:Configuration=Debug
