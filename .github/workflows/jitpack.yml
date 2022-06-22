@@ -25,9 +25,15 @@ jobs:
 
       - name: Install test dependencies
         run: dotnet restore ./Ziggeo.Xamarin.NetStandard.Demo.Android/AndroidTestProject2/AndroidTestProject2.csproj
-        
-#      - name: Install Ziggeo
-#        run: dotnet add ./Ziggeo.Xamarin.NetStandard.Demo.Android/AndroidTestProject2/AndroidTestProject2.csproj package Ziggeo.XamarinSDK.Netstandard
+
+      - name: Nuget Instal
+        run: |
+          cd Ziggeo.Xamarin.NetStandard.Demo.Android \
+          cd AndroidTestProject2 \
+          nuget install
+      
+      #      - name: Install Ziggeo
+      #        run: dotnet add ./Ziggeo.Xamarin.NetStandard.Demo.Android/AndroidTestProject2/AndroidTestProject2.csproj package Ziggeo.XamarinSDK.Netstandard
 
       - name: Build
         uses: reactivecircus/android-emulator-runner@v2
