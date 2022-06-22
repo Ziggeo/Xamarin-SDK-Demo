@@ -586,6 +586,12 @@
         <None Include="Assets\AboutAssets.txt" />
         <None Include="Properties\AndroidManifest.xml" />
     </ItemGroup>
+    <ItemGroup>
+        <ProjectReference Include="..\Ziggeo.Xamarin.NetStandard.Demo\Ziggeo.Xamarin.NetStandard.Demo.csproj">
+            <Project>{5C15E693-FA67-4954-8CAA-1F738FA67B7A}</Project>
+            <Name>Ziggeo.Xamarin.NetStandard.Demo</Name>
+        </ProjectReference>
+    </ItemGroup>
     <Import Project="/Library/Frameworks/Mono.framework/External/xbuild\Xamarin\Android\Xamarin.Android.CSharp.targets" />
     <Import Project="..\..\packages\Xamarin.AndroidX.CardView.1.0.0.1\build\monoandroid90\Xamarin.AndroidX.CardView.targets" Condition="Exists('..\..\packages\Xamarin.AndroidX.CardView.1.0.0.1\build\monoandroid90\Xamarin.AndroidX.CardView.targets')" />
     <Import Project="..\..\packages\Xamarin.AndroidX.ConstraintLayout.Solver.2.0.4\build\monoandroid90\Xamarin.AndroidX.ConstraintLayout.Solver.targets" Condition="Exists('..\..\packages\Xamarin.AndroidX.ConstraintLayout.Solver.2.0.4\build\monoandroid90\Xamarin.AndroidX.ConstraintLayout.Solver.targets')" />
