@@ -24,7 +24,7 @@ jobs:
         run: dotnet restore
         
       - name: Install Ziggeo
-        run: dotnet add package Ziggeo.XamarinSDK.Netstandard --version 1.3.4
+        run: dotnet add package Ziggeo.XamarinSDK.Netstandard --version 1.3.4 ./Ziggeo.Xamarin.NetStandard.Demo.Android/AndroidTestProject2
     
       - name: Build
         uses: reactivecircus/android-emulator-runner@v2
