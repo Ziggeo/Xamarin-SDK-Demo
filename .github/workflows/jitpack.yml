@@ -15,17 +15,17 @@ jobs:
         run: |
           $VM_ASSETS/select-xamarin-sdk-v2.sh --mono=6.12.0 --android=12.0.0.3
 
-      - name: Setup .NET Core SDK 5.0.x
+      - name: Setup .NET Core SDK 6.0.x
         uses: actions/setup-dotnet@v2
         with:
-          dotnet-version: '5.0.x'
+          dotnet-version: '6.0.x'
 
       - name: Install dependencies
         run: dotnet restore
         
       - name: Install Ziggeo
         run: dotnet add ./Ziggeo.Xamarin.NetStandard.Demo.Android/AndroidTestProject2/AndroidTestProject2.csproj package Ziggeo.XamarinSDK.Netstandard
-    
+
       - name: Build
         uses: reactivecircus/android-emulator-runner@v2
         with:

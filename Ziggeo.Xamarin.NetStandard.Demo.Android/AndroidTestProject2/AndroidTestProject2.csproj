@@ -560,6 +560,18 @@
           <HintPath>..\..\packages\Xamarin.KotlinX.Coroutines.Core.Jvm.1.6.2.1\lib\monoandroid12.0\Xamarin.KotlinX.Coroutines.Core.Jvm.dll</HintPath>
           <Private>True</Private>
         </Reference>
+        <Reference Include="Ziggeo.Xamarin.Android, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+          <HintPath>..\..\packages\Ziggeo.XamarinSDK.Netstandard.1.3.4\lib\MonoAndroid\Ziggeo.Xamarin.Android.dll</HintPath>
+          <Private>True</Private>
+        </Reference>
+        <Reference Include="Ziggeo.Xamarin.Android.Binding, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+          <HintPath>..\..\packages\Ziggeo.XamarinSDK.Netstandard.1.3.4\lib\MonoAndroid\Ziggeo.Xamarin.Android.Binding.dll</HintPath>
+          <Private>True</Private>
+        </Reference>
+        <Reference Include="Ziggeo.Xamarin.NetStandard, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+          <HintPath>..\..\packages\Ziggeo.XamarinSDK.Netstandard.1.3.4\lib\MonoAndroid\Ziggeo.Xamarin.NetStandard.dll</HintPath>
+          <Private>True</Private>
+        </Reference>
     </ItemGroup>
     <ItemGroup>
         <Compile Include="MainActivity.cs" />
@@ -574,7 +586,7 @@
         <None Include="Assets\AboutAssets.txt" />
         <None Include="Properties\AndroidManifest.xml" />
     </ItemGroup>
-    <Import Project="$(MSBuildBinPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
+    <Import Project="/Library/Frameworks/Mono.framework/External/xbuild\Xamarin\Android\Xamarin.Android.CSharp.targets" />
     <Import Project="..\..\packages\Xamarin.AndroidX.CardView.1.0.0.1\build\monoandroid90\Xamarin.AndroidX.CardView.targets" Condition="Exists('..\..\packages\Xamarin.AndroidX.CardView.1.0.0.1\build\monoandroid90\Xamarin.AndroidX.CardView.targets')" />
     <Import Project="..\..\packages\Xamarin.AndroidX.ConstraintLayout.Solver.2.0.4\build\monoandroid90\Xamarin.AndroidX.ConstraintLayout.Solver.targets" Condition="Exists('..\..\packages\Xamarin.AndroidX.ConstraintLayout.Solver.2.0.4\build\monoandroid90\Xamarin.AndroidX.ConstraintLayout.Solver.targets')" />
     <Import Project="..\..\packages\Xamarin.AndroidX.ExifInterface.1.3.2.2\build\monoandroid9.0\Xamarin.AndroidX.ExifInterface.targets" Condition="Exists('..\..\packages\Xamarin.AndroidX.ExifInterface.1.3.2.2\build\monoandroid9.0\Xamarin.AndroidX.ExifInterface.targets')" />
