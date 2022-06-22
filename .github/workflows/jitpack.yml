@@ -43,7 +43,7 @@ jobs:
           working-directory: ./Ziggeo.Xamarin.NetStandard.Demo.Android/AndroidTestProject2
           profile: Nexus 4
           script: |
-            msbuild AndroidTestProject2.csproj /t:Clean /t:Build /t:PackageForAndroid /t:Install /p:Configuration=Debug \
+            msbuild AndroidTestProject2.csproj /t:Build /t:PackageForAndroid /t:Install /p:Configuration=Debug \
             adb shell pm list instrumentation \
             adb shell am instrument -w AndroidTestProject2.AndroidTestProject2/app.tests.TestInstrumentation
     
