@@ -31,9 +31,10 @@ jobs:
         with:
           api-level: ${{ matrix.api-level }}
           target: ${{ matrix.target }}
+          working-directory: ./Ziggeo.Xamarin.NetStandard.Demo.Android/AndroidTestProject2
           profile: Nexus 4
           script: |
-            msbuild Ziggeo.Xamarin.NetStandard.Demo.Android/AndroidTestProject2/AndroidTestProject2.csproj /t:Clean /t:Build /t:PackageForAndroid /p:Configuration=Debug \
+            msbuild AndroidTestProject2.csproj /t:Clean /t:Build /t:PackageForAndroid /p:Configuration=Debug \
             adb shell pm list instrumentation \
             adb shell am instrument -w AndroidTestProject2.AndroidTestProject2/app.tests.TestInstrumentation
       
