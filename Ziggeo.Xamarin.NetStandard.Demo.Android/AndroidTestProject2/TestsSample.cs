@@ -1,13 +1,13 @@
 ﻿using System.Drawing;
 using NUnit.Framework;
-// using Ziggeo;
+using Ziggeo;
 
 namespace AndroidTestProject2
 {
     [TestFixture]
     public class TestsSample
     {
-        // private ZiggeoApplication _ziggeo;
+        private ZiggeoApplication _ziggeo;
         private string _appToken = "TOKEN";
         private string _ServerAuthToken = "ServerAuthToken";
         private string _ClientAuthToken = "ClientAuthToken";
@@ -17,9 +17,9 @@ namespace AndroidTestProject2
         {
             // _ziggeo = new ZiggeoApplication
             // {
-            //     AppToken = _appToken,
-            //     ServerAuthToken = _ServerAuthToken,
-            //     ClientAuthToken = _ClientAuthToken
+            // AppToken = _appToken,
+            // ServerAuthToken = _ServerAuthToken,
+            // ClientAuthToken = _ClientAuthToken
             // };
         }
         
