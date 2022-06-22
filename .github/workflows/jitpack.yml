@@ -32,16 +32,17 @@ jobs:
           api-level: ${{ matrix.api-level }}
           target: ${{ matrix.target }}
           profile: Nexus 4
-          script: "msbuild Ziggeo.Xamarin.NetStandard.Demo.Android/AndroidTestProject2/AndroidTestProject2.csproj /t:Clean /t:Build /t:PackageForAndroid /p:Configuration=Debug"
-
-      - name: Run Xamarin tests
-        uses: reactivecircus/android-emulator-runner@v2
-        with:
-          api-level: ${{ matrix.api-level }}
-          target: ${{ matrix.target }}
-          working-directory: ./Ziggeo.Xamarin.NetStandard.Demo.Android/AndroidTestProject2
-          profile: Nexus 4
-          script: " adb shell am instrument -w AndroidTestProject2.AndroidTestProject2/app.tests.TestInstrumentation "
+          script: "msbuild Ziggeo.Xamarin.NetStandard.Demo.Android/AndroidTestProject2/AndroidTestProject2.csproj /t:Clean /t:Build /t:PackageForAndroid /p:Configuration=Debug
+                  adb shell am instrument -w AndroidTestProject2.AndroidTestProject2/app.tests.TestInstrumentation"
+      
+      #      - name: Run Xamarin tests
+      #        uses: reactivecircus/android-emulator-runner@v2
+      #        with:
+      #          api-level: ${{ matrix.api-level }}
+      #          target: ${{ matrix.target }}
+      #          working-directory: ./Ziggeo.Xamarin.NetStandard.Demo.Android/AndroidTestProject2
+      #          profile: Nexus 4
+      #          script: " adb shell am instrument -w AndroidTestProject2.AndroidTestProject2/app.tests.TestInstrumentation "
 
       #      - name: "Run Xamarin tests"
       #        uses: reactivecircus/android-emulator-runner@v2
