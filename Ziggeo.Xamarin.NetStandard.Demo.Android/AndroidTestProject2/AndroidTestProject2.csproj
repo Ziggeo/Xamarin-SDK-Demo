@@ -394,16 +394,16 @@
           <Private>True</Private>
         </Reference>
         <Reference Include="Ziggeo.Xamarin.Android, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
-            <HintPath>..\..\packages\Ziggeo.XamarinSDK.Netstandard.1.3.4\lib\MonoAndroid\Ziggeo.Xamarin.Android.dll</HintPath>
-            <Private>True</Private>
+          <HintPath>..\..\packages\Ziggeo.XamarinSDK.Netstandard.1.3.4\lib\MonoAndroid\Ziggeo.Xamarin.Android.dll</HintPath>
+          <Private>True</Private>
         </Reference>
         <Reference Include="Ziggeo.Xamarin.Android.Binding, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
-            <HintPath>..\..\packages\Ziggeo.XamarinSDK.Netstandard.1.3.4\lib\MonoAndroid\Ziggeo.Xamarin.Android.Binding.dll</HintPath>
-            <Private>True</Private>
+          <HintPath>..\..\packages\Ziggeo.XamarinSDK.Netstandard.1.3.4\lib\MonoAndroid\Ziggeo.Xamarin.Android.Binding.dll</HintPath>
+          <Private>True</Private>
         </Reference>
         <Reference Include="Ziggeo.Xamarin.NetStandard, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
-            <HintPath>..\..\packages\Ziggeo.XamarinSDK.Netstandard.1.3.4\lib\MonoAndroid\Ziggeo.Xamarin.NetStandard.dll</HintPath>
-            <Private>True</Private>
+          <HintPath>..\..\packages\Ziggeo.XamarinSDK.Netstandard.1.3.4\lib\MonoAndroid\Ziggeo.Xamarin.NetStandard.dll</HintPath>
+          <Private>True</Private>
         </Reference>
         <PackageReference Include="Ziggeo.XamarinSDK.Netstandard">
             <Version>1.3.4</Version>
