@@ -104,6 +104,17 @@ namespace AndroidTestProject2
             _ziggeo.Ziggeo.RecorderConfig = CameraRecorderConfigMapper.Map(_ziggeo.CameraRecorderConfig);
             Assert.IsTrue(_ziggeo.Ziggeo.RecorderConfig.BlurMode);
         }
+        
+        [Test]
+        public void RecorderConfigPausableModeTest()
+        {
+            _ziggeo.CameraRecorderConfig = new CameraRecorderConfig
+            {
+                IsPausedMode = true
+            };
+            _ziggeo.Ziggeo.RecorderConfig = CameraRecorderConfigMapper.Map(_ziggeo.CameraRecorderConfig);
+            Assert.IsTrue(_ziggeo.Ziggeo.RecorderConfig.IsPausedMode);
+        }
 
         [Test]
         public void RecorderConfigShouldSendImmediatelyTest()
@@ -212,7 +223,7 @@ namespace AndroidTestProject2
                 ShouldShowSubtitles = true
             };
             _ziggeo.Ziggeo.PlayerConfig = PlayerConfigMapper.Map(_ziggeo.PlayerConfig);
-            Assert.IsFalse(_ziggeo.Ziggeo.PlayerConfig.ShouldShowSubtitles);
+            Assert.IsTrue(_ziggeo.Ziggeo.PlayerConfig.ShouldShowSubtitles);
         }
 
         [Test]
@@ -223,7 +234,7 @@ namespace AndroidTestProject2
                 IsMuted = true
             };
             _ziggeo.Ziggeo.PlayerConfig = PlayerConfigMapper.Map(_ziggeo.PlayerConfig);
-            Assert.IsFalse(_ziggeo.Ziggeo.PlayerConfig.Muted);
+            Assert.IsTrue(_ziggeo.Ziggeo.PlayerConfig.Muted);
         }
         
         [Test]
