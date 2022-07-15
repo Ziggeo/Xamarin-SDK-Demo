@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:resources="clr-namespace:Ziggeo.Xamarin.NetStandard.Demo;assembly=Ziggeo.Xamarin.NetStandard.Demo"
+             x:Class="Ziggeo.Xamarin.NetStandard.Demo.Views.ListInfoPage"
+             Title="{x:Static resources:AppResources.sdks_header}">
+
+    <ContentPage.Content>
+        <StackLayout>
+            <ListView x:Name="ItemsListView"
+                      BackgroundColor="White"
+                      ItemsSource="{Binding Items}"
+                      HasUnevenRows="true"
+                      CachingStrategy="RecycleElement"
+                      ItemSelected="OnItemSelected">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout>
+                                <Grid
+                                    HorizontalOptions="Fill"
+                                    VerticalOptions="Fill">
+                                    <Image
+                                        Margin="{StaticResource DefaultPadding}"
+                                        HeightRequest="{StaticResource ListInfoImageHeight}"
+                                        Source="{Binding Logo}" />
+                                    <BoxView
+                                        HorizontalOptions="Fill"
+                                        VerticalOptions="Fill"
+                                        BackgroundColor="#000000"
+                                        Opacity="0.2" />
+                                </Grid>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

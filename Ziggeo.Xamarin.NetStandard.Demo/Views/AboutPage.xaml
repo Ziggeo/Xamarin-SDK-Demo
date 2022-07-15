@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Ziggeo.Xamarin.NetStandard.Demo.Views.AboutPage"
+             xmlns:resources="clr-namespace:Ziggeo.Xamarin.NetStandard.Demo;"
+             xmlns:viewModels="clr-namespace:Ziggeo.Xamarin.NetStandard.Demo.ViewModels;assembly=Ziggeo.Xamarin.NetStandard.Demo"
+             Title="{x:Static resources:AppResources.about_header}">
+
+    <ContentPage.BindingContext>
+        <viewModels:AboutViewModel />
+    </ContentPage.BindingContext>
+
+    <ScrollView>
+        <StackLayout Padding="{StaticResource DefaultPadding}">
+
+            <Label
+                FontSize="{StaticResource TitleFontSize}"
+                FontAttributes="Bold"
+                HorizontalTextAlignment="Center"
+                Text="{x:Static resources:AppResources.about_title}" />
+
+            <Label
+                FontSize="{StaticResource MessageFontSize}">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span Text="Visit " />
+                        <Span Text="GitHub"
+                              TextColor="Accent"
+                              TextDecorations="Underline">
+                            <Span.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding OpenWebCommand}"
+                                                      CommandParameter="https://github.com/Ziggeo/Android-Client-SDK" />
+                            </Span.GestureRecognizers>
+                        </Span>
+                        <Span
+                            Text=" if you want to star us or just to see the sources.&#10;&#10;You might also want to take a look at other sections." />
+                        <Span Text="&#10;&#10;Learn: &#10;" />
+                        <Span Text="- Quick start&#10;"
+                              TextColor="Accent"
+                              TextDecorations="Underline">
+                            <Span.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding OpenWebCommand}"
+                                                      CommandParameter="https://ziggeo.com/quickstart" />
+                            </Span.GestureRecognizers>
+                        </Span>
+                        <Span Text="- Screencasts&#10;"
+                              TextColor="Accent"
+                              TextDecorations="Underline">
+                            <Span.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding OpenWebCommand}"
+                                                      CommandParameter="https://ziggeo.com/screencasts" />
+                            </Span.GestureRecognizers>
+                        </Span>
+                        <Span Text="- Webinars"
+                              TextColor="Accent"
+                              TextDecorations="Underline">
+                            <Span.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding OpenWebCommand}"
+                                                      CommandParameter="https://ziggeo.com/webinars" />
+                            </Span.GestureRecognizers>
+                        </Span>
+                        <Span Text="&#10;&#10;Reference: &#10;" />
+                        <Span Text="- Documentation&#10;"
+                              TextColor="Accent"
+                              TextDecorations="Underline">
+                            <Span.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding OpenWebCommand}"
+                                                      CommandParameter="https://ziggeo.com/docs" />
+                            </Span.GestureRecognizers>
+                        </Span>
+                        <Span Text="- FAQs&#10;"
+                              TextColor="Accent"
+                              TextDecorations="Underline">
+                            <Span.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding OpenWebCommand}"
+                                                      CommandParameter="https://support.ziggeo.com" />
+                            </Span.GestureRecognizers>
+                        </Span>
+                        <Span Text="- Integrations&#10;"
+                              TextColor="Accent"
+                              TextDecorations="Underline">
+                            <Span.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding OpenWebCommand}"
+                                                      CommandParameter="https://ziggeo.com/integrations" />
+                            </Span.GestureRecognizers>
+                        </Span>
+                        <Span Text="&#10;&#10;Sandboxes: &#10;" />
+                        <Span Text="- Configuration&#10;"
+                              TextColor="Accent"
+                              TextDecorations="Underline">
+                            <Span.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding OpenWebCommand}"
+                                                      CommandParameter="https://ziggeo.com/sandbox/configuration" />
+                            </Span.GestureRecognizers>
+                        </Span>
+                        <Span Text="- Server-Side&#10;"
+                              TextColor="Accent"
+                              TextDecorations="Underline">
+                            <Span.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding OpenWebCommand}"
+                                                      CommandParameter="https://ziggeo.com/sandbox/serverside" />
+                            </Span.GestureRecognizers>
+                        </Span>
+                        <Span Text="- Authorization Tokens&#10;"
+                              TextColor="Accent"
+                              TextDecorations="Underline">
+                            <Span.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding OpenWebCommand}"
+                                                      CommandParameter="https://ziggeo.com/sandbox/authorization-tokens" />
+                            </Span.GestureRecognizers>
+                        </Span>
+                        <Span Text="- Webhooks Builder&#10;"
+                              TextColor="Accent"
+                              TextDecorations="Underline">
+                            <Span.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding OpenWebCommand}"
+                                                      CommandParameter="https://ziggeo.com/sandbox/webhooks" />
+                            </Span.GestureRecognizers>
+                        </Span>
+                        <Span Text="&#10;&#10;Community: &#10;" />
+                        <Span Text="- Forum&#10;"
+                              TextColor="Accent"
+                              TextDecorations="Underline">
+                            <Span.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding OpenWebCommand}"
+                                                      CommandParameter="https://support.ziggeo.com/hc/en-us/community/posts" />
+                            </Span.GestureRecognizers>
+                        </Span>
+                        <Span Text="- StackOverflow&#10;"
+                              TextColor="Accent"
+                              TextDecorations="Underline">
+                            <Span.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding OpenWebCommand}"
+                                                      CommandParameter="https://stackoverflow.com/search?q=ziggeo" />
+                            </Span.GestureRecognizers>
+                        </Span>
+                        <Span Text="&#10;&#10;Support: &#10;" />
+                        <Span Text="- Support&#10;"
+                              TextColor="Accent"
+                              TextDecorations="Underline">
+                            <Span.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding OpenWebCommand}"
+                                                      CommandParameter="mailto:support@ziggeo.com" />
+                            </Span.GestureRecognizers>
+                        </Span>
+                        <Span Text="- Dev Updates&#10;"
+                              TextColor="Accent"
+                              TextDecorations="Underline">
+                            <Span.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding OpenWebCommand}"
+                                                      CommandParameter="https://ziggeo.com/dev-updates" />
+                            </Span.GestureRecognizers>
+                        </Span>
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

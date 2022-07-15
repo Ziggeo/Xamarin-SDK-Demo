@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2013/05/nuspec.xsd">
+  <metadata>
+    <id>Ziggeo.Xamarin.NetStandard.Nuget</id>
+    <version>1.0.48</version>
+    <title></title>
+    <authors>alex</authors>
+    <owners>alex</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Ziggeo.Xamarin.NetStandard.Nuget</description>
+    <summary></summary>
+    <releaseNotes></releaseNotes>
+    <copyright></copyright>
+    <language></language>
+    <dependencies>
+      <group targetFramework="Xamarin.iOS1.0">
+        <dependency id="Microsoft.CSharp" version="4.5.0" />
+        <dependency id="Microsoft.NETCore.Platforms" version="2.2.0" />
+        <dependency id="Microsoft.Win32.Primitives" version="4.3.0" />
+        <dependency id="NETStandard.Library" version="2.0.3" />
+        <dependency id="Newtonsoft.Json" version="12.0.1" />
+        <dependency id="System.AppContext" version="4.3.0" />
+        <dependency id="System.Collections" version="4.3.0" />
+        <dependency id="System.Collections.Concurrent" version="4.3.0" />
+        <dependency id="System.ComponentModel.TypeConverter" version="4.3.0" />
+        <dependency id="System.Console" version="4.3.1" />
+        <dependency id="System.Diagnostics.Debug" version="4.3.0" />
+        <dependency id="System.Diagnostics.Tools" version="4.3.0" />
+        <dependency id="System.Diagnostics.Tracing" version="4.3.0" />
+        <dependency id="System.Globalization" version="4.3.0" />
+        <dependency id="System.Globalization.Calendars" version="4.3.0" />
+        <dependency id="System.IO" version="4.3.0" />
+        <dependency id="System.IO.Compression" version="4.3.0" />
+        <dependency id="System.IO.Compression.ZipFile" version="4.3.0" />
+        <dependency id="System.IO.FileSystem" version="4.3.0" />
+        <dependency id="System.IO.FileSystem.Primitives" version="4.3.0" />
+        <dependency id="System.Linq" version="4.3.0" />
+        <dependency id="System.Linq.Expressions" version="4.3.0" />
+        <dependency id="System.Net.Http" version="4.3.4" />
+        <dependency id="System.Net.Primitives" version="4.3.0" />
+        <dependency id="System.Net.Sockets" version="4.3.0" />
+        <dependency id="System.ObjectModel" version="4.3.0" />
+        <dependency id="System.Reflection" version="4.3.0" />
+        <dependency id="System.Reflection.Extensions" version="4.3.0" />
+        <dependency id="System.Reflection.Primitives" version="4.3.0" />
+        <dependency id="System.Resources.ResourceManager" version="4.3.0" />
+        <dependency id="System.Runtime" version="4.3.1" />
+        <dependency id="System.Runtime.Extensions" version="4.3.1" />
+        <dependency id="System.Runtime.Handles" version="4.3.0" />
+        <dependency id="System.Runtime.InteropServices" version="4.3.0" />
+        <dependency id="System.Runtime.InteropServices.RuntimeInformation" version="4.3.0" />
+        <dependency id="System.Runtime.Numerics" version="4.3.0" />
+        <dependency id="System.Runtime.Serialization.Formatters" version="4.3.0" />
+        <dependency id="System.Runtime.Serialization.Primitives" version="4.3.0" />
+        <dependency id="System.Security.Cryptography.Algorithms" version="4.3.1" />
+        <dependency id="System.Security.Cryptography.Encoding" version="4.3.0" />
+        <dependency id="System.Security.Cryptography.Primitives" version="4.3.0" />
+        <dependency id="System.Security.Cryptography.X509Certificates" version="4.3.2" />
+        <dependency id="System.Text.Encoding" version="4.3.0" />
+        <dependency id="System.Text.Encoding.Extensions" version="4.3.0" />
+        <dependency id="System.Text.RegularExpressions" version="4.3.0" />
+        <dependency id="System.Threading" version="4.3.0" />
+        <dependency id="System.Threading.Tasks" version="4.3.0" />
+        <dependency id="System.Threading.Timer" version="4.3.0" />
+        <dependency id="System.Xml.ReaderWriter" version="4.3.1" />
+        <dependency id="System.Xml.XDocument" version="4.3.0" />
+        <dependency id="System.Xml.XmlDocument" version="4.3.0" />
+      </group>
+      <group targetFramework=".NETStandard2.0">
+        <dependency id="Newtonsoft.Json" version="12.0.1" />
+      </group>
+      <group targetFramework="MonoAndroid8.1">
+        <dependency id="GoogleGson" version="2.8.1" />
+        <dependency id="Microsoft.CSharp" version="4.5.0" />
+        <dependency id="Microsoft.NETCore.Platforms" version="2.2.0" />
+        <dependency id="Microsoft.Win32.Primitives" version="4.3.0" />
+        <dependency id="Naxam.ReactiveStreams.Droid" version="1.0.1" />
+        <dependency id="Naxam.RxJava2.Droid" version="2.1.2" />
+        <dependency id="Naxam.SquareUp.OkHttp3.LoggingInterceptor" version="3.11.0" />
+        <dependency id="NETStandard.Library" version="2.0.3" />
+        <dependency id="Newtonsoft.Json" version="12.0.1" />
+        <dependency id="Square.OkHttp3" version="3.8.1" />
+        <dependency id="Square.OkIO" version="1.13.0" />
+        <dependency id="System.AppContext" version="4.3.0" />
+        <dependency id="System.Collections" version="4.3.0" />
+        <dependency id="System.Collections.Concurrent" version="4.3.0" />
+        <dependency id="System.ComponentModel.TypeConverter" version="4.3.0" />
+        <dependency id="System.Console" version="4.3.1" />
+        <dependency id="System.Diagnostics.Debug" version="4.3.0" />
+        <dependency id="System.Diagnostics.Tools" version="4.3.0" />
+        <dependency id="System.Diagnostics.Tracing" version="4.3.0" />
+        <dependency id="System.Globalization" version="4.3.0" />
+        <dependency id="System.Globalization.Calendars" version="4.3.0" />
+        <dependency id="System.IO" version="4.3.0" />
+        <dependency id="System.IO.Compression" version="4.3.0" />
+        <dependency id="System.IO.Compression.ZipFile" version="4.3.0" />
+        <dependency id="System.IO.FileSystem" version="4.3.0" />
+        <dependency id="System.IO.FileSystem.Primitives" version="4.3.0" />
+        <dependency id="System.Linq" version="4.3.0" />
+        <dependency id="System.Linq.Expressions" version="4.3.0" />
+        <dependency id="System.Net.Http" version="4.3.4" />
+        <dependency id="System.Net.Primitives" version="4.3.0" />
+        <dependency id="System.Net.Sockets" version="4.3.0" />
+        <dependency id="System.ObjectModel" version="4.3.0" />
+        <dependency id="System.Reflection" version="4.3.0" />
+        <dependency id="System.Reflection.Extensions" version="4.3.0" />
+        <dependency id="System.Reflection.Primitives" version="4.3.0" />
+        <dependency id="System.Resources.ResourceManager" version="4.3.0" />
+        <dependency id="System.Runtime" version="4.3.1" />
+        <dependency id="System.Runtime.Extensions" version="4.3.1" />
+        <dependency id="System.Runtime.Handles" version="4.3.0" />
+        <dependency id="System.Runtime.InteropServices" version="4.3.0" />
+        <dependency id="System.Runtime.InteropServices.RuntimeInformation" version="4.3.0" />
+        <dependency id="System.Runtime.Numerics" version="4.3.0" />
+        <dependency id="System.Runtime.Serialization.Formatters" version="4.3.0" />
+        <dependency id="System.Runtime.Serialization.Primitives" version="4.3.0" />
+        <dependency id="System.Security.Cryptography.Algorithms" version="4.3.1" />
+        <dependency id="System.Security.Cryptography.Encoding" version="4.3.0" />
+        <dependency id="System.Security.Cryptography.Primitives" version="4.3.0" />
+        <dependency id="System.Security.Cryptography.X509Certificates" version="4.3.2" />
+        <dependency id="System.Text.Encoding" version="4.3.0" />
+        <dependency id="System.Text.Encoding.Extensions" version="4.3.0" />
+        <dependency id="System.Text.RegularExpressions" version="4.3.0" />
+        <dependency id="System.Threading" version="4.3.0" />
+        <dependency id="System.Threading.Tasks" version="4.3.0" />
+        <dependency id="System.Threading.Timer" version="4.3.0" />
+        <dependency id="System.Xml.ReaderWriter" version="4.3.1" />
+        <dependency id="System.Xml.XDocument" version="4.3.0" />
+        <dependency id="System.Xml.XmlDocument" version="4.3.0" />
+        <dependency id="Xamarin.Android.Arch.Core.Common" version="1.1.1.1" />
+        <dependency id="Xamarin.Android.Arch.Lifecycle.Common" version="1.1.1.1" />
+        <dependency id="Xamarin.Android.Arch.Lifecycle.Runtime" version="1.1.1.1" />
+        <dependency id="Xamarin.Android.Support.Animated.Vector.Drawable" version="28.0.0.1" />
+        <dependency id="Xamarin.Android.Support.Annotations" version="28.0.0.1" />
+        <dependency id="Xamarin.Android.Support.Compat" version="28.0.0.1" />
+        <dependency id="Xamarin.Android.Support.Constraint.Layout" version="1.1.2" />
+        <dependency id="Xamarin.Android.Support.Constraint.Layout.Solver" version="1.1.2" />
+        <dependency id="Xamarin.Android.Support.Core.UI" version="28.0.0.1" />
+        <dependency id="Xamarin.Android.Support.Core.Utils" version="28.0.0.1" />
+        <dependency id="Xamarin.Android.Support.Fragment" version="28.0.0.1" />
+        <dependency id="Xamarin.Android.Support.Media.Compat" version="28.0.0.1" />
+        <dependency id="Xamarin.Android.Support.v4" version="28.0.0.1" />
+        <dependency id="Xamarin.Android.Support.v7.AppCompat" version="28.0.0.1" />
+        <dependency id="Xamarin.Android.Support.Vector.Drawable" version="28.0.0.1" />
+        <dependency id="Xam.Plugins.Android.ExoPlayer" version="2.9.0" />
+        <dependency id="Xam.Plugins.Android.ExoPlayer.Core" version="2.9.0" />
+        <dependency id="Xam.Plugins.Android.ExoPlayer.Dash" version="2.9.0" />
+        <dependency id="Xam.Plugins.Android.ExoPlayer.Hls" version="2.9.0" />
+        <dependency id="Xam.Plugins.Android.ExoPlayer.SmoothStreaming" version="2.9.0" />
+        <dependency id="Xam.Plugins.Android.ExoPlayer.UI" version="2.9.0" />
+      </group>
+    </dependencies>
+    <frameworkAssemblies>
+      <frameworkAssembly assemblyName="System.Core" targetFramework="Xamarin.iOS1.0" />
+      <frameworkAssembly assemblyName="System" targetFramework="Xamarin.iOS1.0" />
+      <frameworkAssembly assemblyName="System.Xml" targetFramework="Xamarin.iOS1.0" />
+      <frameworkAssembly assemblyName="Xamarin.iOS" targetFramework="Xamarin.iOS1.0" />
+      <frameworkAssembly assemblyName="Java.Interop" targetFramework="MonoAndroid8.1" />
+      <frameworkAssembly assemblyName="Mono.Android" targetFramework="MonoAndroid8.1" />
+      <frameworkAssembly assemblyName="System.Core" targetFramework="MonoAndroid8.1" />
+      <frameworkAssembly assemblyName="System" targetFramework="MonoAndroid8.1" />
+      <frameworkAssembly assemblyName="System.Xml" targetFramework="MonoAndroid8.1" />
+    </frameworkAssemblies>
+  </metadata>
+</package>

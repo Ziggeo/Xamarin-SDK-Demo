@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Ziggeo.Xamarin.NetStandard.Demo.Views.RecordingsListPage"
+             xmlns:resources="clr-namespace:Ziggeo.Xamarin.NetStandard.Demo;"
+             xmlns:viewModels="clr-namespace:Ziggeo.Xamarin.NetStandard.Demo.ViewModels;assembly=Ziggeo.Xamarin.NetStandard.Demo"
+             Title="{x:Static resources:AppResources.recordings_header}">
+
+    <ContentPage.BindingContext>
+        <viewModels:RecordingsListViewModel />
+    </ContentPage.BindingContext>
+    <AbsoluteLayout>
+        <ListView
+            x:Name="ItemsListView"
+            ItemsSource="{Binding Items}"
+            VerticalOptions="FillAndExpand"
+            HasUnevenRows="true"
+            RefreshCommand="{Binding LoadItemsCommand}"
+            IsPullToRefreshEnabled="true"
+            IsRefreshing="{Binding IsBusy, Mode=OneWay}"
+            CachingStrategy="RecycleElement"
+            ItemSelected="OnItemSelected">
+
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout
+                            HorizontalOptions="Center"
+                            Orientation="Horizontal"
+                            Padding="{StaticResource DefaultPadding}">
+                            <Image>
+                                <Image.Triggers>
+                                    <DataTrigger TargetType="Image"
+                                                 Binding="{Binding Type }"
+                                                 Value="VideoItem">
+                                        <Setter Property="Source">
+                                            <Setter.Value>
+                                                <FontImageSource
+                                                    Color="Black"
+                                                    Size="60"
+                                                    FontFamily="{DynamicResource MaterialFontFamily}"
+                                                    Glyph="{StaticResource IconVideo}" />
+                                            </Setter.Value>
+                                        </Setter>
+                                    </DataTrigger>
+                                    <DataTrigger TargetType="Image"
+                                                 Binding="{Binding Type }"
+                                                 Value="AudioItem">
+                                        <Setter Property="Source">
+                                            <Setter.Value>
+                                                <FontImageSource
+                                                    Color="Black"
+                                                    Size="60"
+                                                    FontFamily="{DynamicResource MaterialFontFamily}"
+                                                    Glyph="{StaticResource IconMic}" />
+                                            </Setter.Value>
+                                        </Setter>
+                                    </DataTrigger>
+                                    <DataTrigger TargetType="Image"
+                                                 Binding="{Binding Type }"
+                                                 Value="ImageItem">
+                                        <Setter Property="Source">
+                                            <Setter.Value>
+                                                <FontImageSource
+                                                    Color="Black"
+                                                    Size="60"
+                                                    FontFamily="{DynamicResource MaterialFontFamily}"
+                                                    Glyph="{StaticResource IconImage}" />
+                                            </Setter.Value>
+                                        </Setter>
+                                    </DataTrigger>
+                                </Image.Triggers>
+                            </Image>
+                            <StackLayout
+                                VerticalOptions="Center"
+                                Margin="16,0,0,0">
+                                <Label Text="{Binding Token}"
+                                       Style="{StaticResource TokenAndTagsStyle}" />
+                                <Label
+                                    Text="{Binding Tags}"
+                                    Style="{StaticResource TokenAndTagsStyle}" />
+                            </StackLayout>
+                            <StackLayout
+                                Margin="16,0,0,0"
+                                HorizontalOptions="CenterAndExpand">
+                                <Label
+                                    HorizontalTextAlignment="Center"
+                                    Text="{Binding Status}">
+                                    <Label.Triggers>
+                                        <Trigger TargetType="Label"
+                                                 Property="Text"
+                                                 Value="READY">
+                                            <Setter Property="TextColor" Value="{StaticResource StateReady}" />
+                                        </Trigger>
+                                        <Trigger TargetType="Label"
+                                                 Property="Text"
+                                                 Value="FAILED">
+                                            <Setter Property="TextColor" Value="{StaticResource StateFailed}" />
+                                        </Trigger>
+                                        <Trigger TargetType="Label"
+                                                 Property="Text"
+                                                 Value="PROCESSING">
+                                            <Setter Property="TextColor" Value="{StaticResource StateProcessing}" />
+                                        </Trigger>
+                                    </Label.Triggers>
+                                </Label>
+                                <Label
+                                    HorizontalTextAlignment="Center"
+                                    Text="{Binding Date}" />
+                            </StackLayout>
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+        <StackLayout
+            Margin="30"
+            AbsoluteLayout.LayoutFlags="All"
+            AbsoluteLayout.LayoutBounds="0,0,1,1"
+            HorizontalOptions="End"
+            Orientation="Horizontal">
+
+            <FlexLayout
+                HorizontalOptions="EndAndExpand"
+                HeightRequest="330"
+                Direction="Column"
+                JustifyContent="End"
+                AlignItems="Center">
+
+                <ImageButton
+                    Style="{StaticResource SmallFabStyle}"
+                    Clicked="BtnFolder_OnClicked"
+                    x:Name="BtnFolder">
+                    <ImageButton.Source>
+                        <FontImageSource
+                            FontFamily="{DynamicResource MaterialFontFamily}"
+                            Glyph="{StaticResource IconFolder}" />
+                    </ImageButton.Source>
+                </ImageButton>
+
+                <ImageButton
+                    Style="{StaticResource SmallFabStyle}"
+                    Clicked="BtnImage_OnClicked"
+                    x:Name="BtnImage">
+                    <ImageButton.Source>
+                        <FontImageSource
+                            FontFamily="{DynamicResource MaterialFontFamily}"
+                            Glyph="{StaticResource IconImage}" />
+                    </ImageButton.Source>
+                </ImageButton>
+
+                <ImageButton
+                    Style="{StaticResource SmallFabStyle}"
+                    Clicked="BtnMic_OnClicked"
+                    x:Name="BtnMic">
+                    <ImageButton.Source>
+                        <FontImageSource
+                            FontFamily="{DynamicResource MaterialFontFamily}"
+                            Glyph="{StaticResource IconMic}" />
+                    </ImageButton.Source>
+                </ImageButton>
+
+                <ImageButton
+                    Style="{StaticResource SmallFabStyle}"
+                    Clicked="BtnScreen_OnClicked"
+                    x:Name="BtnScreen">
+                    <ImageButton.Source>
+                        <FontImageSource
+                            FontFamily="{DynamicResource MaterialFontFamily}"
+                            Glyph="{StaticResource IconScreen}" />
+                    </ImageButton.Source>
+                </ImageButton>
+
+                <ImageButton
+                    Style="{StaticResource SmallFabStyle}"
+                    Clicked="BtnVideo_OnClicked"
+                    x:Name="BtnVideo">
+                    <ImageButton.Source>
+                        <FontImageSource
+                            FontFamily="{DynamicResource MaterialFontFamily}"
+                            Glyph="{StaticResource IconVideo}" />
+                    </ImageButton.Source>
+                </ImageButton>
+
+                <ImageButton
+                    Style="{StaticResource FabStyle}"
+                    Clicked="BtnRoot_OnClicked"
+                    x:Name="BtnRoot">
+                    <ImageButton.Source>
+                        <FontImageSource
+                            FontFamily="{DynamicResource MaterialFontFamily}"
+                            Glyph="{StaticResource IconPlus}" />
+                    </ImageButton.Source>
+                </ImageButton>
+
+            </FlexLayout>
+        </StackLayout>
+    </AbsoluteLayout>
+</ContentPage>

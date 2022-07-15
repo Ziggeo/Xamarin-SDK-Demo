@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Ziggeo.Xamarin.NetStandard.Demo.Views.LogPage"
+             xmlns:resources="clr-namespace:Ziggeo.Xamarin.NetStandard.Demo;"
+             xmlns:viewModels="clr-namespace:Ziggeo.Xamarin.NetStandard.Demo.ViewModels;assembly=Ziggeo.Xamarin.NetStandard.Demo"
+             Title="{x:Static resources:AppResources.log_header}">
+
+    <ContentPage.BindingContext>
+        <viewModels:LogViewModel />
+    </ContentPage.BindingContext>
+
+    <StackLayout
+        Margin="{StaticResource DefaultPadding}">
+        <Label
+            HorizontalTextAlignment="Center"
+            IsVisible="{Binding IsEmpty}"
+            Text="{x:Static resources:AppResources.message_log_empty}" />
+
+        <ListView
+            x:Name="ItemsListView"
+            ItemsSource="{Binding Items}"
+            VerticalOptions="FillAndExpand"
+            HasUnevenRows="True"
+            RefreshCommand="{Binding LoadItemsCommand}"
+            IsRefreshing="{Binding IsBusy, Mode=OneWay}"
+            CachingStrategy="RecycleElement">
+
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell IsEnabled="false">
+                        <StackLayout
+                            Margin="0,8"
+                            Orientation="Horizontal">
+                            <Label Text="{Binding FormattedOutput}" />
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        
+        <Button
+            Command="{Binding SendReportCommand}"
+            Text="{x:Static resources:AppResources.btn_send_report}" />
+        
+    </StackLayout>
+</ContentPage>

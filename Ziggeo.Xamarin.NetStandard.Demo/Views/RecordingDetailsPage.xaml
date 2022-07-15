@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:resources="clr-namespace:Ziggeo.Xamarin.NetStandard.Demo;assembly=Ziggeo.Xamarin.NetStandard.Demo"
+             xmlns:viewModels="clr-namespace:Ziggeo.Xamarin.NetStandard.Demo.ViewModels;assembly=Ziggeo.Xamarin.NetStandard.Demo"
+             x:Class="Ziggeo.Xamarin.NetStandard.Demo.Views.RecordingDetailsPage"
+             Title="{x:Static resources:AppResources.details_header}">
+
+    <ContentPage.BindingContext>
+        <viewModels:RecordingDetailsViewModel />
+    </ContentPage.BindingContext>
+
+    <StackLayout>
+        <Image
+            HeightRequest="200"
+            Margin="{StaticResource DefaultPadding}"
+            Aspect="{Binding AspectProp}"
+            Source="{Binding ImageSource}">
+            <Image.GestureRecognizers>
+                <TapGestureRecognizer
+                    Command="{Binding ImageClickedCommand }"
+                    NumberOfTapsRequired="1" />
+            </Image.GestureRecognizers>
+        </Image>
+        <Entry
+            IsEnabled="{Binding IsEditMode}"
+            Margin="{StaticResource DefaultPadding}"
+            Placeholder="{x:Static resources:AppResources.hint_token_or_key}"
+            Text="{Binding TokenOrKey}" />
+        <Entry
+            IsEnabled="{Binding IsEditMode}"
+            Margin="{StaticResource DefaultPadding}"
+            Placeholder="{x:Static resources:AppResources.hint_title}"
+            Text="{Binding Title}" />
+        <Entry
+            IsEnabled="{Binding IsEditMode}"
+            Margin="{StaticResource DefaultPadding}"
+            Placeholder="{x:Static resources:AppResources.hint_description}"
+            Text="{Binding Description}" />
+
+    </StackLayout>
+</ContentPage>

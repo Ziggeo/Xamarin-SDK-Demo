@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Ziggeo.Xamarin.NetStandard.Demo.Views.SettingsPage"
+             xmlns:resources="clr-namespace:Ziggeo.Xamarin.NetStandard.Demo;"
+             xmlns:viewModels="clr-namespace:Ziggeo.Xamarin.NetStandard.Demo.ViewModels;assembly=Ziggeo.Xamarin.NetStandard.Demo"
+             Title="{x:Static resources:AppResources.settings_header}">
+
+    <ContentPage.BindingContext>
+        <viewModels:SettingsViewModel />
+    </ContentPage.BindingContext>
+
+    <StackLayout
+        HorizontalOptions="FillAndExpand"
+        VerticalOptions="FillAndExpand">
+        <StackLayout
+            HorizontalOptions="FillAndExpand"
+            Orientation="Horizontal"
+            Padding="{StaticResource DefaultPadding}">
+            <Label
+                Margin="{StaticResource DefaultPadding}"
+                Text="{x:Static resources:AppResources.blur_settings}" />
+
+            <StackLayout
+                VerticalOptions="Center"
+                HorizontalOptions="EndAndExpand">
+                <Switch
+                    IsEnabled="True"
+                    IsToggled="{Binding IsBlurMode}"
+                    Toggled="OnBlurModeToggled"
+                />
+            </StackLayout>
+        </StackLayout>
+        <Button
+            VerticalOptions="EndAndExpand"
+            HorizontalOptions="Center"
+            FontSize="12"
+            Margin="{StaticResource DefaultPadding}"
+            Clicked="SaveSettings"
+            Text="{x:Static resources:AppResources.save_settings}" />
+    </StackLayout>
+</ContentPage>
