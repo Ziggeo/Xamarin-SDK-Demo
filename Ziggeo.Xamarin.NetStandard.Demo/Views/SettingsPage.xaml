@@ -31,6 +31,42 @@
                 />
             </StackLayout>
         </StackLayout>
+        <StackLayout
+            HorizontalOptions="FillAndExpand"
+            Orientation="Horizontal"
+            Padding="{StaticResource DefaultPadding}">
+            <Label
+                Margin="{StaticResource DefaultPadding}"
+                Text="{x:Static resources:AppResources.blur_settings}" />
+
+            <StackLayout
+                VerticalOptions="Center"
+                HorizontalOptions="EndAndExpand">
+                <Switch
+                    IsEnabled="True"
+                    IsToggled="{Binding CustomPlayerMode}"
+                    Toggled="OnCustomPlayerModeToggled"
+                />
+            </StackLayout>
+        </StackLayout>
+        <StackLayout
+            HorizontalOptions="FillAndExpand"
+            Orientation="Horizontal"
+            Padding="{StaticResource DefaultPadding}">
+            <Label
+                Margin="{StaticResource DefaultPadding}"
+                Text="{x:Static resources:AppResources.blur_settings}" />
+
+            <StackLayout
+                VerticalOptions="Center"
+                HorizontalOptions="EndAndExpand">
+                <Switch
+                    IsEnabled="True"
+                    IsToggled="{Binding CustomCameraMode}"
+                    Toggled="OnCustomCameraModeToggled"
+                />
+            </StackLayout>
+        </StackLayout>
         <Button
             VerticalOptions="EndAndExpand"
             HorizontalOptions="Center"

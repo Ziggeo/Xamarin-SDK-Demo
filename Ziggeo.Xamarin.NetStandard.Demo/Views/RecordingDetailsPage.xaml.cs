@@ -1,7 +1,9 @@
 ﻿using System.Linq;
 using Acr.UserDialogs;
+using Xamarin.Essentials;
 using Xamarin.Forms;
 using Ziggeo.Xamarin.NetStandard.Demo.Models;
+using Ziggeo.Xamarin.NetStandard.Demo.Utils;
 using Ziggeo.Xamarin.NetStandard.Demo.ViewModels;
 
 namespace Ziggeo.Xamarin.NetStandard.Demo.Views
@@ -105,6 +107,23 @@ namespace Ziggeo.Xamarin.NetStandard.Demo.Views
         public void HideLoading()
         {
             UserDialogs.Instance.Loading().Hide();
+        }
+        
+        public async void OnVideoSelected( VideoItem item)
+        {
+            if (GetCustomPlayerMode())
+            {
+                await Navigation.PushAsync(new CustomPlayerPage());
+            }
+            else
+            {
+                App.ZiggeoApplication.StartPlayer(item.Token);
+            }
+        }
+        
+        private bool GetCustomPlayerMode()
+        {
+            return Preferences.Get(Constants.CustomPlayerMode, false);
         }
     }
 }

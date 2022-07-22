@@ -1,6 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+using Acr.UserDialogs;
+using Xamarin.Essentials;
 using Xamarin.Forms;
 using Ziggeo.Xamarin.NetStandard.Demo.Models;
 using Ziggeo.Xamarin.NetStandard.Demo.Utils;
@@ -24,7 +24,7 @@ namespace Ziggeo.Xamarin.NetStandard.Demo.Views
             if (!(args.SelectedItem is MediaItem item))
                 return;
 
-            RecordingDetailsViewModel model = new RecordingDetailsViewModel {Item = item};
+            var model = new RecordingDetailsViewModel {Item = item};
             await Navigation.PushAsync(new RecordingDetailsPage(model));
 
             // Manually deselect item
@@ -75,7 +75,7 @@ namespace Ziggeo.Xamarin.NetStandard.Demo.Views
 
         private void ShowComingSoonToast()
         {
-            Acr.UserDialogs.UserDialogs.Instance.Toast(AppResources.coming_soon, new TimeSpan(1));
+            UserDialogs.Instance.Toast(AppResources.coming_soon, new TimeSpan(1));
         }
     }
 }

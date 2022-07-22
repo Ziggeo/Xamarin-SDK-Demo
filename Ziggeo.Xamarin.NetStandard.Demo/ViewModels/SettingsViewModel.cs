@@ -8,10 +8,24 @@ namespace Ziggeo.Xamarin.NetStandard.Demo.ViewModels
     public class SettingsViewModel : BaseViewModel
     {
         private bool _isBlurMode;
+        private bool _customPlayerMode;
+        private bool _customCameraMode;
         public bool IsBlurMode
         {
             get => _isBlurMode;
             set {  _isBlurMode = value; OnPropertyChanged(nameof(IsBlurMode));  }
+        }
+        
+        public bool CustomPlayerMode
+        {
+            get => _customPlayerMode;
+            set {  _customPlayerMode = value; OnPropertyChanged(nameof(CustomPlayerMode));  }
+        }
+        
+        public bool CustomCameraMode
+        {
+            get => _customCameraMode;
+            set {  _customCameraMode = value; OnPropertyChanged(nameof(CustomCameraMode));  }
         }
 
         public SettingsViewModel()
@@ -23,15 +37,30 @@ namespace Ziggeo.Xamarin.NetStandard.Demo.ViewModels
             IsBlurMode = Preferences.Get(Constants.BlurMode, false);
         }
         
+        public void GetCustomPlayerMode()
+        {
+            CustomPlayerMode = Preferences.Get(Constants.CustomPlayerMode, false);
+        }
+        
+        public void GetCustomCameraMode()
+        {
+            CustomCameraMode = Preferences.Get(Constants.CustomCameraMode, false);
+        }
+        
          public void SaveBlurMode()
                 {
-                    Console.WriteLine("AAAAAAAA _SaveBlurMode"+ IsBlurMode);
-
                     Preferences.Set(Constants.BlurMode, IsBlurMode);
                     App.ZiggeoApplication.CameraRecorderConfig.BlurMode = IsBlurMode;
-                    
-                    Console.WriteLine("AAAAAAAA BlurMode"+ App.ZiggeoApplication.CameraRecorderConfig.BlurMode);
-
                 }
+         
+         public void SaveCustomPlayerMode()
+         {
+             Preferences.Set(Constants.CustomPlayerMode, CustomPlayerMode);
+         }
+         
+         public void SaveCustomCameraMode()
+         {
+             Preferences.Set(Constants.CustomCameraMode, CustomCameraMode);
+         }
     }
 }
