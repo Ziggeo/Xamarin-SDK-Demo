@@ -48,9 +48,16 @@ namespace Ziggeo.Xamarin.NetStandard.Demo.Views
             BtnVideo.IsVisible = _isOpened;
         }
 
-        private void BtnVideo_OnClicked(object sender, EventArgs e)
+        private async void BtnVideo_OnClicked(object sender, EventArgs e)
         {
-            App.ZiggeoApplication.StartCameraRecorder();
+            if (GetCustomCameraMode())
+            {
+                await Navigation.PushAsync(new CustomCameraPage());
+            }
+            else
+            {
+                App.ZiggeoApplication.StartCameraRecorder();
+            }
         }
 
         private void BtnScreen_OnClicked(object sender, EventArgs e)
@@ -76,6 +83,11 @@ namespace Ziggeo.Xamarin.NetStandard.Demo.Views
         private void ShowComingSoonToast()
         {
             UserDialogs.Instance.Toast(AppResources.coming_soon, new TimeSpan(1));
+        }
+        
+        private bool GetCustomCameraMode()
+        {
+            return Preferences.Get(Constants.CustomCameraMode, false);
         }
     }
 }

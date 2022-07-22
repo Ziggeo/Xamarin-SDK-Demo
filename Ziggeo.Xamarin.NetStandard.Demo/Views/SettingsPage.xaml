@@ -15,8 +15,7 @@
         VerticalOptions="FillAndExpand">
         <StackLayout
             HorizontalOptions="FillAndExpand"
-            Orientation="Horizontal"
-            Padding="{StaticResource DefaultPadding}">
+            Orientation="Horizontal">
             <Label
                 Margin="{StaticResource DefaultPadding}"
                 Text="{x:Static resources:AppResources.blur_settings}" />
@@ -33,11 +32,10 @@
         </StackLayout>
         <StackLayout
             HorizontalOptions="FillAndExpand"
-            Orientation="Horizontal"
-            Padding="{StaticResource DefaultPadding}">
+            Orientation="Horizontal">
             <Label
                 Margin="{StaticResource DefaultPadding}"
-                Text="{x:Static resources:AppResources.blur_settings}" />
+                Text="{x:Static resources:AppResources.custom_player_settings}" />
 
             <StackLayout
                 VerticalOptions="Center"
@@ -51,11 +49,10 @@
         </StackLayout>
         <StackLayout
             HorizontalOptions="FillAndExpand"
-            Orientation="Horizontal"
-            Padding="{StaticResource DefaultPadding}">
+            Orientation="Horizontal">
             <Label
                 Margin="{StaticResource DefaultPadding}"
-                Text="{x:Static resources:AppResources.blur_settings}" />
+                Text="{x:Static resources:AppResources.custom_camera_settings}" />
 
             <StackLayout
                 VerticalOptions="Center"

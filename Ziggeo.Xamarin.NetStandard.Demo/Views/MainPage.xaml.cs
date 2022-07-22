@@ -26,6 +26,7 @@ namespace Ziggeo.Xamarin.NetStandard.Demo.Views
             var abPage = new MasterPageItem {Title = AppResources.item_about, TargetType = typeof(AboutPage)};
             var logPage = new MasterPageItem {Title = AppResources.item_log, TargetType = typeof(LogPage)};
             var customPlayerPage = new MasterPageItem {Title = AppResources.item_log, TargetType = typeof(CustomPlayerPage)};
+            var customCameraPage = new MasterPageItem {Title = AppResources.item_log, TargetType = typeof(CustomCameraPage)};
 
             MenuList.Add(recPage);
             MenuList.Add(setPage);
@@ -35,6 +36,7 @@ namespace Ziggeo.Xamarin.NetStandard.Demo.Views
             MenuList.Add(abPage);
             MenuList.Add(logPage);
             MenuList.Add(customPlayerPage);
+            MenuList.Add(customCameraPage);
 
             NavigationList.ItemsSource = MenuList;
 

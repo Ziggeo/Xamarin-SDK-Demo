@@ -46,7 +46,7 @@ namespace Ziggeo.Xamarin.NetStandard.Demo.Views
         {
             _viewModel.SaveBlurMode();
             _viewModel.SaveCustomPlayerMode();
-            _viewModel.SaveCustomPlayerMode();
+            _viewModel.SaveCustomCameraMode();
         }
     }
 }

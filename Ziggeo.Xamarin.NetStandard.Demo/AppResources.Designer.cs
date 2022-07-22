@@ -81,6 +81,18 @@ namespace Ziggeo.Xamarin.NetStandard.Demo {
             }
         }
         
+        internal static string custom_camera_settings {
+            get {
+                return ResourceManager.GetString("custom_camera_settings", resourceCulture);
+            }
+        }
+        
+        internal static string custom_player_settings {
+            get {
+                return ResourceManager.GetString("custom_player_settings", resourceCulture);
+            }
+        }
+        
         internal static string save_settings {
             get {
                 return ResourceManager.GetString("save_settings", resourceCulture);

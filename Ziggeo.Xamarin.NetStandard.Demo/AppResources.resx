@@ -140,6 +140,12 @@
   <data name="blur_settings" xml:space="preserve">
     <value>Use blur Mode</value>
   </data>
+  <data name="custom_camera_settings" xml:space="preserve">
+    <value>Use Custom Camera Mode</value>
+  </data>
+  <data name="custom_player_settings" xml:space="preserve">
+    <value>Use Custom Player Mode</value>
+  </data>
   <data name="save_settings" xml:space="preserve">
     <value>Save</value>
   </data>
