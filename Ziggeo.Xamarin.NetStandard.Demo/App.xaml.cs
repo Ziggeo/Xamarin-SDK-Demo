@@ -1,9 +1,7 @@
 ﻿using System;
 using Xamarin.Essentials;
 using Xamarin.Forms;
-using Xamarin.Forms.Internals;
 using Xamarin.Forms.Xaml;
-using Ziggeo;
 using Ziggeo.Xamarin.NetStandard.Demo.Services;
 using Ziggeo.Xamarin.NetStandard.Demo.Utils;
 using Ziggeo.Xamarin.NetStandard.Demo.Views;
