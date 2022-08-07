@@ -69,10 +69,11 @@
       <Version>4.8.0.1269</Version>
     </PackageReference>
     <PackageReference Include="Ziggeo.XamarinSDK.Netstandard">
-      <Version>1.3.17</Version>
+      <Version>1.3.9</Version>
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CameraWidgetRenderer.cs" />
     <Compile Include="MainActivity.cs" />
     <Compile Include="Resources\Resource.designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -98,6 +99,10 @@
     <AndroidResource Include="Resources\drawable\logo_python.png" />
     <AndroidResource Include="Resources\drawable\logo_react.png" />
     <AndroidResource Include="Resources\drawable\logo_ruby.png" />
+    <AndroidResource Include="Resources\drawable\logo_sap.png">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateGeneratedFiles</Generator>
+    </AndroidResource>
     <AndroidResource Include="Resources\drawable\logo_swift.png" />
     <AndroidResource Include="Resources\drawable\logo_xamarin.png" />
     <AndroidResource Include="Resources\drawable\xamagon.png" />
@@ -122,12 +127,6 @@
     <AndroidResource Include="Resources\mipmap-xxxhdpi\ic_launcher_round.png" />
     <AndroidResource Include="Resources\values\styles.xml" />
     <AndroidResource Include="Resources\values\colors.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Resources\drawable-hdpi\" />
-    <Folder Include="Resources\drawable-xhdpi\" />
-    <Folder Include="Resources\drawable-xxhdpi\" />
-    <Folder Include="Resources\drawable-xxxhdpi\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Ziggeo.Xamarin.NetStandard.Demo\Ziggeo.Xamarin.NetStandard.Demo.csproj">
@@ -181,9 +180,6 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\logo_nyustern.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\drawable\logo_sap.png" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\logo_spotify.png" />

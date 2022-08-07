@@ -9,7 +9,10 @@ using Android.OS;
 using Acr.UserDialogs;
 using FFImageLoading.Forms.Platform;
 using Xamarin.Essentials;
-
+using Xamarin.Forms;
+using Xamarin.Forms.Platform.Android;
+using Ziggeo.Xamarin.Android.CustomViews;
+using Platform = Xamarin.Essentials.Platform;
 using Ziggeo;
 
 namespace Ziggeo.Xamarin.NetStandard.Demo.Droid
@@ -29,10 +32,17 @@ namespace Ziggeo.Xamarin.NetStandard.Demo.Droid
             CachedImageRenderer.Init(true);
             CachedImageRenderer.InitImageViewHandler();
             UserDialogs.Init(this);
-            LoadApplication(new App(new ZiggeoApplication()));
+
+            var ziggeoPlayer = new ZVideoView(this);
+            var playerView = ziggeoPlayer.ToView();
+
+            LoadApplication(new App(new ZiggeoApplication(), 
+                playerView, 
+                ziggeoPlayer));
         }
 
-        public override void OnRequestPermissionsResult(int requestCode, string[] permissions, Permission[] grantResults)
+        public override void OnRequestPermissionsResult(int requestCode, string[] permissions,
+            Permission[] grantResults)
         {
             Platform.OnRequestPermissionsResult(requestCode, permissions, grantResults);
 

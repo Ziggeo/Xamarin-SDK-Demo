@@ -16,7 +16,7 @@
     <PackageReference Include="Xamarin.FFImageLoading.Forms" Version="2.4.11.982" />  
     <PackageReference Include="Xamarin.Forms" Version="4.8.0.1269" />  
     <PackageReference Include="Xamarin.Forms.Visual.Material" Version="4.8.0.1269" />  
-    <PackageReference Include="Ziggeo.XamarinSDK.Netstandard" Version="1.3.17" />
+    <PackageReference Include="Ziggeo.XamarinSDK.Netstandard" Version="1.3.9" />
   </ItemGroup>
 
   <ItemGroup>
@@ -88,6 +88,9 @@
   <ItemGroup>
     <Reference Include="Refractored.Fab, Version=2.1.0.0, Culture=neutral, PublicKeyToken=null">
       <HintPath>C:\Users\alexander\.nuget\packages\refractored.floatingactionbutton\2.1.0\lib\MonoAndroid10\Refractored.Fab.dll</HintPath>
+    </Reference>
+    <Reference Include="Ziggeo.Xamarin.Android, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>..\..\..\..\.nuget\packages\ziggeo.xamarinsdk.netstandard\1.3.36\lib\MonoAndroid\Ziggeo.Xamarin.Android.dll</HintPath>
     </Reference>
   </ItemGroup>
 </Project>

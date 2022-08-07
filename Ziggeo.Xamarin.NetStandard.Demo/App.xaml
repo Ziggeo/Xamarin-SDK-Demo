@@ -82,7 +82,12 @@
             <x:String x:Key="IconDelete">&#xf1c0;</x:String>
             <x:String x:Key="IconSave">&#xf193;</x:String>
             <x:String x:Key="IconClose">&#xf156;</x:String>
-
+            <x:String x:Key="IconPlayVideo">&#xF40A;</x:String>
+            <x:String x:Key="IconStopVideo">&#xF4DB;</x:String>
+            <x:String x:Key="IconSaveVideo">&#xF12C;</x:String>
+            <x:String x:Key="IconSwitchCameraFront">&#xF102;</x:String>
+            <x:String x:Key="IconSwitchCameraBack">&#xF106;</x:String>
+            
             <OnPlatform x:Key="MaterialFontFamily" x:TypeArguments="x:String">
                 <On Platform="iOS" Value="Material Design Icons" />
                 <On Platform="Android" Value="materialdesignicons-webfont.ttf#Material Design Icons" />
@@ -99,6 +104,12 @@
 
                 <Setter Property="FontFamily"
                         Value="quicksand_regular" />
+            </Style>
+            
+            <Style x:Key="SmallIconStyle" TargetType="ImageButton">
+                <Setter Property="IsVisible" Value="False" />
+                <Setter Property="Margin" Value="0,0,0,8" />
+                <Setter Property="Padding" Value="{StaticResource HalfPadding}" />
             </Style>
 
             <Style x:Key="SmallFabStyle" TargetType="ImageButton">

@@ -2,10 +2,88 @@
 
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:widgets="clr-namespace:Ziggeo.Xamarin.NetStandard.Demo.Views.Widgets;assembly=Ziggeo.Xamarin.NetStandard.Demo"
              x:Class="Ziggeo.Xamarin.NetStandard.Demo.Views.CustomCameraPage">
     <ContentPage.Content>
-        <StackLayout>
-            <!-- <ziggeo:IZiggeoApplication.ZCameraView /> -->
-        </StackLayout>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <StackLayout
+                HorizontalOptions="FillAndExpand"
+                VerticalOptions="FillAndExpand"
+                x:Name="CameraStackLayout" >
+                <widgets:CameraWidget
+                    x:Name="CameraWidget" 
+                    HorizontalOptions="FillAndExpand"
+                    VerticalOptions="FillAndExpand"/>
+            </StackLayout>
+
+            <StackLayout
+                Margin="30"
+                AbsoluteLayout.LayoutFlags="HeightProportional"
+                AbsoluteLayout.LayoutBounds="0,0,1,1"
+                HorizontalOptions="Center"
+                VerticalOptions="End"
+                Orientation="Horizontal"
+                x:Name="StackLayout">
+                <ImageButton
+                    BackgroundColor="Transparent"
+                    Clicked="PlayVideo_OnClicked"
+                    WidthRequest="{StaticResource SmallFabSize}"
+                    HeightRequest="{StaticResource SmallFabSize}"
+                    x:Name="PlayVideo">
+                    <ImageButton.Source>
+                        <FontImageSource
+                            Color="White"
+                            Size="20"
+                            FontFamily="{DynamicResource MaterialFontFamily}"
+                            Glyph="{StaticResource IconPlayVideo}" />
+                    </ImageButton.Source>
+                </ImageButton>
+                 
+                <ImageButton
+                    BackgroundColor="Transparent"
+                    Clicked="SwitchCamera_OnClicked"
+                    WidthRequest="{StaticResource SmallFabSize}"
+                    HeightRequest="{StaticResource SmallFabSize}"
+                    x:Name="SwitchCamera">
+                    <ImageButton.Source>
+                        <FontImageSource
+                            Color="White"
+                            FontFamily="{DynamicResource MaterialFontFamily}"
+                            Glyph="{StaticResource IconSwitchCameraFront}" />
+                    </ImageButton.Source>
+                </ImageButton>
+
+                <ImageButton
+                    BackgroundColor="Transparent"
+                    Clicked="StartRecording_OnClicked"
+                    WidthRequest="{StaticResource SmallFabSize}"
+                    HeightRequest="{StaticResource SmallFabSize}"
+                    x:Name="StartRecording">
+                    <ImageButton.Source>
+                        <FontImageSource
+                            FontFamily="{DynamicResource MaterialFontFamily}"
+                            Size="20"
+                            Glyph="{StaticResource IconVideo}" />
+                    </ImageButton.Source>
+                </ImageButton>
+                <ImageButton
+                    BackgroundColor="Transparent"
+                    Clicked="StopRecording_OnClicked"
+                    WidthRequest="{StaticResource SmallFabSize}"
+                    HeightRequest="{StaticResource SmallFabSize}"
+                    x:Name="StopRecording">
+                    <ImageButton.Source>
+                        <FontImageSource
+                            Color="White"
+                            Size="20"
+                            FontFamily="{DynamicResource MaterialFontFamily}"
+                            Glyph="{StaticResource IconSaveVideo}" />
+                    </ImageButton.Source>
+                </ImageButton>
+            </StackLayout>
+        </Grid>
     </ContentPage.Content>
 </ContentPage>

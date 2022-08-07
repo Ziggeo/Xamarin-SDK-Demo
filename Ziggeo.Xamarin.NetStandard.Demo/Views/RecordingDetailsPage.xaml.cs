@@ -1,4 +1,5 @@
-﻿using System.Linq;
+﻿using System.Collections.Generic;
+using System.Linq;
 using Acr.UserDialogs;
 using Xamarin.Essentials;
 using Xamarin.Forms;
@@ -25,7 +26,7 @@ namespace Ziggeo.Xamarin.NetStandard.Demo.Views
                 Token = "Item 1",
             };
 
-            _viewModel = new RecordingDetailsViewModel {Item = item};
+            _viewModel = new RecordingDetailsViewModel { Item = item };
             BindingContext = _viewModel;
         }
 
@@ -65,32 +66,32 @@ namespace Ziggeo.Xamarin.NetStandard.Demo.Views
             if (_editToolbarItem == null)
             {
                 var resources = Application.Current.Resources;
-                var font = (string) ((OnPlatform<string>) resources["MaterialFontFamily"])
+                var font = (string)((OnPlatform<string>)resources["MaterialFontFamily"])
                     .Platforms.FirstOrDefault(p => p.Platform[0] == Device.RuntimePlatform)?.Value;
                 const int iconSize = 48;
 
-                _editToolbarItem = new ToolbarItem {Command = _viewModel.EditCommand};
+                _editToolbarItem = new ToolbarItem { Command = _viewModel.EditCommand };
                 var editImageSource = new FontImageSource
                 {
                     Size = iconSize, FontFamily = font, Glyph = resources["IconEdit"] as string
                 };
                 _editToolbarItem.IconImageSource = editImageSource;
 
-                _deleteToolbarItem = new ToolbarItem {Command = _viewModel.DeleteCommand};
+                _deleteToolbarItem = new ToolbarItem { Command = _viewModel.DeleteCommand };
                 var deleteImageSource = new FontImageSource
                 {
                     Size = iconSize, FontFamily = font, Glyph = resources["IconDelete"] as string
                 };
                 _deleteToolbarItem.IconImageSource = deleteImageSource;
 
-                _saveToolbarItem = new ToolbarItem {Command = _viewModel.SaveCommand};
+                _saveToolbarItem = new ToolbarItem { Command = _viewModel.SaveCommand };
                 var saveImageSource = new FontImageSource
                 {
                     Size = iconSize, FontFamily = font, Glyph = resources["IconSave"] as string
                 };
                 _saveToolbarItem.IconImageSource = saveImageSource;
 
-                _cancelToolbarItem = new ToolbarItem {Command = _viewModel.CancelCommand};
+                _cancelToolbarItem = new ToolbarItem { Command = _viewModel.CancelCommand };
                 var cancelImageSource = new FontImageSource
                 {
                     Size = iconSize, FontFamily = font, Glyph = resources["IconClose"] as string
@@ -108,19 +109,20 @@ namespace Ziggeo.Xamarin.NetStandard.Demo.Views
         {
             UserDialogs.Instance.Loading().Hide();
         }
-        
-        public async void OnVideoSelected( VideoItem item)
+
+        public async void OnVideoSelected(VideoItem item)
         {
             if (GetCustomPlayerMode())
             {
-                await Navigation.PushAsync(new CustomPlayerPage());
+                await Navigation.PushAsync(new CustomPlayerPage(
+                    new List<string> { item.Token }, null));
             }
             else
             {
                 App.ZiggeoApplication.StartPlayer(item.Token);
             }
         }
-        
+
         private bool GetCustomPlayerMode()
         {
             return Preferences.Get(Constants.CustomPlayerMode, false);
