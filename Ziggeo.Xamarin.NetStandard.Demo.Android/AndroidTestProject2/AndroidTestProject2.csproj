@@ -561,19 +561,19 @@
             <Private>True</Private>
         </Reference>
         <Reference Include="Ziggeo.Xamarin.Android, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
-          <HintPath>..\..\packages\Ziggeo.XamarinSDK.Netstandard.1.3.9\lib\MonoAndroid\Ziggeo.Xamarin.Android.dll</HintPath>
+          <HintPath>..\..\packages\Ziggeo.XamarinSDK.Netstandard.1.3.10\lib\MonoAndroid\Ziggeo.Xamarin.Android.dll</HintPath>
           <Private>True</Private>
         </Reference>
         <Reference Include="Ziggeo.Xamarin.Android.Binding, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
-            <HintPath>..\..\packages\Ziggeo.XamarinSDK.Netstandard.1.3.9\lib\MonoAndroid\Ziggeo.Xamarin.Android.Binding.dll</HintPath>
+            <HintPath>..\..\packages\Ziggeo.XamarinSDK.Netstandard.1.3.10\lib\MonoAndroid\Ziggeo.Xamarin.Android.Binding.dll</HintPath>
             <Private>True</Private>
         </Reference>
         <Reference Include="Ziggeo.Xamarin.NetStandard, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
-            <HintPath>..\..\packages\Ziggeo.XamarinSDK.Netstandard.1.3.9\lib\MonoAndroid\Ziggeo.Xamarin.NetStandard.dll</HintPath>
+            <HintPath>..\..\packages\Ziggeo.XamarinSDK.Netstandard.1.3.10\lib\MonoAndroid\Ziggeo.Xamarin.NetStandard.dll</HintPath>
             <Private>True</Private>
         </Reference>
         <PackageReference Include="Ziggeo.XamarinSDK.Netstandard">
-            <Version>1.3.9</Version>
+            <Version>1.3.10</Version>
         </PackageReference>
     </ItemGroup>
     <ItemGroup>
@@ -582,7 +582,7 @@
         <Compile Include="Resources\Resource.designer.cs"/>
         <Compile Include="Properties\AssemblyInfo.cs"/>
         <PackageReference Include="Ziggeo.XamarinSDK.Netstandard">
-            <Version>1.3.9</Version>
+            <Version>1.3.10</Version>
         </PackageReference>
     </ItemGroup>
     <ItemGroup>
@@ -592,7 +592,7 @@
         <None Include="Assets\AboutAssets.txt"/>
         <None Include="Properties\AndroidManifest.xml"/>
         <PackageReference Include="Ziggeo.XamarinSDK.Netstandard">
-            <Version>1.3.9</Version>
+            <Version>1.3.10</Version>
         </PackageReference>
     </ItemGroup>
     <Import Project="/Library/Frameworks/Mono.framework/External/xbuild\Xamarin\Android\Xamarin.Android.CSharp.targets" />

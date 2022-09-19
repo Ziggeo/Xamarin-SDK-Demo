@@ -110,7 +110,7 @@ namespace AndroidTestProject2
         {
             _ziggeo.CameraRecorderConfig = new CameraRecorderConfig
             {
-                IsPausedMode = true
+                PausedMode = true
             };
             _ziggeo.Ziggeo.RecorderConfig = CameraRecorderConfigMapper.Map(_ziggeo.CameraRecorderConfig);
             Assert.IsTrue(_ziggeo.Ziggeo.RecorderConfig.IsPausedMode);
@@ -389,6 +389,17 @@ namespace AndroidTestProject2
             };
             _ziggeo.Ziggeo.UploadingConfig = UploaderConfigMapper.Map(_ziggeo.UploaderConfig);
             Assert.IsTrue(_ziggeo.Ziggeo.UploadingConfig.ShouldStartAsForeground);
+        }
+        
+        [Test]
+        public void UploaderConfigLostConnectionActionTest()
+        {
+            _ziggeo.UploaderConfig = new UploaderConfig
+            {
+                LostConnectionAction = 1
+            };
+            _ziggeo.Ziggeo.UploadingConfig = UploaderConfigMapper.Map(_ziggeo.UploaderConfig);
+            Assert.IsTrue(_ziggeo.Ziggeo.UploadingConfig.LostConnectionAction);
         }
     }
 }
