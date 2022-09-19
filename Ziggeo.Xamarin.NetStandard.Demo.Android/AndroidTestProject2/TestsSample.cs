@@ -399,7 +399,7 @@ namespace AndroidTestProject2
                 LostConnectionAction = 1
             };
             _ziggeo.Ziggeo.UploadingConfig = UploaderConfigMapper.Map(_ziggeo.UploaderConfig);
-            Assert.IsTrue(_ziggeo.Ziggeo.UploadingConfig.LostConnectionAction);
+            Assert.IsTrue(_ziggeo.Ziggeo.UploadingConfig.LostConnectionAction == 1);
         }
     }
 }
